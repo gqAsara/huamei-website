@@ -1,0 +1,140 @@
+/* Page-specific styles for /imprint (and /privacy, /terms when wired) */
+.lg-wrap { max-width: 1280px; margin: 0 auto; padding: 0 48px 96px; }
+
+/* Masthead */
+.lg-mast {
+  padding: 56px 0 32px; margin-bottom: 48px;
+  border-bottom: 1px solid var(--foil-gold);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end;
+}
+.lg-mast .crumbs {
+  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px;
+}
+.lg-mast .crumbs a { color: var(--ink-3); border: 0; text-decoration: none; }
+.lg-mast .crumbs .sep { color: var(--ink-4); margin: 0 10px; }
+.lg-mast .rn {
+  font-family: var(--font-display); font-style: italic; font-size: 16px;
+  color: var(--foil-gold); margin-bottom: 6px;
+}
+.lg-mast h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px); line-height: 1; letter-spacing: -.02em;
+  margin: 0; color: var(--ink);
+}
+.lg-mast h1 em { font-style: italic; color: var(--foil-gold-2); }
+.lg-mast .meta {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--ink-3); text-align: right;
+  display: flex; gap: 18px; justify-content: flex-end; align-items: baseline;
+}
+.lg-mast .meta .dot { color: var(--foil-gold); }
+
+/* Two-column layout: TOC + prose */
+.lg-layout {
+  display: grid; grid-template-columns: 240px 1fr; gap: 80px; align-items: start;
+}
+.lg-toc {
+  position: sticky; top: 96px;
+  padding-top: 4px;
+  font-family: var(--font-label);
+}
+.lg-toc .kicker {
+  font-size: 9.5px; letter-spacing: .32em; text-transform: uppercase; color: var(--foil-gold-2);
+  padding-bottom: 12px; margin-bottom: 14px; border-bottom: .5px solid var(--rule-soft);
+}
+.lg-toc ol { list-style: none; margin: 0; padding: 0; counter-reset: sec; }
+.lg-toc li {
+  counter-increment: sec; padding: 7px 0;
+  border-bottom: .5px dotted var(--ink-5);
+}
+.lg-toc li a {
+  display: grid; grid-template-columns: 32px 1fr; gap: 10px; align-items: baseline;
+  border: 0; text-decoration: none; color: var(--ink-2);
+  font-family: var(--font-body); font-size: 13.5px; line-height: 1.3;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.lg-toc li a::before {
+  content: counter(sec, lower-roman) ".";
+  font-family: var(--font-display); font-style: italic; font-size: 13px;
+  color: var(--foil-gold); letter-spacing: 0;
+}
+.lg-toc li a:hover { color: var(--foil-gold-2); }
+
+.lg-prose { max-width: 62ch; }
+.lg-prose h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 32px; line-height: 1.1; letter-spacing: -.01em; color: var(--ink);
+  margin: 48px 0 16px; padding-bottom: 10px;
+  border-bottom: .5px solid var(--rule-soft);
+  display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
+}
+.lg-prose h2:first-child { margin-top: 0; }
+.lg-prose h2 em { font-style: italic; color: var(--foil-gold-2); }
+.lg-prose h2 .n {
+  font-family: var(--font-display); font-style: italic; font-size: 16px;
+  color: var(--foil-gold); flex-shrink: 0;
+}
+.lg-prose h3 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 18px; line-height: 1.3; color: var(--ink);
+  margin: 28px 0 10px;
+}
+.lg-prose p {
+  font-family: var(--font-body); font-size: 15px; line-height: 1.7; color: var(--ink-2);
+  margin: 0 0 16px; text-wrap: pretty; max-width: none;
+}
+.lg-prose em { font-style: italic; color: var(--ink); }
+.lg-prose ul { margin: 0 0 20px; padding: 0; list-style: none; }
+.lg-prose ul li {
+  position: relative; padding: 4px 0 4px 24px;
+  font-family: var(--font-body); font-size: 14.5px; line-height: 1.6; color: var(--ink-2);
+}
+.lg-prose ul li::before {
+  content: "·"; position: absolute; left: 8px; top: 4px;
+  color: var(--foil-gold); font-size: 18px; line-height: 1.4;
+}
+.lg-prose .definition {
+  display: grid; grid-template-columns: 180px 1fr; gap: 24px;
+  padding: 12px 0; border-bottom: .5px dotted var(--ink-5);
+}
+.lg-prose .definition dt {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--ink-3); padding-top: 2px;
+}
+.lg-prose .definition dd {
+  margin: 0; font-family: var(--font-body); font-size: 14.5px; line-height: 1.55; color: var(--ink);
+}
+.lg-prose .callout {
+  margin: 24px 0; padding: 20px 24px; background: var(--paper-2);
+  border-left: 1px solid var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 17px; line-height: 1.4; color: var(--ink);
+}
+.lg-prose address {
+  font-style: normal;
+  font-family: var(--font-body); font-size: 15px; line-height: 1.7; color: var(--ink);
+  padding: 18px 24px; background: var(--paper-2); margin: 18px 0;
+}
+.lg-prose address .lbl {
+  display: block;
+  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--foil-gold-2); margin-bottom: 8px;
+}
+
+/* Footer signoff */
+.lg-sign {
+  margin-top: 80px; padding-top: 24px;
+  border-top: 1px solid var(--foil-gold);
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.lg-sign .italic {
+  font-family: var(--font-display); font-style: italic; font-size: 14px;
+  color: var(--ink-2); letter-spacing: 0; text-transform: none;
+}
+
+@media (max-width: 960px) {
+  .lg-mast, .lg-layout { grid-template-columns: 1fr; }
+  .lg-toc { position: static; }
+}

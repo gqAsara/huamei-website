@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import { fontDisplay, fontBody, fontLabel, fontCN } from "./fonts";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://huamei.io"),
+  title: {
+    default: "Huamei 華美 — Premium custom luxury packaging",
+    template: "%s · Huamei",
+  },
+  description:
+    "Huamei is a custom luxury packaging house with factories across four Chinese provinces — Henan, Zhejiang, Sichuan and Guizhou. Founded 1992. Rigid boxes, drawer boxes, magnetic closures, hot-foil, emboss, lamination — for cosmetic & skincare, wine spirits & tea, seasonal gifting, and wellness categories.",
+  openGraph: {
+    type: "website",
+    siteName: "Huamei 華美",
+    locale: "en_US",
+    alternateLocale: ["zh_CN"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Huamei 華美 — Premium custom luxury packaging",
+    description:
+      "A custom luxury packaging house across Henan, Zhejiang, Sichuan and Guizhou. Since 1992.",
+  },
+  robots: { index: true, follow: true },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${fontDisplay.variable} ${fontBody.variable} ${fontLabel.variable} ${fontCN.variable}`}
+    >
+      <body>{children}</body>
+    </html>
+  );
+}

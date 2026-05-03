@@ -1,0 +1,330 @@
+@import "tailwindcss";
+@import "./chrome.css";
+
+/* ============================================================
+   HUAMEI DESIGN TOKENS — colors, type, space, shadow, motion
+   Ported from design-system/colors_and_type.css
+   ============================================================ */
+:root {
+  /* Papers — the stock itself */
+  --paper:          #F4EFE6;
+  --paper-2:        #EBE4D6;
+  --paper-edge:     #DCD3BF;
+  --paper-white:    #FAF7F0;
+
+  /* Inks — the printed word */
+  --ink:            #1A1614;
+  --ink-2:          #2E2822;
+  --ink-3:          #6B615A;
+  --ink-4:          #9B9289;
+  --ink-5:          #C9BFB2;
+
+  /* Foils — the decoration */
+  --foil-gold:      #B08A3E;
+  --foil-gold-2:    #8F6E2B;
+  --foil-gold-hi:   #D4B26C;
+  --foil-copper:    #8B4D2D;
+  --foil-silver:    #7E7A76;
+
+  /* Dyed papers — the accents */
+  --noir:           #14100E;
+  --oxblood:        #5C1A1A;
+  --sage:           #6F7A68;
+  --bone:           #E8E0D0;
+  --sand:           #B8A582;
+  --ink-blue:       #1E2A33;
+
+  /* Semantic aliases */
+  --fg:             var(--ink);
+  --fg-2:           var(--ink-2);
+  --fg-3:           var(--ink-3);
+  --fg-mute:        var(--ink-4);
+  --bg:             var(--paper);
+  --bg-2:           var(--paper-2);
+  --rule:           var(--ink-4);
+  --rule-soft:      var(--ink-5);
+  --accent:         var(--foil-gold);
+  --accent-deep:    var(--foil-gold-2);
+
+  /* Type scale (fluid, print-rooted) */
+  --fs-hero:        clamp(3.5rem, 7vw, 6.5rem);
+  --fs-h1:          clamp(2.5rem, 4.5vw, 4rem);
+  --fs-h2:          clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3:          1.5rem;
+  --fs-body-lg:     1.125rem;
+  --fs-body:        1rem;
+  --fs-body-sm:     0.9375rem;
+  --fs-caption:     0.8125rem;
+  --fs-label:       0.75rem;
+  --fs-label-sm:    0.6875rem;
+
+  /* Line-heights & tracking */
+  --lh-tight:       1.05;
+  --lh-snug:        1.2;
+  --lh-normal:      1.5;
+  --lh-prose:       1.65;
+
+  --tr-display:     -0.01em;
+  --tr-body:        0;
+  --tr-label:       0.22em;
+  --tr-label-wide:  0.36em;
+  --tr-label-tight: 0.08em;
+
+  /* Spacing — 4..128px */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* Rules */
+  --rule-hair:   0.5px solid var(--rule);
+  --rule-thin:   1px solid var(--rule);
+  --rule-soft-b: 1px solid var(--rule-soft);
+
+  /* Radii — almost-sharp catalogue */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   3px;
+
+  /* Shadows — flat paper, never glowy */
+  --shadow-card:  0 1px 2px rgba(26,22,20,0.04), 0 8px 24px -12px rgba(26,22,20,0.08);
+  --shadow-lift:  0 2px 6px rgba(26,22,20,0.06), 0 18px 40px -18px rgba(26,22,20,0.15);
+  --shadow-press: inset 0 1px 2px rgba(26,22,20,0.08);
+
+  /* Motion — patient, never bouncy */
+  --ease-paper:   cubic-bezier(0.32, 0.72, 0.28, 1);
+  --ease-out:     cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur-fast:     180ms;
+  --dur-med:      320ms;
+  --dur-slow:     560ms;
+
+  /* Layout columns */
+  --col:          1140px;
+  --col-narrow:   720px;
+  --col-wide:     1320px;
+}
+
+/* ============================================================
+   TAILWIND v4 @theme — exposes tokens as utilities
+   Font *-family vars are populated by next/font in app/layout.tsx
+   ============================================================ */
+@theme inline {
+  /* Colors → bg-*, text-*, border-* utilities */
+  --color-paper:        var(--paper);
+  --color-paper-2:      var(--paper-2);
+  --color-paper-edge:   var(--paper-edge);
+  --color-paper-white:  var(--paper-white);
+  --color-ink:          var(--ink);
+  --color-ink-2:        var(--ink-2);
+  --color-ink-3:        var(--ink-3);
+  --color-ink-4:        var(--ink-4);
+  --color-ink-5:        var(--ink-5);
+  --color-foil-gold:    var(--foil-gold);
+  --color-foil-gold-2:  var(--foil-gold-2);
+  --color-foil-gold-hi: var(--foil-gold-hi);
+  --color-foil-copper:  var(--foil-copper);
+  --color-foil-silver:  var(--foil-silver);
+  --color-noir:         var(--noir);
+  --color-oxblood:      var(--oxblood);
+  --color-sage:         var(--sage);
+  --color-bone:         var(--bone);
+  --color-sand:         var(--sand);
+  --color-ink-blue:     var(--ink-blue);
+
+  /* Fonts (set via next/font in app/layout.tsx) */
+  --font-display: var(--font-display-family), 'Garamond', 'Times New Roman', serif;
+  --font-body:    var(--font-body-family), 'Georgia', 'Times New Roman', serif;
+  --font-label:   var(--font-label-family), 'Helvetica Neue', Arial, sans-serif;
+  --font-cn:      var(--font-cn-family), 'Songti SC', serif;
+
+  /* Type scale → text-* utilities */
+  --text-hero:     var(--fs-hero);
+  --text-h1:       var(--fs-h1);
+  --text-h2:       var(--fs-h2);
+  --text-h3:       var(--fs-h3);
+  --text-body-lg:  var(--fs-body-lg);
+  --text-body:     var(--fs-body);
+  --text-body-sm:  var(--fs-body-sm);
+  --text-caption:  var(--fs-caption);
+  --text-label:    var(--fs-label);
+  --text-label-sm: var(--fs-label-sm);
+
+  /* Tracking → tracking-* utilities */
+  --tracking-display:     -0.01em;
+  --tracking-label:       0.22em;
+  --tracking-label-wide:  0.36em;
+  --tracking-label-tight: 0.08em;
+
+  /* Radii */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+
+  /* Shadows */
+  --shadow-card:  0 1px 2px rgba(26,22,20,0.04), 0 8px 24px -12px rgba(26,22,20,0.08);
+  --shadow-lift:  0 2px 6px rgba(26,22,20,0.06), 0 18px 40px -18px rgba(26,22,20,0.15);
+  --shadow-press: inset 0 1px 2px rgba(26,22,20,0.08);
+
+  /* Container widths → max-w-narrow / max-w-col / max-w-wide */
+  --container-narrow: 720px;
+  --container-col:    1140px;
+  --container-wide:   1320px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — editorial defaults
+   ============================================================ */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "kern", "onum";
+  overflow-x: clip;
+}
+
+/* Display heading — oversized hero */
+.hm-hero, h1.hm-hero {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-display);
+  color: var(--ink);
+  margin: 0;
+}
+.hm-hero em, .hm-hero i { font-style: italic; font-weight: 400; }
+
+h1, .hm-h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-display);
+  color: var(--ink);
+  margin: 0 0 var(--space-4);
+}
+h2, .hm-h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  color: var(--ink);
+  margin: 0 0 var(--space-4);
+}
+h3, .hm-h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  color: var(--ink);
+  margin: 0 0 var(--space-3);
+}
+
+/* Body copy */
+p, .hm-p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  color: var(--ink-2);
+  margin: 0 0 var(--space-4);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+.hm-p-lg { font-size: var(--fs-body-lg); }
+
+/* Pull quote — italic display, gold rule */
+blockquote, .hm-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: var(--space-5) 0;
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--foil-gold);
+}
+
+/* Labels — letter-spaced all-caps sans, the catalogue signature */
+.hm-label, .hm-eyebrow, .hm-kicker {
+  font-family: var(--font-label);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--tr-label);
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.hm-label-wide   { letter-spacing: var(--tr-label-wide); }
+.hm-label-ink    { color: var(--ink); }
+.hm-label-gold   { color: var(--foil-gold); }
+
+/* Wordmark — H U A M E I */
+.hm-wordmark {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: var(--tr-label-wide);
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* Caption / meta */
+.hm-caption, figcaption, small {
+  font-family: var(--font-label);
+  font-size: var(--fs-caption);
+  line-height: 1.45;
+  color: var(--ink-3);
+  letter-spacing: var(--tr-label-tight);
+}
+
+/* Bilingual — 華美 */
+.hm-cn {
+  font-family: var(--font-cn);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+/* Roman numerals */
+.hm-roman {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--foil-gold);
+}
+
+/* Hairline rule */
+hr, .hm-rule {
+  border: 0;
+  border-top: var(--rule-hair);
+  margin: var(--space-6) 0;
+}
+.hm-rule-thick { border-top: var(--rule-thin); }
+.hm-rule-gold  { border-top: 1px solid var(--foil-gold); }
+
+/* Links — understated underline, gold on hover */
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink-5);
+  transition: border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+a:hover { border-bottom-color: var(--foil-gold); color: var(--foil-gold-2); }
+
+/* Selection */
+::selection { background: var(--foil-gold); color: var(--paper-white); }
+
+/* Containers */
+.hm-col         { max-width: var(--col);        margin-inline: auto; padding-inline: var(--space-6); }
+.hm-col-narrow  { max-width: var(--col-narrow); margin-inline: auto; padding-inline: var(--space-6); }
+.hm-col-wide    { max-width: var(--col-wide);   margin-inline: auto; padding-inline: var(--space-6); }

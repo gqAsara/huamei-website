@@ -1,0 +1,227 @@
+/* /volumes — case-study archive */
+
+.vol-wrap { max-width: 1280px; margin: 0 auto; padding: 0 48px 120px; }
+
+/* Masthead */
+.vol-mast {
+  padding: 28px 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end;
+  border-bottom: 1px solid var(--foil-gold);
+}
+.vol-mast .rn {
+  font-family: var(--font-display); font-style: italic; font-size: 16px;
+  color: var(--foil-gold); margin-bottom: 10px;
+}
+.vol-mast h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(44px, 5.6vw, 84px); line-height: .98; letter-spacing: -.025em;
+  margin: 0; color: var(--ink);
+}
+.vol-mast h1 em { font-style: italic; color: var(--foil-gold-2); }
+.vol-mast .count {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;
+}
+.vol-mast .intro {
+  font-family: var(--font-body); font-style: italic; font-size: 16.5px;
+  line-height: 1.45; color: var(--ink-2);
+  max-width: 40ch; margin: 0 0 0 auto; text-wrap: pretty;
+}
+
+/* Filter bar */
+.vol-filters {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 24px;
+  padding: 18px 0; border-bottom: .5px solid var(--rule-soft);
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em; text-transform: uppercase;
+}
+.vol-filter-group { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.vol-filter-group > .lbl { color: var(--ink-4); font-size: 9px; }
+.vol-filter-group button {
+  background: transparent; border: 0; padding: 4px 0; cursor: pointer;
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--ink-3); position: relative;
+  transition: color 240ms ease;
+}
+.vol-filter-group button::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: .5px;
+  background: var(--foil-gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 260ms cubic-bezier(.4, 0, .2, 1);
+}
+.vol-filter-group button:hover { color: var(--ink); }
+.vol-filter-group button.on { color: var(--foil-gold-2); }
+.vol-filter-group button.on::after { transform: scaleX(1); }
+
+.vol-view-toggle { display: flex; gap: 14px; align-items: baseline; color: var(--ink-4); font-size: 9px; }
+.vol-view-toggle button {
+  background: transparent; border: 0; padding: 4px 0; cursor: pointer;
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--ink-3); transition: color 240ms ease;
+}
+.vol-view-toggle button:hover { color: var(--ink); }
+.vol-view-toggle button.on {
+  color: var(--foil-gold-2);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* List view (ledger) */
+.vol-list { display: flex; flex-direction: column; }
+.vol-list .row {
+  display: grid; grid-template-columns: 70px 1fr 140px 90px 100px;
+  gap: 28px; align-items: center;
+  padding: 20px 0;
+  border-bottom: .5px solid var(--rule-soft);
+  text-decoration: none; color: var(--ink); cursor: pointer;
+  transition: background 240ms ease, padding-left 320ms cubic-bezier(.4, 0, .2, 1);
+}
+.vol-list .row:hover { background: var(--paper-2); padding-left: 12px; }
+.vol-list .row .rn {
+  font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--foil-gold);
+}
+.vol-list .row .ttl { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.vol-list .row .name {
+  font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.1;
+  letter-spacing: -.008em; color: var(--ink);
+  position: relative; display: inline-block; align-self: flex-start;
+}
+.vol-list .row .name::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: -2px;
+  height: .5px; background: var(--foil-gold);
+  transition: right 420ms cubic-bezier(.4, 0, .2, 1);
+}
+.vol-list .row:hover .name::after { right: 0; }
+.vol-list .row .client {
+  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.vol-list .row .tag {
+  font-family: var(--font-body); font-style: italic; font-size: 13.5px; color: var(--ink-3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.vol-list .row .year {
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .22em;
+  color: var(--ink-3); text-align: right;
+}
+.vol-list .row .thumb {
+  width: 100px; height: 72px;
+  background-color: #1a1614;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: end;
+  transform: translateY(0);
+  transition: transform 320ms cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0 0 0 .5px var(--rule-soft);
+}
+.vol-list .row:hover .thumb { transform: translateY(-3px); }
+
+/* Plates view */
+.vol-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px;
+  padding-top: 28px;
+}
+.vol-card {
+  text-decoration: none; color: var(--ink);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: transform 320ms cubic-bezier(.4, 0, .2, 1);
+}
+.vol-card:hover { transform: translateY(-4px); }
+.vol-card .cover {
+  aspect-ratio: 4 / 5;
+  background-color: #1a1614;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 .5px var(--rule-soft);
+  position: relative; overflow: hidden;
+}
+.vol-card .cover .rn {
+  position: absolute; left: 14px; top: 12px;
+  font-family: var(--font-display); font-style: italic; font-size: 18px;
+  color: var(--foil-gold-hi);
+  text-shadow: 0 1px 2px rgba(20, 16, 14, .4);
+}
+.vol-card .meta-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--font-label); font-size: 9px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink-4);
+  padding-top: 4px;
+  border-top: .5px solid var(--rule-soft);
+}
+.vol-card h3 {
+  margin: 0;
+  font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.1;
+  letter-spacing: -.01em; color: var(--ink);
+}
+.vol-card .tag {
+  font-family: var(--font-body); font-style: italic; font-size: 13.5px; color: var(--ink-3);
+}
+
+/* Empty state */
+.vol-empty {
+  padding: 72px 0; text-align: center; color: var(--ink-4);
+  font-family: var(--font-display); font-style: italic; font-size: 22px;
+}
+
+/* Commission CTA */
+.vol-cta {
+  margin-top: 72px; padding: 56px 0; text-align: center;
+  border-top: 1px solid var(--foil-gold);
+}
+.vol-cta .kicker {
+  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  text-transform: uppercase; color: var(--foil-gold-2); margin-bottom: 14px;
+}
+.vol-cta h4 {
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: clamp(28px, 3vw, 40px); line-height: 1.1;
+  margin: 0 auto 10px; max-width: 28ch; color: var(--ink);
+}
+.vol-cta p {
+  font-family: var(--font-body); font-size: 14.5px; line-height: 1.5; color: var(--ink-3);
+  max-width: 48ch; margin: 0 auto 26px; text-wrap: pretty;
+}
+.vol-cta a.begin {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 14px 26px; text-decoration: none;
+  border: .5px solid var(--ink); color: var(--ink);
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em; text-transform: uppercase;
+  transition: background 260ms ease, color 260ms ease;
+}
+.vol-cta a.begin:hover { background: var(--ink); color: var(--paper); }
+.vol-cta a.begin .arrow {
+  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  color: var(--foil-gold); letter-spacing: 0; text-transform: none;
+}
+
+/* Section heading (DTC Brand / Branded clients) */
+.vol-section { margin-top: 48px; }
+.vol-section-head {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: end;
+  gap: 18px; margin-bottom: 16px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--foil-gold);
+}
+.vol-section-head .kicker {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.vol-section-head h2 {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: clamp(22px, 2vw, 28px); line-height: 1; letter-spacing: -.01em;
+  margin: 0; color: var(--ink);
+}
+.vol-section-head .cnt {
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .25em;
+  text-transform: uppercase; color: var(--foil-gold-2);
+}
+
+@media (max-width: 900px) {
+  .vol-mast { grid-template-columns: 1fr; }
+  .vol-mast .intro { margin-left: 0; }
+  .vol-list .row { grid-template-columns: 50px 1fr 80px; gap: 16px; }
+  .vol-list .row .thumb,
+  .vol-list .row .tag { display: none; }
+  .vol-grid { grid-template-columns: 1fr 1fr; }
+  .vol-section-head { grid-template-columns: 1fr; gap: 4px; }
+}
