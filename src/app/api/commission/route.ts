@@ -71,5 +71,5 @@ export async function POST(request: Request) {
     console.log("[commission] new submission (no RESEND_API_KEY set, not sending)", payload);
   }
 
-  return NextResponse.redirect(new URL("/begin?sent=1", request.url), 303);
+  return NextResponse.redirect(new URL("/begin/sent", request.url), 303);
 }
