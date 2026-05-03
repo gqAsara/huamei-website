@@ -1,8 +1,14 @@
 import { ImageResponse } from "next/og";
+import fs from "node:fs";
+import path from "node:path";
 
 export const alt = "Huamei 華美 — Premium custom luxury packaging";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+const sealPath = path.join(process.cwd(), "public", "huamei-mark-512.png");
+const sealBuffer = fs.readFileSync(sealPath);
+const sealDataUri = `data:image/png;base64,${sealBuffer.toString("base64")}`;
 
 export default async function OpengraphImage() {
   return new ImageResponse(
@@ -30,6 +36,19 @@ export default async function OpengraphImage() {
             bottom: 28,
             border: "0.5px solid #C9BFB2",
             pointerEvents: "none",
+          }}
+        />
+
+        {/* Seal — top right, like a stamp on a letter */}
+        <img
+          src={sealDataUri}
+          width={170}
+          height={170}
+          alt=""
+          style={{
+            position: "absolute",
+            top: 56,
+            right: 60,
           }}
         />
 
