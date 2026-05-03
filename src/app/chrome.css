@@ -132,12 +132,10 @@
   color: var(--ink);
 }
 .hm-wm .seal {
-  width: 36px; height: 36px;
+  width: 40px; height: 40px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
-  /* lift the seal off the cream paper without crushing the foil */
-  mix-blend-mode: multiply;
 }
 .hm-wm .lat {
   font-family: var(--font-display); font-weight: 500; font-size: 20px;
@@ -353,9 +351,12 @@
   letter-spacing: .34em; text-transform: uppercase;
   color: var(--paper-white); padding-left: .34em;
 }
-.hm-footer .brand .cn {
-  font-family: var(--font-cn); font-size: 20px; letter-spacing: .22em;
-  color: var(--foil-gold-hi); margin-top: 14px;
+.hm-footer .brand .brand-seal {
+  width: 72px; height: 72px;
+  object-fit: contain;
+  display: block;
+  margin-top: 18px;
+  margin-left: -6px;
 }
 .hm-footer .brand .rule { width: 56px; height: 1px; background: var(--foil-gold); margin: 20px 0 20px; }
 .hm-footer .brand .voice {

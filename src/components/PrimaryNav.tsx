@@ -56,17 +56,15 @@ export function PrimaryNav() {
     <nav className={`hm-nav${drawerOpen ? " drawer-open" : ""}`} id="nav">
       <div className="hm-nav-inner">
         <Link className="hm-wm" href="/">
-          <img
-            src="/huamei-mark.png"
-            alt=""
-            width={36}
-            height={36}
-            className="seal"
-            aria-hidden="true"
-          />
           <span className="lat">Huamei</span>
           <span className="bar" />
-          <span className="cn">華美</span>
+          <img
+            src="/huamei-mark-512.png"
+            alt="華美"
+            width={40}
+            height={40}
+            className="seal"
+          />
         </Link>
 
         <ul className="hm-primary" ref={navRef}>
