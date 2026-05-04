@@ -21,11 +21,6 @@ author:
 publishedAt: "2026-05-04T09:00:00+08:00"
 updatedAt: "2026-05-04T09:00:00+08:00"
 schema: "Article"
-hero:
-  src: "/margin/custom-luxury-rigid-box-manufacturing/hero.jpg"
-  alt: "A two-piece telescoping rigid box opening on a Henan finishing line, lid lifting away from a foil-stamped base."
-  width: 1600
-  height: 900
 internalLinks:
   - "/craft"
   - "/craft/rigid"

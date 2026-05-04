@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: "/margin" },
 };
 
-type Post = { num: string; title: string; italic: string; when: string };
+type Post = { num: string; title: string; italic: string; when: string; href?: string };
 type Section = {
   rn: string;
   id: string;
@@ -31,9 +31,10 @@ const SECTIONS: Section[] = [
     intro:
       "Notes from the press floor — the materials we trust, the corners we won't cut, and the techniques we keep coming back to.",
     posts: [
-      { num: "i.",   title: "Magnesium etched, ",      italic: "how a foil plate is born.",        when: "In preparation" },
-      { num: "ii.",  title: "A morning at the ",       italic: "Yangshao kiln.",                   when: "In preparation" },
-      { num: "iii.", title: "The pink we couldn't ",   italic: "match the first time.",            when: "In preparation" },
+      { num: "i.",   title: "Custom luxury rigid box manufacturing — ", italic: "what it actually means.", when: "May 2026", href: "/margin/custom-luxury-rigid-box-manufacturing" },
+      { num: "ii.",  title: "Magnesium etched, ",      italic: "how a foil plate is born.",        when: "In preparation" },
+      { num: "iii.", title: "A morning at the ",       italic: "Yangshao kiln.",                   when: "In preparation" },
+      { num: "iv.",  title: "The pink we couldn't ",   italic: "match the first time.",            when: "In preparation" },
     ],
   },
   {
@@ -146,16 +147,25 @@ export default function MarginPage() {
             <p className="mg-cat-intro">{s.intro}</p>
           </div>
           <ul className="mg-forth-list">
-            {s.posts.map((p) => (
-              <li key={p.num} className="mg-forth-row">
-                <span className="num">{p.num}</span>
-                <span className="ttl">
-                  {p.title}
-                  <em>{p.italic}</em>
-                </span>
-                <span className="when">{p.when}</span>
-              </li>
-            ))}
+            {s.posts.map((p) => {
+              const ttl = (
+                <>
+                  <span className="num">{p.num}</span>
+                  <span className="ttl">
+                    {p.title}
+                    <em>{p.italic}</em>
+                  </span>
+                  <span className="when">{p.when}</span>
+                </>
+              );
+              return p.href ? (
+                <li key={p.num} className="mg-forth-row mg-forth-row--live">
+                  <Link href={p.href} className="mg-forth-link">{ttl}</Link>
+                </li>
+              ) : (
+                <li key={p.num} className="mg-forth-row">{ttl}</li>
+              );
+            })}
           </ul>
         </section>
       ))}
