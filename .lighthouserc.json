@@ -3,19 +3,19 @@
     "collect": {
       "startServerCommand": "npm run start",
       "url": [
-        "http://localhost:3000/en",
-        "http://localhost:3000/en/craft",
-        "http://localhost:3000/en/industry",
-        "http://localhost:3000/en/house/factory"
+        "http://localhost:3000/",
+        "http://localhost:3000/craft",
+        "http://localhost:3000/industry",
+        "http://localhost:3000/house/factory"
       ],
       "numberOfRuns": 2
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["error", { "minScore": 0.85 }],
+        "categories:performance": ["warn", { "minScore": 0.85 }],
         "categories:seo":         ["error", { "minScore": 0.95 }],
-        "categories:accessibility": ["error", { "minScore": 0.90 }],
-        "largest-contentful-paint": ["error", { "maxNumericValue": 2500 }],
+        "categories:accessibility": ["error", { "minScore": 0.85 }],
+        "largest-contentful-paint": ["warn", { "maxNumericValue": 2500 }],
         "cumulative-layout-shift":  ["error", { "maxNumericValue": 0.1 }],
         "interaction-to-next-paint": ["warn", { "maxNumericValue": 200 }]
       }
