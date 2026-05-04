@@ -3,34 +3,34 @@
   "version": 3,
   "currentPhase": 0,
   "phaseName": "Measurement Foundation",
-  "lastShipped": null,
-  "nextAction": "Verify GSC Domain property, install GA4 via @next/third-parties, verify Bing Webmaster, generate IndexNow key. See playbook \u00a75.",
-  "lastUpdated": null,
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/1",
+  "nextAction": "Verify GSC TXT propagation and click Verify, verify Bing Webmaster, add INDEXNOW_KEY to .env.local + Vercel env. Schedule Phase 0.5 discovery interview. See playbook §5 + §5.5.",
+  "lastUpdated": "2026-05-04T19:38:00Z",
   "phase0Tasks": {
-    "gsc": "not_started",
-    "ga4": "not_started",
+    "gsc": "in_progress",
+    "ga4": "done",
     "bing": "not_started",
-    "indexnow": "not_started",
+    "indexnow": "in_progress",
     "baselineGeoScore": "not_started"
   },
   "phase05Discovery": {
     "interviewScheduled": null,
     "interviewCompleted": null,
     "dataPointsCollected": 0,
-    "blockers": []
+    "blockers": ["Interview date not yet scheduled with operations"]
   },
   "phase1Commits": {
     "titles": "not_started",
     "canonicals": "not_started",
     "jsonLd": "not_started",
-    "hreflang": "not_started",
+    "hreflang": "blocked",
     "robotsAi": "not_started"
   },
   "phase3Pillars": {
-    "p1_rigid_box_manufacturing": "not_started",
-    "p2_hot_foil_emboss_finishing": "not_started",
-    "p3_sustainable_luxury_packaging": "not_started",
-    "p4_china_packaging_manufacturer": "not_started"
+    "p1_rigid_box_manufacturing": "blocked",
+    "p2_hot_foil_emboss_finishing": "blocked",
+    "p3_sustainable_luxury_packaging": "blocked",
+    "p4_china_packaging_manufacturer": "blocked"
   },
   "metrics": {
     "currentGeoScore": null,
@@ -44,5 +44,9 @@
     "lcpP75TopRoutes": null,
     "rfqSubmissionsLast28d": null
   },
-  "openIssues": []
+  "openIssues": [
+    "Phase 0.5 discovery interview not yet scheduled — blocks all Phase 3 pillar work",
+    "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
+    "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready"
+  ]
 }
