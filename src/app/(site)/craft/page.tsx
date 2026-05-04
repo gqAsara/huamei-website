@@ -33,7 +33,7 @@ const STRUCTURES: Item[] = [
 ];
 
 const SURFACES: Item[] = [
-  { rn: "i.",   name: "Hot-foil ", italic: "stamping", desc: "Champagne, copper, silver, black · Kurz & Crown.", count: "17",    href: "/craft/hot-foil",   image: "/photos/generated/surfaces/hot-foil.jpg" },
+  { rn: "i.",   name: "Hot-foil ", italic: "stamping", desc: "Champagne, copper, silver, black · seventeen on file.", count: "17",    href: "/craft/hot-foil",   image: "/photos/generated/surfaces/hot-foil.jpg" },
   { rn: "ii.",  name: "Registered emboss",     desc: "Die rises in perfect alignment with ink or foil.",   count: "—",     href: "/craft/emboss",     image: "/photos/generated/surfaces/emboss.jpg" },
   { rn: "iii.", name: "Debossing",             desc: "The mark pressed below the page, blind or filled.",  count: "—",     href: "/craft/deboss",     image: "/photos/generated/surfaces/deboss.jpg" },
   { rn: "iv.",  name: "Soft-touch ", italic: "laminate", desc: "Velvet finish · matte, scratch-resistant.", count: "—",     href: "/craft/soft-touch", image: "/photos/generated/surfaces/soft-touch.jpg" },
