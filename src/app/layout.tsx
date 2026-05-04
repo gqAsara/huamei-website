@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { fontDisplay, fontBody, fontLabel, fontCN } from "./fonts";
 import "./globals.css";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://huamei.io"),
@@ -36,6 +39,7 @@ export default function RootLayout({
       className={`${fontDisplay.variable} ${fontBody.variable} ${fontLabel.variable} ${fontCN.variable}`}
     >
       <body>{children}</body>
+      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }
