@@ -5,11 +5,11 @@
   "phaseName": "Measurement Foundation",
   "lastShipped": "https://github.com/gqAsara/huamei-website/pull/1",
   "nextAction": "Verify GSC TXT propagation and click Verify, verify Bing Webmaster, add INDEXNOW_KEY to .env.local + Vercel env. Schedule Phase 0.5 discovery interview. See playbook §5 + §5.5.",
-  "lastUpdated": "2026-05-04T19:38:00Z",
+  "lastUpdated": "2026-05-04T20:25:00Z",
   "phase0Tasks": {
     "gsc": "in_progress",
     "ga4": "done",
-    "bing": "not_started",
+    "bing": "done",
     "indexnow": "in_progress",
     "baselineGeoScore": "not_started"
   },
