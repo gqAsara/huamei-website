@@ -9,7 +9,7 @@
 | Search intent | commercial (buyer evaluating manufacturers, not yet ready to RFQ) |
 | Word count | 1,500–1,800 |
 | Pillar parent | (this is the pillar — clusters underneath include /margin/magnetic-pull-force, /margin/greyboard-grades, /margin/rigid-box-tooling-amortization) |
-| Author | George Qiao, Founder, Huamei. **Prerequisite:** add George to `/house/people` before draft ships (Editor's hard rule #6 — bylines must be real people on /house/people). Sonia Sun is currently the only named person there. |
+| Author | Sonia Sun, Founder, Huamei (since 1992). Already on `/house/people` and `/imprint`. Founder direction 2026-05-04: Sonia stays the sole named person on /house/people for now. |
 | Schema | Article (NOT FAQPage; question H2s render as on-page Q&A only) |
 | Slug | /margin/custom-luxury-rigid-box-manufacturing |
 
@@ -97,7 +97,7 @@ All confirmed in `.seo/SEO_CONTEXT.md` v3 (locked 2026-05-04):
 
 TODOs:
 
-- ⏳ Author byline tenure — George Qiao, Founder. Confirm "since 1992" tenure phrasing + 1–2-line bio for /house/people addition.
+- ✅ Author byline — Sonia Sun, Founder (since 1992). Already live on /house/people; portrait now on file at `public/photos/people/sonia-sun.jpg` (delivered 2026-05-04).
 
 ## External citations
 
@@ -135,7 +135,7 @@ Founder direction 2026-05-04: lead the buyer's-perspective verb. The pillar clos
 
 ## Open questions for human (resolved 2026-05-04)
 
-1. ✅ Byline → George Qiao, Founder. Prerequisite: add to /house/people. Need 1–2 line bio + tenure phrasing.
+1. ✅ Byline → Sonia Sun, Founder (since 1992). Already on /house/people. Portrait at `public/photos/people/sonia-sun.jpg`.
 2. ✅ FSC mention → drop. Removed from materials section above.
 3. ✅ Spirits roster → keep /volumes-only on this pillar. /industry/spirits will carry the broader roster.
 4. ✅ CTA wording → "I want a box like this." See section above.
