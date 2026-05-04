@@ -24,3 +24,5 @@
 2026-05-04T22:30:01.000Z	site-engineer	state	state.json — phase3Pillars.p1 set to in_progress, lastShipped → PR #4, openIssues refreshed (3 closed)
 2026-05-04T22:40:00.000Z	site-engineer	draft	Pillar 1 brief updated with founder answers — byline = George Qiao (gates on /house/people add), FSC dropped, spirits /volumes-only, CTA = 'I want a box like this'
 2026-05-04T22:50:00.000Z	site-engineer	asset	Saved Sonia Sun portrait to public/photos/people/sonia-sun.jpg (provided by founder); brief reverted to Sonia as Pillar 1 byline per founder decision
+2026-05-04T22:55:00.000Z	site-engineer	commit	PR #5 opened — Sonia Sun portrait wired into /house/people (figure + caption, native aspect ratio)
+2026-05-04T22:55:01.000Z	site-engineer	delegate	Editor agent dispatched (background) for Pillar 1 prose draft from .seo/drafts/p1-rigid-box-manufacturing.brief.md → content/margin/custom-luxury-rigid-box-manufacturing.md
