@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { fontDisplay, fontBody, fontLabel, fontCN } from "./fonts";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { organizationGraph } from "@/lib/schema/organization";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -38,7 +40,10 @@ export default function RootLayout({
       lang="en"
       className={`${fontDisplay.variable} ${fontBody.variable} ${fontLabel.variable} ${fontCN.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <JsonLd data={organizationGraph} />
+        {children}
+      </body>
       {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );

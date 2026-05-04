@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./margin.css";
 
 export const metadata = {
@@ -95,6 +97,12 @@ const SECTIONS: Section[] = [
 export default function MarginPage() {
   return (
     <main className="su-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Margin", path: "/margin" },
+        ])}
+      />
       {/* Masthead */}
       <section className="su-mast">
         <div>

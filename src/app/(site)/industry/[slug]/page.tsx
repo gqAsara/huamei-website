@@ -1,5 +1,7 @@
 import { TopicTemplate } from "@/components/TopicTemplate";
 import { getTopic } from "@/lib/topics";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 
 export default async function IndustryTopicPage({
   params,
@@ -8,7 +10,19 @@ export default async function IndustryTopicPage({
 }) {
   const { slug } = await params;
   const topic = getTopic("industry", slug);
-  return <TopicTemplate topic={topic} />;
+  const name = `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""}`.trim();
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Industry", path: "/industry" },
+          { name, path: `/industry/${slug}` },
+        ])}
+      />
+      <TopicTemplate topic={topic} />
+    </>
+  );
 }
 
 export async function generateMetadata({

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import EquipmentCarousel from "@/components/EquipmentCarousel";
 import { EQUIPMENT } from "@/lib/equipment";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
 
 export const metadata = {
@@ -13,6 +15,13 @@ export const metadata = {
 export default function FactoryPage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+          { name: "Factory", path: "/house/factory" },
+        ])}
+      />
       <header className="hs-subcover">
         <div className="kicker">
           <Link href="/house">← The House</Link>

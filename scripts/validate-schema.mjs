@@ -56,8 +56,13 @@ function targets() {
       return out.split('\n').filter(Boolean).filter(p => /\.(json|tsx?|jsx?|mdx)$/.test(p));
     } catch { return []; }
   }
-  return [...walk('lib/schema'), ...walk('app'), ...walk('.seo/templates/schema')]
-    .filter(p => /\.(json|tsx?|jsx?)$/.test(p));
+  return [
+    ...walk('lib/schema'),
+    ...walk('src/lib/schema'),
+    ...walk('app'),
+    ...walk('src/app'),
+    ...walk('.seo/templates/schema'),
+  ].filter(p => /\.(json|tsx?|jsx?)$/.test(p));
 }
 
 function validateBlock({ json, path }) {

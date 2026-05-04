@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./house.css";
 
 export const metadata = {
@@ -11,6 +13,12 @@ export const metadata = {
 export default function HousePage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+        ])}
+      />
       {/* I. Index — links to /house/philosophy, /house/factory, /house/certifications */}
       <nav className="hs-index" aria-label="Inside the House">
         <Link href="/house/philosophy">

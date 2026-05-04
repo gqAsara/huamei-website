@@ -5,6 +5,8 @@ import { getCase, getVolumeNeighbours } from "@/lib/cases";
 import { VOLUMES } from "@/lib/volumes";
 import { CaseOpening } from "@/components/CaseOpening";
 import { CaseCarousel } from "@/components/CaseCarousel";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./case.css";
 
 export async function generateStaticParams() {
@@ -39,10 +41,18 @@ export default async function CasePage({
 
   if (!c && !vol) notFound();
 
+  const crumbName = c?.name ?? vol?.name ?? "Volume";
+  const crumbs = breadcrumbList([
+    { name: "Home", path: "/" },
+    { name: "Case studies", path: "/volumes" },
+    { name: crumbName, path: `/volumes/${slug}` },
+  ]);
+
   // Stub view for volumes without full case data yet
   if (!c) {
     return (
       <>
+        <JsonLd data={crumbs} />
         <div className="cs-back">
           <Link href="/volumes">← Return to Case studies</Link>
         </div>
@@ -99,6 +109,7 @@ export default async function CasePage({
 
   return (
     <>
+      <JsonLd data={crumbs} />
       <div className="cs-back">
         <Link href="/volumes">← Return to Case studies</Link>
       </div>
