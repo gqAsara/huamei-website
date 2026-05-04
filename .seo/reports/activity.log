@@ -31,3 +31,4 @@
 2026-05-04T23:40:00.000Z	site-engineer	merge	PR #5 (Sonia portrait) merged to main; branch deleted
 2026-05-04T23:42:00.000Z	site-engineer	merge	PR #6 (/margin/[slug] route + Pillar 1 publishable) merged to main; branch deleted; all CI green incl Lighthouse
 2026-05-04T23:43:00.000Z	site-engineer	publish	Pillar 1 LIVE at https://huamei.io/margin/custom-luxury-rigid-box-manufacturing — phase3Pillars.p1 → published; Vercel auto-deploy in flight
+2026-05-04T23:55:00.000Z	site-engineer	commit	PR #7 opened — move Sonia portrait from /house/people to /house/philosophy letter section (float-right inside hs-philosophy-letter-mark)
