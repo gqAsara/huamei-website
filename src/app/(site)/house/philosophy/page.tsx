@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
@@ -34,6 +35,17 @@ export default function PhilosophyPage() {
         <div className="hs-philosophy-body">
           {/* A letter from Sonia */}
           <div className="hs-philosophy-letter-mark">A letter from Sonia</div>
+          <figure className="hs-letter-portrait">
+            <div className="img">
+              <Image
+                src="/photos/people/sonia-sun.jpg"
+                alt="Sonia Sun, Founder of Huamei"
+                fill
+                sizes="(max-width: 720px) 60vw, 200px"
+              />
+            </div>
+            <figcaption>Sonia Sun &middot; 1992</figcaption>
+          </figure>
           <p>
             I started Huamei in <em>one small room,</em> in 1992. There were four
             of us. One offset press. We made folding cartons for the printers down

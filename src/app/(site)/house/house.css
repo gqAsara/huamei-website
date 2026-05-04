@@ -540,8 +540,16 @@
   color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
 }
 .hs-people .copy p em { font-style: italic; color: var(--foil-gold-2); }
-.hs-portrait { margin: 4px 0 22px; max-width: 280px; }
-.hs-portrait .img {
+
+/* Founder portrait, used inside the "A letter from Sonia" block on /house/philosophy.
+   Floated right so the letter prose flows around it like a printed letter. */
+.hs-letter-portrait {
+  float: right;
+  margin: 4px 0 16px 28px;
+  max-width: 200px;
+  shape-outside: inset(0 round 2px);
+}
+.hs-letter-portrait .img {
   position: relative;
   aspect-ratio: 1079 / 1441;
   width: 100%;
@@ -549,13 +557,20 @@
   overflow: hidden;
   background: var(--ink-7);
 }
-.hs-portrait .img img { object-fit: cover; }
-.hs-portrait figcaption {
-  margin-top: 10px;
-  font-family: var(--font-label); font-size: 10px;
-  letter-spacing: .26em; text-transform: uppercase;
-  color: var(--ink-3);
+.hs-letter-portrait .img img { object-fit: cover; }
+.hs-letter-portrait figcaption {
+  margin-top: 8px;
+  font-family: var(--font-label); font-size: 9.5px;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--ink-3); text-align: center;
 }
+@media (max-width: 720px) {
+  .hs-letter-portrait {
+    float: none; display: block;
+    max-width: 220px; margin: 0 auto 22px;
+  }
+}
+
 .hs-people .roster {
   display: grid; grid-template-columns: 1fr;
   border-top: .5px solid var(--rule-soft);
