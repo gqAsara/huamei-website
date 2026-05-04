@@ -22,8 +22,9 @@ export async function generateMetadata({
   const name = c?.name ?? vol?.name ?? "Volume";
   const tagline = c?.tagline ?? vol?.tag ?? "";
   return {
-    title: `${name} · Case studies · Huamei`,
+    title: `${name} · Case studies`,
     description: tagline,
+    alternates: { canonical: `/volumes/${slug}` },
   };
 }
 

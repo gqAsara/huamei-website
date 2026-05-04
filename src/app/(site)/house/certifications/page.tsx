@@ -4,9 +4,10 @@ import { CERTIFICATIONS } from "@/lib/certifications";
 import "../house.css";
 
 export const metadata = {
-  title: "Certifications · Huamei",
+  title: "Certifications — FSC, ISO 9001, ISO 14001, ISO 45001",
   description:
     "FSC, ISO 9001, ISO 14001, ISO 45001 and CE — the audited standards behind every Huamei project. Producing worldwide, sustainably, at the highest standards.",
+  alternates: { canonical: "/house/certifications" },
 };
 
 export default function CertificationsPage() {

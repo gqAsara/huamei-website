@@ -3,9 +3,10 @@ import Link from "next/link";
 import "./craft.css";
 
 export const metadata = {
-  title: "Craft · Huamei",
+  title: "Craft — structures, surfaces & finishing",
   description:
     "Ninety-nine structures, seventeen foils, eighty papers on file. The full stack of decisions between brief and shelf.",
+  alternates: { canonical: "/craft" },
 };
 
 type Item = {

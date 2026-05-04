@@ -2,8 +2,9 @@ import Link from "next/link";
 import "./imprint.css";
 
 export const metadata = {
-  title: "Imprint · Huamei",
+  title: "Imprint",
   description: "Publisher, registration, contact, and editorial responsibility for huamei.io.",
+  alternates: { canonical: "/imprint" },
 };
 
 export default function ImprintPage() {

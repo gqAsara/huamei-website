@@ -2,9 +2,10 @@ import Link from "next/link";
 import "./margin.css";
 
 export const metadata = {
-  title: "Blogs · Huamei",
+  title: "Margin — the Huamei journal of luxury packaging",
   description:
     "Notes from the press floor — production, people, customer success, sustainability and company news. Posted when we have something to say.",
+  alternates: { canonical: "/margin" },
 };
 
 type Post = { num: string; title: string; italic: string; when: string };

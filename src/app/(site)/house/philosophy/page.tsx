@@ -2,9 +2,10 @@ import Link from "next/link";
 import "../house.css";
 
 export const metadata = {
-  title: "Our Philosophy · Huamei",
+  title: "Philosophy — a letter from Sonia Sun",
   description:
     "A letter from Sonia Sun, founder of Huamei, and the threshold — why we believe a box is a brand's first physical handshake.",
+  alternates: { canonical: "/house/philosophy" },
 };
 
 export default function PhilosophyPage() {

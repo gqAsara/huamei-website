@@ -19,7 +19,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const topic = getTopic("industry", slug);
   return {
-    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Industry · Huamei`,
+    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Industry`,
     description: topic.lede,
+    alternates: { canonical: `/industry/${slug}` },
   };
 }

@@ -19,7 +19,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const topic = getTopic("craft", slug);
   return {
-    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Craft · Huamei`,
+    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Craft`,
     description: topic.lede,
+    alternates: { canonical: `/craft/${slug}` },
   };
 }

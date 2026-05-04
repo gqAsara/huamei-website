@@ -5,6 +5,10 @@ import { useMemo, useState } from "react";
 import { VOLUMES, type Volume } from "@/lib/volumes";
 import "./volumes.css";
 
+// Note: metadata is not exported from "use client" files. Volumes
+// catalogue title and canonical fall back to root layout defaults
+// — acceptable since the per-volume pages have their own metadata.
+
 const YEARS = ["all", "2025", "2024"] as const;
 const CATS = [
   "all",

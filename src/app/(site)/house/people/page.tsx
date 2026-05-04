@@ -2,9 +2,10 @@ import Link from "next/link";
 import "../house.css";
 
 export const metadata = {
-  title: "People · Huamei",
+  title: "People — three thousand craftspeople since 1992",
   description:
     "More than three thousand people work at Huamei across four press floors. Founded by Sonia Sun in 1992.",
+  alternates: { canonical: "/house/people" },
 };
 
 export default function PeoplePage() {

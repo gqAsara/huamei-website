@@ -2,9 +2,10 @@ import Link from "next/link";
 import "./begin.css";
 
 export const metadata = {
-  title: "Begin a project · Huamei",
+  title: "Begin a project",
   description:
     "A short, considered intake form. Our team will reply asap. 300 piece minimum, 2–4 weeks lead time on demand.",
+  alternates: { canonical: "/begin" },
 };
 
 export default function BeginPage() {

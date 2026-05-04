@@ -4,9 +4,10 @@ import { EQUIPMENT } from "@/lib/equipment";
 import "../house.css";
 
 export const metadata = {
-  title: "The Factory & Floor · Huamei",
+  title: "Factory & floor — four press floors across China",
   description:
     "Press floors across Henan, Zhejiang, Sichuan and Guizhou — 22,000 m² of foil, emboss, deboss, lamination and finishing under one roof.",
+  alternates: { canonical: "/house/factory" },
 };
 
 export default function FactoryPage() {

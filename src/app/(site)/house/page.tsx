@@ -2,9 +2,10 @@ import Link from "next/link";
 import "./house.css";
 
 export const metadata = {
-  title: "The House · Huamei",
+  title: "The House — four factories across China since 1992",
   description:
     "Press floors across Henan, Zhejiang, Sichuan and Guizhou, since 1992. 22,000 m², 3,000+ craftspeople. Founded by Sonia Sun.",
+  alternates: { canonical: "/house" },
 };
 
 export default function HousePage() {

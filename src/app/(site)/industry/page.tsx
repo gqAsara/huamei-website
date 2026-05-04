@@ -2,9 +2,10 @@ import Link from "next/link";
 import "./industry.css";
 
 export const metadata = {
-  title: "Industry · Huamei",
+  title: "By industry — cosmetic, spirits, gifting, wellness",
   description:
     "Four categories on file — cosmetic & skincare, wine spirits & tea, seasonal & gifting, wellness.",
+  alternates: { canonical: "/industry" },
 };
 
 export default function IndustryPage() {
