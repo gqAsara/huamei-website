@@ -74,9 +74,9 @@ export default function ImprintPage() {
             <span>Registration.</span>
             <span className="n">ii.</span>
           </h2>
-          <dl className="definition"><dt>Company no.</dt><dd>913100001137XXXXXX</dd></dl>
-          <dl className="definition"><dt>VAT / tax</dt><dd>3100001137XXXXXX</dd></dl>
-          <dl className="definition"><dt>ICP filing</dt><dd>豫ICP备 XXXXXXXX 号</dd></dl>
+          <dl className="definition"><dt>Company no.</dt><dd>Available on request</dd></dl>
+          <dl className="definition"><dt>VAT / tax</dt><dd>Available on request</dd></dl>
+          <dl className="definition"><dt>ICP filing</dt><dd>Available on request</dd></dl>
           <dl className="definition"><dt>Legal rep.</dt><dd>Sun, Sonia — Founder &amp; Director</dd></dl>
           <dl className="definition"><dt>Incorporated</dt><dd>Zhengzhou, Henan, 12 iii. 1992</dd></dl>
 
