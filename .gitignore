@@ -47,6 +47,12 @@ yarn-error.log*
 .seo/reports/activity.log.*.log
 .seo/reports/validation-failures.log
 
+# SEO discovery — internal source-of-truth; not for public repo
+# (contains client names, factory data, and supplier specifics that
+# need permission/sanitization before publication)
+.seo/reference/internal/
+.seo/reference/discovery-*.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
