@@ -33,3 +33,4 @@
 2026-05-04T23:43:00.000Z	site-engineer	publish	Pillar 1 LIVE at https://huamei.io/margin/custom-luxury-rigid-box-manufacturing — phase3Pillars.p1 → published; Vercel auto-deploy in flight
 2026-05-04T23:55:00.000Z	site-engineer	commit	PR #7 opened — move Sonia portrait from /house/people to /house/philosophy letter section (float-right inside hs-philosophy-letter-mark)
 2026-05-05T00:05:00.000Z	site-engineer	merge	PR #7 (portrait → letter section) merged; portrait now lives in "A letter from Sonia" block on /house/philosophy, removed from /house/people
+2026-05-05T00:25:00.000Z	site-engineer	merge	PR #8 (portrait tweaks + URL rename /margin → /blogs) merged; Pillar 1 now lives at huamei.io/blogs/custom-luxury-rigid-box-manufacturing; 301 redirects in place
