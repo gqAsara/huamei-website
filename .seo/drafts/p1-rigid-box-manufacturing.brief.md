@@ -9,7 +9,7 @@
 | Search intent | commercial (buyer evaluating manufacturers, not yet ready to RFQ) |
 | Word count | 1,500–1,800 |
 | Pillar parent | (this is the pillar — clusters underneath include /margin/magnetic-pull-force, /margin/greyboard-grades, /margin/rigid-box-tooling-amortization) |
-| Author | TODO — propose Sonia Sun (founder, named on /house/people, legal rep on /imprint). Confirm with George before writing the byline. |
+| Author | George Qiao, Founder, Huamei. **Prerequisite:** add George to `/house/people` before draft ships (Editor's hard rule #6 — bylines must be real people on /house/people). Sonia Sun is currently the only named person there. |
 | Schema | Article (NOT FAQPage; question H2s render as on-page Q&A only) |
 | Slug | /margin/custom-luxury-rigid-box-manufacturing |
 
@@ -54,7 +54,6 @@ Custom luxury rigid box manufacturing — what it actually means
 
 - Greyboard 1.5–3.0 mm rigid skeleton; coated and uncoated paper 120–400 gsm; book-cloth (Iris, Wibalin, Buckram); recycled and alt-fibre stocks (Grasshopper, Crush Citrus, hemp, bamboo); specialty stocks (translucent, metallic-core, seeded, hand-made).
 - Tie to "eighty papers on file" homepage stat.
-- One-line on FSC chain-of-custody **(TODO — pending founder data; replace with a placeholder or omit if F1 still blocked at draft time).**
 - Link to /craft (materials section), /craft/recycled.
 
 ### H2 — Surface treatments (120–180 words)
@@ -98,8 +97,7 @@ All confirmed in `.seo/SEO_CONTEXT.md` v3 (locked 2026-05-04):
 
 TODOs:
 
-- ⏳ FSC chain-of-custody status — blocked on Pillar 2 sustainability data; either omit or surface as TODO
-- ⏳ Author byline — confirm "Sonia Sun, Founder, 30+ years" or alternate
+- ⏳ Author byline tenure — George Qiao, Founder. Confirm "since 1992" tenure phrasing + 1–2-line bio for /house/people addition.
 
 ## External citations
 
@@ -127,9 +125,17 @@ Required minimum: 2 /craft pages + 1 /volumes case study. This brief targets:
 - **Answer (verbatim, 39 words):**
   > A custom luxury rigid box is built from greyboard wrapped in printed paper or cloth, decorated with foil or emboss, and finished with a magnetic or telescoping closure. Lead times: 7–10 days for samples, 15–20 days for production. Minimum 200 pieces.
 
-## Open questions for human
+## CTA at end of pillar
 
-1. **Byline:** Sonia Sun (founder, on /house/people) as the author, or someone else? She is the only named person currently on /house/people. If you'd like to be the byline (George Qiao), we need to add you to /house/people first.
-2. **FSC mention in materials section:** include a one-line "FSC chain-of-custody available — see /margin sustainability" placeholder, or omit until Pillar 2 lands?
-3. **Spirits roster on this pillar:** the marquee spirits cases are named in the case-study list (Wuliangye, Dukang, etc.). Do you want any of the 30+ baijiu names from the discovery list pulled forward, or keep this pillar focused on the /volumes-grandfathered set and let `/industry/spirits` carry the broader roster?
-4. **CTA wording at end:** standard "Pull a sample, send us a brief" with link to /begin, or something more specific to rigid boxes?
+Founder direction 2026-05-04: lead the buyer's-perspective verb. The pillar closes on a case-study row (Lancôme CNY, Estée Lauder Holiday, L'Oréal Gem, Wuliangye 68, Luoyang Dukang) followed by:
+
+- **Heading:** I want a box like this.
+- **Sub-copy:** Pick the volume closest to the construction you want, and tell us where it should go on. We'll pull a sample on the same stock and the same foil within five working days.
+- **Button:** Start a brief → `/begin` (with optional `?ref=<volume-slug>` query so the intake form pre-fills which case study inspired the request — Site Engineer to wire later).
+
+## Open questions for human (resolved 2026-05-04)
+
+1. ✅ Byline → George Qiao, Founder. Prerequisite: add to /house/people. Need 1–2 line bio + tenure phrasing.
+2. ✅ FSC mention → drop. Removed from materials section above.
+3. ✅ Spirits roster → keep /volumes-only on this pillar. /industry/spirits will carry the broader roster.
+4. ✅ CTA wording → "I want a box like this." See section above.
