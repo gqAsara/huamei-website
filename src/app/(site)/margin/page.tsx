@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./margin.css";
 
 export const metadata = {
-  title: "Blogs · Huamei",
+  title: "Margin — the Huamei journal of luxury packaging",
   description:
     "Notes from the press floor — production, people, customer success, sustainability and company news. Posted when we have something to say.",
+  alternates: { canonical: "/margin" },
 };
 
 type Post = { num: string; title: string; italic: string; when: string };
@@ -94,6 +97,12 @@ const SECTIONS: Section[] = [
 export default function MarginPage() {
   return (
     <main className="su-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Margin", path: "/margin" },
+        ])}
+      />
       {/* Masthead */}
       <section className="su-mast">
         <div>

@@ -1,15 +1,25 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
 
 export const metadata = {
-  title: "Our Philosophy · Huamei",
+  title: "Philosophy — a letter from Sonia Sun",
   description:
     "A letter from Sonia Sun, founder of Huamei, and the threshold — why we believe a box is a brand's first physical handshake.",
+  alternates: { canonical: "/house/philosophy" },
 };
 
 export default function PhilosophyPage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+          { name: "Philosophy", path: "/house/philosophy" },
+        ])}
+      />
       <header className="hs-subcover">
         <div className="kicker">
           <Link href="/house">← The House</Link>

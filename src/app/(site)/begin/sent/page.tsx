@@ -2,10 +2,11 @@ import Link from "next/link";
 import "./sent.css";
 
 export const metadata = {
-  title: "Brief received · Huamei",
+  title: "Brief received",
   description:
     "Your brief reached the Huamei studio. A founder-led reply lands within 48 hours, often sooner.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/begin/sent" },
 };
 
 export default function SentPage() {

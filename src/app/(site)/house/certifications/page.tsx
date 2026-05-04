@@ -1,17 +1,27 @@
 import Link from "next/link";
 import CertificationCarousel from "@/components/CertificationCarousel";
 import { CERTIFICATIONS } from "@/lib/certifications";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
 
 export const metadata = {
-  title: "Certifications · Huamei",
+  title: "Certifications — FSC, ISO 9001, ISO 14001, ISO 45001",
   description:
     "FSC, ISO 9001, ISO 14001, ISO 45001 and CE — the audited standards behind every Huamei project. Producing worldwide, sustainably, at the highest standards.",
+  alternates: { canonical: "/house/certifications" },
 };
 
 export default function CertificationsPage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+          { name: "Certifications", path: "/house/certifications" },
+        ])}
+      />
       <header className="hs-subcover">
         <div className="kicker">
           <Link href="/house">← The House</Link>

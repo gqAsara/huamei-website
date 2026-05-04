@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./craft.css";
 
 export const metadata = {
-  title: "Craft · Huamei",
+  title: "Craft — structures, surfaces & finishing",
   description:
     "Ninety-nine structures, seventeen foils, eighty papers on file. The full stack of decisions between brief and shelf.",
+  alternates: { canonical: "/craft" },
 };
 
 type Item = {
@@ -102,6 +105,12 @@ function Showcase({ items }: { items: Item[] }) {
 export default function CraftPage() {
   return (
     <main className="cr-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Craft", path: "/craft" },
+        ])}
+      />
       {/* Masthead */}
       <section className="cr-mast">
         <div className="ltop">

@@ -1,15 +1,24 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./industry.css";
 
 export const metadata = {
-  title: "Industry · Huamei",
+  title: "By industry — cosmetic, spirits, gifting, wellness",
   description:
     "Four categories on file — cosmetic & skincare, wine spirits & tea, seasonal & gifting, wellness.",
+  alternates: { canonical: "/industry" },
 };
 
 export default function IndustryPage() {
   return (
     <main className="in-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Industry", path: "/industry" },
+        ])}
+      />
       {/* Masthead */}
       <section className="in-mast">
         <div className="k">

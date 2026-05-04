@@ -1,15 +1,24 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./house.css";
 
 export const metadata = {
-  title: "The House · Huamei",
+  title: "The House — four factories across China since 1992",
   description:
     "Press floors across Henan, Zhejiang, Sichuan and Guizhou, since 1992. 22,000 m², 3,000+ craftspeople. Founded by Sonia Sun.",
+  alternates: { canonical: "/house" },
 };
 
 export default function HousePage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+        ])}
+      />
       {/* I. Index — links to /house/philosophy, /house/factory, /house/certifications */}
       <nav className="hs-index" aria-label="Inside the House">
         <Link href="/house/philosophy">

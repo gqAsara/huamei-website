@@ -1,15 +1,25 @@
 import Link from "next/link";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
 
 export const metadata = {
-  title: "People · Huamei",
+  title: "People — three thousand craftspeople since 1992",
   description:
     "More than three thousand people work at Huamei across four press floors. Founded by Sonia Sun in 1992.",
+  alternates: { canonical: "/house/people" },
 };
 
 export default function PeoplePage() {
   return (
     <main className="hs-wrap">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "The House", path: "/house" },
+          { name: "People", path: "/house/people" },
+        ])}
+      />
       <header className="hs-subcover">
         <div className="kicker">
           <Link href="/house">← The House</Link>
