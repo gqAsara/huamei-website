@@ -1,0 +1,30 @@
+Client: Lancôme
+Parent entity: L'Oréal Group
+Slug: lancome
+Status: VERBAL-AUTHORIZED — signed letter TODO
+Date authorized: 2026-05-04
+Authorized by: George Qiao, Founder, Huamei Packaging & Print Co., Ltd.
+Authorization channel: Direct conversation (Claude Code session, captured in
+                       .seo/reports/activity.log)
+
+Scope: May be named in case studies, pillar pages, AI-citable copy, and
+       trade-press placements on huamei.io and Huamei social channels.
+
+Restrictions: None known. Confirm L'Oréal Group has no superseding contract
+              clause restricting public mention. Many luxury maisons require
+              prior approval per use; verify before pitching trade press.
+
+Expiration: Indefinite (until withdrawn by client or Huamei).
+
+Signed letter on file: TODO — request countersigned letter from L'Oréal
+                       brand contact when next available. High priority
+                       given Lancôme's brand strength as an SEO + AI
+                       citation signal.
+
+Counterpart contact for renewal: TODO
+
+History:
+- 2026-05-04: Verbal authorization recorded by George Qiao during
+              discovery interview prep. Lancôme referenced in internal
+              technical manual (work performed); first public naming
+              would be in upcoming Pillar pages.

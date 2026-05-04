@@ -7,3 +7,8 @@
 2026-05-04T20:46:27.753Z	site-engineer	commit	PR #2 merged — Phase 1 commits 1, 2, 3, 5 shipped
 2026-05-04T20:50:37.182Z	site-engineer	commit	Phase 2 PR #3 opened — /llms.txt
 2026-05-04T21:19:12.269Z	site-engineer	discovery	Phase 0.5 discovery prefilled from internal manual; .seo/reference/internal/ + discovery-*.md gitignored
+2026-05-04T21:29:13.056Z	site-engineer	discovery	Added structure library: 14 families, 66 variants, 239 assets at .seo/reference/internal/structures/
+2026-05-04T21:34:35.281Z	site-engineer	discovery	Added price sheet 2026-04 to internal/; sanitized signals lifted into discovery doc — paper grades, FSC chain, 5 new client confirmations including Serenjoy USA
+2026-05-04T21:37:41.600Z	site-engineer	discovery	Recognized 13 cert scans + corporate registration already live on /house/certifications + /imprint; sections 4 + 5 + 8 updated
+2026-05-04T21:39:59.204Z	site-engineer	discovery	Confirmed Wuzhi as new Henan factory address; four-factory narrative intact
+2026-05-04T21:42:12.709Z	human	permission	Verbal-authorized: Yue-Sai, Lancôme, Serenjoy Box LLC — see .seo/permissions/{yue-sai,lancome,serenjoy}.txt
