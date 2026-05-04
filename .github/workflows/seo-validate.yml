@@ -1,0 +1,57 @@
+name: SEO validate
+
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'lib/schema/**'
+      - 'public/llms.txt'
+      - 'public/robots.txt'
+      - '.seo/templates/schema/**'
+      - '.seo/state.json'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate-jsonld:
+    name: JSON-LD validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Run schema validator
+        run: node scripts/validate-schema.mjs
+
+  validate-state:
+    name: state.json schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: npm install --no-save ajv@8 ajv-formats@3
+      - run: node scripts/validate-state-schema.mjs
+
+  links:
+    name: Internal link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: node scripts/check-internal-links.mjs || true
+
+  secret-scan:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

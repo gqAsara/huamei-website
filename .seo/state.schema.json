@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Huamei SEO state",
+  "type": "object",
+  "required": ["version", "currentPhase", "phaseName", "phase0Tasks", "phase1Commits", "phase3Pillars", "metrics"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "integer", "minimum": 1 },
+    "currentPhase": { "type": "integer", "minimum": 0, "maximum": 4 },
+    "phaseName": { "type": "string" },
+    "lastShipped": { "type": ["string", "null"] },
+    "nextAction": { "type": ["string", "null"] },
+    "lastUpdated": { "type": ["string", "null"], "format": "date-time" },
+    "phase0Tasks": {
+      "type": "object",
+      "patternProperties": {
+        ".*": { "enum": ["not_started", "in_progress", "blocked", "done"] }
+      }
+    },
+    "phase05Discovery": {
+      "type": "object",
+      "properties": {
+        "interviewScheduled": { "type": ["string", "null"], "format": "date" },
+        "interviewCompleted": { "type": ["string", "null"], "format": "date" },
+        "dataPointsCollected": { "type": "integer", "minimum": 0 },
+        "blockers": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "phase1Commits": {
+      "type": "object",
+      "patternProperties": {
+        ".*": { "enum": ["not_started", "in_progress", "blocked", "done"] }
+      }
+    },
+    "phase3Pillars": {
+      "type": "object",
+      "patternProperties": {
+        ".*": { "enum": ["not_started", "in_progress", "blocked", "done", "published"] }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "currentGeoScore": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+        "currentGeoScoreDate": { "type": ["string", "null"], "format": "date" },
+        "indexedPages": { "type": ["integer", "null"], "minimum": 0 },
+        "brandedImpressionsLast28d": { "type": ["integer", "null"], "minimum": 0 },
+        "nonBrandedImpressionsLast28d": { "type": ["integer", "null"], "minimum": 0 },
+        "top10Keywords": { "type": ["integer", "null"], "minimum": 0 },
+        "top10KeywordsDate": { "type": ["string", "null"], "format": "date" },
+        "mentionCount": { "type": "integer", "minimum": 0 },
+        "lcpP75TopRoutes": { "type": ["number", "null"], "minimum": 0 },
+        "rfqSubmissionsLast28d": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "openIssues": { "type": "array", "items": { "type": "string" } }
+  }
+}

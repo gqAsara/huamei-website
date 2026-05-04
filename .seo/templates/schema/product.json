@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "<<< product name >>>",
+  "description": "<<< description >>>",
+  "image": "<<< image url >>>",
+  "brand": { "@id": "https://huamei.io/#org" },
+  "manufacturer": { "@id": "https://huamei.io/#org" },
+  "category": "Custom Luxury Packaging",
+  "material": "<<< materials list >>>",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/MadeToOrder",
+    "seller": { "@id": "https://huamei.io/#org" },
+    "url": "https://huamei.io/begin",
+    "priceCurrency": "USD",
+    "priceSpecification": { "@type": "PriceSpecification", "valueAddedTaxIncluded": false }
+  }
+}

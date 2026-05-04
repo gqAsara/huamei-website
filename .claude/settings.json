@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git switch:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run validate:schema)",
+      "Bash(node scripts/validate-schema.mjs:*)",
+      "Bash(node scripts/validate-state-schema.mjs:*)",
+      "Bash(node scripts/dedup-mention.mjs:*)",
+      "Bash(node scripts/activity-log.mjs:*)",
+      "Bash(node scripts/check-internal-links.mjs:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git merge:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(curl:*)",
+      "Bash(npm publish:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "node scripts/pre-write-guard.mjs" },
+          { "type": "command", "command": "node scripts/secret-scan.mjs" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "node scripts/validate-schema.mjs --staged-only" },
+          { "type": "command", "command": "mkdir -p .seo && touch .seo/.last-tool-use" }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "node scripts/post-bash-indexnow.mjs" },
+          { "type": "command", "command": "mkdir -p .seo && touch .seo/.last-tool-use" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "node scripts/state-integrity-check.mjs" }
+        ]
+      }
+    ]
+  }
+}

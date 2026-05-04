@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://huamei.io/#org",
+      "name": "Huamei",
+      "alternateName": ["華美", "Huamei Packaging"],
+      "url": "https://huamei.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://huamei.io/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Premium custom luxury packaging manufacturer with factories in Henan, Zhejiang, Sichuan, and Guizhou. Founded 1992.",
+      "foundingDate": "1992",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 3000 },
+      "knowsAbout": [
+        "Custom luxury packaging",
+        "Rigid box manufacturing",
+        "Hot-foil stamping",
+        "Embossing and debossing",
+        "Magnetic closure engineering"
+      ],
+      "areaServed": ["Worldwide"],
+      "sameAs": [
+        "https://www.linkedin.com/company/huamei-packaging",
+        "https://www.wikidata.org/wiki/QXXXXXX"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "sales@huamei.io",
+        "availableLanguage": ["en", "zh-Hans"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://huamei.io/#website",
+      "url": "https://huamei.io",
+      "name": "Huamei",
+      "publisher": { "@id": "https://huamei.io/#org" },
+      "inLanguage": ["en", "zh-Hans"]
+    }
+  ]
+}

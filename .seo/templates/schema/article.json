@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "<<< title >>>",
+  "description": "<<< description >>>",
+  "image": ["<<< hero src >>>"],
+  "datePublished": "<<< ISO 8601 >>>",
+  "dateModified": "<<< ISO 8601 >>>",
+  "author": {
+    "@type": "Person",
+    "name": "<<< author name >>>",
+    "jobTitle": "<<< author role >>>",
+    "url": "https://huamei.io<<< author url >>>"
+  },
+  "publisher": { "@id": "https://huamei.io/#org" },
+  "mainEntityOfPage": "https://huamei.io<<< canonical >>>",
+  "articleSection": "<<< section >>>",
+  "wordCount": 0,
+  "inLanguage": "<<< en | zh-Hans >>>"
+}

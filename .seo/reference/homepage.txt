@@ -1,0 +1,5 @@
+# Mirror of huamei.io homepage copy.
+# Populate by running:
+#   curl -sL https://huamei.io | node -e 'const s=require("fs").readFileSync(0,"utf8");/* extract visible text */'
+# or by copy-paste from the rendered page.
+# Editor reads this for cold-start voice reference.

@@ -36,8 +36,16 @@ yarn-error.log*
 # vercel
 .vercel
 
-# claude code local config / skills
-.claude
+# claude code — local state only; commit agents/commands/settings
+.claude/sessions/
+.claude/.cache/
+.claude/skills/
+
+# SEO bundle ephemeral state
+.seo/.last-tool-use
+.seo/reports/screenshots/
+.seo/reports/activity.log.*.log
+.seo/reports/validation-failures.log
 
 # typescript
 *.tsbuildinfo

@@ -1,0 +1,48 @@
+{
+  "$schema": ".seo/state.schema.json",
+  "version": 3,
+  "currentPhase": 0,
+  "phaseName": "Measurement Foundation",
+  "lastShipped": null,
+  "nextAction": "Verify GSC Domain property, install GA4 via @next/third-parties, verify Bing Webmaster, generate IndexNow key. See playbook \u00a75.",
+  "lastUpdated": null,
+  "phase0Tasks": {
+    "gsc": "not_started",
+    "ga4": "not_started",
+    "bing": "not_started",
+    "indexnow": "not_started",
+    "baselineGeoScore": "not_started"
+  },
+  "phase05Discovery": {
+    "interviewScheduled": null,
+    "interviewCompleted": null,
+    "dataPointsCollected": 0,
+    "blockers": []
+  },
+  "phase1Commits": {
+    "titles": "not_started",
+    "canonicals": "not_started",
+    "jsonLd": "not_started",
+    "hreflang": "not_started",
+    "robotsAi": "not_started"
+  },
+  "phase3Pillars": {
+    "p1_rigid_box_manufacturing": "not_started",
+    "p2_hot_foil_emboss_finishing": "not_started",
+    "p3_sustainable_luxury_packaging": "not_started",
+    "p4_china_packaging_manufacturer": "not_started"
+  },
+  "metrics": {
+    "currentGeoScore": null,
+    "currentGeoScoreDate": null,
+    "indexedPages": null,
+    "brandedImpressionsLast28d": null,
+    "nonBrandedImpressionsLast28d": null,
+    "top10Keywords": null,
+    "top10KeywordsDate": null,
+    "mentionCount": 0,
+    "lcpP75TopRoutes": null,
+    "rfqSubmissionsLast28d": null
+  },
+  "openIssues": []
+}

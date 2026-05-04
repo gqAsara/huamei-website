@@ -1,0 +1,40 @@
+# CODEOWNERS — review routing for huamei.io
+#
+# !!! EDIT BEFORE USE !!!
+# The team handles below (@huamei/seo, @huamei/brand, @huamei/translator,
+# @huamei/repo-owners) are PLACEHOLDERS. Replace with your real GitHub
+# org and team handles before this file does anything useful.
+#
+# How to find your real teams:
+#   gh api orgs/<your-org>/teams | jq -r '.[].slug'
+#
+# CODEOWNERS only enforces if branch protection is enabled and "Require
+# review from Code Owners" is checked in your repo settings.
+
+# Default — all PRs reviewed by repo owner
+*                               @huamei/repo-owners
+
+# SEO-critical paths
+/app/sitemap.ts                 @huamei/seo @huamei/repo-owners
+/app/robots.ts                  @huamei/seo @huamei/repo-owners
+/lib/schema/                    @huamei/seo @huamei/repo-owners
+/public/llms.txt                @huamei/seo @huamei/repo-owners
+/public/robots.txt              @huamei/seo @huamei/repo-owners
+/next.config.js                 @huamei/seo @huamei/repo-owners
+/.seo/                          @huamei/seo @huamei/repo-owners
+/CLAUDE.md                      @huamei/seo @huamei/repo-owners
+/.claude/agents/                @huamei/seo @huamei/repo-owners
+/.claude/commands/              @huamei/seo @huamei/repo-owners
+
+# Brand voice — Editor + brand lead
+/content/                       @huamei/brand @huamei/seo
+
+# Translations — Translator + brand lead (zh-Hans)
+/content/zh-Hans/               @huamei/translator @huamei/brand
+
+# Hooks and CI
+/.github/                       @huamei/repo-owners
+/scripts/                       @huamei/seo @huamei/repo-owners
+
+# Permissions — write-once, repo owner only
+/.seo/permissions/              @huamei/repo-owners
