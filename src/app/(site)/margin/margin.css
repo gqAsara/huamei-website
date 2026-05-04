@@ -163,6 +163,19 @@
   font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-4);
 }
+.mg-forth-row--live { display: block; padding: 0; }
+.mg-forth-row--live .mg-forth-link {
+  display: grid; grid-template-columns: 80px 1fr auto;
+  align-items: baseline; gap: 28px;
+  padding: 22px 0;
+  text-decoration: none; color: inherit;
+  transition: background var(--dur) var(--ease-paper);
+}
+.mg-forth-row--live .mg-forth-link:hover { background: var(--paper-2); }
+.mg-forth-row--live .mg-forth-link:hover .ttl { color: var(--ink); }
+.mg-forth-row--live .ttl { color: var(--ink-2); }
+.mg-forth-row--live .ttl em { color: var(--foil-gold-2); }
+.mg-forth-row--live .when { color: var(--foil-gold); }
 .mg-forth-foot {
   font-family: var(--font-body); font-style: italic; font-size: 14px;
   color: var(--ink-3); margin: 24px 0 0;
