@@ -26,3 +26,4 @@
 2026-05-04T22:50:00.000Z	site-engineer	asset	Saved Sonia Sun portrait to public/photos/people/sonia-sun.jpg (provided by founder); brief reverted to Sonia as Pillar 1 byline per founder decision
 2026-05-04T22:55:00.000Z	site-engineer	commit	PR #5 opened — Sonia Sun portrait wired into /house/people (figure + caption, native aspect ratio)
 2026-05-04T22:55:01.000Z	site-engineer	delegate	Editor agent dispatched (background) for Pillar 1 prose draft from .seo/drafts/p1-rigid-box-manufacturing.brief.md → content/margin/custom-luxury-rigid-box-manufacturing.md
+2026-05-04T23:05:00.000Z	editor	draft	content/margin/custom-luxury-rigid-box-manufacturing.md
