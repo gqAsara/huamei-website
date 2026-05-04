@@ -421,7 +421,7 @@ export default function Home() {
               <span>S U S T A I N A B I L I T Y</span>
               <span>N E W S</span>
             </div>
-            <Link className="link" href="/margin" style={{ marginTop: 18, display: "inline-block" }}>
+            <Link className="link" href="/blogs" style={{ marginTop: 18, display: "inline-block" }}>
               Read the blogs →
             </Link>
           </div>

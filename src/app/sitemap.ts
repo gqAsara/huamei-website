@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { VOLUMES } from "@/lib/volumes";
 import { navCategories } from "@/lib/nav";
-import { getAllMarginPosts } from "@/lib/margin";
+import { getAllBlogPosts } from "@/lib/blogs";
 
 const SITE = "https://huamei.io";
 
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/craft",
     "/industry",
-    "/margin",
+    "/blogs",
     "/house",
     "/house/philosophy",
     "/house/factory",
@@ -53,8 +53,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),
-    ...getAllMarginPosts().map((p) => ({
-      url: `${SITE}/margin/${p.slug}`,
+    ...getAllBlogPosts().map((p) => ({
+      url: `${SITE}/blogs/${p.slug}`,
       lastModified: new Date(p.updatedAt),
       changeFrequency: "monthly" as const,
       priority: 0.8,

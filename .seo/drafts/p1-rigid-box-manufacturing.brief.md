@@ -8,10 +8,10 @@
 | Secondary keywords | luxury rigid box, custom rigid box manufacturer, China rigid box factory, magnetic-flap rigid box, hand-assembled luxury packaging |
 | Search intent | commercial (buyer evaluating manufacturers, not yet ready to RFQ) |
 | Word count | 1,500–1,800 |
-| Pillar parent | (this is the pillar — clusters underneath include /margin/magnetic-pull-force, /margin/greyboard-grades, /margin/rigid-box-tooling-amortization) |
+| Pillar parent | (this is the pillar — clusters underneath include /blogs/magnetic-pull-force, /blogs/greyboard-grades, /blogs/rigid-box-tooling-amortization) |
 | Author | Sonia Sun, Founder, Huamei (since 1992). Already on `/house/people` and `/imprint`. Founder direction 2026-05-04: Sonia stays the sole named person on /house/people for now. |
 | Schema | Article (NOT FAQPage; question H2s render as on-page Q&A only) |
-| Slug | /margin/custom-luxury-rigid-box-manufacturing |
+| Slug | /blogs/custom-luxury-rigid-box-manufacturing |
 
 ## H1
 

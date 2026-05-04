@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getMarginPost, getAllMarginSlugs } from "@/lib/margin";
+import { getBlogPost, getAllBlogSlugs } from "@/lib/blogs";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import { articleGraph } from "@/lib/schema/article";
 import "./post.css";
 
 export async function generateStaticParams() {
-  return getAllMarginSlugs().map((slug) => ({ slug }));
+  return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -17,12 +17,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getMarginPost(slug);
+  const post = getBlogPost(slug);
   if (!post) return { title: "Not found" };
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `/margin/${slug}` },
+    alternates: { canonical: `/blogs/${slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -43,19 +43,19 @@ function formatDate(iso: string): string {
   });
 }
 
-export default async function MarginPostPage({
+export default async function BlogPostPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getMarginPost(slug);
+  const post = getBlogPost(slug);
   if (!post) notFound();
 
   const crumbs = breadcrumbList([
     { name: "Home", path: "/" },
-    { name: "Margin", path: "/margin" },
-    { name: post.title, path: `/margin/${slug}` },
+    { name: "Blogs", path: "/blogs" },
+    { name: post.title, path: `/blogs/${slug}` },
   ]);
 
   return (
@@ -64,12 +64,12 @@ export default async function MarginPostPage({
       <JsonLd data={articleGraph(post)} />
 
       <div className="mp-back">
-        <Link href="/margin">← Return to Margin</Link>
+        <Link href="/blogs">← Return to Blogs</Link>
       </div>
 
       <article className="mp-article">
         <header className="mp-head">
-          <div className="mp-kicker">Margin · the Huamei journal</div>
+          <div className="mp-kicker">Blogs · the Huamei journal</div>
           <h1 className="mp-h1">{post.title}</h1>
           <div className="mp-byline">
             <span className="by">

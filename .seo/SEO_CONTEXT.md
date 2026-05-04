@@ -75,7 +75,7 @@ Two ways a client can be named publicly. Editor agent must use both:
 
 1. **Grandfathered via /volumes** — every client in `src/lib/volumes.ts`
    is already on the live site and may be named freely in pillar pages,
-   /margin posts, and trade-press copy. Current /volumes roster includes
+   /blogs posts, and trade-press copy. Current /volumes roster includes
    Lancôme Paris, Estée Lauder, L'Oréal Paris, Wuliangye, Yangshao,
    Luoyang Dukang, Hongxing / Red Star Erguotou, Hetao Wang, Shede,
    Danquan, Zhonghua, Taozui, Tian An Men Jiu, T2 True Brews, DEEPURE,
@@ -162,8 +162,8 @@ plausibly true, it does not belong in a Huamei article. Cut it.
 
 ## Cold-start exception
 
-On a brand-new site with fewer than three /margin posts, Editor cannot
-fulfill its standard rule of "read three existing /margin posts before
+On a brand-new site with fewer than three /blogs posts, Editor cannot
+fulfill its standard rule of "read three existing /blogs posts before
 drafting." During cold-start, Editor reads instead:
 
 1. The homepage copy (mirrored at `.seo/reference/homepage.txt` after
@@ -171,7 +171,7 @@ drafting." During cold-start, Editor reads instead:
 2. /house/philosophy.
 3. Any existing /volumes/* case studies (visible in the sitemap).
 
-Cold-start ends when three /margin posts exist.
+Cold-start ends when three /blogs posts exist.
 
 ## How the agent team is organized
 
@@ -209,7 +209,7 @@ reads `.seo/state.json` and proposes the next move.
    not diverge from reality.
 3. **Append a decision record** to `.seo/decisions/` any time you choose
    one option over another that the playbook treats as a real choice.
-4. **Read existing /margin posts before drafting.** If fewer than three
+4. **Read existing /blogs posts before drafting.** If fewer than three
    exist, follow the Cold-start exception above.
 5. **Validate every JSON-LD payload** against schema.org and Google's Rich
    Results Test before requesting review. The pre-commit hook enforces this;
@@ -225,7 +225,9 @@ reads `.seo/state.json` and proposes the next move.
 
 - Routes live in `src/app/(site)/`. The route group `(site)` does not appear
   in URLs; it groups pages that share the marketing layout. New pillar pages
-  go under `src/app/(site)/margin/[slug]/page.tsx`.
+  go under `src/app/(site)/blogs/[slug]/page.tsx`. (URL-renamed from
+  `/margin` to `/blogs` 2026-05-04 — old URLs 301 to new in
+  next.config.ts.)
 - JSON-LD lives in `src/lib/schema/` (directory does not yet exist; Phase 1
   Commit #3 creates it).
 - Per-page metadata uses Next.js `Metadata` API. See
