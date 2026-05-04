@@ -3,8 +3,8 @@ name: SEO validate
 on:
   pull_request:
     paths:
-      - 'app/**'
-      - 'lib/schema/**'
+      - 'src/app/**'
+      - 'src/lib/schema/**'
       - 'public/llms.txt'
       - 'public/robots.txt'
       - '.seo/templates/schema/**'
