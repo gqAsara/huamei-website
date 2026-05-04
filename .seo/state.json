@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/4",
-  "nextAction": "PR #3 (/llms.txt) and PR #4 (honesty fixes) both merged 2026-05-04. Pillar 1 brief drafted at .seo/drafts/p1-rigid-box-manufacturing.brief.md. Next: (1) get founder answers on 4 open brief questions (byline, FSC mention, spirits roster scope, CTA wording), (2) hand brief to Editor agent for full prose draft, (3) Editor returns markdown at content/margin/custom-luxury-rigid-box-manufacturing.md, (4) Site Engineer wires up /margin/[slug] route + Article schema + dateModified.",
-  "lastUpdated": "2026-05-04T22:30:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/6",
+  "nextAction": "Pillar 1 LIVE at https://huamei.io/margin/custom-luxury-rigid-box-manufacturing as of 2026-05-04. PR #5 (Sonia portrait) and PR #6 (margin route + Pillar 1 publishable) both merged. Next: (1) ping IndexNow with the new URL (needs explicit founder OK per SEO_CONTEXT rule #1), (2) provide hero photo for the pillar (1600×900) when ready, (3) continue Phase 3 with Pillar 4 (Working with a Chinese manufacturer) — unblocked by Serenjoy AUTHORIZED. Pillars 2 (sustainability) + 3 still blocked.",
+  "lastUpdated": "2026-05-04T23:40:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -30,7 +30,7 @@
     "robotsAi": "done"
   },
   "phase3Pillars": {
-    "p1_rigid_box_manufacturing": "in_progress",
+    "p1_rigid_box_manufacturing": "published",
     "p2_hot_foil_emboss_finishing": "blocked",
     "p3_sustainable_luxury_packaging": "blocked",
     "p4_china_packaging_manufacturer": "blocked"
@@ -48,7 +48,8 @@
     "rfqSubmissionsLast28d": null
   },
   "openIssues": [
-    "Pillar 1 brief has 4 open questions for founder (byline, FSC mention, spirits roster scope, CTA wording) — blocking Editor agent draft",
+    "Pillar 1 hero image (1600×900) not yet on disk at /public/margin/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder to provide",
+    "IndexNow ping for new Pillar 1 URL pending explicit founder authorization per SEO_CONTEXT rule #1",
     "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
