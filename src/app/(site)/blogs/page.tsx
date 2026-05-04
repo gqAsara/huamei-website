@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
-import "./margin.css";
+import "./blogs.css";
 
 export const metadata = {
-  title: "Margin — the Huamei journal of luxury packaging",
+  title: "Blogs — the Huamei journal of luxury packaging",
   description:
     "Notes from the press floor — production, people, customer success, sustainability and company news. Posted when we have something to say.",
-  alternates: { canonical: "/margin" },
+  alternates: { canonical: "/blogs" },
 };
 
 type Post = { num: string; title: string; italic: string; when: string; href?: string };
@@ -31,7 +31,7 @@ const SECTIONS: Section[] = [
     intro:
       "Notes from the press floor — the materials we trust, the corners we won't cut, and the techniques we keep coming back to.",
     posts: [
-      { num: "i.",   title: "Custom luxury rigid box manufacturing — ", italic: "what it actually means.", when: "May 2026", href: "/margin/custom-luxury-rigid-box-manufacturing" },
+      { num: "i.",   title: "Custom luxury rigid box manufacturing — ", italic: "what it actually means.", when: "May 2026", href: "/blogs/custom-luxury-rigid-box-manufacturing" },
       { num: "ii.",  title: "Magnesium etched, ",      italic: "how a foil plate is born.",        when: "In preparation" },
       { num: "iii.", title: "A morning at the ",       italic: "Yangshao kiln.",                   when: "In preparation" },
       { num: "iv.",  title: "The pink we couldn't ",   italic: "match the first time.",            when: "In preparation" },
@@ -95,13 +95,13 @@ const SECTIONS: Section[] = [
   },
 ];
 
-export default function MarginPage() {
+export default function BlogsPage() {
   return (
     <main className="su-wrap">
       <JsonLd
         data={breadcrumbList([
           { name: "Home", path: "/" },
-          { name: "Margin", path: "/margin" },
+          { name: "Blogs", path: "/blogs" },
         ])}
       />
       {/* Masthead */}

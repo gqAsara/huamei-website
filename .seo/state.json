@@ -4,7 +4,7 @@
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
   "lastShipped": "https://github.com/gqAsara/huamei-website/pull/6",
-  "nextAction": "Pillar 1 LIVE at https://huamei.io/margin/custom-luxury-rigid-box-manufacturing as of 2026-05-04. PR #5 (Sonia portrait) and PR #6 (margin route + Pillar 1 publishable) both merged. Next: (1) ping IndexNow with the new URL (needs explicit founder OK per SEO_CONTEXT rule #1), (2) provide hero photo for the pillar (1600×900) when ready, (3) continue Phase 3 with Pillar 4 (Working with a Chinese manufacturer) — unblocked by Serenjoy AUTHORIZED. Pillars 2 (sustainability) + 3 still blocked.",
+  "nextAction": "Pillar 1 LIVE at https://huamei.io/blogs/custom-luxury-rigid-box-manufacturing as of 2026-05-04 (URL renamed from /margin → /blogs same day; 301 redirects in next.config.ts). PR #5/6/7/8 all merged or in flight. Next: (1) ping IndexNow with new /blogs URL once renamed PR is live (needs explicit founder OK), (2) wire founder-provided hero image for the pillar (1600×900), (3) continue Phase 3 with Pillar 4 (Working with a Chinese manufacturer) — unblocked by Serenjoy AUTHORIZED.",
   "lastUpdated": "2026-05-04T23:40:00Z",
   "phase0Tasks": {
     "gsc": "done",
@@ -48,7 +48,7 @@
     "rfqSubmissionsLast28d": null
   },
   "openIssues": [
-    "Pillar 1 hero image (1600×900) not yet on disk at /public/margin/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder to provide",
+    "Pillar 1 hero image (1600×900) not yet on disk at /public/blogs/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder shared a tea-box photo 2026-05-04 but the screenshot tmp path was wiped before save; founder to re-upload to ~/Desktop or ~/Downloads",
     "IndexNow ping for new Pillar 1 URL pending explicit founder authorization per SEO_CONTEXT rule #1",
     "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",

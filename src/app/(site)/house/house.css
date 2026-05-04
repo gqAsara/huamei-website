@@ -545,8 +545,8 @@
    Floated right so the letter prose flows around it like a printed letter. */
 .hs-letter-portrait {
   float: right;
-  margin: 4px 0 16px 28px;
-  max-width: 200px;
+  margin: 4px 0 16px 32px;
+  max-width: 240px;
   shape-outside: inset(0 round 2px);
 }
 .hs-letter-portrait .img {

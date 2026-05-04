@@ -41,10 +41,10 @@ export default function PhilosophyPage() {
                 src="/photos/people/sonia-sun.jpg"
                 alt="Sonia Sun, Founder of Huamei"
                 fill
-                sizes="(max-width: 720px) 60vw, 200px"
+                sizes="(max-width: 720px) 70vw, 240px"
               />
             </div>
-            <figcaption>Sonia Sun &middot; 1992</figcaption>
+            <figcaption>Sonia Sun</figcaption>
           </figure>
           <p>
             I started Huamei in <em>one small room,</em> in 1992. There were four

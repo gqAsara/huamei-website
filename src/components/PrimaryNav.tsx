@@ -156,7 +156,7 @@ export function PrimaryNav() {
 function activeKeyFor(pathname: string): string | null {
   if (pathname.startsWith("/craft")) return "craft";
   if (pathname.startsWith("/industry")) return "industry";
-  if (pathname.startsWith("/margin")) return "margin";
+  if (pathname.startsWith("/blogs")) return "blogs";
   if (pathname.startsWith("/house")) return "house";
   if (pathname.startsWith("/volumes")) return "volumes";
   return null;

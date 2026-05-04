@@ -104,9 +104,9 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    key: "margin",
+    key: "blogs",
     label: "Blogs",
-    href: "/margin",
+    href: "/blogs",
   },
   {
     key: "house",

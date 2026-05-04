@@ -1,9 +1,9 @@
-import type { MarginPost } from "@/lib/margin";
+import type { BlogPost } from "@/lib/blogs";
 
 const SITE = "https://huamei.io";
 
-export function articleGraph(post: MarginPost) {
-  const url = `${SITE}/margin/${post.slug}`;
+export function articleGraph(post: BlogPost) {
+  const url = `${SITE}/blogs/${post.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
