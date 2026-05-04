@@ -8,9 +8,19 @@ import { navCategories, type NavCategory } from "@/lib/nav";
 export function PrimaryNav() {
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [lastPath, setLastPath] = useState<string | null>(null);
   const navRef = useRef<HTMLUListElement>(null);
   const pathname = usePathname();
   const activeKey = activeKeyFor(pathname);
+
+  // Close drawer/menus on route change — done during render so React batches
+  // it into the same commit, instead of triggering a cascading re-render via
+  // setState-in-useEffect (which the lint rule rightly flags).
+  if (pathname !== lastPath) {
+    setLastPath(pathname);
+    if (drawerOpen) setDrawerOpen(false);
+    if (openKey) setOpenKey(null);
+  }
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -30,12 +40,6 @@ export function PrimaryNav() {
       document.removeEventListener("keydown", onKey);
     };
   }, []);
-
-  // Close drawer on route change
-  useEffect(() => {
-    setDrawerOpen(false);
-    setOpenKey(null);
-  }, [pathname]);
 
   // Lock body scroll when drawer is open
   useEffect(() => {

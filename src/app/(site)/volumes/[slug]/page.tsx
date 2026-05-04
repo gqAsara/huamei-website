@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCase, getVolumeNeighbours } from "@/lib/cases";
@@ -59,7 +60,13 @@ export default async function CasePage({
             <CaseCarousel photos={vol!.photos} alt={vol!.name} />
           ) : (
             <section className="cs-hero">
-              <img src={vol!.cover} alt={vol!.name} />
+              <Image
+                src={vol!.cover}
+                alt={vol!.name}
+                fill
+                sizes="(max-width: 760px) 100vw, 1200px"
+                priority
+              />
             </section>
           )}
           <div className="cs-stub">
@@ -111,7 +118,13 @@ export default async function CasePage({
 
         {/* Hero */}
         <section className="cs-hero">
-          <img src={c.hero} alt={c.name} />
+          <Image
+            src={c.hero}
+            alt={c.name}
+            fill
+            sizes="(max-width: 760px) 100vw, 1200px"
+            priority
+          />
         </section>
 
         {/* Colophon ledger */}

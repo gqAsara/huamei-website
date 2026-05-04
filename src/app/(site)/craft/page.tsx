@@ -262,7 +262,7 @@ export default function CraftPage() {
               <span className="rn">III.</span>
             </div>
             <div className="meta"><span>Cosmetics</span><span>2024</span></div>
-            <h4>L'Oréal Gem</h4>
+            <h4>L&rsquo;Oréal Gem</h4>
             <div className="tag">Faceted &middot; Bespoke</div>
           </Link>
         </div>

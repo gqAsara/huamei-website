@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 export function CaseCarousel({ photos, alt }: { photos: string[]; alt?: string }) {
@@ -20,10 +21,13 @@ export function CaseCarousel({ photos, alt }: { photos: string[]; alt?: string }
 
   return (
     <section className="cs-carousel" aria-label={alt ? `${alt} — photo carousel` : "Photo carousel"}>
-      <img
+      <Image
         className="cs-carousel-frame"
         src={photos[i]}
         alt={`${alt ?? "Photo"} ${i + 1} of ${n}`}
+        fill
+        sizes="(max-width: 760px) 100vw, 1200px"
+        priority={i === 0}
       />
       {n > 1 ? (
         <>
