@@ -27,3 +27,4 @@
 2026-05-04T22:55:00.000Z	site-engineer	commit	PR #5 opened — Sonia Sun portrait wired into /house/people (figure + caption, native aspect ratio)
 2026-05-04T22:55:01.000Z	site-engineer	delegate	Editor agent dispatched (background) for Pillar 1 prose draft from .seo/drafts/p1-rigid-box-manufacturing.brief.md → content/margin/custom-luxury-rigid-box-manufacturing.md
 2026-05-04T23:05:00.000Z	editor	draft	content/margin/custom-luxury-rigid-box-manufacturing.md
+2026-05-04T23:30:00.000Z	site-engineer	commit	PR #6 opened — /margin/[slug] route handler + lib/margin + Article JSON-LD; Pillar 1 publishes after merge
