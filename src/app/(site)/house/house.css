@@ -540,6 +540,22 @@
   color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
 }
 .hs-people .copy p em { font-style: italic; color: var(--foil-gold-2); }
+.hs-portrait { margin: 4px 0 22px; max-width: 280px; }
+.hs-portrait .img {
+  position: relative;
+  aspect-ratio: 1079 / 1441;
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--ink-7);
+}
+.hs-portrait .img img { object-fit: cover; }
+.hs-portrait figcaption {
+  margin-top: 10px;
+  font-family: var(--font-label); font-size: 10px;
+  letter-spacing: .26em; text-transform: uppercase;
+  color: var(--ink-3);
+}
 .hs-people .roster {
   display: grid; grid-template-columns: 1fr;
   border-top: .5px solid var(--rule-soft);

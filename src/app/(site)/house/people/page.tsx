@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
@@ -45,6 +46,17 @@ export default function PeoplePage() {
             Sichuan trained the senior finisher in Guizhou. The work passes hand to
             hand, the way it always has.
           </p>
+          <figure className="hs-portrait">
+            <div className="img">
+              <Image
+                src="/photos/people/sonia-sun.jpg"
+                alt="Sonia Sun, Founder of Huamei"
+                fill
+                sizes="(max-width: 720px) 60vw, 280px"
+              />
+            </div>
+            <figcaption>Sonia Sun &middot; Founder &middot; 1992</figcaption>
+          </figure>
           <p>
             The house is led by <em>Sonia Sun</em>, who founded Huamei in 1992.
             Every project goes past her desk before it goes to press.
