@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/2",
-  "nextAction": "Discovery library locked (2026-05-04). Founder approvals captured: MOQ public floor 200+, Heidelberg+KBA equipment, lead times 7-10/15-20d, magnet 6-50g@2800G, /volumes-grandfathered client roster + blanket discovery authorization. Queued (in order): (1) merge PR #3 /llms.txt, (2) ship hot-foil correction PR — drop Kurz/Crown supplier name from craft/page.tsx + topics.ts (factually wrong; actual suppliers Chinese), (3) imprint XXXXXX placeholder fix — replace 3 fields with 'Available on request', (4) begin Pillar 1 outline (Custom Luxury Rigid Box Manufacturing).",
-  "lastUpdated": "2026-05-04T22:00:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/4",
+  "nextAction": "PR #3 (/llms.txt) and PR #4 (honesty fixes) both merged 2026-05-04. Pillar 1 brief drafted at .seo/drafts/p1-rigid-box-manufacturing.brief.md. Next: (1) get founder answers on 4 open brief questions (byline, FSC mention, spirits roster scope, CTA wording), (2) hand brief to Editor agent for full prose draft, (3) Editor returns markdown at content/margin/custom-luxury-rigid-box-manufacturing.md, (4) Site Engineer wires up /margin/[slug] route + Article schema + dateModified.",
+  "lastUpdated": "2026-05-04T22:30:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -30,7 +30,7 @@
     "robotsAi": "done"
   },
   "phase3Pillars": {
-    "p1_rigid_box_manufacturing": "blocked",
+    "p1_rigid_box_manufacturing": "in_progress",
     "p2_hot_foil_emboss_finishing": "blocked",
     "p3_sustainable_luxury_packaging": "blocked",
     "p4_china_packaging_manufacturer": "blocked"
@@ -48,10 +48,8 @@
     "rfqSubmissionsLast28d": null
   },
   "openIssues": [
-    "PR #3 (/llms.txt) opened on branch seo/p2-llms-txt but not yet merged",
-    "Live site has factually-wrong Kurz/Crown supplier claim in craft/page.tsx + topics.ts — correction PR queued",
-    "Imprint registration fields show XXXXXX placeholders (Company no., VAT, ICP) — replace with 'Available on request' per founder decision 2026-05-04",
-    "Pillar 2 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
+    "Pillar 1 brief has 4 open questions for founder (byline, FSC mention, spirits roster scope, CTA wording) — blocking Editor agent draft",
+    "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
     "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input"

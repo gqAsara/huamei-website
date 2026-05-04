@@ -18,3 +18,7 @@
 2026-05-04T22:00:02.000Z	site-engineer	context	SEO_CONTEXT.md v3 update — locked discovery facts (MOQ 200+, lead times, pull-force, equipment), added Authorized client roster section, banned Kurz/Crown supplier claim
 2026-05-04T22:00:03.000Z	site-engineer	state	state.json updated — nextAction queue: merge PR #3, hot-foil PR, imprint fix, Pillar 1 outline; phase05 dataPointsCollected=32; openIssues refreshed
 2026-05-04T22:15:00.000Z	site-engineer	commit	Phase 1.5 PR #4 opened — honesty fixes (Kurz/Crown drop + imprint XXXXXX → 'Available on request' + MOQ 300 → 200)
+2026-05-04T22:25:00.000Z	site-engineer	merge	PR #3 (/llms.txt) merged to main; branch seo/p2-llms-txt deleted
+2026-05-04T22:25:01.000Z	site-engineer	merge	PR #4 (honesty fixes — Kurz/Crown drop, imprint, MOQ 200) merged to main; branch seo/p1.5-honesty-fixes deleted
+2026-05-04T22:30:00.000Z	site-engineer	draft	Pillar 1 brief written at .seo/drafts/p1-rigid-box-manufacturing.brief.md — 4 open questions for founder gate Editor handoff
+2026-05-04T22:30:01.000Z	site-engineer	state	state.json — phase3Pillars.p1 set to in_progress, lastShipped → PR #4, openIssues refreshed (3 closed)
