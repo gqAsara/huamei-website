@@ -1,11 +1,11 @@
 {
   "$schema": ".seo/state.schema.json",
   "version": 3,
-  "currentPhase": 0,
-  "phaseName": "Measurement Foundation",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/1",
-  "nextAction": "Phase 0 measurement foundation complete (4/5; baselineGeoScore blocked on 7-14 days of GSC data). Schedule Phase 0.5 discovery interview to unblock Phase 3. In parallel, Phase 1 Commits #1 (titles), #2 (canonical), #3 (JSON-LD), #5 (robots+AI bots) are ready to ship — Site Engineer.",
-  "lastUpdated": "2026-05-04T20:35:00Z",
+  "currentPhase": 1,
+  "phaseName": "Technical Hygiene",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/2",
+  "nextAction": "Phase 1 technical hygiene merged (commits 1, 2, 3, 5 done; #4 hreflang deferred per ADR 0003). Phase 2 GEO work and Phase 0.5 discovery interview are next. Editor remains blocked on Phase 0.5 transcript.",
+  "lastUpdated": "2026-05-04T20:50:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -20,11 +20,11 @@
     "blockers": ["Interview date not yet scheduled with operations"]
   },
   "phase1Commits": {
-    "titles": "not_started",
-    "canonicals": "not_started",
-    "jsonLd": "not_started",
+    "titles": "done",
+    "canonicals": "done",
+    "jsonLd": "done",
     "hreflang": "blocked",
-    "robotsAi": "not_started"
+    "robotsAi": "done"
   },
   "phase3Pillars": {
     "p1_rigid_box_manufacturing": "blocked",

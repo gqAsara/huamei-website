@@ -3,3 +3,5 @@
 2026-05-04T20:24:20.313Z	site-engineer	verify	GSC Domain property for huamei.io confirmed verified
 2026-05-04T20:25:59.435Z	site-engineer	submit	sitemap https://huamei.io/sitemap.xml submitted to GSC
 2026-05-04T20:28:13.594Z	site-engineer	config	INDEXNOW_KEY set on .env.local + Vercel Prod/Dev — Phase 0 4 of 5 done
+2026-05-04T20:40:36.706Z	site-engineer	commit	Phase 1 PR #2 opened — titles, canonicals, headers, JSON-LD, AI bots
+2026-05-04T20:46:27.753Z	site-engineer	commit	PR #2 merged — Phase 1 commits 1, 2, 3, 5 shipped
