@@ -21,3 +21,24 @@ outside of any agent.
 - Any restrictions ("not in mainland Chinese-language press")
 - Expiration date (or "indefinite")
 - Counterpart contact for renewal
+
+## Blanket discovery roster authorization (2026-05-04)
+
+George Qiao (founder) explicitly authorized public naming of every
+client referenced in `.seo/reference/discovery-2026-05-04.md` during
+the 2026-05-04 Claude Code discovery session. The /volumes catalogue
+is also de facto authoritative — clients already published in
+`src/lib/volumes.ts` are grandfathered and require no separate file.
+
+**Practical rule for the Editor agent:**
+
+1. If a client is in `src/lib/volumes.ts` → grandfathered, name freely.
+2. If a client is in the discovery file but not in /volumes → name freely
+   on the strength of this blanket authorization, but file a
+   per-client `.seo/permissions/<slug>.txt` record at the time of first
+   public mention so the audit trail stays clean.
+3. If a client is not in either → require a fresh permission file
+   before naming.
+
+Signed letters from individual clients remain a "TODO — chase down"
+for record-keeping, but they do not gate publication.

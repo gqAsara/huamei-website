@@ -4,8 +4,8 @@
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
   "lastShipped": "https://github.com/gqAsara/huamei-website/pull/2",
-  "nextAction": "Phase 1 technical hygiene merged (commits 1, 2, 3, 5 done; #4 hreflang deferred per ADR 0003). Phase 2 GEO work and Phase 0.5 discovery interview are next. Editor remains blocked on Phase 0.5 transcript.",
-  "lastUpdated": "2026-05-04T20:50:00Z",
+  "nextAction": "Discovery library locked (2026-05-04). Founder approvals captured: MOQ public floor 200+, Heidelberg+KBA equipment, lead times 7-10/15-20d, magnet 6-50g@2800G, /volumes-grandfathered client roster + blanket discovery authorization. Queued (in order): (1) merge PR #3 /llms.txt, (2) ship hot-foil correction PR — drop Kurz/Crown supplier name from craft/page.tsx + topics.ts (factually wrong; actual suppliers Chinese), (3) imprint XXXXXX placeholder fix — replace 3 fields with 'Available on request', (4) begin Pillar 1 outline (Custom Luxury Rigid Box Manufacturing).",
+  "lastUpdated": "2026-05-04T22:00:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -16,8 +16,11 @@
   "phase05Discovery": {
     "interviewScheduled": null,
     "interviewCompleted": null,
-    "dataPointsCollected": 0,
-    "blockers": ["Interview date not yet scheduled with operations"]
+    "dataPointsCollected": 32,
+    "blockers": [
+      "Sustainability data (FSC chain-of-custody status, recycled-content %, EUDR readiness) — founder will provide later; blocks Pillar 2",
+      "Live formal interview not held — covered async via 7+ internal-doc uploads on 2026-05-04 (technical manual, structure zips, raw-material + auxiliary materials + costing data PDFs, folding-box + mailer pricing xlsx)"
+    ]
   },
   "phase1Commits": {
     "titles": "done",
@@ -45,7 +48,10 @@
     "rfqSubmissionsLast28d": null
   },
   "openIssues": [
-    "Phase 0.5 discovery interview not yet scheduled — blocks all Phase 3 pillar work",
+    "PR #3 (/llms.txt) opened on branch seo/p2-llms-txt but not yet merged",
+    "Live site has factually-wrong Kurz/Crown supplier claim in craft/page.tsx + topics.ts — correction PR queued",
+    "Imprint registration fields show XXXXXX placeholders (Company no., VAT, ICP) — replace with 'Available on request' per founder decision 2026-05-04",
+    "Pillar 2 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
     "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input"

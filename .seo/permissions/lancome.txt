@@ -28,3 +28,15 @@ History:
               discovery interview prep. Lancôme referenced in internal
               technical manual (work performed); first public naming
               would be in upcoming Pillar pages.
+
+────────────────────────────────────────────
+STATUS UPDATE — 2026-05-04
+────────────────────────────────────────────
+Status upgraded: VERBAL-AUTHORIZED → AUTHORIZED
+Channel: Founder explicit confirmation, Claude Code session
+         (transcript at .claude/projects/-Users-macbookpro/*.jsonl)
+Note: Lancôme also already publicly named in /volumes catalogue
+      (cases VII, VI, V — Lancôme CNY, 11.11 Tmall, Love).
+      Treat as grandfathered AND authorized.
+Signed letter on file: still TODO — countersigned letter
+                       from L'Oréal contact remains a priority.

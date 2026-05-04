@@ -25,3 +25,10 @@ History:
 - 2026-05-04: Verbal authorization recorded by George Qiao during
               discovery interview prep. Yue-Sai already publicly named
               in /volumes catalogue prior to this conversation.
+
+────────────────────────────────────────────
+STATUS UPDATE — 2026-05-04
+────────────────────────────────────────────
+Status upgraded: VERBAL-AUTHORIZED → AUTHORIZED
+Channel: Founder explicit confirmation, Claude Code session.
+Signed letter on file: still TODO.

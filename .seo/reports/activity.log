@@ -12,3 +12,8 @@
 2026-05-04T21:37:41.600Z	site-engineer	discovery	Recognized 13 cert scans + corporate registration already live on /house/certifications + /imprint; sections 4 + 5 + 8 updated
 2026-05-04T21:39:59.204Z	site-engineer	discovery	Confirmed Wuzhi as new Henan factory address; four-factory narrative intact
 2026-05-04T21:42:12.709Z	human	permission	Verbal-authorized: Yue-Sai, Lancôme, Serenjoy Box LLC — see .seo/permissions/{yue-sai,lancome,serenjoy}.txt
+2026-05-04T21:55:11.969Z	site-engineer	discovery	Big batch: folding-box pricing, mailer pricing, auxiliary materials (30+ foils, magnets, inks Heidelberg/KBA, adhesives), costing data — closes MOQ + lead time + pull-force + tooling + 30+ baijiu clients
+2026-05-04T22:00:00.000Z	human	approval	Founder explicit approvals: A all permitted, B all permitted, C1 hot-foil correction approved, C2 imprint XXXXXX→'Available on request', D MOQ public claim 200+ (other items approved), E Pillar 1 next, F1 sustainability deferred, F2 export logistics from open data, G no factory addresses
+2026-05-04T22:00:01.000Z	site-engineer	permission	AUTHORIZED status appended to lancome.txt, yue-sai.txt, serenjoy.txt; blanket discovery roster authorization added to permissions/README.md
+2026-05-04T22:00:02.000Z	site-engineer	context	SEO_CONTEXT.md v3 update — locked discovery facts (MOQ 200+, lead times, pull-force, equipment), added Authorized client roster section, banned Kurz/Crown supplier claim
+2026-05-04T22:00:03.000Z	site-engineer	state	state.json updated — nextAction queue: merge PR #3, hot-foil PR, imprint fix, Pillar 1 outline; phase05 dataPointsCollected=32; openIssues refreshed

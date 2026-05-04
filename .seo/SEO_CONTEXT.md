@@ -10,6 +10,12 @@ turn.
 
 > **v2 note (2026-05).** Tier 1 corrections applied. Fabricated factory specs
 > removed. See `CHANGELOG.md` for the full diff against v1.
+>
+> **v3 note (2026-05-04).** Discovery library locked. MOQ public floor,
+> lead times, magnet pull-force, equipment, and client roster moved from
+> "NOT confirmed" → confirmed. Kurz/Crown supplier claim retired (factually
+> wrong; actual hot-foil suppliers are Chinese — Shandong Kaituo et al).
+> See "Confirmed by discovery 2026-05-04" section below.
 
 ---
 
@@ -40,25 +46,74 @@ These are the only specs we have publicly confirmed. Quote them exactly:
 - "From sketch to sealed crate"
 - Roughly 3,000 employees (homepage states "3,000+")
 
+### Confirmed by discovery 2026-05-04
+
+The 2026-05-04 internal-document review (technical manual + structure zips +
+auxiliary materials catalogue + costing data + folding-box / mailer pricing)
+locked in these public claims. Quote them in any future copy:
+
+- **MOQ public floor: 200+ pieces.** Internal records show some structures
+  go as low as 100, but the public claim is 200+ to keep the published
+  number conservative and protect tier pricing.
+- **Lead times: 7–10 day samples, 15–20 day production runs.**
+- **Magnetic closure pull-force: 6–50 g at 2,800 Gauss** (range across
+  closure types and board weights).
+- **Press equipment: Heidelberg and KBA offset presses.** Capability-grade
+  signal — name them; do not quote SKUs or vintages.
+- **Foil palette: seventeen curated colours, in-house.** Do NOT cite Kurz
+  or Crown as suppliers (see Banned-claim list). Underlying suppliers are
+  Chinese (Shandong Kaituo et al) and not for public mention.
+- **Inks: Heidelberg and KBA standard ink trains** for offset; soy-blend
+  on file for select runs (sustainability detail to be expanded once
+  Pillar 2 unblocks).
+- **Cost driver framing for B2B copy: "hand-assembly is the cost driver
+  for true luxury."** Never quote actual % or RMB figures.
+
+### Authorized client roster (as of 2026-05-04)
+
+Two ways a client can be named publicly. Editor agent must use both:
+
+1. **Grandfathered via /volumes** — every client in `src/lib/volumes.ts`
+   is already on the live site and may be named freely in pillar pages,
+   /margin posts, and trade-press copy. Current /volumes roster includes
+   Lancôme Paris, Estée Lauder, L'Oréal Paris, Wuliangye, Yangshao,
+   Luoyang Dukang, Hongxing / Red Star Erguotou, Hetao Wang, Shede,
+   Danquan, Zhonghua, Taozui, Tian An Men Jiu, T2 True Brews, DEEPURE,
+   Collgene, Kefumei, Man Made Crayon, Glees Grove (read the file for
+   the canonical list).
+2. **Authorized via discovery (2026-05-04 blanket)** — every named
+   client in `.seo/reference/discovery-2026-05-04.md` was authorized
+   for public mention by the founder on 2026-05-04. File a per-client
+   `.seo/permissions/<slug>.txt` at first public mention as audit trail,
+   but do not gate publication on countersigned letters.
+
+Existing per-client files: lancome.txt, yue-sai.txt, serenjoy.txt
+(all status = AUTHORIZED).
+
 ### Facts NOT yet confirmed (do not invent)
 
-The following are common in luxury packaging copy but have NOT been confirmed
-for Huamei. Use placeholders, ask the human, or run a discovery interview
-(see `.seo/templates/discovery-interview.md`):
+These remain unconfirmed; surface a `<TODO: confirm with operations>`
+placeholder and stop:
 
-- Specific greyboard weights stocked
-- Specific magnetic closure pull-force ranges
-- Specific MOQ figures by structure type
-- Specific sample-to-production lead times
+- Specific greyboard weights stocked (the manual lists categories, not
+  named greyboard SKUs)
 - Reject rates, throughput, factory-line counts
-- Named clients (luxury brands almost never want to be quoted; default: do
-  not name)
-- Specific certifications (FSC, ISO 9001, ISO 14001, BSCI, etc.) — confirm
-  before claiming
-- Factory addresses, phone numbers, GPS coordinates
+- Specific certifications BEYOND those already scanned to
+  `/house/certifications` (13 cert scans + corporate registration are
+  live; new claims need their own scans)
+- Factory street addresses, GPS coordinates, phone numbers — per founder
+  decision 2026-05-04, the public site stays at province-level only
+  ("Henan / Zhejiang / Sichuan / Guizhou"). Do not publish Wuzhi or
+  any other city-level address.
+- Specific RMB or USD prices, MOQ tier prices, supplier SKU codes,
+  margin / cost percentages — internal-only forever.
 
-When a draft needs one of these, surface a `<TODO: confirm with operations>`
-placeholder and stop. Never paper over.
+### Banned claims (factually wrong on the live site, slated for correction)
+
+- **Kurz / Crown as foil suppliers** (currently in `src/lib/topics.ts`
+  and `src/app/(site)/craft/page.tsx`). Real suppliers are Chinese.
+  Drop supplier names; reframe as "seventeen curated colours, in-house."
+  Hot-foil PR queued.
 
 ## Brand voice
 
