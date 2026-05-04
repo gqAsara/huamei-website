@@ -1,3 +1,5 @@
 2026-05-04T20:19:09.093Z	site-engineer	commit	PR #1 merged — GA4 installed, NEXT_PUBLIC_GA_ID live on Production+Development
 2026-05-04T20:22:33.162Z	site-engineer	verify	Bing Webmaster Tools verified for huamei.io
 2026-05-04T20:24:20.313Z	site-engineer	verify	GSC Domain property for huamei.io confirmed verified
+2026-05-04T20:25:59.435Z	site-engineer	submit	sitemap https://huamei.io/sitemap.xml submitted to GSC
+2026-05-04T20:28:13.594Z	site-engineer	config	INDEXNOW_KEY set on .env.local + Vercel Prod/Dev — Phase 0 4 of 5 done

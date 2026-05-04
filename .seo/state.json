@@ -4,14 +4,14 @@
   "currentPhase": 0,
   "phaseName": "Measurement Foundation",
   "lastShipped": "https://github.com/gqAsara/huamei-website/pull/1",
-  "nextAction": "Verify GSC TXT propagation and click Verify, verify Bing Webmaster, add INDEXNOW_KEY to .env.local + Vercel env. Schedule Phase 0.5 discovery interview. See playbook §5 + §5.5.",
-  "lastUpdated": "2026-05-04T20:30:00Z",
+  "nextAction": "Phase 0 measurement foundation complete (4/5; baselineGeoScore blocked on 7-14 days of GSC data). Schedule Phase 0.5 discovery interview to unblock Phase 3. In parallel, Phase 1 Commits #1 (titles), #2 (canonical), #3 (JSON-LD), #5 (robots+AI bots) are ready to ship — Site Engineer.",
+  "lastUpdated": "2026-05-04T20:35:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
     "bing": "done",
-    "indexnow": "in_progress",
-    "baselineGeoScore": "not_started"
+    "indexnow": "done",
+    "baselineGeoScore": "blocked"
   },
   "phase05Discovery": {
     "interviewScheduled": null,
@@ -47,6 +47,7 @@
   "openIssues": [
     "Phase 0.5 discovery interview not yet scheduled — blocks all Phase 3 pillar work",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
-    "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready"
+    "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
+    "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input"
   ]
 }
