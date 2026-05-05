@@ -43,3 +43,6 @@
 2026-05-05T01:10:00.000Z	site-engineer	merge	PR #9 merged (after activity-log conflict resolution); Pillar 4 LIVE at huamei.io/blogs/working-with-a-chinese-luxury-packaging-manufacturer
 2026-05-05T01:11:00.000Z	site-engineer	publish	Two pillars now published — Pillar 1 (rigid box manufacturing) + Pillar 4 (Chinese manufacturer for US brands); phase3Pillars.p4 → published
 2026-05-05T01:30:00.000Z	site-engineer	commit	PR #10 opened — Product → Service on /craft/*; fixes 2 GSC critical issues + Article publisher @id mismatch; ADR 0006 written
+2026-05-05T01:40:00.000Z	site-engineer	merge	PR #10 merged — Product schema swapped for Service on /craft/* (15 pages); Article publisher @id corrected; ADR 0006 written
+2026-05-05T01:42:00.000Z	site-engineer	external	IndexNow ping (HTTP 200) for all 15 /craft/* URLs — founder-authorized 2026-05-05; clears GSC-equivalent structured-data errors on Bing/Yandex/Naver/Seznam
+2026-05-05T01:42:30.000Z	human	external	GSC URL Inspection: founder submitted ~10 of 15 /craft/* URLs via Request Indexing before hitting daily quota; remaining ~5 queued for tomorrow
