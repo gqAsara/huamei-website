@@ -2,7 +2,7 @@ import { TopicTemplate } from "@/components/TopicTemplate";
 import { getTopic } from "@/lib/topics";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
-import { craftProduct } from "@/lib/schema/product";
+import { craftService } from "@/lib/schema/service";
 
 export default async function CraftTopicPage({
   params,
@@ -22,7 +22,7 @@ export default async function CraftTopicPage({
         ])}
       />
       <JsonLd
-        data={craftProduct({
+        data={craftService({
           slug,
           name,
           description: topic.lede,

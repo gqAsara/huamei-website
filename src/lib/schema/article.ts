@@ -20,7 +20,7 @@ export function articleGraph(post: BlogPost) {
       url: post.author.url ? `${SITE}${post.author.url}` : undefined,
       jobTitle: post.author.role,
     },
-    publisher: { "@id": `${SITE}#organization` },
+    publisher: { "@id": `${SITE}/#org` },
     image: post.hero ? `${SITE}${post.hero.src}` : undefined,
     keywords: [
       post.primaryKeyword,
