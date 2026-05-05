@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/6",
-  "nextAction": "Pillar 1 LIVE at https://huamei.io/blogs/custom-luxury-rigid-box-manufacturing as of 2026-05-04 (URL renamed from /margin → /blogs same day; 301 redirects in next.config.ts). PR #5/6/7/8 all merged or in flight. Next: (1) ping IndexNow with new /blogs URL once renamed PR is live (needs explicit founder OK), (2) wire founder-provided hero image for the pillar (1600×900), (3) continue Phase 3 with Pillar 4 (Working with a Chinese manufacturer) — unblocked by Serenjoy AUTHORIZED.",
-  "lastUpdated": "2026-05-04T23:40:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/8",
+  "nextAction": "IndexNow pinged 2026-05-05 (HTTP 202) for /blogs Pillar 1 + /blogs index + /sitemap.xml. Pillar 4 brief drafted at .seo/drafts/p4-china-packaging-manufacturer.brief.md — 4 open questions for founder (Serenjoy framing, Section 301 mention, /begin?from=us deep-link, hero image). Once approved, hand to Editor agent for prose draft. Hero photo for Pillar 1 still pending re-upload.",
+  "lastUpdated": "2026-05-05T00:30:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -33,7 +33,7 @@
     "p1_rigid_box_manufacturing": "published",
     "p2_hot_foil_emboss_finishing": "blocked",
     "p3_sustainable_luxury_packaging": "blocked",
-    "p4_china_packaging_manufacturer": "blocked"
+    "p4_china_packaging_manufacturer": "in_progress"
   },
   "metrics": {
     "currentGeoScore": null,
@@ -49,7 +49,7 @@
   },
   "openIssues": [
     "Pillar 1 hero image (1600×900) not yet on disk at /public/blogs/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder shared a tea-box photo 2026-05-04 but the screenshot tmp path was wiped before save; founder to re-upload to ~/Desktop or ~/Downloads",
-    "IndexNow ping for new Pillar 1 URL pending explicit founder authorization per SEO_CONTEXT rule #1",
+    "Pillar 4 brief has 4 open questions for founder (Serenjoy framing depth, Section 301 mention, /begin?from=us deep-link, hero image) — blocking Editor agent draft",
     "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
