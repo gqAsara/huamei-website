@@ -50,7 +50,6 @@
   "openIssues": [
     "Pillar 1 hero image (1600×900) not yet on disk at /public/blogs/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder shared a tea-box photo 2026-05-04 but the screenshot tmp path was wiped before save; founder to re-upload to ~/Desktop or ~/Downloads",
     "Pillar 4 hero image (Serenjoy box photo) not yet on disk at /public/blogs/working-with-a-chinese-luxury-packaging-manufacturer/hero.jpg — page renders without it; founder to upload",
-    "IndexNow ping for new Pillar 4 URL pending explicit founder authorization per SEO_CONTEXT rule #1",
     "GSC URL Inspection: founder ran out of daily quota after submitting ~10 of 15 /craft/* URLs (got to /craft/spot-uv); remaining ~5 (offset, wraps, plus any earlier skips) to submit tomorrow when quota resets",
     "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
