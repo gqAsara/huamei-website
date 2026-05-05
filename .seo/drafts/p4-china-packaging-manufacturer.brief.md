@@ -71,7 +71,8 @@ Working with a Chinese luxury packaging manufacturer
 ### H2 — How Huamei works with US brands (120–180 words)
 
 - **Definitive first sentence:** Huamei's US-bound work is a smaller share of total volume than our domestic Chinese spirits and cosmetic accounts, but it is a growing share — and we treat it like every other house relationship.
-- Specifics: Sample-first quoting, signed client permission filed before any name is published, transparent line-itemed quotes, daily sample-stage photos, optional client-side QC firm at our gate. Serenjoy Box LLC has been a US client since the corrugated outer carton specs ran on our 2026 q1 press calendar; we ship rigid construction, folding cartons, and gifting structures into US 3PLs against named purchase orders.
+- Specifics: Sample-first quoting, signed client permission filed before any name is published, transparent line-itemed quotes, daily sample-stage photos, optional client-side QC firm at our gate.
+- **Serenjoy as the lead US example (~2–3 sentences):** Serenjoy Box LLC, a US-based packaging house, runs production with us across rigid construction, folding cartons, and gifting structures shipped into US 3PL warehouses against named purchase orders. Their corrugated outer cartons ran on our 2026 q1 press calendar; their gifting structures are featured in the hero image at the top of this article. The relationship is the most readable answer a US founder can ask for to the question "does this Chinese factory actually do what it says."
 - Tie to existing pillars: For the rigid-box construction details, see [Pillar 1](/blogs/custom-luxury-rigid-box-manufacturing). For our cosmetic work specifically, see [`/industry/cosmetic`](/industry/cosmetic).
 
 ## CTA at end of pillar
@@ -123,9 +124,9 @@ Required minimum: 2 /craft pages + 1 /volumes case study + 1 cross-pillar. This 
 - **Answer (verbatim, 38 words):**
   > Working with a Chinese packaging manufacturer runs in five phases — brief, sample, production, pre-shipment QC, and ocean freight. From locked artwork to a US warehouse, expect 7–10 weeks for luxury rigid construction. MOQs start at 200 pieces.
 
-## Open questions for human
+## Open questions (resolved 2026-05-05)
 
-1. **Serenjoy framing in the "How Huamei works with US brands" H2** — the brief currently says "Serenjoy Box LLC has been a US client since the corrugated outer carton specs ran on our 2026 q1 press calendar." Do you want a stronger framing (e.g., a one-line quote-style endorsement) or is this factual mention enough? Editor will work with whatever you specify.
-2. **Section 301 tariff mention** — keep at directional level ("Section 301 applies; importer of record handles") or skip the tariff conversation entirely to keep the pillar editorial rather than legal/finance?
-3. **CTA query parameter `?from=us`** — do you want me to wire the /begin form to read this and pre-tag US-buyer leads, or is that out of scope for the pillar publish?
-4. **Hero image** — same as Pillar 1, pending re-upload of the tea-box photo (or a different photo specifically for Pillar 4 — maybe a US-bound shipment shot, a Henan press-floor wide angle, or a sample crate ready for FOB).
+1. ✅ **Serenjoy framing — lifted.** Founder direction "just use Serenjoy's box photo." Pillar promotes Serenjoy from one-line factual mention to a 2–3-sentence anchor in the "How Huamei works with US brands" H2, framed descriptively (not quote-style). Serenjoy is also now the hero image subject — see point 4. See updated H2 above.
+2. ✅ **Section 301 tariff — keep at directional level.** Site-engineer call (founder delegated): the pillar mentions Section 301 once in the lead-time/landed-cost H2 in directional language ("Section 301 applies to packaging from China; the US importer of record handles classification"). No specific HTSUS rate quoted, no link to USTR — rates change and a quoted rate would rot. Editorial framing wins over legal precision here.
+3. ✅ **`/begin?from=us` deep-link — out of scope for this pillar.** Site-engineer call: the pillar can ship without the intake-form param plumbing. Bookmark for a later small PR if US-buyer attribution becomes a measurement priority. Pillar CTA stays plain `/begin`.
+4. ⏳ **Hero image — pending Serenjoy box photo upload.** Founder direction "use Serenjoy's box photo." No Serenjoy photo currently on disk in `/public/`, `~/Desktop`, `~/Downloads`, or the equipment-images workspace. Founder to upload one — any filename, any standard format — and I will wire it into `/public/blogs/working-with-a-chinese-luxury-packaging-manufacturer/hero.jpg` and add the `hero` block to the article frontmatter. Editor agent can draft prose without it; hero is wired in last.
