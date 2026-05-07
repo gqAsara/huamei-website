@@ -14,25 +14,13 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  async rewrites() {
-    // Serve the Sanity Studio at studio.huamei.io. Internally everything is
-    // mounted at /studio; this rewrites the subdomain's path tree so the
-    // browser URL stays studio.huamei.io while the Next route is /studio/*.
-    //
-    // afterFiles (not beforeFiles) so Next's static asset handler resolves
-    // /_next/static/*, /favicon.ico, etc. against the filesystem first —
-    // otherwise the rewrite turns those requests into Studio HTML and the
-    // page renders blank because chunks parse as garbage.
-    return {
-      afterFiles: [
-        {
-          source: "/:path*",
-          has: [{ type: "host", value: "studio.huamei.io" }],
-          destination: "/studio/:path*",
-        },
-      ],
-    };
-  },
+  // studio.huamei.io → /studio rewrite is handled in src/proxy.ts (Next 16
+  // proxy file convention, formerly middleware).
+  // Doing it via next.config rewrites picks the wrong path on either side:
+  // - beforeFiles intercepts /_next/static/* and breaks asset loading
+  // - afterFiles fires too late; / has already matched the homepage route
+  // Middleware runs first per request and its matcher cleanly excludes
+  // /_next, /api, and metadata files.
 
   async headers() {
     return [
