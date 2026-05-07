@@ -14,40 +14,57 @@ if (!projectId && typeof window !== "undefined") {
   console.warn("[sanity.config] NEXT_PUBLIC_SANITY_PROJECT_ID missing");
 }
 
-export default defineConfig({
-  name: "huamei",
-  title: "Huamei Studio",
-  basePath: "/studio",
-  projectId,
-  dataset,
-  plugins: [
-    structureTool({
-      structure: (S) =>
-        S.list()
-          .title("Content")
-          .items([
-            S.listItem()
-              .title("Case studies")
-              .child(
-                S.documentTypeList("caseStudy")
-                  .title("Case studies")
-                  .defaultOrdering([
-                    { field: "featured", direction: "desc" },
-                    { field: "year", direction: "desc" },
-                  ])
-              ),
-            S.divider(),
-            S.listItem()
-              .title("Industries")
-              .child(
-                S.documentTypeList("industry")
-                  .title("Industries")
-                  .defaultOrdering([{ field: "order", direction: "asc" }])
-              ),
-          ]),
-    }),
-    visionTool(),
-    zhHansLocale({ title: "简体中文" }),
-  ],
-  schema: { types: schemaTypes },
-});
+/**
+ * Build the Studio config with a runtime-determined basePath.
+ *
+ * Two valid hosts:
+ *   - studio.huamei.io  → basePath "/" (host-rewritten subdomain)
+ *   - huamei.io/studio  → basePath "/studio" (default)
+ *
+ * The factory lets the Studio component pick the correct basePath
+ * based on the request's host header (passed from the server) so
+ * Studio's internal client router lines up with the URL the
+ * browser actually shows.
+ */
+export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}) {
+  return defineConfig({
+    name: "huamei",
+    title: "Huamei Studio",
+    basePath,
+    projectId,
+    dataset,
+    plugins: [
+      structureTool({
+        structure: (S) =>
+          S.list()
+            .title("Content")
+            .items([
+              S.listItem()
+                .title("Case studies")
+                .child(
+                  S.documentTypeList("caseStudy")
+                    .title("Case studies")
+                    .defaultOrdering([
+                      { field: "featured", direction: "desc" },
+                      { field: "year", direction: "desc" },
+                    ])
+                ),
+              S.divider(),
+              S.listItem()
+                .title("Industries")
+                .child(
+                  S.documentTypeList("industry")
+                    .title("Industries")
+                    .defaultOrdering([{ field: "order", direction: "asc" }])
+                ),
+            ]),
+      }),
+      visionTool(),
+      zhHansLocale({ title: "简体中文" }),
+    ],
+    schema: { types: schemaTypes },
+  });
+}
+
+// Default export keeps `npx sanity` CLI working (it imports the default).
+export default buildConfig();

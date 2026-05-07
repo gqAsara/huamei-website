@@ -1,8 +1,14 @@
 "use client";
 
+import { useMemo } from "react";
 import { NextStudio } from "next-sanity/studio";
-import config from "../../../../sanity.config";
+import { buildConfig } from "../../../../sanity.config";
 
-export function Studio() {
+export function Studio({ host }: { host: string }) {
+  const config = useMemo(() => {
+    const basePath = host.startsWith("studio.") ? "/" : "/studio";
+    return buildConfig({ basePath });
+  }, [host]);
+
   return <NextStudio config={config} />;
 }

@@ -1,14 +1,5 @@
-/**
- * Sanity Studio mount point.
- *
- * Studio UI is a client SPA. This server-component shell forwards Sanity's
- * recommended metadata + viewport, then renders the client child.
- *
- * Auth + access control is handled by Sanity itself — only users invited to
- * the project (currently George + Jacky) can sign in.
- */
-
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import { Studio } from "./Studio";
 
 // Studio is a client SPA; server just renders the shell. Dynamic-render
@@ -28,6 +19,12 @@ export const viewport: Viewport = {
   interactiveWidget: "resizes-content",
 };
 
-export default function StudioPage() {
-  return <Studio />;
+export default async function StudioPage() {
+  // Read the host header so the Studio's basePath matches the URL the
+  // browser actually shows. studio.huamei.io is host-rewritten to
+  // /studio/*, so the browser URL is "/" while the Next route is
+  // "/studio". Without this, Sanity's client router 404s on every page.
+  const h = await headers();
+  const host = h.get("host") ?? "";
+  return <Studio host={host} />;
 }
