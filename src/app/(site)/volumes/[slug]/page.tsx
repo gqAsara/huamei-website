@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCase, getVolumeNeighbours } from "@/lib/cases";
-import { VOLUMES } from "@/lib/volumes";
+import { VOLUMES, type Volume } from "@/lib/volumes";
+import { getAllVolumes, getVolumeBySlug } from "@/lib/sanity/queries";
 import { CaseOpening } from "@/components/CaseOpening";
 import { CaseCarousel } from "@/components/CaseCarousel";
 import { JsonLd } from "@/lib/schema/JsonLd";
@@ -10,7 +11,15 @@ import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./case.css";
 
 export async function generateStaticParams() {
-  return VOLUMES.map((v) => ({ slug: v.slug }));
+  const sanityVolumes = await getAllVolumes();
+  const list = sanityVolumes.length > 0 ? sanityVolumes : VOLUMES;
+  return list.map((v) => ({ slug: v.slug }));
+}
+
+async function resolveVolume(slug: string): Promise<Volume | null> {
+  const fromSanity = await getVolumeBySlug(slug);
+  if (fromSanity) return fromSanity;
+  return VOLUMES.find((v) => v.slug === slug) ?? null;
 }
 
 export async function generateMetadata({
@@ -20,7 +29,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const c = getCase(slug);
-  const vol = VOLUMES.find((v) => v.slug === slug);
+  const vol = await resolveVolume(slug);
   const name = c?.name ?? vol?.name ?? "Volume";
   const tagline = c?.tagline ?? vol?.tag ?? "";
   return {
@@ -37,7 +46,7 @@ export default async function CasePage({
 }) {
   const { slug } = await params;
   const c = getCase(slug);
-  const vol = VOLUMES.find((v) => v.slug === slug);
+  const vol = await resolveVolume(slug);
 
   if (!c && !vol) notFound();
 
