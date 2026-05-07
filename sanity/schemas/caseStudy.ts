@@ -143,6 +143,26 @@ export const caseStudy = defineType({
       ],
       validation: (Rule) => Rule.min(1).max(20),
     }),
+    defineField({
+      name: "aiGenerated",
+      title: "AI generated",
+      type: "boolean",
+      group: "meta",
+      readOnly: true,
+      hidden: ({ document }) => !document?.aiGenerated,
+      description:
+        "True if this case study was created by the AI intake from a submission.",
+    }),
+    defineField({
+      name: "sourceSubmission",
+      title: "Source submission",
+      type: "reference",
+      to: [{ type: "caseStudySubmission" }],
+      group: "meta",
+      readOnly: true,
+      hidden: ({ document }) => !document?.sourceSubmission,
+      description: "Link back to the submission that generated this case study.",
+    }),
   ],
   preview: {
     select: {
