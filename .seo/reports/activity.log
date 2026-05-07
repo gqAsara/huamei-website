@@ -49,3 +49,4 @@
 2026-05-05T01:50:00.000Z	site-engineer	external	IndexNow ping (HTTP 200) for /blogs/working-with-a-chinese-luxury-packaging-manufacturer + /sitemap.xml — founder-authorized 2026-05-05
 2026-05-05T19:59:39.117Z	outreach	draft	.seo/reports/directory-copy/
 2026-05-07T07:29:34.695Z	site-engineer	scaffold	Sanity CMS for /volumes — schemas, studio mount, migration (31/31), build green; ADR 0007 written; Mandarin guide for Jacky at .seo/docs/jacky-cms-guide-zh.md
+2026-05-07T07:53:10.557Z	site-engineer	merge	PR #11 merged — Sanity CMS migration for /volumes (31 case studies + 6 industries); Studio at /studio; Vercel deploy + webhook wired

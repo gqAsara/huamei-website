@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/10",
-  "nextAction": "PR #10 merged 2026-05-05 — Product schema swapped for Service on /craft/*; Article publisher @id corrected. IndexNow pinged (HTTP 200) for all 15 /craft URLs to clear GSC structured-data errors on Bing/Yandex/Naver/Seznam. Founder also requested ~10 of those URLs via GSC URL Inspection earlier (pre-merge timing fine — Googlebot fetches the queued URLs after merge so it sees the fixed schema). Remaining ~5 URLs queued for tomorrow's GSC quota reset. Pillar 4 IndexNow ping still pending. Hero photos for Pillars 1 + 4 pending. Pillar 3 still blocked on sustainability data.",
-  "lastUpdated": "2026-05-05T01:45:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/11",
+  "nextAction": "PR #11 merged 2026-05-07 — Sanity CMS migration for /volumes. 31 case studies + 6 industries + 89 photos in Sanity; Studio embedded at /studio; Vercel deploy webhook wired (Sanity publish → Vercel rebuild → ISR invalidate, ~60s end-to-end). Founder pending: (a) DNS CNAME for studio.huamei.io, (b) verify deploy 1p7aeefls landed clean, (c) test publish→rebuild loop, (d) rotate SANITY_WRITE_TOKEN. Jacky invite deferred per founder direction.",
+  "lastUpdated": "2026-05-07T08:00:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -50,10 +50,12 @@
   "openIssues": [
     "Pillar 1 hero image (1600×900) not yet on disk at /public/blogs/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder shared a tea-box photo 2026-05-04 but the screenshot tmp path was wiped before save; founder to re-upload to ~/Desktop or ~/Downloads",
     "Pillar 4 hero image (Serenjoy box photo) not yet on disk at /public/blogs/working-with-a-chinese-luxury-packaging-manufacturer/hero.jpg — page renders without it; founder to upload",
-    "GSC URL Inspection: founder ran out of daily quota after submitting ~10 of 15 /craft/* URLs (got to /craft/spot-uv); remaining ~5 (offset, wraps, plus any earlier skips) to submit tomorrow when quota resets",
+    "GSC URL Inspection: founder ran out of daily quota 2026-05-05 after submitting ~10 of 15 /craft/* URLs (got to /craft/spot-uv); remaining /craft/offset + /craft/wraps to submit when quota resets",
     "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
-    "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input"
+    "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input",
+    "Sanity post-merge: rotate SANITY_WRITE_TOKEN (was shared in chat); add CNAME for studio.huamei.io at Google Domains; invite Jacky chenyongzhuo66@gmail.com when ready",
+    "Outreach packet drafts (.seo/reports/directory-copy/, .seo/reports/outreach/2026-05-05-directories-batch1.md) and library IA draft (.seo/drafts/library-ia.md) on disk but not committed — pending founder approval / LinkedIn page creation as the unblock"
   ]
 }
