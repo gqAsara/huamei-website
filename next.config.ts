@@ -14,6 +14,21 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  async rewrites() {
+    // Serve the Sanity Studio at studio.huamei.io. Internally everything is
+    // mounted at /studio; this rewrites the subdomain's path tree so the
+    // browser URL stays studio.huamei.io while the Next route is /studio/*.
+    return {
+      beforeFiles: [
+        {
+          source: "/:path*",
+          has: [{ type: "host", value: "studio.huamei.io" }],
+          destination: "/studio/:path*",
+        },
+      ],
+    };
+  },
+
   async headers() {
     return [
       {
