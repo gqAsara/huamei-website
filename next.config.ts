@@ -18,8 +18,13 @@ const nextConfig: NextConfig = {
     // Serve the Sanity Studio at studio.huamei.io. Internally everything is
     // mounted at /studio; this rewrites the subdomain's path tree so the
     // browser URL stays studio.huamei.io while the Next route is /studio/*.
+    //
+    // afterFiles (not beforeFiles) so Next's static asset handler resolves
+    // /_next/static/*, /favicon.ico, etc. against the filesystem first —
+    // otherwise the rewrite turns those requests into Studio HTML and the
+    // page renders blank because chunks parse as garbage.
     return {
-      beforeFiles: [
+      afterFiles: [
         {
           source: "/:path*",
           has: [{ type: "host", value: "studio.huamei.io" }],
