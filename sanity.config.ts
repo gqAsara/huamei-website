@@ -10,7 +10,6 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 // Don't throw here — would break server prerender + Studio module load.
 // Studio surfaces its own friendly auth/config error if projectId is empty.
 if (!projectId && typeof window !== "undefined") {
-  // eslint-disable-next-line no-console
   console.warn("[sanity.config] NEXT_PUBLIC_SANITY_PROJECT_ID missing");
 }
 
@@ -39,8 +38,20 @@ export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}
           S.list()
             .title("Content")
             .items([
+              // Primary editor surface — submit a new case study.
               S.listItem()
-                .title("Case studies")
+                .title("📷 New / past submissions · 案例上传")
+                .child(
+                  S.documentTypeList("caseStudySubmission")
+                    .title("Submissions")
+                    .defaultOrdering([
+                      { field: "_createdAt", direction: "desc" },
+                    ])
+                ),
+              S.divider(),
+              // Admin surface — view what the AI has produced.
+              S.listItem()
+                .title("📚 Published case studies (read-only for editors)")
                 .child(
                   S.documentTypeList("caseStudy")
                     .title("Case studies")
@@ -49,9 +60,8 @@ export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}
                       { field: "year", direction: "desc" },
                     ])
                 ),
-              S.divider(),
               S.listItem()
-                .title("Industries")
+                .title("🏷️ Industries")
                 .child(
                   S.documentTypeList("industry")
                     .title("Industries")

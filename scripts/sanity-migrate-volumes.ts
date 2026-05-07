@@ -20,7 +20,6 @@
 import { createClient } from "@sanity/client";
 import { readFileSync, existsSync } from "node:fs";
 import { resolve, basename } from "node:path";
-import { config as loadDotenv } from "node:process";
 
 // Read .env.local manually (no dotenv runtime dep)
 {
