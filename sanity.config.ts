@@ -1,6 +1,7 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
+import { zhHansLocale } from "@sanity/locale-zh-hans";
 import { schemaTypes } from "./sanity/schemas";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
@@ -46,6 +47,7 @@ export default defineConfig({
           ]),
     }),
     visionTool(),
+    zhHansLocale({ title: "简体中文" }),
   ],
   schema: { types: schemaTypes },
 });
