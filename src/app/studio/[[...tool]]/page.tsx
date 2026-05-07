@@ -8,11 +8,25 @@
  * the project (currently George + Jacky) can sign in.
  */
 
+import type { Metadata, Viewport } from "next";
 import { Studio } from "./Studio";
 
-export const dynamic = "force-static";
+// Studio is a client SPA; server just renders the shell. Dynamic-render
+// rather than prerender — Sanity's bundle fails to prerender cleanly on
+// Next 16 + Turbopack (known issue with sanity/next-sanity SSR).
+export const dynamic = "force-dynamic";
 
-export { metadata, viewport } from "next-sanity/studio";
+export const metadata: Metadata = {
+  title: "Huamei Studio",
+  robots: { index: false, follow: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
+};
 
 export default function StudioPage() {
   return <Studio />;

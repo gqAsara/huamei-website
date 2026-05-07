@@ -6,11 +6,11 @@ import { schemaTypes } from "./sanity/schemas";
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 
-if (!projectId) {
-  throw new Error(
-    "NEXT_PUBLIC_SANITY_PROJECT_ID is not set. Add it to .env.local " +
-      "(see /Users/.../huamei-website/.env.local) and to Vercel project env."
-  );
+// Don't throw here — would break server prerender + Studio module load.
+// Studio surfaces its own friendly auth/config error if projectId is empty.
+if (!projectId && typeof window !== "undefined") {
+  // eslint-disable-next-line no-console
+  console.warn("[sanity.config] NEXT_PUBLIC_SANITY_PROJECT_ID missing");
 }
 
 export default defineConfig({
