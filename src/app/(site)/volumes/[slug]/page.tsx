@@ -8,6 +8,7 @@ import { CaseOpening } from "@/components/CaseOpening";
 import { CaseCarousel } from "@/components/CaseCarousel";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { caseStudyService } from "@/lib/schema/service";
 import "./case.css";
 
 export async function generateStaticParams() {
@@ -57,11 +58,28 @@ export default async function CasePage({
     { name: crumbName, path: `/volumes/${slug}` },
   ]);
 
+  // Per-page Service JSON-LD for portfolio indexability. Falls back to
+  // the editorial brief / specification when the case has full content;
+  // otherwise uses the catalogue-row tag line.
+  const serviceJsonLd = vol
+    ? caseStudyService({
+        slug,
+        name: vol.name,
+        client: vol.client,
+        tag: vol.tag,
+        year: vol.year,
+        category: vol.category,
+        cover: vol.cover,
+        photos: vol.photos,
+      })
+    : null;
+
   // Stub view for volumes without full case data yet
   if (!c) {
     return (
       <>
         <JsonLd data={crumbs} />
+        {serviceJsonLd ? <JsonLd data={serviceJsonLd} /> : null}
         <div className="cs-back">
           <Link href="/volumes">← Return to Case studies</Link>
         </div>
@@ -119,6 +137,7 @@ export default async function CasePage({
   return (
     <>
       <JsonLd data={crumbs} />
+      {serviceJsonLd ? <JsonLd data={serviceJsonLd} /> : null}
       <div className="cs-back">
         <Link href="/volumes">← Return to Case studies</Link>
       </div>

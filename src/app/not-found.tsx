@@ -73,19 +73,26 @@ export default function NotFound() {
                   <Link href="/volumes">
                     <span className="rn">ii.</span>
                     <span className="name">Case studies</span>
-                    <span className="meta">12 on file</span>
+                    <span className="meta">30+ on file</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blogs">
+                    <span className="rn">iii.</span>
+                    <span className="name">Blogs</span>
+                    <span className="meta">Notes from the press floor</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/house">
-                    <span className="rn">iii.</span>
+                    <span className="rn">iv.</span>
                     <span className="name">The House</span>
                     <span className="meta">Since 1992</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/begin">
-                    <span className="rn">iv.</span>
+                    <span className="rn">v.</span>
                     <span className="name">Begin a project</span>
                     <span className="meta">Intake</span>
                   </Link>
