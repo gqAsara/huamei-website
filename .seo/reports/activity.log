@@ -54,3 +54,4 @@
 2026-05-08T18:17:44.772Z	site-engineer	merge	PR #13 merged 2026-05-08 — cowork audit fixes (P0+P1+P2): drop og:locale:alternate, add canonical, harden /api/commission with honeypot, CSP header, availableLanguage zh-Hans, Service schema on /volumes/*, image sitemap
 2026-05-08T18:19:21.459Z	site-engineer	external	IndexNow ping (HTTP 200) for / + 31 /volumes/* + sitemap.xml — refresh after PR #13 schema/canonical/CSP rollout
 2026-05-08T18:20:49.582Z	editor	draft	.seo/drafts/p2-hot-foil-finishing.brief.md — Pillar 2 brief; awaiting founder Q1-Q4
+2026-05-08T18:29:36.440Z	editor	publish	Pillar 2 published — /blogs/hot-foil-stamping-for-luxury-packaging (1720 words, 9 H2s, hero from Unsplash CC0); state.json p2 → published
