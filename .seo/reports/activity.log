@@ -55,3 +55,5 @@
 2026-05-08T18:19:21.459Z	site-engineer	external	IndexNow ping (HTTP 200) for / + 31 /volumes/* + sitemap.xml — refresh after PR #13 schema/canonical/CSP rollout
 2026-05-08T18:20:49.582Z	editor	draft	.seo/drafts/p2-hot-foil-finishing.brief.md — Pillar 2 brief; awaiting founder Q1-Q4
 2026-05-08T18:29:36.440Z	editor	publish	Pillar 2 published — /blogs/hot-foil-stamping-for-luxury-packaging (1720 words, 9 H2s, hero from Unsplash CC0); state.json p2 → published
+2026-05-08T18:39:11.404Z	site-engineer	external	IndexNow ping (HTTP 200) for Pillar 2 — /blogs/hot-foil-stamping-for-luxury-packaging + /blogs + sitemap
+2026-05-08T18:41:01.079Z	editor	publish	Cluster #1 published — /blogs/magnetic-pull-force-explained (980 words; clusters under Pillar 1+4); exact-match query 6-50g @ 2800Gauss
