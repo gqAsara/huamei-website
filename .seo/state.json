@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/11",
-  "nextAction": "PR #11 merged 2026-05-07 — Sanity CMS migration for /volumes. 31 case studies + 6 industries + 89 photos in Sanity; Studio embedded at /studio; Vercel deploy webhook wired (Sanity publish → Vercel rebuild → ISR invalidate, ~60s end-to-end). Founder pending: (a) DNS CNAME for studio.huamei.io, (b) verify deploy 1p7aeefls landed clean, (c) test publish→rebuild loop, (d) rotate SANITY_WRITE_TOKEN. Jacky invite deferred per founder direction.",
-  "lastUpdated": "2026-05-07T08:00:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/13",
+  "nextAction": "PR #11/#12/#13 all merged + verified live 2026-05-07/08. Three pillars worth of work landed: (a) Sanity CMS for /volumes with Studio at studio.huamei.io; (b) AI intake pipeline (photos+5 fields → Claude vision → published caseStudy in ~10s, end-to-end test passed); (c) cowork audit fixes — canonical, CSP, Service schema on /volumes/*, honeypot on /api/commission, availableLanguage zh-Hans, 218 image:image entries in sitemap. Next unblocked work: Pillar 2 brief (hot-foil & finishing) — discovery facts confirmed (17 colours · ±0.1mm registration · in-house). Pillar 3 still blocked on FSC/EUDR data; hreflang still blocked per ADR 0003.",
+  "lastUpdated": "2026-05-08T18:18:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
