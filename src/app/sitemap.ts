@@ -2,10 +2,11 @@ import type { MetadataRoute } from "next";
 import { VOLUMES } from "@/lib/volumes";
 import { navCategories } from "@/lib/nav";
 import { getAllBlogPosts } from "@/lib/blogs";
+import { getAllVolumes } from "@/lib/sanity/queries";
 
 const SITE = "https://huamei.io";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticPaths = [
@@ -34,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
   const subPathsUnique = Array.from(new Set(subPaths));
 
+  // Prefer Sanity (live, includes AI-generated case studies); fall back to
+  // the static volumes.ts during build environments without Sanity envs.
+  const sanityVolumes = await getAllVolumes();
+  const volumes = sanityVolumes.length > 0 ? sanityVolumes : VOLUMES;
+  const blogs = getAllBlogPosts();
+
   return [
     ...staticPaths.map((path) => ({
       url: `${SITE}${path}`,
@@ -47,17 +54,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
-    ...VOLUMES.map((v) => ({
+    ...volumes.map((v) => ({
       url: `${SITE}/volumes/${v.slug}`,
       lastModified: now,
       changeFrequency: "yearly" as const,
       priority: 0.6,
+      // Image sitemap entries — Google Images is a real top-of-funnel
+      // for packaging buyers shopping by visual reference.
+      images: [v.cover, ...v.photos].filter(
+        (u): u is string => typeof u === "string" && u.length > 0,
+      ),
     })),
-    ...getAllBlogPosts().map((p) => ({
+    ...blogs.map((p) => ({
       url: `${SITE}/blogs/${p.slug}`,
       lastModified: new Date(p.updatedAt),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+      ...(p.hero?.src
+        ? {
+            images: [
+              p.hero.src.startsWith("http")
+                ? p.hero.src
+                : `${SITE}${p.hero.src}`,
+            ],
+          }
+        : {}),
     })),
   ];
 }

@@ -31,6 +31,24 @@ export default function BeginPage() {
           autoComplete="off"
           encType="multipart/form-data"
         >
+          {/* Honeypot — invisible to humans, filled by bots scraping every
+              input. /api/commission silently drops submissions where this
+              field has any value. Do not rename without updating the route. */}
+          <input
+            type="text"
+            name="company_website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: 1,
+              height: 1,
+              opacity: 0,
+            }}
+          />
+
           {/* Progress rail */}
           <div className="bg-steps">
             <div className="step on"><span className="n">i.</span><span className="t">You</span></div>

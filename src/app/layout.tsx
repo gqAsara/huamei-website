@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Huamei 華美",
     locale: "en_US",
-    alternateLocale: ["zh_CN"],
+    // alternateLocale removed 2026-05-08 — /zh-Hans not yet built (per ADR
+    // 0003). Re-add as ["zh_Hans"] when the locale-prefix migration ships.
   },
   twitter: {
     card: "summary_large_image",
