@@ -58,3 +58,5 @@
 2026-05-08T18:39:11.404Z	site-engineer	external	IndexNow ping (HTTP 200) for Pillar 2 — /blogs/hot-foil-stamping-for-luxury-packaging + /blogs + sitemap
 2026-05-08T18:41:01.079Z	editor	publish	Cluster #1 published — /blogs/magnetic-pull-force-explained (980 words; clusters under Pillar 1+4); exact-match query 6-50g @ 2800Gauss
 2026-05-08T18:53:32.867Z	editor	publish	Cluster #2-4 published — hot-foil-vs-cold-foil, registered-emboss-foil-tolerance, greyboard-grades (autonomous run, founder-authorized)
+2026-05-09T18:27:16.213Z	site-engineer	merge	PR #16 merged 2026-05-09 — 3 cluster posts (hot-foil-vs-cold-foil, registered emboss-foil tolerance, greyboard grades). 4 clusters total now live.
+2026-05-09T18:32:04.270Z	site-engineer	external	IndexNow ping (HTTP 200) for 4 cluster URLs + /blogs + sitemap — autonomous run wrap

@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/13",
-  "nextAction": "PR #11/#12/#13 all merged + verified live 2026-05-07/08. Three pillars worth of work landed: (a) Sanity CMS for /volumes with Studio at studio.huamei.io; (b) AI intake pipeline (photos+5 fields → Claude vision → published caseStudy in ~10s, end-to-end test passed); (c) cowork audit fixes — canonical, CSP, Service schema on /volumes/*, honeypot on /api/commission, availableLanguage zh-Hans, 218 image:image entries in sitemap. Next unblocked work: Pillar 2 brief (hot-foil & finishing) — discovery facts confirmed (17 colours · ±0.1mm registration · in-house). Pillar 3 still blocked on FSC/EUDR data; hreflang still blocked per ADR 0003.",
-  "lastUpdated": "2026-05-08T18:18:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/16",
+  "nextAction": "Autonomous SEO run 2026-05-08/09 (founder-authorized): Pillar 2 + 4 cluster posts published in 5 PRs (#14, #15, #16). Site now has 3 of 4 pillars live (P1, P2, P4) plus 4 cluster spokes — magnetic-pull-force, hot-foil-vs-cold-foil, registered-emboss-foil-tolerance, greyboard-grades. All facts grounded in 2026-05-04 discovery; no fabrication. Internal-link density on /blogs roughly doubled. IndexNow refreshed. P3 (sustainability) still blocked on FSC/EUDR data — only blocker for full pillar coverage. Cluster queue exhausted for confirmed-fact topics; next clusters need either P3 unblock OR new discovery facts.",
+  "lastUpdated": "2026-05-09T18:25:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
