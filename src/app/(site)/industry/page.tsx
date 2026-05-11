@@ -4,9 +4,9 @@ import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./industry.css";
 
 export const metadata = {
-  title: "By industry — cosmetic, spirits, gifting, wellness",
+  title: "Luxury packaging by industry — cosmetic, spirits, gifting, wellness",
   description:
-    "Four categories on file — cosmetic & skincare, wine spirits & tea, seasonal & gifting, wellness.",
+    "Custom luxury packaging across four sectors: cosmetic & skincare (Lancôme, Estée Lauder, L'Oréal), wine spirits & tea (Wuliangye, Yangshao, Dukang), seasonal gifting, and wellness. MOQ 200+, since 1992.",
   alternates: { canonical: "/industry" },
 };
 

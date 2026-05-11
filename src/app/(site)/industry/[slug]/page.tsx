@@ -2,6 +2,7 @@ import { TopicTemplate } from "@/components/TopicTemplate";
 import { getTopic } from "@/lib/topics";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { industryService } from "@/lib/schema/service";
 
 export default async function IndustryTopicPage({
   params,
@@ -19,6 +20,14 @@ export default async function IndustryTopicPage({
           { name: "Industry", path: "/industry" },
           { name, path: `/industry/${slug}` },
         ])}
+      />
+      <JsonLd
+        data={industryService({
+          slug,
+          name,
+          description: topic.lede,
+          image: topic.heroImage,
+        })}
       />
       <TopicTemplate topic={topic} />
     </>

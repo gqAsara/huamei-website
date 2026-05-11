@@ -4,9 +4,9 @@ import { getAllVolumes, getAllIndustries } from "@/lib/sanity/queries";
 import "./volumes.css";
 
 export const metadata = {
-  title: "Case studies",
+  title: "Luxury packaging case studies — 30+ projects on file",
   description:
-    "A running ledger of work. Every volume is a closed book; every drawer pulled left a record behind.",
+    "Case studies from Huamei's press floor: Lancôme, Estée Lauder, L'Oréal, Wuliangye, Yangshao, Dukang, and 25 more. Filterable by year, industry, and view. Cosmetic, spirits, gifting, wellness — since 1992.",
   alternates: { canonical: "/volumes" },
 };
 

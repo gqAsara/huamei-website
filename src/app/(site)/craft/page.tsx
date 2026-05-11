@@ -5,9 +5,9 @@ import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./craft.css";
 
 export const metadata = {
-  title: "Craft — structures, surfaces & finishing",
+  title: "Luxury packaging craft — 99 structures, 17 foils, 80 papers",
   description:
-    "Ninety-nine structures, seventeen foils, eighty papers on file. The full stack of decisions between brief and shelf.",
+    "Custom luxury packaging capabilities: rigid box construction, magnetic closures, hot-foil stamping, embossing, soft-touch laminate, spot UV. 99+ structures, 17 in-house foils, 80 papers on file. MOQ 200+.",
   alternates: { canonical: "/craft" },
 };
 

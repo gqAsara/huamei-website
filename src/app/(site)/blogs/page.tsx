@@ -4,9 +4,9 @@ import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./blogs.css";
 
 export const metadata = {
-  title: "Blogs — the Huamei journal of luxury packaging",
+  title: "Luxury packaging guides & technical references — Huamei blog",
   description:
-    "Notes from the press floor — production, people, customer success, sustainability and company news. Posted when we have something to say.",
+    "Editorial guides on luxury packaging manufacturing: rigid box construction, hot-foil stamping, magnetic closure pull-force, greyboard grades, MOQ economics, Chinese manufacturing. Written by the press floor.",
   alternates: { canonical: "/blogs" },
 };
 
