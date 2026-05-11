@@ -32,6 +32,8 @@ export type TopicRelated = {
 
 export type TopicSpec = { label: string; value: string };
 
+export type TopicFaq = { q: string; a: string };
+
 export type Topic = {
   slug: string;
   category: TopicCategory;
@@ -58,6 +60,13 @@ export type Topic = {
   ctaTitle: string;
   ctaDesc: string;
   heroImage?: string;
+  // Commercial-intent fields (audit 2026-05-11). Optional — when set, the
+  // route's generateMetadata uses commercialTitle/commercialDescription for
+  // SEO; TopicTemplate renders buyerFaq + trustClients sections.
+  commercialTitle?: string;
+  commercialDescription?: string;
+  buyerFaq?: TopicFaq[];
+  trustClients?: string[]; // auto-derived in getTopic() from VOLUMES
 };
 
 const STRUCTURE_SLUGS = new Set([
@@ -220,6 +229,13 @@ const HOT_FOIL: Topic = {
   ctaTitle: "Pull a foil sample, or send us a die.",
   ctaDesc: "We will press your wordmark on three stocks — coated, uncoated, and Gmund cloth — in your chosen foil and post the swatches within five working days.",
   heroImage: "/photos/generated/surfaces/hot-foil.jpg",
+  commercialTitle: "Hot-foil stamping manufacturer for luxury packaging — 17 foils on file",
+  commercialDescription: "Hot-foil stamping for rigid boxes and folding cartons. 17 in-house foil colours across warm, cool, pigmented, and holographic families. ±0.1 mm registration on emboss-and-foil. MOQ 200+, 7–10 day samples.",
+  buyerFaq: [
+    { q: "How many foil colours do you stock?", a: "17 in-house across five optical families — warm metallics (5), cool metallics (4), pigmented (4), holographic / pearlescent (2), specialty (2). Free swatch set posted within 5–7 days." },
+    { q: "What registration do you hold for emboss-and-foil?", a: "±0.1 mm at Huamei. Industry typical is ±0.3 mm. The press operator re-checks alignment every 200 sheets across the run." },
+    { q: "What's the press temperature and dwell?", a: "120–160 °C, dwell 0.4–0.8 s. The press operator dials each to the substrate — uncoated paper needs a higher dwell than coated; book-cloth needs a softer die." },
+  ],
 };
 
 const CATEGORY_META: Record<TopicCategory, { label: string; cn: string; href: string }> = {
@@ -244,6 +260,10 @@ type TopicCopy = {
   cn?: string;
   lede?: string;
   related?: TopicRelated[];
+  // Commercial-intent fields. See Topic type.
+  commercialTitle?: string;
+  commercialDescription?: string;
+  buyerFaq?: TopicFaq[];
 };
 
 const TOPIC_COPY: Record<string, TopicCopy> = {
@@ -255,6 +275,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Two pieces, lifted straight up — the simplest gesture a luxury box can make.",
     meta: ["1.5–2.5 mm core", "Paper or cloth wrap", "Min 300 pcs"],
+    commercialTitle: "Custom luxury rigid box manufacturer — since 1992",
+    commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production. Built for Lancôme, Estée Lauder, Wuliangye and others.",
+    buyerFaq: [
+      { q: "What's the minimum order for a custom rigid box?", a: "200+ pieces public floor. Some structures run lower on a per-project quote. Below 200 the per-piece cost rises because press setup and hand-assembly time stop amortizing." },
+      { q: "How long does a custom rigid box take?", a: "Samples 7–10 days; production 20–28 days from approved sample. Add a week for registered emboss-and-foil." },
+      { q: "What greyboard thickness should I spec?", a: "2.0 mm is the house standard for cosmetics; 2.5 mm for magnetic-flap and drawer constructions; 3.0 mm for spirits and heritage gift packs." },
+    ],
   },
   magnetic: {
     prose: [
@@ -264,6 +291,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The flap pulls home with a soft thunk; the seam disappears.",
     meta: ["4–8 N42 magnets", "Pull-tested 5,000 cycles", "24–32 days"],
+    commercialTitle: "Magnetic closure rigid box manufacturer — luxury packaging",
+    commercialDescription: "Magnetic-flap rigid boxes with 6–50 g pull-force at 2,800 Gauss, hidden under the wrap. MOQ 200+, 7–10 day samples, 24–32 day production. Built for Lancôme, Wuliangye and major cosmetic brands.",
+    buyerFaq: [
+      { q: "What's the minimum order quantity for a magnetic-flap rigid box?", a: "200+ pieces for rigid magnetic-flap construction. Some structures run lower on a per-project quote — ask in the brief." },
+      { q: "How long does a magnetic-flap rigid box take to produce?", a: "Samples turn in 7–10 days. Production runs 24–32 days from approved sample. Magnet sourcing adds a week at very low volume." },
+      { q: "How strong is the magnetic closure?", a: "Pull-force sits between 6 and 50 grams at 2,800 Gauss, tuned to lid weight and closure geometry. See the magnetic pull-force article for the full range." },
+    ],
   },
   drawer: {
     prose: [
@@ -273,6 +307,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The drawer carries the contents; the slipcase holds the wordmark.",
     meta: ["Single · twin · tower", "Ribbon or thumb-slot", "Hand-assembled"],
+    commercialTitle: "Drawer & slipcase rigid box manufacturer — luxury packaging",
+    commercialDescription: "Drawer-and-slipcase rigid construction for jewellery, fragrance, advent and gift sets. Singles, twins, towers. MOQ 200+, 22–30 day lead time. Paperboard runners — never plastic.",
+    buyerFaq: [
+      { q: "What's the minimum order for a drawer rigid box?", a: "200+ pieces for drawer-and-slipcase. Towers and twins quoted on a per-project basis." },
+      { q: "How long does production take?", a: "Sample 7–10 days; production 22–30 days. Hand-assembled — drawer runners are paperboard, never plastic." },
+      { q: "What formats do you make?", a: "Singles, twins, and towers (e.g. 24-drawer advent calendars). Drawer pull options: ribbon or thumb-slot." },
+    ],
   },
   folding: {
     prose: [
@@ -282,6 +323,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The cheapest box that can still feel considered.",
     meta: ["250–450 gsm SBS", "1,000 pcs min", "14–18 days"],
+    commercialTitle: "Folding carton manufacturer for luxury packaging — Huamei",
+    commercialDescription: "Reverse-tuck, auto-bottom, and seal-end folding cartons on 250–450 gsm SBS. MOQ 1,000+; per-piece cost falls fast above 5,000. 14–18 day lead time, hot-foil and soft-touch routine.",
+    buyerFaq: [
+      { q: "When is a folding carton cheaper than a rigid box?", a: "Above 5,000 pieces. Below 1,000 a rigid box is usually cheaper per unit because the rigid setup amortizes faster than the offset print setup." },
+      { q: "What's the lead time on a folding carton?", a: "14–18 days for unprinted blanks; add a week for hot-foil or registered emboss-and-foil." },
+      { q: "What stocks do you use?", a: "250–450 gsm SBS folding boxboard. Reverse-tuck, auto-bottom, seal-end and bespoke crash formats. Soft-touch laminate is the most-specified upgrade." },
+    ],
   },
   book: {
     prose: [
@@ -291,6 +339,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "A book that doesn't open onto a page.",
     meta: ["Cloth-bound spine", "Magnetic clasp", "28–35 days"],
+    commercialTitle: "Book-style & clamshell rigid box manufacturer — luxury packaging",
+    commercialDescription: "Cloth-bound hinged book-style boxes with magnetic clasp closure. Iris, Wibalin, Buckram on file. MOQ 200+, 28–35 day lead time, ±1 mm cradle tolerance. Built for archival and anniversary kits.",
+    buyerFaq: [
+      { q: "What's the minimum order for a book-style rigid box?", a: "200+ pieces. Lead time runs longer than other structures because of the cloth-wrap step." },
+      { q: "What cloth do you stock?", a: "Iris, Wibalin, and Buckram — 14 colours and 3 weights on file. Cloth options take about a week to source for orders outside the core palette." },
+      { q: "How long does production take?", a: "Sample 10–14 days (cloth lead time is the bottleneck); production 28–35 days from approved sample." },
+    ],
   },
   inserts: {
     prose: [
@@ -300,6 +355,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Whatever holds the object steady, and presents it cleanly on opening.",
     meta: ["EVA · pulp · satin · flute", "±1 mm tolerance", "ISTA-3A drop-test"],
+    commercialTitle: "Custom packaging insert manufacturer — EVA, pulp, cradles",
+    commercialDescription: "Moulded pulp, EVA foam, cut-flute and satin-wrapped cradles. ±1 mm tolerance to product. ISTA-3A drop-tested on project. Lead time matches outer box, 20–28 days typical.",
+    buyerFaq: [
+      { q: "What materials do you make inserts from?", a: "EVA foam (hand-cut or die-stamped), moulded paper pulp, cut-flute corrugated, satin-wrapped cradles. Pulp is the sustainable default; EVA where impact protection is the priority." },
+      { q: "How tight is the fit?", a: "We dimension inserts to ±1 mm of the product. Bottle cradles include a recessed neck; multi-piece sets get matched apertures across the kit." },
+      { q: "Are inserts drop-tested?", a: "Yes — to ISTA-3A on project. Test results are part of the project record. EVA is specified when impact protection is the priority." },
+    ],
   },
   shoppers: {
     prose: [
@@ -309,6 +371,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "A bag is the box's antechamber — the customer's first surface.",
     meta: ["200 gsm + gusset", "Rope · ribbon · cord", "Min 500 pcs"],
+    commercialTitle: "Luxury shopper bag manufacturer — rope, ribbon, leather handles",
+    commercialDescription: "Gusseted 200 gsm paper shoppers with rope, ribbon, knotted cord, or saddle-stitched leather handles. MOQ 500+, 16–22 day production. Hot-foil and emboss on the front panel to match the box inside.",
+    buyerFaq: [
+      { q: "What's the MOQ for shoppers?", a: "500+ pieces. Lower per-project on quote for premium boutique flagship runs." },
+      { q: "What handle options do you make?", a: "Rope, ribbon, knotted cord, or saddle-stitched leather. Eyelet reinforcement on per-brief basis. Handle holes are die-cut to ±0.5 mm." },
+      { q: "How long does production take?", a: "Sample 5–7 days; production 16–22 days. Lead time scales with the handle complexity — leather adds a week." },
+    ],
   },
   bespoke: {
     prose: [
@@ -318,6 +387,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Engineered from the contents outward.",
     meta: ["6–10 wks engineering", "From 100 units", "Named after the brand"],
+    commercialTitle: "Bespoke luxury packaging manufacturer — engineered one-offs",
+    commercialDescription: "Custom packaging structures engineered from scratch for unusual flacons, calendars, and limited editions. From 100 units, 6–10 week engineering window. Each structure named after the brand on the colophon.",
+    buyerFaq: [
+      { q: "When is a bespoke structure the right call?", a: "When none of the standard structures answer the brief — unusual flacon geometries, asymmetric calendars, hidden drawer reveals. If a standard structure fits, we will tell you in the brief." },
+      { q: "What's the minimum order?", a: "From 100 units typical. The constraint is engineering time amortization, not press capacity." },
+      { q: "How long does it take?", a: "Engineering: 6–10 weeks (sketch → white-blank prototype → 2–3 refinement rounds → final dies). Production schedule follows once dies are cut." },
+    ],
   },
 
   // ----- Surfaces -----
@@ -329,6 +405,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "No ink, no foil — only the relief and the light.",
     meta: ["±0.1 mm registration", "Magnesium · 0.6 mm", "300 pcs min"],
+    commercialTitle: "Registered emboss manufacturer for luxury packaging — ±0.1 mm",
+    commercialDescription: "Registered embossing held to ±0.1 mm — industry typical is ±0.3 mm. Magnesium dies for short runs, copper for longer. Best on uncoated stocks. MOQ 200+, sample 7–10 days.",
+    buyerFaq: [
+      { q: "What tolerance do you hold for registered emboss-and-foil?", a: "±0.1 mm at Huamei. Industry typical is ±0.3 mm. The difference shows up at six inches as a foil that 'shadows' the emboss." },
+      { q: "Which stocks emboss best?", a: "Uncoated paper holds the relief crispest because the fibre stretches without breaking. Book-cloth and recycled stocks also work; coated art papers crack at deep emboss." },
+      { q: "Do you do sculpted (multi-level) emboss?", a: "Yes — a second die adds depth detail. Sculpted is most often used for wordmarks; flat emboss for borders and decorative shapes." },
+    ],
   },
   deboss: {
     prose: [
@@ -338,6 +421,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The mark sunken into the page — quieter than emboss.",
     meta: ["±0.1 mm registration", "Best on uncoated", "Cloth-friendly"],
+    commercialTitle: "Deboss manufacturer for luxury packaging — ±0.1 mm",
+    commercialDescription: "Sunken-mark debossing on uncoated, tinted, and book-cloth stocks. Blind (no foil) or foil-filled. ±0.1 mm registration. MOQ 200+, lead time matches outer box.",
+    buyerFaq: [
+      { q: "What's the difference between emboss and deboss?", a: "Emboss raises the mark above the surface; deboss presses it below. Same ±0.1 mm registration tolerance. Deboss is quieter, often more elegant on tinted stocks." },
+      { q: "Can deboss be done blind, or does it need foil?", a: "Both work. Blind deboss is the tone-on-tone whisper option; foil-filled deboss is the standard wordmark treatment. Most projects use one or the other, not both." },
+      { q: "Does it work on cloth?", a: "Yes — book-cloth (Wibalin, Iris) holds the impression cleanly without cracking. Often the best surface for a tone-on-tone deboss." },
+    ],
   },
   "soft-touch": {
     prose: [
@@ -347,6 +437,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Reads as more expensive than the underlying stock — which is half the point.",
     meta: ["Matte velvet film", "+¥2.40/unit @ 5k", "≥ 250 gsm stock"],
+    commercialTitle: "Soft-touch laminate manufacturer for luxury packaging",
+    commercialDescription: "Velvet matte soft-touch laminate, scratch- and fingerprint-resistant. Pairs cleanly with spot-UV, hot-foil, and emboss. Recommended on ≥250 gsm stock. +2 day lead time for the laminate cure.",
+    buyerFaq: [
+      { q: "What does soft-touch laminate do?", a: "Adds a velvet matte film over the printed sheet. Scratch-resistant, fingerprint-resistant, slightly silken in the hand. Reads as more expensive than the underlying stock." },
+      { q: "Can I combine it with spot-UV or foil?", a: "Yes — soft-touch over dark Pantone with spot-UV on top is a Huamei signature for cosmetic outers. Hot-foil and emboss work on the laminate without issue." },
+      { q: "Any stock restrictions?", a: "Not recommended below 250 gsm. The film stiffens the carton; on thin board it can over-stiffen and feel cardboardy rather than premium." },
+    ],
   },
   "spot-uv": {
     prose: [
@@ -356,6 +453,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "A pattern that only catches the light from one angle.",
     meta: ["±0.2 mm to ink", "Best over soft-touch", "+1 day lead"],
+    commercialTitle: "Spot UV varnish manufacturer for luxury packaging",
+    commercialDescription: "Gloss-on-matte spot UV varnish, registered to ink and emboss at ±0.2 mm. Best over soft-touch laminate. Drawn at the artwork stage as a separate spot colour. +1 day lead time.",
+    buyerFaq: [
+      { q: "What does spot UV add to a box?", a: "A glossy varnish printed in registered patterns over a matte field. The contrast — gloss against soft-touch or uncoated — only catches the light from one angle. Used for wordmarks, decorative patterns, and accent panels." },
+      { q: "What stock does it work best over?", a: "Soft-touch laminate is the strongest pairing — the matte-and-gloss contrast is most pronounced. Also works straight onto coated stock for a more subtle effect." },
+      { q: "How is it specified in artwork?", a: "Spot UV is drawn as a separate spot colour in the print PDF. We preview the gloss line on a sample sheet before production; the screen cannot show how light catches the varnish." },
+    ],
   },
   offset: {
     prose: [
@@ -365,6 +469,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "ΔE ≤ 2 — the floor's hard ceiling on colour.",
     meta: ["8-col Heidelberg", "ΔE ≤ 2", "GMG contract proofs"],
+    commercialTitle: "Offset print manufacturer for luxury packaging — Pantone ΔE ≤ 2",
+    commercialDescription: "8-colour Heidelberg XL 106 offset, ISO 12647-2 colour managed to ΔE ≤ 2. Soy inks house standard. GMG-certified contract proofs. MOQ 1,000+ for offset; digital fills below that.",
+    buyerFaq: [
+      { q: "What's the colour tolerance you hold on press?", a: "ΔE ≤ 2 against Pantone, GMG-certified contract proof. The four 'extra' colour stations beyond CMYK carry Pantone spots, white, varnish, or speciality inks." },
+      { q: "What's the minimum for offset?", a: "1,000+ pieces. Below that the press setup cost dominates per-piece price; digital short-run fills the volume below 1,000." },
+      { q: "What inks do you use?", a: "Soy inks are house standard. Petroleum inks available on request only. Metallic and low-migration food-safe inks on file for the speciality stations." },
+    ],
   },
   wraps: {
     prose: [
@@ -374,6 +485,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The skin of the box — chosen at the first conversation.",
     meta: ["80+ stocks", "Gmund · Fedrigoni · Iris", "Mitred corners"],
+    commercialTitle: "Wrap papers & cloth for luxury packaging — Gmund, Fedrigoni, Iris",
+    commercialDescription: "80+ wrap stocks on file from Gmund, Fedrigoni, Iris book-cloth, Wibalin. Paper wraps mitre at the corners; cloth wraps cover flat. Selection in the first consultation; swatches posted free.",
+    buyerFaq: [
+      { q: "What stocks do you hold on file?", a: "80+ wrap stocks including Gmund Colors Matt (default cream), Fedrigoni Woodstock, Iris and Wibalin book-cloth. We post swatches of every candidate in the first sample round." },
+      { q: "Paper or cloth wrap — how do I choose?", a: "Paper is the default; mitres at the corners. Cloth (Iris, Wibalin) covers corners flat and takes emboss + foil cleanly. Cloth adds about a week to lead time outside the core palette." },
+      { q: "Can I bring my own stock?", a: "Yes — send the spec sheet. We will source through the mill or accept a brand-supplied roll. Mill-direct is usually faster and avoids customs delays." },
+    ],
   },
 
   // ----- Industries -----
@@ -389,6 +507,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The compact, the tube, the jar — and everything that sits around them.",
     meta: ["9 in archive", "ΔE ≤ 2", "Soft-touch standard"],
+    commercialTitle: "Luxury cosmetic & skincare packaging manufacturer — Huamei",
+    commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Lancôme, Estée Lauder, L'Oréal Paris.",
+    buyerFaq: [
+      { q: "What's the MOQ for cosmetic packaging?", a: "1,000+ for folding cartons; 300+ for rigid; 200+ for magnetic-flap rigid. Below the floors a rigid box is usually cheaper per unit than a folding carton." },
+      { q: "What lead time should I plan for?", a: "14–18 days for folding cartons; 20–32 days for rigid. Add a week for registered emboss-and-foil. Sample turnaround 7–10 days." },
+      { q: "What colour tolerance do you hold?", a: "Pantone-matched to ΔE ≤ 2 on press, GMG-certified contract proof. Foil-to-emboss registration ±0.1 mm where the brief requires." },
+    ],
   },
 
   spirits: {
@@ -403,6 +528,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The reveal is half the bottle.",
     meta: ["14 in archive", "Book · drawer · ceramic", "±1 mm cradles"],
+    commercialTitle: "Luxury spirits, wine & tea packaging manufacturer — Huamei",
+    commercialDescription: "Book-style, drawer, and ceramic cradle gift packs for spirits, wine, and archival tea. ±1 mm bottle-profile tolerance. Built for Wuliangye, Yangshao, Dukang, Hongxing Erguotou.",
+    buyerFaq: [
+      { q: "What's the MOQ for a spirits gift box?", a: "300+ for rigid construction; 1,000+ for the printed folding cartons that sit beside the bottle in retail. Some heritage launches run lower on per-project quote." },
+      { q: "How long does a spirits launch take?", a: "22–35 days production. Ceramic cradles add a week; cloth-wrapped book-style adds another. Plan 8–10 weeks from brief to a warehouse pallet in the US." },
+      { q: "What insert options do you make for bottles?", a: "Moulded pulp (sustainable default, moisture-stable for cellared SKUs), EVA foam (impact protection), ceramic cradles (premium tier). All dimensioned to ±1 mm of the bottle profile." },
+    ],
   },
 
   seasonal: {
@@ -417,6 +549,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Booked a year ahead — colour and symbol are the brief.",
     meta: ["6 in archive", "CNY · Mid-Autumn", "Booked a year ahead"],
+    commercialTitle: "CNY & Mid-Autumn gift box manufacturer — luxury seasonal packaging",
+    commercialDescription: "Chinese New Year, Mid-Autumn, and lunar limited-edition gift packs. Sleeves, drawers, ribbon shoppers, laser-cut overlays. CNY ships October; Mid-Autumn ships June. Book press capacity a year ahead.",
+    buyerFaq: [
+      { q: "When do I need to book a CNY launch?", a: "Press capacity is reserved by February for the October ship date. The earlier the brief lands, the more structural engineering room there is. Late bookings ship; they just have less room to refine." },
+      { q: "What's the MOQ for seasonal work?", a: "500+ for shoppers; 1,000+ for printed cartons. Limited editions occasionally run lower on per-project quote — say so in the brief." },
+      { q: "What structures work best for seasonal gifting?", a: "Drawer-and-slipcase carries the most ceremony; sleeves are the lightweight option; laser-cut overlays add the symbol without changing the structure. Red-and-gold treatments are the deepest bench in our catalogue." },
+    ],
   },
 
   wellness: {
@@ -430,6 +569,13 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Type that whispers — paper that composts.",
     meta: ["2 in archive", "Pulp + folding", "Soy ink standard"],
+    commercialTitle: "Luxury wellness & botanical packaging manufacturer — Huamei",
+    commercialDescription: "Restrained, considered packaging for botanicals, soaps, and supplements. Uncoated stocks, soy ink, pulp inserts that compost. FSC/PEFC default. MOQ 500+, 16–22 day lead time.",
+    buyerFaq: [
+      { q: "What sustainability standards do you hold?", a: "FSC or PEFC stocks by default. Soy ink house standard; petroleum ink available only on request. Pulp inserts are the sustainable default for cradles and trays." },
+      { q: "What's the MOQ for wellness packaging?", a: "500+ for folding cartons. Prestige threshold (the runs where unit cost stabilizes) is at 1,000+." },
+      { q: "What's the typical palette and stock?", a: "Soft pinks, eucalyptus greens, ivory — never the saturated palette of mass cosmetic. Uncoated stocks (Gmund, Fedrigoni) carry the brief; floral debossed wraps for gift-minded SKUs." },
+    ],
   },
 };
 
@@ -440,16 +586,46 @@ function titleize(slug: string): string {
     .join(" ");
 }
 
+// Auto-derive named clients (max 5) from the volumes that demonstrate this
+// topic. Used to render the trust line on /craft/* and /industry/* pages.
+function clientsForTopic(category: TopicCategory, slug: string): string[] {
+  let volumeSlugs: string[] = [];
+  if (category === "craft") {
+    volumeSlugs = CRAFT_VOLUMES[slug] ?? [];
+  } else {
+    const cats = INDUSTRY_CATEGORIES[slug];
+    if (cats) {
+      volumeSlugs = VOLUMES.filter((v) => cats.includes(v.category)).map((v) => v.slug);
+    }
+  }
+  const seen = new Set<string>();
+  const clients: string[] = [];
+  for (const vs of volumeSlugs) {
+    const v = VOLUMES.find((x) => x.slug === vs);
+    if (!v) continue;
+    const c = v.client.trim();
+    if (!c || /house design|studio client|dtc client/i.test(c)) continue;
+    if (seen.has(c)) continue;
+    seen.add(c);
+    clients.push(c);
+    if (clients.length >= 5) break;
+  }
+  return clients;
+}
+
 export function getTopic(category: TopicCategory, slug: string): Topic {
   const explicit = TOPICS[slug];
   if (explicit && explicit.category === category) {
     const dynamic = relatedFromVolumes(slug);
-    return dynamic ? { ...explicit, related: dynamic } : explicit;
+    const base = dynamic ? { ...explicit, related: dynamic } : explicit;
+    const trustClients = clientsForTopic(category, slug);
+    return trustClients.length ? { ...base, trustClients } : base;
   }
 
   const meta = CATEGORY_META[category];
   const name = titleize(slug);
   const copy = TOPIC_COPY[slug];
+  const trustClients = clientsForTopic(category, slug);
 
   return {
     slug,
@@ -499,5 +675,9 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     ctaKicker: "Samples · Posted free",
     ctaTitle: `Begin with ${name.toLowerCase()}.`,
     ctaDesc: "Every topic in the Huamei archive starts the same way — a brief, a sample, a price band. We post first-round samples free of charge.",
+    commercialTitle: copy?.commercialTitle,
+    commercialDescription: copy?.commercialDescription,
+    buyerFaq: copy?.buyerFaq,
+    ...(trustClients.length ? { trustClients } : {}),
   };
 }

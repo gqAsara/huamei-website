@@ -41,9 +41,13 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const topic = getTopic("craft", slug);
+  // Prefer commercial-intent title when set (audit 2026-05-11 upgrade);
+  // fall back to the descriptive default.
   return {
-    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Craft`,
-    description: topic.lede,
+    title:
+      topic.commercialTitle ??
+      `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Craft`,
+    description: topic.commercialDescription ?? topic.lede,
     alternates: { canonical: `/craft/${slug}` },
   };
 }
