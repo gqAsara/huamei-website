@@ -155,6 +155,27 @@ export function TopicTemplate({ topic }: { topic: Topic }) {
         </>
       ) : null}
 
+      {/* VI-b. Related blog posts (cluster + pillar links). Wires the
+          hub-and-spoke architecture: this commercial page → investigative
+          long-form content. */}
+      {topic.relatedBlogs?.length ? (
+        <>
+          <div className="tp-sec-head">
+            <h2>Read <em>further.</em></h2>
+            <span className="stamp">Notes from the press floor</span>
+          </div>
+          <section className="tp-readmore">
+            {topic.relatedBlogs.map((b) => (
+              <Link key={b.slug} className="tp-readmore-row" href={`/blogs/${b.slug}`}>
+                <span className="tp-readmore-title">{b.title}</span>
+                {b.description ? <span className="tp-readmore-desc">{b.description}</span> : null}
+                <span className="tp-readmore-arr">→</span>
+              </Link>
+            ))}
+          </section>
+        </>
+      ) : null}
+
       {/* VII. CTA */}
       <section className="tp-cta">
         {topic.trustClients?.length ? (

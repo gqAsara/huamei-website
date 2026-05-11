@@ -34,6 +34,12 @@ export type TopicSpec = { label: string; value: string };
 
 export type TopicFaq = { q: string; a: string };
 
+export type TopicRelatedBlog = {
+  slug: string;
+  title: string;
+  description: string;
+};
+
 export type Topic = {
   slug: string;
   category: TopicCategory;
@@ -62,11 +68,12 @@ export type Topic = {
   heroImage?: string;
   // Commercial-intent fields (audit 2026-05-11). Optional — when set, the
   // route's generateMetadata uses commercialTitle/commercialDescription for
-  // SEO; TopicTemplate renders buyerFaq + trustClients sections.
+  // SEO; TopicTemplate renders buyerFaq + trustClients + relatedBlogs.
   commercialTitle?: string;
   commercialDescription?: string;
   buyerFaq?: TopicFaq[];
   trustClients?: string[]; // auto-derived in getTopic() from VOLUMES
+  relatedBlogs?: TopicRelatedBlog[]; // auto-derived from TOPIC_RELATED_BLOGS map
 };
 
 const STRUCTURE_SLUGS = new Set([
@@ -586,6 +593,77 @@ function titleize(slug: string): string {
     .join(" ");
 }
 
+// Topic-slug → ordered list of blog post slugs to surface as "Read further"
+// links. Each topic gets up to 3 blogs. Added 2026-05-11 to wire the
+// hub-and-spoke link graph: commercial /craft + /industry pages link out
+// to investigative /blogs/* content. Slug must match a file in content/blogs.
+const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
+  // Structures
+  rigid: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction", "rigid-box-vs-folding-carton"],
+  magnetic: ["magnetic-pull-force-explained", "custom-luxury-rigid-box-manufacturing"],
+  drawer: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
+  folding: ["rigid-box-vs-folding-carton", "moq-realities-luxury-packaging"],
+  book: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
+  inserts: ["custom-luxury-rigid-box-manufacturing"],
+  shoppers: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
+  bespoke: ["moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
+  // Surfaces
+  "hot-foil": ["hot-foil-stamping-for-luxury-packaging", "hot-foil-vs-cold-foil-cost-and-finish", "registered-emboss-foil-tolerance"],
+  emboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
+  deboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
+  "soft-touch": ["hot-foil-stamping-for-luxury-packaging"],
+  "spot-uv": ["hot-foil-stamping-for-luxury-packaging"],
+  offset: ["hot-foil-stamping-for-luxury-packaging"],
+  wraps: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
+  // Industries
+  cosmetic: ["custom-luxury-rigid-box-manufacturing", "magnetic-pull-force-explained", "greyboard-grades-for-luxury-rigid-construction"],
+  spirits: ["custom-luxury-rigid-box-manufacturing", "working-with-a-chinese-luxury-packaging-manufacturer", "greyboard-grades-for-luxury-rigid-construction"],
+  seasonal: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
+  wellness: ["moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
+};
+
+// Read post titles + descriptions lazily from content/blogs at module init
+// so the topic page can render real titles, not just slugs. Cached.
+type BlogMeta = { title: string; description: string };
+let _blogMetaCache: Record<string, BlogMeta> | null = null;
+function getBlogMeta(): Record<string, BlogMeta> {
+  if (_blogMetaCache) return _blogMetaCache;
+  // Lazy import to avoid pulling fs into client bundles (Topic is server-only).
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { readFileSync, readdirSync, existsSync } = require("node:fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { join } = require("node:path");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const matter = require("gray-matter");
+  const dir = join(process.cwd(), "content", "blogs");
+  const map: Record<string, BlogMeta> = {};
+  if (!existsSync(dir)) return (_blogMetaCache = map);
+  for (const file of readdirSync(dir)) {
+    if (!file.endsWith(".md")) continue;
+    const slug = file.replace(/\.md$/, "");
+    const raw = readFileSync(join(dir, file), "utf8");
+    const { data } = matter(raw);
+    map[slug] = {
+      title: data.title ?? slug,
+      description: data.description ?? "",
+    };
+  }
+  return (_blogMetaCache = map);
+}
+
+function relatedBlogsForTopic(slug: string): TopicRelatedBlog[] {
+  const blogSlugs = TOPIC_RELATED_BLOGS[slug];
+  if (!blogSlugs?.length) return [];
+  const meta = getBlogMeta();
+  return blogSlugs
+    .map((s) => {
+      const m = meta[s];
+      return m ? { slug: s, title: m.title, description: m.description } : null;
+    })
+    .filter((b): b is TopicRelatedBlog => b !== null)
+    .slice(0, 3);
+}
+
 // Auto-derive named clients (max 5) from the volumes that demonstrate this
 // topic. Used to render the trust line on /craft/* and /industry/* pages.
 function clientsForTopic(category: TopicCategory, slug: string): string[] {
@@ -619,13 +697,19 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     const dynamic = relatedFromVolumes(slug);
     const base = dynamic ? { ...explicit, related: dynamic } : explicit;
     const trustClients = clientsForTopic(category, slug);
-    return trustClients.length ? { ...base, trustClients } : base;
+    const relatedBlogs = relatedBlogsForTopic(slug);
+    return {
+      ...base,
+      ...(trustClients.length ? { trustClients } : {}),
+      ...(relatedBlogs.length ? { relatedBlogs } : {}),
+    };
   }
 
   const meta = CATEGORY_META[category];
   const name = titleize(slug);
   const copy = TOPIC_COPY[slug];
   const trustClients = clientsForTopic(category, slug);
+  const relatedBlogs = relatedBlogsForTopic(slug);
 
   return {
     slug,
@@ -679,5 +763,6 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     commercialDescription: copy?.commercialDescription,
     buyerFaq: copy?.buyerFaq,
     ...(trustClients.length ? { trustClients } : {}),
+    ...(relatedBlogs.length ? { relatedBlogs } : {}),
   };
 }
