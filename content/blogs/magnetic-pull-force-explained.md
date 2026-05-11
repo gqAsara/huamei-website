@@ -18,7 +18,7 @@ author:
   factory: "Henan"
   url: "/house/people"
 publishedAt: "2026-05-08T19:30:00+08:00"
-updatedAt: "2026-05-08T19:30:00+08:00"
+updatedAt: "2026-05-11T18:30:00+08:00"
 schema: "Article"
 internalLinks:
   - "/craft"
@@ -58,6 +58,14 @@ The question every brand director eventually asks on a magnetic-flap rigid box i
 > Magnetic closure pull-force on a luxury rigid box should sit between 6 and 50 grams at 2,800 Gauss, depending on the closure geometry and the wrapped board weight. Below 6 g the closure feels loose; above 50 g it snaps too hard for a luxury unbox.
 
 Pull-force is the weight, in grams, that the magnet can hold against gravity before it releases. It is measured by hanging a known mass from one half of the closed magnetic pair and recording the value at which the pair separates. The Gauss number (2,800 across all our closure types) is a separate measurement of the magnet's surface field strength — it does not move with project. **Pull-force is the variable; Gauss is the constant.**
+
+### A note on units — why some manufacturers quote pounds, not grams
+
+Some industry references quote magnetic closure pull-force in **3–5 pounds** (roughly 1,400–2,300 grams). That number measures something different: the peak axial force required to pull two large neodymium magnets apart in direct line, typically for industrial gift boxes, wood-cased presentation cases, or large hinged enclosures where the lid itself weighs several hundred grams.
+
+For luxury cosmetic, spirits, and gifting rigid boxes — where the lid weighs 30–80 grams and is opened with a single thumb — **the relevant spec is the much smaller "hold-against-gravity" pull-force in grams.** A 3-pound closure on a 60-gram cosmetic lid would feel industrial, not luxurious. The 6–50 g range is what the buyer's hand actually wants.
+
+If a brief specifies pull-force in pounds, we ask one question — what is the lid weight — and convert from there. The luxury answer is almost always a single-digit-percentage of the lid mass.
 
 The reason pull-force is the spec that matters is that it is the only number on a magnetic box that a buyer can *feel*. They will not feel the board weight, the wrap gsm, the foil dwell time, or the registration tolerance. They will feel the closure. The closure decides whether the box reads as expensive or as cheap when it lands on the table.
 
