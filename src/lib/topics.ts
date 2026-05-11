@@ -323,7 +323,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The cheapest box that can still feel considered.",
     meta: ["250–450 gsm SBS", "1,000 pcs min", "14–18 days"],
-    commercialTitle: "Folding carton manufacturer for luxury packaging — Huamei",
+    commercialTitle: "Folding carton manufacturer for luxury packaging",
     commercialDescription: "Reverse-tuck, auto-bottom, and seal-end folding cartons on 250–450 gsm SBS. MOQ 1,000+; per-piece cost falls fast above 5,000. 14–18 day lead time, hot-foil and soft-touch routine.",
     buyerFaq: [
       { q: "When is a folding carton cheaper than a rigid box?", a: "Above 5,000 pieces. Below 1,000 a rigid box is usually cheaper per unit because the rigid setup amortizes faster than the offset print setup." },
@@ -507,7 +507,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The compact, the tube, the jar — and everything that sits around them.",
     meta: ["9 in archive", "ΔE ≤ 2", "Soft-touch standard"],
-    commercialTitle: "Luxury cosmetic & skincare packaging manufacturer — Huamei",
+    commercialTitle: "Luxury cosmetic & skincare packaging manufacturer",
     commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Lancôme, Estée Lauder, L'Oréal Paris.",
     buyerFaq: [
       { q: "What's the MOQ for cosmetic packaging?", a: "1,000+ for folding cartons; 300+ for rigid; 200+ for magnetic-flap rigid. Below the floors a rigid box is usually cheaper per unit than a folding carton." },
@@ -528,7 +528,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The reveal is half the bottle.",
     meta: ["14 in archive", "Book · drawer · ceramic", "±1 mm cradles"],
-    commercialTitle: "Luxury spirits, wine & tea packaging manufacturer — Huamei",
+    commercialTitle: "Luxury spirits, wine & tea packaging manufacturer",
     commercialDescription: "Book-style, drawer, and ceramic cradle gift packs for spirits, wine, and archival tea. ±1 mm bottle-profile tolerance. Built for Wuliangye, Yangshao, Dukang, Hongxing Erguotou.",
     buyerFaq: [
       { q: "What's the MOQ for a spirits gift box?", a: "300+ for rigid construction; 1,000+ for the printed folding cartons that sit beside the bottle in retail. Some heritage launches run lower on per-project quote." },
@@ -569,7 +569,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "Type that whispers — paper that composts.",
     meta: ["2 in archive", "Pulp + folding", "Soy ink standard"],
-    commercialTitle: "Luxury wellness & botanical packaging manufacturer — Huamei",
+    commercialTitle: "Luxury wellness & botanical packaging manufacturer",
     commercialDescription: "Restrained, considered packaging for botanicals, soaps, and supplements. Uncoated stocks, soy ink, pulp inserts that compost. FSC/PEFC default. MOQ 500+, 16–22 day lead time.",
     buyerFaq: [
       { q: "What sustainability standards do you hold?", a: "FSC or PEFC stocks by default. Soy ink house standard; petroleum ink available only on request. Pulp inserts are the sustainable default for cradles and trays." },
