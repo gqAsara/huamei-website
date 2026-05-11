@@ -32,9 +32,12 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const topic = getTopic("industry", slug);
+  // Prefer commercial-intent title when set (audit 2026-05-11 upgrade).
   return {
-    title: `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Industry`,
-    description: topic.lede,
+    title:
+      topic.commercialTitle ??
+      `${topic.title.replace(/\.$/, "")}${topic.italic ?? ""} · Industry`,
+    description: topic.commercialDescription ?? topic.lede,
     alternates: { canonical: `/industry/${slug}` },
   };
 }

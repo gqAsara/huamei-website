@@ -135,14 +135,40 @@ export function TopicTemplate({ topic }: { topic: Topic }) {
         ))}
       </dl>
 
-      {/* VI. CTA */}
+      {/* VI. Buyer FAQ — added 2026-05-11 as commercial-intent layering.
+          Plain on-page Q&A, NOT FAQPage schema (per SEO_CONTEXT.md: Google
+          restricted FAQPage rich results to gov/health domains in 2023). */}
+      {topic.buyerFaq?.length ? (
+        <>
+          <div className="tp-sec-head">
+            <h2>What <em>buyers ask</em> first.</h2>
+            <span className="stamp">Huamei &middot; FAQ</span>
+          </div>
+          <section className="tp-faq">
+            {topic.buyerFaq.map((f, i) => (
+              <div className="tp-faq-row" key={i}>
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            ))}
+          </section>
+        </>
+      ) : null}
+
+      {/* VII. CTA */}
       <section className="tp-cta">
+        {topic.trustClients?.length ? (
+          <div className="kicker tp-cta-trust">
+            <span style={{ opacity: 0.55, marginRight: 8 }}>Made for &middot;</span>
+            {topic.trustClients.join(" · ")}
+          </div>
+        ) : null}
         <div className="kicker">{topic.ctaKicker}</div>
         <h3>{topic.ctaTitle}</h3>
         <p>{topic.ctaDesc}</p>
         <div className="actions">
           <Link className="hm-plate" href="/begin">
-            <span className="roman">→</span> Begin
+            <span className="roman">→</span> Begin a project
           </Link>
           <a className="alt" href="mailto:info@huamei.io">info@huamei.io</a>
         </div>

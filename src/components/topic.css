@@ -345,6 +345,42 @@
 }
 .tp-cta .alt:hover { border-bottom-color: var(--foil-gold-hi); color: var(--foil-gold-hi); }
 
+/* Buyer FAQ — commercial-intent Q&A block added 2026-05-11. Lives between
+   the spec table and the CTA. Each row is a question + plain-text answer;
+   intentionally NOT FAQPage JSON-LD (Google restricted those rich results
+   in 2023). */
+.tp-faq {
+  display: grid;
+  gap: 28px;
+  max-width: 760px;
+  margin: 0 auto 64px;
+  padding: 0 28px;
+}
+.tp-faq-row {
+  border-top: .5px solid var(--rule);
+  padding-top: 22px;
+}
+.tp-faq-row h3 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin: 0 0 10px;
+  color: var(--ink, #1a1614);
+}
+.tp-faq-row p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft, #6b615a);
+  margin: 0;
+}
+.tp-cta-trust {
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 960px) {
   .tp-mast, .tp-prose, .tp-index-grid, .tp-related-grid, .tp-specs {
     grid-template-columns: 1fr;
