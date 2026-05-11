@@ -3,8 +3,8 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/19",
-  "nextAction": "Autonomous SEO 2026-05-11 (session 2): PR #19 shipped. Founder pulled GSC numbers: 47 pages indexed, 19 not indexed (1 reason) as of 5/7/26 — meaningfully ahead of the 3-6 month brand sandbox the playbook assumed. AI baseline report corrected (WebSearch tool returns scraped index, not Google's real one). Next moves: (a) founder clicks GSC 'Not indexed → 1 reason' to identify the 19 stragglers; (b) founder pulls GSC Performance queries for any pillar-keyword impressions — even position-30 is signal we're inside the ranking window; (c) continue cluster expansion. Site at 3 pillars + 6 cluster spokes = 9 blog posts. P3 still blocked on FSC/EUDR data.",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/20",
+  "nextAction": "PR #20 ships commercial-intent upgrade across all 15 /craft/* + 4 /industry/* pages. Each got: new commercial-front-loaded SEO title, new meta description, 3-Q buyer FAQ section (no FAQPage schema), auto-derived trust line in CTA (Made for · Lancôme · Wuliangye · ...). Replaces 'create new landing pages' approach with 'upgrade existing pages' — preserves indexing momentum. GSC indexed 47/66 pages at day 7 (founder confirmed). 19 'Discovered - currently not indexed' (queue backlog, not rejection); 0 'Crawled - rejected'. Next: weekly GSC re-probe; founder to share Performance query data for any pillar-keyword impressions.",
   "lastUpdated": "2026-05-11T18:55:00Z",
   "phase0Tasks": {
     "gsc": "done",
