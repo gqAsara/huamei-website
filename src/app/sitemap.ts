@@ -1,10 +1,20 @@
 import type { MetadataRoute } from "next";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { VOLUMES } from "@/lib/volumes";
 import { navCategories } from "@/lib/nav";
 import { getAllBlogPosts } from "@/lib/blogs";
 import { getAllVolumes } from "@/lib/sanity/queries";
 
 const SITE = "https://huamei.io";
+
+// Check whether a /public-relative path actually exists on disk. Used to
+// gate image:image sitemap entries — emitting an entry for a missing file
+// signals a broken image to Google.
+function publicFileExists(src: string | undefined): boolean {
+  if (!src || src.startsWith("http")) return Boolean(src);
+  return existsSync(join(process.cwd(), "public", src.replace(/^\//, "")));
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -70,12 +80,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(p.updatedAt),
       changeFrequency: "monthly" as const,
       priority: 0.8,
-      ...(p.hero?.src
+      // Only emit image entry when the file actually exists on disk —
+      // otherwise the sitemap signals a broken image to Google. Pillar
+      // 4's hero is referenced in frontmatter but pending founder upload;
+      // this gate prevents the 404 from leaking into the sitemap.
+      ...(publicFileExists(p.hero?.src)
         ? {
             images: [
-              p.hero.src.startsWith("http")
-                ? p.hero.src
-                : `${SITE}${p.hero.src}`,
+              p.hero!.src.startsWith("http")
+                ? p.hero!.src
+                : `${SITE}${p.hero!.src}`,
             ],
           }
         : {}),
