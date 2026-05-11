@@ -279,7 +279,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production. Built for Lancôme, Estée Lauder, Wuliangye and others.",
     buyerFaq: [
       { q: "What's the minimum order for a custom rigid box?", a: "200+ pieces public floor. Some structures run lower on a per-project quote. Below 200 the per-piece cost rises because press setup and hand-assembly time stop amortizing." },
-      { q: "How long does a custom rigid box take?", a: "Samples 7–10 days; production 20–28 days from approved sample. Add a week for registered emboss-and-foil." },
+      { q: "How long does a custom rigid box take?", a: "Samples 7–10 days; production 20–28 days from approved sample. Foil, emboss, and registered emboss-and-foil are included in the production schedule — no extra time." },
       { q: "What greyboard thickness should I spec?", a: "2.0 mm is the house standard for cosmetics; 2.5 mm for magnetic-flap and drawer constructions; 3.0 mm for spirits and heritage gift packs." },
     ],
   },
@@ -319,7 +319,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "The folding carton is the workhorse — flat-shipped, glued or tucked at the line. 250 to 450 gsm coated or uncoated stock, die-cut, scored, sometimes laminated. The cheapest box that can still feel considered.",
       "We make reverse-tuck, auto-bottom, seal-end, and a handful of bespoke crashes. Hot-foil and emboss are routine on the front panel. Soft-touch laminate is the upgrade most cosmetic clients reach for.",
-      "Used for cosmetic outers, prestige FMCG, and retail-shelf packaging at scale. Minimum run 1,000 — per-unit cost falls fast above 5,000. Lead time 14–18 days for unprinted blanks; add a week for hot-foil.",
+      "Used for cosmetic outers, prestige FMCG, and retail-shelf packaging at scale. Minimum run 1,000 — per-unit cost falls fast above 5,000. Lead time 14–18 days, with hot-foil and emboss included in the schedule.",
     ],
     pullQuote: "The cheapest box that can still feel considered.",
     meta: ["250–450 gsm SBS", "1,000 pcs min", "14–18 days"],
@@ -327,7 +327,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     commercialDescription: "Reverse-tuck, auto-bottom, and seal-end folding cartons on 250–450 gsm SBS. MOQ 1,000+; per-piece cost falls fast above 5,000. 14–18 day lead time, hot-foil and soft-touch routine.",
     buyerFaq: [
       { q: "When is a folding carton cheaper than a rigid box?", a: "Above 5,000 pieces. Below 1,000 a rigid box is usually cheaper per unit because the rigid setup amortizes faster than the offset print setup." },
-      { q: "What's the lead time on a folding carton?", a: "14–18 days for unprinted blanks; add a week for hot-foil or registered emboss-and-foil." },
+      { q: "What's the lead time on a folding carton?", a: "14–18 days. Hot-foil, emboss, and registered emboss-and-foil run inside the production schedule — no extra time for surface decoration." },
       { q: "What stocks do you use?", a: "250–450 gsm SBS folding boxboard. Reverse-tuck, auto-bottom, seal-end and bespoke crash formats. Soft-touch laminate is the most-specified upgrade." },
     ],
   },
@@ -433,12 +433,12 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "A matte velvet film laminated to a printed sheet. Scratch-resistant, fingerprint-resistant, slightly silken under the fingertips. Reads as more expensive than the underlying stock — which is half the point.",
       "We laminate after offset printing, before the finishing line. Pairs with spot-UV (gloss-on-matte), foil, and emboss without complication. Soft-touch over a dark Pantone is a Huamei signature for cosmetic and skincare outers.",
-      "Adds about ¥2.40 per unit at a 5k run. Lead time +2 days for the laminate cure. Not recommended on stocks under 250 gsm — the film stiffens the carton, which can over-stiffen a thin board.",
+      "Adds about ¥2.40 per unit at a 5k run. Runs inside the production schedule — no extra lead time. Not recommended on stocks under 250 gsm — the film stiffens the carton, which can over-stiffen a thin board.",
     ],
     pullQuote: "Reads as more expensive than the underlying stock — which is half the point.",
     meta: ["Matte velvet film", "+¥2.40/unit @ 5k", "≥ 250 gsm stock"],
     commercialTitle: "Soft-touch laminate manufacturer for luxury packaging",
-    commercialDescription: "Velvet matte soft-touch laminate, scratch- and fingerprint-resistant. Pairs cleanly with spot-UV, hot-foil, and emboss. Recommended on ≥250 gsm stock. +2 day lead time for the laminate cure.",
+    commercialDescription: "Velvet matte soft-touch laminate, scratch- and fingerprint-resistant. Pairs cleanly with spot-UV, hot-foil, and emboss. Recommended on ≥250 gsm stock. Runs inside the production schedule — no extra lead time.",
     buyerFaq: [
       { q: "What does soft-touch laminate do?", a: "Adds a velvet matte film over the printed sheet. Scratch-resistant, fingerprint-resistant, slightly silken in the hand. Reads as more expensive than the underlying stock." },
       { q: "Can I combine it with spot-UV or foil?", a: "Yes — soft-touch over dark Pantone with spot-UV on top is a Huamei signature for cosmetic outers. Hot-foil and emboss work on the laminate without issue." },
@@ -449,12 +449,12 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "A gloss varnish printed in registered patterns over a matte field. The contrast is the subject: a pinstripe of gloss against soft-touch laminate, a wordmark sealed in clear over uncoated paper, a pattern that only catches the light from {em}one angle{/em}.",
       "We register spot-UV to ink and emboss at ±0.2 mm. Most common over soft-touch laminate, where the matte-and-gloss contrast is most pronounced; also used straight onto coated stock for a more subtle effect.",
-      "Drawn at the artwork stage — the spot-UV file is a separate spot colour in the print PDF. We preview the gloss line on a sample sheet before going to production. Lead time +1 day.",
+      "Drawn at the artwork stage — the spot-UV file is a separate spot colour in the print PDF. We preview the gloss line on a sample sheet before going to production. Runs inside the production schedule — no extra lead time.",
     ],
     pullQuote: "A pattern that only catches the light from one angle.",
-    meta: ["±0.2 mm to ink", "Best over soft-touch", "+1 day lead"],
+    meta: ["±0.2 mm to ink", "Best over soft-touch", "Registered to print"],
     commercialTitle: "Spot UV varnish manufacturer for luxury packaging",
-    commercialDescription: "Gloss-on-matte spot UV varnish, registered to ink and emboss at ±0.2 mm. Best over soft-touch laminate. Drawn at the artwork stage as a separate spot colour. +1 day lead time.",
+    commercialDescription: "Gloss-on-matte spot UV varnish, registered to ink and emboss at ±0.2 mm. Best over soft-touch laminate. Drawn at the artwork stage as a separate spot colour. Runs inside the production schedule.",
     buyerFaq: [
       { q: "What does spot UV add to a box?", a: "A glossy varnish printed in registered patterns over a matte field. The contrast — gloss against soft-touch or uncoated — only catches the light from one angle. Used for wordmarks, decorative patterns, and accent panels." },
       { q: "What stock does it work best over?", a: "Soft-touch laminate is the strongest pairing — the matte-and-gloss contrast is most pronounced. Also works straight onto coated stock for a more subtle effect." },
@@ -511,7 +511,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Lancôme, Estée Lauder, L'Oréal Paris.",
     buyerFaq: [
       { q: "What's the MOQ for cosmetic packaging?", a: "1,000+ for folding cartons; 300+ for rigid; 200+ for magnetic-flap rigid. Below the floors a rigid box is usually cheaper per unit than a folding carton." },
-      { q: "What lead time should I plan for?", a: "14–18 days for folding cartons; 20–32 days for rigid. Add a week for registered emboss-and-foil. Sample turnaround 7–10 days." },
+      { q: "What lead time should I plan for?", a: "14–18 days for folding cartons; 20–32 days for rigid. Surface decoration — hot-foil, emboss, soft-touch, spot-UV — runs inside the production schedule. Sample turnaround 7–10 days." },
       { q: "What colour tolerance do you hold?", a: "Pantone-matched to ΔE ≤ 2 on press, GMG-certified contract proof. Foil-to-emboss registration ±0.1 mm where the brief requires." },
     ],
   },
