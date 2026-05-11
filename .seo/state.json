@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/18",
-  "nextAction": "Autonomous SEO run 2026-05-11: PR #17 (sitemap defensive fix — stop emitting 404 image entry for Pillar 4 hero) + PR #18 (cluster #5 rigid-vs-folding-carton + first competitive baseline report). Site now has 3 pillars + 5 cluster spokes (8 blog posts total). Competitive baseline confirms all 3 pillar primary keywords have weak top-10 results — Huamei wins on quality once indexed. AI engine citation probe queued for ~2026-05-25 (need more indexing time). Next unblocked work options: (a) more clusters from confirmed facts, (b) Pillar 4 refresh adding the manufacturer-not-agent distinction, (c) wait for GSC data to mature. P3 (sustainability) still blocked.",
-  "lastUpdated": "2026-05-11T18:10:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/19",
+  "nextAction": "Autonomous SEO 2026-05-11 (session 2): PR #19 ships Pillar 4 'manufacturer-not-agent' refresh + cluster #6 (MOQ realities) + cluster #1 units-fix (lbs vs grams clarification) + AI citation baseline report. Probe revealed: (a) site:huamei.io zero indexed pages (expected at day 7); (b) 3 other 'Huamei' packaging companies rank for branded queries — long-term backlinks + Organization.sameAs needed; (c) industry quotes pull-force in lbs not grams (cluster #1 fixed). Site at 3 pillars + 6 cluster spokes = 9 blog posts. P3 still blocked on FSC/EUDR data. Founder action items: rotate SANITY_WRITE_TOKEN; upload Pillar 1+4 hero photos; GSC URL inspect /craft/offset + /craft/wraps; LinkedIn page (unblocks Org.sameAs + outreach).",
+  "lastUpdated": "2026-05-11T18:55:00Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
