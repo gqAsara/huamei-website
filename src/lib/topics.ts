@@ -611,8 +611,8 @@ const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   "hot-foil": ["hot-foil-stamping-for-luxury-packaging", "hot-foil-vs-cold-foil-cost-and-finish", "registered-emboss-foil-tolerance"],
   emboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
   deboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
-  "soft-touch": ["hot-foil-stamping-for-luxury-packaging"],
-  "spot-uv": ["hot-foil-stamping-for-luxury-packaging"],
+  "soft-touch": ["soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
+  "spot-uv": ["soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
   offset: ["hot-foil-stamping-for-luxury-packaging"],
   wraps: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
   // Industries
