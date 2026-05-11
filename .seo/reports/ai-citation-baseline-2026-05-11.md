@@ -4,16 +4,22 @@ First probe pass for Huamei brand visibility and pillar content citation. Two da
 
 ## Probe 1: `site:huamei.io`
 
-**Result:** Zero indexed pages.
+**Initial result (WebSearch tool):** Zero indexed pages.
+
+**CORRECTION 2026-05-11 (later same day).** The WebSearch tool returns a third-party scraped index, **not** Google's actual index. Founder pulled the real number from Google Search Console:
 
 ```
-Search query:  site:huamei.io
-Result count:  0
+GSC Page Indexing report (data as of 5/7/26):
+  Indexed:      47 pages
+  Not indexed:  19 pages  (1 reason)
 ```
 
-**Read.** Google has not yet indexed any huamei.io URLs at all. Expected — the site is 7 days post-launch and inside the standard "brand sandbox" window. Will re-probe weekly.
+**Real read.** Google has already indexed **47 of ~66 known pages** at day 7. This is materially faster than the "3–6 month brand sandbox" timeline the playbook assumes. Two implications:
 
-Action: continue ISR + IndexNow pings (already automatic). No code change needed.
+1. **The sandbox framing should be revised toward 2–8 weeks**, not 3–6 months, for non-branded competitive ranking. Indexing alone is the first hurdle and we're already past it.
+2. **The 19 not-indexed pages are worth diagnosing.** GSC reports them under a single reason — likely "Crawled — currently not indexed" or "Page with redirect" (our `/margin` → `/blogs` 301s). Founder can drill into the "1 reason" link in GSC to confirm.
+
+**Action.** Founder to click the "Not indexed → 1 reason" pill in GSC and report back what category the 19 pages fall under. If it's "Crawled — currently not indexed" (Google's "we saw it, we don't think it's worth indexing yet"), the next move is content quality + internal-linking on those specific URLs. If it's "Page with redirect" (our old `/margin` URLs), no action — that's correct.
 
 ## Probe 2: Brand collision — "huamei luxury packaging manufacturer"
 
@@ -62,11 +68,13 @@ For each pillar's primary keyword, check whether Huamei appears in the top 20:
 
 | Pillar | Primary keyword | Huamei in top 20? |
 |---|---|---|
-| P1 | "custom luxury rigid box manufacturer" | No (site not indexed) |
-| P2 | "hot-foil stamping for luxury packaging" | No |
-| P4 | "Chinese luxury packaging manufacturer" | No |
+| P1 | "custom luxury rigid box manufacturer" | Not yet (WebSearch — true GSC ranking probably TBD) |
+| P2 | "hot-foil stamping for luxury packaging" | Not yet |
+| P4 | "Chinese luxury packaging manufacturer" | Not yet |
 
-**Read.** No baseline citations yet — expected. The probe is a placeholder for what will be measured weekly once indexing matures (~2–4 weeks out per the brand-sandbox model).
+**Read after the correction above.** Since Google has 47 pages indexed, ranking is the next gate, not indexing. Worth checking GSC → Performance → Queries (last 28 days) for any non-zero impressions on pillar keywords; even position-50 impressions are early signal that the algorithm is testing our content against the query.
+
+**Founder action.** Open GSC → Performance → toggle "Average position" on → look for queries containing "luxury packaging," "rigid box," "hot foil," or "Chinese packaging." If any show up with even a single impression at position 30+, we're inside the ranking window and the brand sandbox is shorter than expected.
 
 ## Recommended actions
 

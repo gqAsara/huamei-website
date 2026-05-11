@@ -4,7 +4,7 @@
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
   "lastShipped": "https://github.com/gqAsara/huamei-website/pull/19",
-  "nextAction": "Autonomous SEO 2026-05-11 (session 2): PR #19 ships Pillar 4 'manufacturer-not-agent' refresh + cluster #6 (MOQ realities) + cluster #1 units-fix (lbs vs grams clarification) + AI citation baseline report. Probe revealed: (a) site:huamei.io zero indexed pages (expected at day 7); (b) 3 other 'Huamei' packaging companies rank for branded queries — long-term backlinks + Organization.sameAs needed; (c) industry quotes pull-force in lbs not grams (cluster #1 fixed). Site at 3 pillars + 6 cluster spokes = 9 blog posts. P3 still blocked on FSC/EUDR data. Founder action items: rotate SANITY_WRITE_TOKEN; upload Pillar 1+4 hero photos; GSC URL inspect /craft/offset + /craft/wraps; LinkedIn page (unblocks Org.sameAs + outreach).",
+  "nextAction": "Autonomous SEO 2026-05-11 (session 2): PR #19 shipped. Founder pulled GSC numbers: 47 pages indexed, 19 not indexed (1 reason) as of 5/7/26 — meaningfully ahead of the 3-6 month brand sandbox the playbook assumed. AI baseline report corrected (WebSearch tool returns scraped index, not Google's real one). Next moves: (a) founder clicks GSC 'Not indexed → 1 reason' to identify the 19 stragglers; (b) founder pulls GSC Performance queries for any pillar-keyword impressions — even position-30 is signal we're inside the ranking window; (c) continue cluster expansion. Site at 3 pillars + 6 cluster spokes = 9 blog posts. P3 still blocked on FSC/EUDR data.",
   "lastUpdated": "2026-05-11T18:55:00Z",
   "phase0Tasks": {
     "gsc": "done",

@@ -64,3 +64,4 @@
 2026-05-11T19:58:19.395Z	site-engineer	external	IndexNow ping (HTTP 200) for cluster #5 + /blogs + sitemap. Sitemap defensive-fix verified live (Pillar 4 broken hero.jpg no longer in sitemap).
 2026-05-11T20:03:29.399Z	editor	publish	Session 2 — Pillar 4 refresh + cluster #6 (MOQ realities) + cluster #1 units fix + AI baseline report
 2026-05-11T20:15:54.341Z	site-engineer	external	IndexNow ping (HTTP 200) for session 2 — cluster #6 + Pillar 4 refresh + cluster #1 refresh + /blogs + sitemap
+2026-05-11T20:20:22.311Z	analyst	report	GSC indexing baseline pulled by founder: 47/66 pages indexed at day 7. Corrects AI baseline WebSearch finding (third-party scraped index, not Google's actual). Re-scoped brand sandbox window from 3-6 months → 2-8 weeks.
