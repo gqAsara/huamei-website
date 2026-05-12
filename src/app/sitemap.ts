@@ -8,6 +8,20 @@ import { getAllVolumes } from "@/lib/sanity/queries";
 
 const SITE = "https://huamei.io";
 
+// Next 16's sitemap generator does NOT XML-escape values it interpolates
+// into <image:loc>, <loc>, etc. — see
+// node_modules/next/dist/build/webpack/loaders/metadata/resolve-route-data.js
+// We pre-escape so Sanity image URLs (which contain `&` for query params
+// like `?w=1200&q=85`) don't break sitemap parsing.
+function xmlEscape(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 // Check whether a /public-relative path actually exists on disk. Used to
 // gate image:image sitemap entries — emitting an entry for a missing file
 // signals a broken image to Google.
@@ -70,10 +84,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly" as const,
       priority: 0.6,
       // Image sitemap entries — Google Images is a real top-of-funnel
-      // for packaging buyers shopping by visual reference.
-      images: [v.cover, ...v.photos].filter(
-        (u): u is string => typeof u === "string" && u.length > 0,
-      ),
+      // for packaging buyers shopping by visual reference. URLs are
+      // XML-escaped because Next 16 doesn't escape <image:loc> values.
+      images: [v.cover, ...v.photos]
+        .filter((u): u is string => typeof u === "string" && u.length > 0)
+        .map(xmlEscape),
     })),
     ...blogs.map((p) => ({
       url: `${SITE}/blogs/${p.slug}`,
@@ -87,9 +102,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...(publicFileExists(p.hero?.src)
         ? {
             images: [
-              p.hero!.src.startsWith("http")
-                ? p.hero!.src
-                : `${SITE}${p.hero!.src}`,
+              xmlEscape(
+                p.hero!.src.startsWith("http")
+                  ? p.hero!.src
+                  : `${SITE}${p.hero!.src}`,
+              ),
             ],
           }
         : {}),
