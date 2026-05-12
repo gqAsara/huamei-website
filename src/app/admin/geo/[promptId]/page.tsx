@@ -70,12 +70,15 @@ function RunCard({ run }: { run: RunDetail }) {
 
 export default async function PromptDetail({
   params,
+  searchParams,
 }: {
   params: Promise<{ promptId: string }>;
+  searchParams: Promise<{ triggered?: string }>;
 }) {
-  const { promptId } = await params;
+  const [{ promptId }, sp] = await Promise.all([params, searchParams]);
+  const justTriggered = sp.triggered === "1";
   const runs = await getRunsForPrompt(decodeURIComponent(promptId));
-  if (runs.length === 0) notFound();
+  if (runs.length === 0 && !justTriggered) notFound();
 
   // Group by engine
   const engines = ["claude", "openai", "perplexity"] as const;
@@ -103,6 +106,11 @@ export default async function PromptDetail({
             promptId={decodeURIComponent(promptId)}
           />
         </div>
+        {justTriggered ? (
+          <div className="run-banner">
+            ✓ Probe queued for this prompt. Refresh in ~1 min for the new run.
+          </div>
+        ) : null}
       </header>
 
       {engines.map((e) => {

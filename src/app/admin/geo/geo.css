@@ -61,6 +61,17 @@
   color: #c83e3e;
 }
 
+.run-banner {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #e0f0e3;
+  color: #2d7a3e;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 1.45;
+  max-width: 760px;
+}
+
 .probing-indicator {
   display: inline-flex;
   align-items: center;

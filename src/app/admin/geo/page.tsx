@@ -44,7 +44,14 @@ function StageGroup({ stage, label }: { stage: string; label: string }) {
   );
 }
 
-export default async function GeoDashboard() {
+export default async function GeoDashboard({
+  searchParams,
+}: {
+  searchParams: Promise<{ triggered?: string }>;
+}) {
+  const params = await searchParams;
+  const justTriggered = params.triggered === "1";
+
   const [prompts, runsAll, recentRunsLast10Min] = await Promise.all([
     getAllPrompts(),
     getLatestRunsMatrix(),
@@ -92,6 +99,12 @@ export default async function GeoDashboard() {
             </span>
           ) : null}
         </div>
+        {justTriggered ? (
+          <div className="run-banner">
+            ✓ Probe started. First batch in ~2 min, full sweep ~10–15 min.
+            Refresh this page to see results as they arrive.
+          </div>
+        ) : null}
       </header>
 
       <section className="geo-sov">
