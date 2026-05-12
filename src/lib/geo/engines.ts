@@ -1,17 +1,18 @@
 /**
  * AI engine adapters for the GEO probe.
  *
- * Claude + OpenAI route through Vercel AI Gateway using the `gateway()`
- * provider from the `ai` package. On Vercel runtime, OIDC-based auth is
- * implicit; locally, set AI_GATEWAY_API_KEY in .env.local to test.
+ * All three engines route through OpenRouter using its OpenAI-compatible
+ * REST API. The `:online` suffix activates Exa-powered web search for
+ * any model that doesn't have search natively (Claude, GPT). Perplexity
+ * Sonar has search built in.
  *
- * Perplexity uses the Sonar API directly (no gateway middleman); needs
- * PERPLEXITY_API_KEY.
+ * Citations come back as URLs embedded in the response text; we extract
+ * them with `extractUrls()` and also surface any `sources` the AI SDK
+ * exposes from the response.
  */
 
-import { generateText, gateway } from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
-import { openai } from "@ai-sdk/openai";
+import { generateText } from "ai";
+import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 
 export type Engine = "claude" | "openai" | "perplexity";
 
@@ -23,18 +24,34 @@ export type ProbeResult = {
   error?: string;
 };
 
+// Model slugs as they appear on OpenRouter. Keep the bare Anthropic /
+// OpenAI ids for storage; add `:online` to the request to turn on web
+// search for Claude + GPT. Perplexity Sonar has search native.
 const CLAUDE_MODEL = "claude-sonnet-4-6";
 const OPENAI_MODEL = "gpt-5-mini";
 const PERPLEXITY_MODEL = "sonar";
 
+const OPENROUTER_CLAUDE = "anthropic/claude-sonnet-4.6:online";
+const OPENROUTER_OPENAI = "openai/gpt-5-mini:online";
+const OPENROUTER_PERPLEXITY = "perplexity/sonar";
+
 const SYSTEM_PROMPT =
   "Answer the user's question as you normally would. Cite sources where relevant. Keep responses concise and on-topic.";
 
+const openrouter = createOpenAICompatible({
+  name: "openrouter",
+  baseURL: "https://openrouter.ai/api/v1",
+  apiKey: process.env.OPENROUTER_API_KEY ?? "",
+  headers: {
+    // OpenRouter uses these for attribution on their leaderboard.
+    "HTTP-Referer": "https://huamei.io",
+    "X-Title": "HuameiGEO",
+  },
+});
+
 function extractUrls(text: string): string[] {
   if (!text) return [];
-  // RFC-permissive URL regex; captures http/https links including in markdown.
   const matches = text.match(/https?:\/\/[^\s)>\]"']+/gi) ?? [];
-  // Normalize: strip trailing punctuation, dedupe, lowercase host.
   const seen = new Set<string>();
   const out: string[] = [];
   for (const raw of matches) {
@@ -54,60 +71,37 @@ function extractUrls(text: string): string[] {
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-async function probeClaude(prompt: string): Promise<ProbeResult> {
-  try {
-    const result = await generateText({
-      // gateway() routes through Vercel AI Gateway — picks up OIDC auth
-      // on Vercel runtime automatically, no ANTHROPIC_API_KEY required.
-      model: gateway(`anthropic/${CLAUDE_MODEL}`),
-      system: SYSTEM_PROMPT,
-      prompt,
-      tools: {
-        web_search: anthropic.tools.webSearch_20250305({ maxUses: 5 }) as any,
-      },
-      stopWhen: ({ steps }: { steps: unknown[] }) => steps.length >= 6,
-    } as any);
-    const text = (result as any).text ?? "";
-    const sourceUrls = ((result as any).sources ?? [])
-      .map((s: { url?: string }) => s.url)
-      .filter((u: string | undefined): u is string => Boolean(u));
-    const citedUrls = Array.from(new Set([...sourceUrls, ...extractUrls(text)]));
-    return { engine: "claude", model: CLAUDE_MODEL, text, citedUrls };
-  } catch (err) {
+async function probeViaOpenRouter(
+  engine: Engine,
+  displayModel: string,
+  routerModel: string,
+  prompt: string,
+): Promise<ProbeResult> {
+  if (!process.env.OPENROUTER_API_KEY) {
     return {
-      engine: "claude",
-      model: CLAUDE_MODEL,
+      engine,
+      model: displayModel,
       text: "",
       citedUrls: [],
-      error: err instanceof Error ? err.message : String(err),
+      error: "OPENROUTER_API_KEY not set",
     };
   }
-}
-
-async function probeOpenAI(prompt: string): Promise<ProbeResult> {
   try {
     const result = await generateText({
-      // Gateway routing for OpenAI too. Note: gateway uses Chat
-      // Completions (not Responses API) under the hood — that's fine
-      // for web_search; OpenAI's web_search tool works on both.
-      model: gateway(`openai/${OPENAI_MODEL}`),
+      model: openrouter(routerModel),
       system: SYSTEM_PROMPT,
       prompt,
-      tools: {
-        web_search: openai.tools.webSearch({}) as any,
-      },
-      stopWhen: ({ steps }: { steps: unknown[] }) => steps.length >= 4,
     } as any);
     const text = (result as any).text ?? "";
     const sourceUrls = ((result as any).sources ?? [])
       .map((s: { url?: string }) => s.url)
       .filter((u: string | undefined): u is string => Boolean(u));
     const citedUrls = Array.from(new Set([...sourceUrls, ...extractUrls(text)]));
-    return { engine: "openai", model: OPENAI_MODEL, text, citedUrls };
+    return { engine, model: displayModel, text, citedUrls };
   } catch (err) {
     return {
-      engine: "openai",
-      model: OPENAI_MODEL,
+      engine,
+      model: displayModel,
       text: "",
       citedUrls: [],
       error: err instanceof Error ? err.message : String(err),
@@ -116,65 +110,16 @@ async function probeOpenAI(prompt: string): Promise<ProbeResult> {
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
-/**
- * Perplexity Sonar — direct REST API call (web search is built-in to the
- * model, no separate tool wiring required). Returns citations in the
- * response payload natively.
- */
+async function probeClaude(prompt: string): Promise<ProbeResult> {
+  return probeViaOpenRouter("claude", CLAUDE_MODEL, OPENROUTER_CLAUDE, prompt);
+}
+
+async function probeOpenAI(prompt: string): Promise<ProbeResult> {
+  return probeViaOpenRouter("openai", OPENAI_MODEL, OPENROUTER_OPENAI, prompt);
+}
+
 async function probePerplexity(prompt: string): Promise<ProbeResult> {
-  try {
-    const apiKey = process.env.PERPLEXITY_API_KEY;
-    if (!apiKey) {
-      return {
-        engine: "perplexity",
-        model: PERPLEXITY_MODEL,
-        text: "",
-        citedUrls: [],
-        error: "PERPLEXITY_API_KEY not set",
-      };
-    }
-    const res = await fetch("https://api.perplexity.ai/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: PERPLEXITY_MODEL,
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: prompt },
-        ],
-        return_citations: true,
-      }),
-    });
-    if (!res.ok) {
-      const detail = await res.text();
-      return {
-        engine: "perplexity",
-        model: PERPLEXITY_MODEL,
-        text: "",
-        citedUrls: [],
-        error: `HTTP ${res.status}: ${detail.slice(0, 200)}`,
-      };
-    }
-    const data = (await res.json()) as {
-      choices?: { message?: { content?: string } }[];
-      citations?: string[];
-    };
-    const text = data.choices?.[0]?.message?.content ?? "";
-    const apiCitations = data.citations ?? [];
-    const citedUrls = Array.from(new Set([...apiCitations, ...extractUrls(text)]));
-    return { engine: "perplexity", model: PERPLEXITY_MODEL, text, citedUrls };
-  } catch (err) {
-    return {
-      engine: "perplexity",
-      model: PERPLEXITY_MODEL,
-      text: "",
-      citedUrls: [],
-      error: err instanceof Error ? err.message : String(err),
-    };
-  }
+  return probeViaOpenRouter("perplexity", PERPLEXITY_MODEL, OPENROUTER_PERPLEXITY, prompt);
 }
 
 const PROBES: Record<Engine, (prompt: string) => Promise<ProbeResult>> = {
