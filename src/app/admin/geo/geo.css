@@ -44,6 +44,43 @@
   cursor: pointer;
 }
 .btn:hover { background: #2a2522; }
+.btn:disabled { opacity: 0.5; cursor: wait; }
+
+.run-feedback {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #e0f0e3;
+  color: #2d7a3e;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 600px;
+}
+.run-feedback.err {
+  background: #fbe5e5;
+  color: #c83e3e;
+}
+
+.probing-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  font-size: 12px;
+  color: #b07b1f;
+  font-weight: 500;
+}
+.probing-indicator .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b07b1f;
+  animation: probing-pulse 1.4s ease-in-out infinite;
+}
+@keyframes probing-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
 
 /* Share of voice */
 .geo-sov {

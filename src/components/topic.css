@@ -345,6 +345,8 @@
 }
 .tp-cta .alt:hover { border-bottom-color: var(--foil-gold-hi); color: var(--foil-gold-hi); }
 
+/* (this file is unrelated to GEO — leave intact) */
+
 /* Related blog posts (cluster + pillar cross-links). Lives below the
    buyer FAQ. Hub-and-spoke link graph: commercial /craft + /industry
    pages link to investigative /blogs/* content. */

@@ -139,3 +139,30 @@ export function computeShareOfVoice(latest: RunSummary[]): ShareOfVoice {
       .sort((a, b) => b.count - a.count),
   };
 }
+
+/**
+ * Returns the timestamp of the most recent run across all prompts/engines.
+ * Used to display "probing now" indicator if a run is fresh (<10 min).
+ */
+export async function getMostRecentRunAt(): Promise<string | null> {
+  if (!projectId) return null;
+  const c = client();
+  const result = await c.fetch<{ runAt: string } | null>(
+    `*[_type=="geoRun"] | order(runAt desc)[0]{ runAt }`,
+  );
+  return result?.runAt ?? null;
+}
+
+/**
+ * Counts runs created in the last N seconds.
+ * Used as the "probing now" signal.
+ */
+export async function getRecentRunCount(seconds: number): Promise<number> {
+  if (!projectId) return 0;
+  const c = client();
+  const cutoff = new Date(Date.now() - seconds * 1000).toISOString();
+  return c.fetch<number>(
+    `count(*[_type=="geoRun" && runAt > $cutoff])`,
+    { cutoff },
+  );
+}

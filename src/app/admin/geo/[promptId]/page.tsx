@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getRunsForPrompt, type RunDetail } from "@/lib/geo/queries";
+import { RunButton } from "../RunButton";
 import "../geo.css";
 
 export const dynamic = "force-dynamic";
@@ -97,9 +98,10 @@ export default async function PromptDetail({
         <h1 className="prompt-text">&ldquo;{promptText}&rdquo;</h1>
         <div className="geo-sub">{runs.length} total runs across {byEngine.size} engines</div>
         <div className="geo-actions">
-          <form action={`/api/cron/geo-probe?promptId=${encodeURIComponent(decodeURIComponent(promptId))}`} method="post">
-            <button className="btn" type="submit">▶ Re-run this prompt</button>
-          </form>
+          <RunButton
+            label="▶ Re-run this prompt"
+            promptId={decodeURIComponent(promptId)}
+          />
         </div>
       </header>
 

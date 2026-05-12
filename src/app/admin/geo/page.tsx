@@ -4,9 +4,11 @@ import {
   getLatestRunsMatrix,
   dedupeMatrixToLatest,
   computeShareOfVoice,
+  getRecentRunCount,
   type Prompt,
   type RunSummary,
 } from "@/lib/geo/queries";
+import { RunButton } from "./RunButton";
 import "./geo.css";
 
 export const dynamic = "force-dynamic";
@@ -43,13 +45,15 @@ function StageGroup({ stage, label }: { stage: string; label: string }) {
 }
 
 export default async function GeoDashboard() {
-  const [prompts, runsAll] = await Promise.all([
+  const [prompts, runsAll, recentRunsLast10Min] = await Promise.all([
     getAllPrompts(),
     getLatestRunsMatrix(),
+    getRecentRunCount(600), // 10 min window for "probing now" indicator
   ]);
 
   const latest = dedupeMatrixToLatest(runsAll);
   const sov = computeShareOfVoice(latest);
+  const isProbing = recentRunsLast10Min > 0;
 
   // Index: promptId × engine → latest run
   const byKey = new Map<string, RunSummary>();
@@ -80,10 +84,13 @@ export default async function GeoDashboard() {
           {ENGINES.length} engines · weekly cadence
         </div>
         <div className="geo-actions">
-          <form action="/api/cron/geo-probe" method="post">
-            <button className="btn" type="submit">▶ Run all now</button>
-          </form>
+          <RunButton />
           <Link className="btn" href="/studio">↗ Manage prompts in Studio</Link>
+          {isProbing ? (
+            <span className="probing-indicator">
+              <span className="dot" /> Probing — {recentRunsLast10Min} runs in last 10 min
+            </span>
+          ) : null}
         </div>
       </header>
 
