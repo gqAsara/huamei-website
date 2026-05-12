@@ -1,17 +1,15 @@
 /**
  * AI engine adapters for the GEO probe.
  *
- * Each adapter takes a buyer prompt, calls the engine with web-search enabled
- * (so the answer reflects what a real user would see), and returns a normalized
- * { text, citedUrls, model } result.
+ * Claude + OpenAI route through Vercel AI Gateway using the `gateway()`
+ * provider from the `ai` package. On Vercel runtime, OIDC-based auth is
+ * implicit; locally, set AI_GATEWAY_API_KEY in .env.local to test.
  *
- * All calls route through the Vercel AI Gateway when running on Vercel.
- * Local dev uses the same path; provider auth is implicit on Vercel and falls
- * back to env-var keys (ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY)
- * when those exist.
+ * Perplexity uses the Sonar API directly (no gateway middleman); needs
+ * PERPLEXITY_API_KEY.
  */
 
-import { generateText } from "ai";
+import { generateText, gateway } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { openai } from "@ai-sdk/openai";
 
@@ -59,12 +57,11 @@ function extractUrls(text: string): string[] {
 async function probeClaude(prompt: string): Promise<ProbeResult> {
   try {
     const result = await generateText({
-      model: anthropic(CLAUDE_MODEL),
+      // gateway() routes through Vercel AI Gateway — picks up OIDC auth
+      // on Vercel runtime automatically, no ANTHROPIC_API_KEY required.
+      model: gateway(`anthropic/${CLAUDE_MODEL}`),
       system: SYSTEM_PROMPT,
       prompt,
-      // Provider-specific tool types don't fully line up with the generic
-      // AI SDK tool slot in TS yet; cast to bypass and let the runtime
-      // route to Anthropic's web_search.
       tools: {
         web_search: anthropic.tools.webSearch_20250305({ maxUses: 5 }) as any,
       },
@@ -90,7 +87,10 @@ async function probeClaude(prompt: string): Promise<ProbeResult> {
 async function probeOpenAI(prompt: string): Promise<ProbeResult> {
   try {
     const result = await generateText({
-      model: openai.responses(OPENAI_MODEL),
+      // Gateway routing for OpenAI too. Note: gateway uses Chat
+      // Completions (not Responses API) under the hood — that's fine
+      // for web_search; OpenAI's web_search tool works on both.
+      model: gateway(`openai/${OPENAI_MODEL}`),
       system: SYSTEM_PROMPT,
       prompt,
       tools: {
