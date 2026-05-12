@@ -11,6 +11,7 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 const writeToken = process.env.SANITY_WRITE_TOKEN;
 const cronSecret = process.env.CRON_SECRET;
+const adminPassword = process.env.ADMIN_PASSWORD;
 
 type PromptDoc = { _id: string; text: string };
 type CompetitorDoc = { brand: string; domains: string[] };
@@ -29,14 +30,33 @@ function client() {
 }
 
 function isAuthorized(req: NextRequest): boolean {
-  // Vercel Cron sends Authorization: Bearer <CRON_SECRET> when configured.
-  if (!cronSecret) return true; // dev fallback — allow if no secret set
+  // Dev fallback — allow if neither secret nor admin password is set.
+  if (!cronSecret && !adminPassword) return true;
+
   const auth = req.headers.get("authorization") ?? "";
-  const expected = `Bearer ${cronSecret}`;
-  if (auth === expected) return true;
-  // Allow ?secret= query param for manual triggers during admin testing.
+
+  // 1. Vercel Cron sends Authorization: Bearer <CRON_SECRET>.
+  if (cronSecret && auth === `Bearer ${cronSecret}`) return true;
+
+  // 2. Browser-driven "Run all now" / "Re-run this prompt" buttons come
+  //    from /admin/geo, which proxy.ts has basic-auth-gated. The browser
+  //    sends those Basic credentials with the form POST. Accept them
+  //    when the password matches ADMIN_PASSWORD.
+  if (adminPassword && auth.startsWith("Basic ")) {
+    try {
+      const decoded = atob(auth.slice(6));
+      const presentedPass = decoded.split(":").slice(1).join(":");
+      if (presentedPass === adminPassword) return true;
+    } catch {
+      // Fall through to 401.
+    }
+  }
+
+  // 3. Manual override via query param (for curl testing).
   const url = new URL(req.url);
-  return url.searchParams.get("secret") === cronSecret;
+  if (cronSecret && url.searchParams.get("secret") === cronSecret) return true;
+
+  return false;
 }
 
 async function processOne(
