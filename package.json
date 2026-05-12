@@ -11,6 +11,8 @@
     "validate:state": "node scripts/validate-state-schema.mjs"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.76",
+    "@ai-sdk/openai": "^3.0.63",
     "@next/third-parties": "^16.2.4",
     "@sanity/client": "^7.22.0",
     "@sanity/image-url": "^2.1.1",
