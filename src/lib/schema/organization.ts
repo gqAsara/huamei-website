@@ -12,7 +12,7 @@ export const organizationGraph = {
       "@type": "Organization",
       "@id": `${SITE}/#org`,
       name: "Huamei",
-      alternateName: ["華美", "Huamei Packaging"],
+      alternateName: ["華美", "Huamei Packaging", "Hwah-May"],
       url: SITE,
       logo: {
         "@type": "ImageObject",
@@ -22,11 +22,19 @@ export const organizationGraph = {
       },
       description:
         "Custom luxury packaging house with factories across four Chinese provinces — Henan, Zhejiang, Sichuan and Guizhou. Founded 1992. Rigid boxes, magnetic closures, hot-foil stamping, embossing, deboss, spot-UV, soft-touch lamination.",
+      disambiguatingDescription:
+        "Chinese luxury packaging manufacturer (華美), founded 1992, operating at huamei.io. Four factories in Henan, Zhejiang, Sichuan, and Guizhou. Approximately 3,000 employees. Custom rigid boxes, magnetic closures, hot-foil stamping, embossing, and presentation cases for cosmetics, spirits, and beauty.",
       foundingDate: "1992",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "CN",
+        addressRegion: "Henan, Zhejiang, Sichuan, Guizhou",
+      },
       numberOfEmployees: {
         "@type": "QuantitativeValue",
         value: 3000,
       },
+      naics: "322212",
       knowsAbout: [
         "Custom luxury packaging",
         "Rigid box manufacturing",
@@ -44,6 +52,9 @@ export const organizationGraph = {
           availableLanguage: ["en", "zh-Hans"],
         },
       ],
+      // sameAs: populate once LinkedIn / Crunchbase / D&B profiles exist.
+      // The disambiguatingDescription above is the primary identity signal
+      // for now (counters huamei-inc.com / huameiworld.com pollution).
     },
     {
       "@type": "WebSite",
