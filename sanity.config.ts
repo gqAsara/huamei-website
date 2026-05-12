@@ -67,6 +67,25 @@ export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}
                     .title("Industries")
                     .defaultOrdering([{ field: "order", direction: "asc" }])
                 ),
+              S.divider(),
+              // GEO monitoring — buyer prompts tracked across AI engines.
+              S.listItem()
+                .title("🤖 GEO prompts")
+                .child(
+                  S.documentTypeList("geoPrompt")
+                    .title("Prompts")
+                    .defaultOrdering([{ field: "priority", direction: "asc" }])
+                ),
+              S.listItem()
+                .title("🆚 GEO competitors")
+                .child(S.documentTypeList("geoCompetitor").title("Competitors")),
+              S.listItem()
+                .title("📊 GEO runs (probe history)")
+                .child(
+                  S.documentTypeList("geoRun")
+                    .title("Probe runs")
+                    .defaultOrdering([{ field: "runAt", direction: "desc" }])
+                ),
             ]),
       }),
       visionTool(),
