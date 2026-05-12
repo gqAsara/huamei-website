@@ -69,3 +69,4 @@
 2026-05-11T20:51:19.090Z	site-engineer	scaffold	Commercial-intent upgrade across all /craft/* + /industry/* pages. New SEO title/description + 3-Q FAQ + trust line per topic. 19 pages upgraded.
 2026-05-11T21:09:44.963Z	site-engineer	external	IndexNow ping (HTTP 200) for 19 upgraded /craft/* + /industry/* URLs after PR #20
 2026-05-11T23:57:14.055Z	editor	publish	Cluster #7 published — /blogs/soft-touch-vs-spot-uv-when-each-is-right (990 words); cluster under Pillar 2; comparison query
+2026-05-12T00:03:21.253Z	site-engineer	external	IndexNow batch ping (HTTP 200) — cluster #7 + 4 index pages + 4 industry pages + sitemap. Sessions 21+22+23 verified live.

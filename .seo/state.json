@@ -3,8 +3,8 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/20",
-  "nextAction": "PR #20 ships commercial-intent upgrade across all 15 /craft/* + 4 /industry/* pages. Each got: new commercial-front-loaded SEO title, new meta description, 3-Q buyer FAQ section (no FAQPage schema), auto-derived trust line in CTA (Made for · Lancôme · Wuliangye · ...). Replaces 'create new landing pages' approach with 'upgrade existing pages' — preserves indexing momentum. GSC indexed 47/66 pages at day 7 (founder confirmed). 19 'Discovered - currently not indexed' (queue backlog, not rejection); 0 'Crawled - rejected'. Next: weekly GSC re-probe; founder to share Performance query data for any pillar-keyword impressions.",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/23",
+  "nextAction": "Four PRs landed 2026-05-11 evening: #20 (commercial upgrade 19 craft+industry pages), #21 (hub-and-spoke cross-links from commercial → blogs), #22 (/industry Service schema + commercial index metadata), #23 (cluster #7 soft-touch vs spot-UV). Plus processing-time correction sweep (no '+1 week for hot-foil' style claims). Site at 3 pillars + 7 clusters = 10 blog posts; 19 commercial landing pages with FAQ + trust line + cross-links; all 4 index pages with commercial metadata. Sitemap clean (218 image entries). IndexNow refreshed across the batch. Next moves blocked on founder: GSC data sharing; Pillar 3 FSC/EUDR data; LinkedIn page (for Org.sameAs + outreach unblock); rotate SANITY_WRITE_TOKEN.",
   "lastUpdated": "2026-05-11T18:55:00Z",
   "phase0Tasks": {
     "gsc": "done",
