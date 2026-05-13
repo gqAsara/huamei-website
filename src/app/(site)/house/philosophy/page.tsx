@@ -41,7 +41,8 @@ export default function PhilosophyPage() {
                 src="/photos/people/sonia-sun.jpg"
                 alt="Sonia Sun, Founder of Huamei"
                 fill
-                sizes="(max-width: 720px) 70vw, 240px"
+                sizes="(max-width: 720px) 70vw, (max-width: 960px) 300px, 360px"
+                priority
               />
             </div>
             <figcaption>Sonia Sun</figcaption>
