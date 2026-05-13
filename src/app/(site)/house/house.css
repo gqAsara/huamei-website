@@ -543,12 +543,14 @@
 
 /* Founder portrait, used inside the "A letter from Sonia" block on /house/philosophy.
    Floated right so the letter prose flows around it like a printed letter.
-   Sized to cover ~paragraph 1 + most of paragraph 2 — bigger feels intentional,
-   not decorative. */
+   Explicit width is required — the figure has only a figcaption as in-flow
+   content, so without `width` the float shrink-wraps to the caption (~110px)
+   and the photo collapses regardless of max-width. */
 .hs-letter-portrait {
   float: right;
-  margin: 4px -40px 18px 40px;
-  max-width: 360px;
+  width: 420px;
+  max-width: 50%;
+  margin: 4px -56px 22px 44px;
   shape-outside: inset(0 round 2px);
 }
 .hs-letter-portrait .img {
@@ -561,18 +563,18 @@
 }
 .hs-letter-portrait .img img { object-fit: cover; }
 .hs-letter-portrait figcaption {
-  margin-top: 10px;
-  font-family: var(--font-label); font-size: 10px;
+  margin-top: 12px;
+  font-family: var(--font-label); font-size: 11px;
   letter-spacing: .28em; text-transform: uppercase;
   color: var(--ink-3); text-align: center;
 }
 @media (max-width: 960px) {
-  .hs-letter-portrait { margin-right: 0; max-width: 300px; }
+  .hs-letter-portrait { width: 340px; margin-right: 0; }
 }
 @media (max-width: 720px) {
   .hs-letter-portrait {
     float: none; display: block;
-    max-width: 260px; margin: 0 auto 22px;
+    width: 280px; max-width: 80%; margin: 0 auto 22px;
   }
 }
 
