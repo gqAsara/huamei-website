@@ -62,7 +62,7 @@ const SECTIONS: Section[] = [
     posts: [
       { num: "i.",   title: "The Souverain project: ", italic: "from sketch to ship.",          when: "In preparation" },
       { num: "ii.",  title: "Glee's Grove — ",          italic: "twelve weeks, four iterations.",  when: "In preparation" },
-      { num: "iii.", title: "Estée Lauder Holiday — ", italic: "watercolor and a foil starfield.", when: "In preparation" },
+      { num: "iii.", title: "Collgene — ", italic: "tuck-end carton with a registered silver foil.", when: "In preparation" },
     ],
   },
   {

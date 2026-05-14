@@ -34,7 +34,7 @@ internalLinks:
   - "/craft/soft-touch"
   - "/craft/spot-uv"
   - "/craft/wraps"
-  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/volumes/dukang"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/working-with-a-chinese-luxury-packaging-manufacturer"
@@ -63,7 +63,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
 
-Hot-foil stamping is the technique that pulls metallic, pearlescent, or pigmented foil onto paper or board under heat and pressure, leaving a reflective mark that ink alone cannot produce. It is the difference between a printed gold and a gold that catches the light at three feet. Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei keeps seventeen foils on file in-house, run on Heidelberg and KBA offset presses with foil units, for cosmetic launches (Estée Lauder and a small bench of skincare houses), spirits gift packs (Wuliangye, Yangshao, Luoyang Dukang) and the seasonal ranges that brand teams build around Chinese New Year. The pages below are a working manual — what hot-foil is, how it differs from its alternatives, which foils we hold, how to pair them to a substrate, and where the technique stops working.
+Hot-foil stamping is the technique that pulls metallic, pearlescent, or pigmented foil onto paper or board under heat and pressure, leaving a reflective mark that ink alone cannot produce. It is the difference between a printed gold and a gold that catches the light at three feet. Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei keeps seventeen foils on file in-house, run on Heidelberg and KBA offset presses with foil units, for cosmetic and skincare launches (Collgene, Kefumei and a small bench of indie houses), spirits gift packs (Wuliangye, Yangshao, Luoyang Dukang) and the seasonal ranges that brand teams build around Chinese New Year. The pages below are a working manual — what hot-foil is, how it differs from its alternatives, which foils we hold, how to pair them to a substrate, and where the technique stops working.
 
 ## What hot-foil stamping is, in one paragraph
 
@@ -125,7 +125,7 @@ A registered emboss-and-foil is a single mark where the embossed die rises *and*
 
 **How to spec it.** Provide a single dieline showing the emboss outline AND the foil mark in one layer. Do not separate them. Specify foil colour and emboss type — sculpted (rounded, with depth detail) or flat (single-level lift). The press operator works from the unified dieline.
 
-A house example sits in the archive. **[Estée Lauder Holiday](/volumes/estee-holiday)** — a watercolour wrap with a foil starfield registered against an embossed mark on the lid. Pull the sample sheets and the alignment is the thing the eye reads first.
+A house example sits in the archive. **[Collgene](/volumes/collgene)** — a tuck-end carton with a registered silver-foil wordmark sitting inside a flat-emboss boundary. Pull the sample sheets and the alignment is the thing the eye reads first.
 
 ## When hot-foil is not the answer
 

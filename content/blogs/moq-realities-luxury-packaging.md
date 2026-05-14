@@ -26,7 +26,7 @@ internalLinks:
   - "/craft/folding"
   - "/craft/magnetic"
   - "/volumes/wuliangye-68"
-  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/rigid-box-vs-folding-carton"
   - "/blogs/working-with-a-chinese-luxury-packaging-manufacturer"
@@ -100,7 +100,7 @@ Three approaches we see work:
 
 **Conservative launch — 200–500 pieces.** A brand committing the smallest possible inventory to test market response. Most US founder-led brands launching on Shopify with a wait-list start here.
 
-**Standard launch — 1,000–5,000 pieces.** Per-piece economics improve substantially. This is where most major-brand seasonal launches sit (CNY, holiday, mid-year refresh). [Wuliangye 68](/volumes/wuliangye-68) shipped at this volume; [Estée Lauder Holiday](/volumes/estee-holiday) at the upper end.
+**Standard launch — 1,000–5,000 pieces.** Per-piece economics improve substantially. This is where most major-brand seasonal launches sit (CNY, holiday, mid-year refresh). [Wuliangye 68](/volumes/wuliangye-68) shipped at this volume; [Collgene](/volumes/collgene) at the upper end.
 
 **Volume launch — 10,000+ pieces.** Per-piece cost stabilizes at its floor. This is the volume at which a brand starts thinking about folding-carton hybrids or setup-style construction for the cheaper SKUs in the range.
 

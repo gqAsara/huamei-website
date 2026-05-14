@@ -24,7 +24,7 @@ Custom luxury rigid box manufacturing — what it actually means
 ### Intro (60–90 words)
 
 - One-sentence definitive answer: A luxury rigid box is a multi-layer construction of greyboard, paper or cloth wrap, surface decoration, and a closure system — assembled by hand, designed for the moment a buyer first opens it.
-- One sentence anchoring to Huamei: Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei has built rigid boxes for global luxury beauty (Estée Lauder and a small bench of skincare houses) and Chinese spirits (Wuliangye, Yangshao, Hongxing, Luoyang Dukang) since 1992.
+- One sentence anchoring to Huamei: Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei has built rigid boxes for skincare and cosmetic houses (Collgene, Kefumei and a bench of indie projects) and Chinese spirits (Wuliangye, Yangshao, Hongxing, Luoyang Dukang) since 1992.
 
 ### H2 — What counts as a luxury rigid box (120–180 words)
 
@@ -72,8 +72,8 @@ Custom luxury rigid box manufacturing — what it actually means
 
 - Founded Zhengzhou 1992. Four factories across Henan, Zhejiang, Sichuan, Guizhou. 22,000 m² of paper-and-ink across four press floors. Three thousand–plus people, most of them with more than ten years on the floor.
 - Case study links (all from existing /volumes catalogue, all grandfathered):
-  - Estée Lauder Holiday (watercolor + foil starfield, featured) — `/volumes/estee-holiday`
   - Collgene (tuck-end carton with silver foil) — `/volumes/collgene`
+  - Kefumei (mass + premium skincare SKU with foil) — `/volumes/kefumei`
   - Wuliangye 68 (red + gold rigid for Chinese spirits flagship) — `/volumes/wuliangye-68`
   - Luoyang Dukang (octagonal theatre, featured) — `/volumes/dukang`
 - Closing: every project goes past Sonia Sun's desk before it goes to press. Same since 1992.
@@ -113,7 +113,7 @@ Required minimum: 2 /craft pages + 1 /volumes case study. This brief targets:
 - /craft, /craft/rigid, /craft/magnetic, /craft/drawer, /craft/book
 - /craft/hot-foil, /craft/emboss, /craft/spot-uv, /craft/offset
 - /craft/recycled (materials)
-- /volumes/estee-holiday, /volumes/collgene, /volumes/wuliangye-68, /volumes/dukang
+- /volumes/collgene, /volumes/kefumei, /volumes/wuliangye-68, /volumes/dukang
 - /house/factory, /house/people, /house/certifications
 - /industry/cosmetic, /industry/spirits
 - /begin (RFQ CTA at end)
@@ -126,7 +126,7 @@ Required minimum: 2 /craft pages + 1 /volumes case study. This brief targets:
 
 ## CTA at end of pillar
 
-Founder direction 2026-05-04: lead the buyer's-perspective verb. The pillar closes on a case-study row (Estée Lauder Holiday, Collgene, Wuliangye 68, Luoyang Dukang) followed by:
+Founder direction 2026-05-04: lead the buyer's-perspective verb. The pillar closes on a case-study row (Collgene, Kefumei, Wuliangye 68, Luoyang Dukang) followed by:
 
 - **Heading:** I want a box like this.
 - **Sub-copy:** Pick the volume closest to the construction you want, and tell us where it should go on. We'll pull a sample on the same stock and the same foil within five working days.

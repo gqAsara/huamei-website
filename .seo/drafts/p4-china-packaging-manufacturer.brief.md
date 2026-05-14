@@ -48,7 +48,7 @@ Working with a Chinese luxury packaging manufacturer
 
 - **Definitive first sentence:** A serious Chinese luxury packaging manufacturer answers three questions on the first call — where the certifications are scanned, what equipment the press floor runs, and which named clients are willing to be referenced.
 - Specifics: ISO 9001:2015 quality management ([standard reference](https://www.iso.org/iso-9001-quality-management.html)), Heidelberg and KBA offset presses on the floor, magnetic pull-force calibrated to a 6–50 g range at 2,800 Gauss, registration on hot-foil-and-emboss held to ±0.1 mm.
-- Tie to Huamei: All thirteen of our certification scans live publicly at [`/house/certifications`](/house/certifications). Our case studies — from Estée Lauder to Wuliangye and Luoyang Dukang — are catalogued at [`/volumes`](/volumes).
+- Tie to Huamei: All thirteen of our certification scans live publicly at [`/house/certifications`](/house/certifications). Our case studies — from Wuliangye and Yangshao to Luoyang Dukang — are catalogued at [`/volumes`](/volumes).
 
 ### H2 — Lead times, logistics, and total landed cost (120–180 words)
 
@@ -112,7 +112,7 @@ TODOs:
 Required minimum: 2 /craft pages + 1 /volumes case study + 1 cross-pillar. This brief targets:
 
 - `/craft`, `/craft/rigid`, `/craft/magnetic`, `/craft/folding`
-- `/volumes` (catalogue link), plus 2–3 specific cases that are recognisable to US buyers — `/volumes/estee-holiday`, `/volumes/collgene`, `/volumes/wuliangye-68` (plus `/volumes/glees-grove` and `/volumes/man-made-crayon` for small-brand reference)
+- `/volumes` (catalogue link), plus 2–3 specific cases that are recognisable to US buyers — `/volumes/collgene`, `/volumes/kefumei`, `/volumes/wuliangye-68` (plus `/volumes/glees-grove` and `/volumes/man-made-crayon` for small-brand reference)
 - `/house/factory`, `/house/people`, `/house/certifications`
 - `/industry/cosmetic`, `/industry/wellness`
 - `/blogs/custom-luxury-rigid-box-manufacturing` (cross-pillar — Pillar 1)

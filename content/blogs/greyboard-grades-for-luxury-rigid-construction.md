@@ -28,7 +28,7 @@ internalLinks:
   - "/craft/book"
   - "/volumes/dukang"
   - "/volumes/wuliangye-68"
-  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/magnetic-pull-force-explained"
   - "/begin"
@@ -70,7 +70,7 @@ Huamei stocks greyboard in four working thicknesses across the 1.5–3.0 mm rang
 
 **1.5 mm — slim, folding-derived structures.** Used for slim presentation cards, two-piece slipcase covers, book-style outers where the inner block carries most of the weight. Below 1.5 mm a structure stops being "rigid" in any meaningful sense and becomes a folding carton with extra layers. We do not stock anything thinner.
 
-**2.0 mm — the house standard for cosmetics.** Beauty rigid boxes (Estée Lauder and the prestige skincare houses) sit at 2.0 mm by default. The thickness is enough to feel substantial in the hand, light enough that air-freight cost stays reasonable on a 50,000-piece launch shipment. If a brief does not specify otherwise, 2.0 mm is what we sample.
+**2.0 mm — the house standard for cosmetics.** Beauty rigid boxes (Collgene, Kefumei and the prestige skincare houses we have on file) sit at 2.0 mm by default. The thickness is enough to feel substantial in the hand, light enough that air-freight cost stays reasonable on a 50,000-piece launch shipment. If a brief does not specify otherwise, 2.0 mm is what we sample.
 
 **2.5 mm — magnetic-flap and drawer constructions.** Magnetic-flap closures put bending stress on the lid every time the box is opened. A 2.0 mm lid will warp visibly across a six-month shelf life under repeated opening; a 2.5 mm lid will not. Drawer constructions also use 2.5 mm because the slipcase walls have to resist the inward-pull of the drawer being pulled out and pushed back. See [magnetic closure pull-force](/blogs/magnetic-pull-force-explained) for how the closure interacts with the wall thickness.
 

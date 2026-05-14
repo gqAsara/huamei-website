@@ -25,7 +25,7 @@ internalLinks:
   - "/craft/hot-foil"
   - "/craft/emboss"
   - "/craft/offset"
-  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/volumes/dukang"
   - "/blogs/hot-foil-stamping-for-luxury-packaging"
   - "/blogs/custom-luxury-rigid-box-manufacturing"

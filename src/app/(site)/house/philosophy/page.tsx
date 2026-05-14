@@ -55,11 +55,11 @@ export default function PhilosophyPage() {
             clean lid makes when it closes.
           </p>
           <p>
-            Bigger work came. Veritiv and Stora Enso bought our boxes for
-            Est&eacute;e Lauder and a small bench of skincare and spirits houses.
-            My name never showed up on a single one. I was happy to be there —
-            but I knew, somewhere quiet inside, that I wanted to meet the
-            people I was making boxes for.
+            Bigger work came. Veritiv and Stora Enso bought our boxes for a
+            wider bench of skincare and spirits houses. My name never showed
+            up on a single one. I was happy to be there — but I knew,
+            somewhere quiet inside, that I wanted to meet the people I was
+            making boxes for.
           </p>
           <p>
             Thirty-four years later, I still print for those big houses. But now I

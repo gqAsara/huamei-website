@@ -37,7 +37,7 @@ export const caseStudySubmission = defineType({
       type: "string",
       group: "input",
       description:
-        "Short title for this work. e.g. 'Estée Lauder Holiday 2026', 'Yangshao Caitao Reissue'.",
+        "Short title for this work. e.g. 'Wuliangye Premium Brew 2026', 'Yangshao Caitao Reissue'.",
       validation: (Rule) => Rule.required().min(2).max(80),
     }),
     defineField({

@@ -22,7 +22,7 @@ export const aiCaseStudySchema = z.object({
     "True iff industryName is NOT in the existing list and you are proposing a new industry doc.",
   ),
   section: z.enum(["branded", "dtc"]).describe(
-    "'branded' for named external clients (Estée Lauder, Wuliangye, Yangshao, etc.). 'dtc' for House design / DTC / Studio client.",
+    "'branded' for named external clients (Wuliangye, Yangshao, Dukang, etc.). 'dtc' for House design / DTC / Studio client.",
   ),
   featured: z.boolean().describe(
     "True only if photos clearly show flagship-quality work for a major-brand client. Default false.",
@@ -70,7 +70,7 @@ INDUSTRY MATCHING
 
 SECTION
 - "branded" if the client is a named external brand (e.g. Wuliangye,
-  Estée Lauder, Yangshao, Dukang).
+  Yangshao, Dukang, Hetao Wang).
 - "dtc" if the client is "House design", "Studio client", "DTC client",
   "DTC ·" anything, or visibly an in-house project.
 

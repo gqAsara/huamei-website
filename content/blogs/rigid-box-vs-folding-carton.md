@@ -25,7 +25,7 @@ internalLinks:
   - "/craft/rigid"
   - "/craft/folding"
   - "/craft/magnetic"
-  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/volumes/wuliangye-68"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/greyboard-grades-for-luxury-rigid-construction"
@@ -113,7 +113,7 @@ If a brand is unsure about format, the working rule is: **brief us on the volume
 
 ## Two house examples
 
-**[Estée Lauder Holiday](/volumes/estee-holiday)** — 2.5 mm rigid watercolour-wrapped box with a registered foil starfield. A 3,000-piece holiday launch. Rigid was the only format that could deliver the foil-to-emboss alignment at prestige standards.
+**[Collgene](/volumes/collgene)** — 2.0 mm rigid skincare carton with a registered silver-foil wordmark inside a flat emboss. A 3,000-piece launch. Rigid was the only format that could deliver the foil-to-emboss alignment at prestige standards.
 
 **[Wuliangye 68](/volumes/wuliangye-68)** — 3.0 mm rigid red-and-gold spirits box for a 200-piece limited edition. Folding carton was never on the table for a luxury spirits launch; the question was which greyboard thickness, not which format.
 

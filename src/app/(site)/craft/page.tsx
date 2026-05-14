@@ -258,13 +258,13 @@ export default function CraftPage() {
             <h4>Oriental Memoirs</h4>
             <div className="tag">Drawer &middot; Laser-cut</div>
           </Link>
-          <Link className="cr-card" href="/volumes/estee-holiday">
-            <div className="ph" style={{ backgroundImage: "url('/photos/cases/estee-holiday/01.jpg')" }}>
-              <span className="rn">IV.</span>
+          <Link className="cr-card" href="/volumes/kefumei">
+            <div className="ph" style={{ backgroundImage: "url('/photos/cases/kefumei/01.jpg')" }}>
+              <span className="rn">VIII.</span>
             </div>
-            <div className="meta"><span>Cosmetics</span><span>2024</span></div>
-            <h4>Estée Lauder Holiday</h4>
-            <div className="tag">Watercolor &middot; Foil starfield</div>
+            <div className="meta"><span>Skincare</span><span>2025</span></div>
+            <h4>Kefumei</h4>
+            <div className="tag">Mass + premium &middot; Foil</div>
           </Link>
           <Link className="cr-card" href="/volumes/collgene">
             <div className="ph" style={{ backgroundImage: "url('/photos/cases/collgene/01.jpg')" }}>

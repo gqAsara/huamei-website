@@ -4,9 +4,9 @@ import { getAllVolumes, getAllIndustries } from "@/lib/sanity/queries";
 import "./volumes.css";
 
 export const metadata = {
-  title: "Luxury packaging case studies — 27 projects on file",
+  title: "Luxury packaging case studies — 26 projects on file",
   description:
-    "Case studies from Huamei's press floor: Estée Lauder, Wuliangye, Yangshao, Dukang, Collgene, Kefumei, and more. Filterable by year, industry, and view. Cosmetic, spirits, gifting, wellness — since 1992.",
+    "Case studies from Huamei's press floor: Wuliangye, Yangshao, Dukang, Collgene, Kefumei, and more. Filterable by year, industry, and view. Cosmetic, spirits, gifting, wellness — since 1992.",
   alternates: { canonical: "/volumes" },
 };
 

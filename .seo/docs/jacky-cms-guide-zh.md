@@ -37,8 +37,8 @@
 | 字段 | 中文说明 | 例子 |
 |---|---|---|
 | **Photos · 项目照片** | 拖入或点击上传，至少 1 张，建议 3–8 张 | 从 1600px 宽以上的照片 |
-| **Project name · 项目名** | 项目的简称 | `Estée Lauder Holiday 2026` |
-| **Client · 客户** | 品牌或工作室名 | `Estée Lauder`，自家做的写 `House design` |
+| **Project name · 项目名** | 项目的简称 | `Wuliangye Premium Brew 2026` |
+| **Client · 客户** | 品牌或工作室名 | `Wuliangye`，自家做的写 `House design` |
 | **Year · 年份** | 项目年份 | `2026`（默认当前年份） |
 | **Materials & techniques · 材料和工艺** | 简单说明工艺 | `Magnetic-closure rigid box, hot-foil champagne` |
 | **Notes for the AI · 备注** | 任何额外信息 | `客户要求温暖配色，强调中式元素` |
