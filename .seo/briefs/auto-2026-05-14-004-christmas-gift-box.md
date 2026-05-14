@@ -1,23 +1,23 @@
 ---
-brief_id: "auto-2026-05-14-001-packaging-manufacturer"
-generated_at: "2026-05-14T05:52:21.261Z"
-rank: 1
-target_query: "packaging manufacturer"
+brief_id: "auto-2026-05-14-004-christmas-gift-box"
+generated_at: "2026-05-14T05:52:21.262Z"
+rank: 4
+target_query: "christmas gift box"
 opportunity_type: "high_volume_gap"
-seo_score: 149.8
+seo_score: 111.7
 intent: "commercial"
-stage: "comparison"
-priority: 1
-volume_monthly: 3600
-competition: 0.2
-cpc_usd: 9.75
-notes: "3.6K monthly, comp 20 LOW — strongest opportunity in registry"
+stage: "evaluation"
+priority: 2
+volume_monthly: 12100
+competition: 0.62
+cpc_usd: 0.68
+notes: "xlsx"
 has_article: false
 ---
 
-# Brief: packaging manufacturer
+# Brief: christmas gift box
 
-**Why this one (auto-scored 149.8):** 3,600 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 111.7):** 12,100 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -37,7 +37,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is packaging manufacturer?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is christmas gift box?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

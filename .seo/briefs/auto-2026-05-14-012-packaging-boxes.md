@@ -1,23 +1,23 @@
 ---
-brief_id: "auto-2026-05-14-004-luxury-packaging"
-generated_at: "2026-05-14T05:42:28.283Z"
-rank: 4
-target_query: "luxury packaging"
+brief_id: "auto-2026-05-14-012-packaging-boxes"
+generated_at: "2026-05-14T05:52:21.263Z"
+rank: 12
+target_query: "packaging boxes"
 opportunity_type: "high_volume_gap"
-seo_score: 87.5
+seo_score: 83.7
 intent: "commercial"
-stage: "comparison"
-priority: 1
-volume_monthly: 590
-competition: 0.99
-cpc_usd: 7.98
-notes: "590 monthly, comp 99 — brand-defining term, hard rank"
+stage: "evaluation"
+priority: 2
+volume_monthly: 3600
+competition: 1
+cpc_usd: 7.5
+notes: "xlsx"
 has_article: false
 ---
 
-# Brief: luxury packaging
+# Brief: packaging boxes
 
-**Why this one (auto-scored 87.5):** 590 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 83.7):** 3,600 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -37,7 +37,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is luxury packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is packaging boxes?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

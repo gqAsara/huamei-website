@@ -1,23 +1,23 @@
 ---
-brief_id: "auto-2026-05-14-001-packaging-manufacturer"
-generated_at: "2026-05-14T05:52:21.261Z"
-rank: 1
-target_query: "packaging manufacturer"
+brief_id: "auto-2026-05-14-007-paper-bag"
+generated_at: "2026-05-14T05:52:21.262Z"
+rank: 7
+target_query: "paper bag"
 opportunity_type: "high_volume_gap"
-seo_score: 149.8
+seo_score: 102.2
 intent: "commercial"
-stage: "comparison"
-priority: 1
-volume_monthly: 3600
-competition: 0.2
-cpc_usd: 9.75
-notes: "3.6K monthly, comp 20 LOW — strongest opportunity in registry"
+stage: "evaluation"
+priority: 2
+volume_monthly: 22200
+competition: 1
+cpc_usd: 2.39
+notes: "xlsx"
 has_article: false
 ---
 
-# Brief: packaging manufacturer
+# Brief: paper bag
 
-**Why this one (auto-scored 149.8):** 3,600 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 102.2):** 22,200 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -37,7 +37,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is packaging manufacturer?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is paper bag?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

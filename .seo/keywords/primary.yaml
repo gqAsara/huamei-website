@@ -14,7 +14,7 @@
 # Re-enrich monthly: `npx tsx scripts/dataforseo-enrich.ts`
 
 defaults:
-  location_code: 2840       # United States
+  location_code: 2840 # United States
   language_code: "en"
   source: "founder + Phase 1 brief topics + DataForSEO enrichment"
 
@@ -242,5 +242,351 @@ keywords:
     priority: 2
     target_url: "/blogs/moq-realities-luxury-packaging"
     last_enriched_at: "2026-05-14T05:37:21Z"
-
-  # ── Founder's 主打关键词.xlsx rows will be appended below this line.
+  - query: perfume box
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    related_queries:
+      - perfume subscription
+      - perfume subscription box
+      - monthly perfume subscription
+      - scent subscription
+      - cologne subscription box
+    volume_monthly: 8100
+    cpc_usd: 1.11
+    competition: 0.95
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: perfume bottle with box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    volume_monthly: 10
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: perfume box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    related_queries:
+      - custom perfume boxes
+      - perfume box design
+      - perfume packaging suppliers
+      - custom perfume packaging
+      - custom cologne boxes
+    volume_monthly: 260
+    cpc_usd: 2.92
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: perfume packaging boxes
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    related_queries:
+      - perfume boxes wholesale
+      - custom perfume boxes
+      - custom perfume packaging
+      - custom cologne boxes
+      - perfume packaging wholesale
+    volume_monthly: 260
+    cpc_usd: 2.92
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom cosmetic packaging box
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    related_queries:
+      - custom cosmetic packaging
+      - custom cosmetic boxes
+      - cosmetic box packaging
+      - custom cosmetic jars
+      - custom makeup packaging
+    volume_monthly: 70
+    competition: 0
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: cosmetic packaging box
+    intent: commercial
+    stage: evaluation
+    priority: 1
+    notes: xlsx; cosmetic + perfume is core sector
+    related_queries:
+      - makeup subscription boxes
+      - monthly makeup box
+      - makeup sample box
+      - custom cosmetic packaging
+      - cosmetic packaging for small business
+    volume_monthly: 320
+    cpc_usd: 6.94
+    competition: 0.58
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - gift baskets
+      - harry and david gift baskets
+      - wine gift baskets
+      - fruit basket
+      - gourmet gift baskets
+    volume_monthly: 60500
+    cpc_usd: 1.7
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: magnetic box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - magnetic gift boxes
+      - magnetic boxes wholesale
+      - custom magnetic boxes
+      - magnetic gift boxes wholesale
+      - magnetic closure boxes
+    volume_monthly: 1900
+    cpc_usd: 3.43
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: paper gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - paper boxes
+      - kraft gift bags
+      - kraft crinkle paper
+      - white gift bag
+      - crinkle packing paper
+    volume_monthly: 880
+    cpc_usd: 2.23
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: folding gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - collapsible gift box
+      - foldable gift boxes
+      - tuck end box
+      - foldabox usa
+      - small foldable boxes
+    volume_monthly: 1300
+    cpc_usd: 1.81
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - personalised jewellery box
+      - custom gift boxes with logo
+      - branded gift boxes
+      - custom gift baskets
+      - custom jewelry box
+    volume_monthly: 1000
+    cpc_usd: 5.29
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: luxury gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - luxury gift baskets
+      - high end gift baskets
+      - luxury chocolate gift box
+      - best luxury gift baskets
+      - luxury gift baskets for her
+    volume_monthly: 1300
+    cpc_usd: 3.41
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: folding magnetic box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    related_queries:
+      - collapsible magnetic gift boxes
+      - foldable magnetic box
+      - collapsible magnetic box
+      - magnetic folding gift box
+      - foldable magnetic gift box
+    volume_monthly: 10
+    cpc_usd: 3.89
+    competition: 0.49
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom magnetic box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 260
+    cpc_usd: 15.84
+    competition: 0.94
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: gift box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 480
+    cpc_usd: 4.34
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: gift box custom
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 1000
+    cpc_usd: 5.29
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: magnetic gift box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: folding gift box magnetic
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: magnetic box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 70
+    cpc_usd: 14.96
+    competition: 0.88
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom luxury gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 70
+    cpc_usd: 9.71
+    competition: 0.91
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: magnetic closure gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 590
+    cpc_usd: 4.19
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom magnetic gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 90
+    cpc_usd: 13.62
+    competition: 0.96
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom printed gift boxes
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 170
+    cpc_usd: 11.43
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: christmas gift box
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 12100
+    cpc_usd: 0.68
+    competition: 0.62
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: paper boxes
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 5400
+    cpc_usd: 2
+    competition: 0.98
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: packaging boxes
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 3600
+    cpc_usd: 7.5
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: paper bag
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: xlsx
+    volume_monthly: 22200
+    cpc_usd: 2.39
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: Mailer box
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: xlsx; secondary capability
+    volume_monthly: 12100
+    cpc_usd: 1.82
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: Corrugated Box
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: xlsx; secondary capability
+    volume_monthly: 9900
+    cpc_usd: 20.85
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom mailer boxes
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: xlsx; secondary capability
+    volume_monthly: 2900
+    cpc_usd: 18.75
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: Wig box
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: xlsx; niche
+    volume_monthly: 590
+    cpc_usd: 0.61
+    competition: 1
+    last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: wig boxes custom logo packaging
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: xlsx; niche
+    last_enriched_at: 2026-05-14T05:51:52.879Z

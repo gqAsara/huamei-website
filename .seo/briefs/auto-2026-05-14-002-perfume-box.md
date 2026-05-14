@@ -1,24 +1,23 @@
 ---
-brief_id: "auto-2026-05-14-003-magnetic-gift-box"
-generated_at: "2026-05-14T05:42:28.283Z"
-rank: 3
-target_query: "magnetic gift box"
+brief_id: "auto-2026-05-14-002-perfume-box"
+generated_at: "2026-05-14T05:52:21.262Z"
+rank: 2
+target_query: "perfume box"
 opportunity_type: "high_volume_gap"
-seo_score: 106.1
+seo_score: 125.2
 intent: "commercial"
 stage: "evaluation"
 priority: 1
-volume_monthly: 2400
-competition: 1
-cpc_usd: 3.51
-target_url: "/craft/magnetic"
-notes: "2.4K monthly, comp 100 — competitive but high intent"
+volume_monthly: 8100
+competition: 0.95
+cpc_usd: 1.11
+notes: "xlsx; cosmetic + perfume is core sector"
 has_article: false
 ---
 
-# Brief: magnetic gift box
+# Brief: perfume box
 
-**Why this one (auto-scored 106.1):** 2,400 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 125.2):** 8,100 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -28,9 +27,13 @@ Follow `.seo/SEO_CONTEXT.md` Phase-2 GEO rules: every H2 leads with a declarativ
 
 Buyer-facing register. Lead the article with the load-bearing answer (MOQ, lead time, capability range). Tie to Huamei's published facts: 1992 founding, four-province footprint, 200+ MOQ floor, 7–10 day samples, 15–20 day production, BSCI/CE/EQS/FSC/SGS certifications, >80% solar share. End with a clear `/begin` CTA.
 
-## Target URL: `/craft/magnetic`
+## Related queries (use as H2 question forms)
 
-No article exists at this slug yet. Draft a new one. Target query is the H1 anchor.
+- perfume subscription
+- perfume subscription box
+- monthly perfume subscription
+- scent subscription
+- cologne subscription box
 
 ## Recommended internal links
 
@@ -42,7 +45,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is magnetic gift box?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is perfume box?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 
