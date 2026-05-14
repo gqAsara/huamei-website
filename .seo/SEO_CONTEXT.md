@@ -91,6 +91,29 @@ Two ways a client can be named publicly. Editor agent must use both:
 Existing per-client files: yue-sai.txt, serenjoy.txt
 (all status = AUTHORIZED).
 
+### International positioning — confirmed 2026-05-13
+
+The founder authorized a new positioning track focused on ESG,
+transit-grade quality, and international certifications. The full
+authoritative source is `.seo/reference/international-positioning-2026-05-13.md`
+— every editor / translator / outreach draft that touches sustainability,
+international shipping, or certifications **must** consult that file and
+quote its numbers verbatim. Key confirmed facts (these move from "do
+not invent" → "publishable"):
+
+- **Green-energy share: >80% solar on Huamei factories.** Shareholders
+  also invest in biomass renewables and hydro. Use this as the
+  load-bearing ESG claim.
+- **Transit-grade testing on file:** high 50 °C / low -30 °C
+  environmental, 24-hour transit-vibration, drop, aging, empty-box
+  compression. Quote the thresholds; don't invent additional ones.
+- **International certifications now public:** BSCI, CE, EQS, FSC, SGS.
+  These are added to the list previously gated as "specific
+  certifications beyond the 13 scans." Treat them as scanned + public.
+
+Differentiation language for US/EU buyers: **stability, ESG, global
+shipping reliability, long-term partnership risk** — not price or speed.
+
 ### Facts NOT yet confirmed (do not invent)
 
 These remain unconfirmed; surface a `<TODO: confirm with operations>`
@@ -99,9 +122,11 @@ placeholder and stop:
 - Specific greyboard weights stocked (the manual lists categories, not
   named greyboard SKUs)
 - Reject rates, throughput, factory-line counts
-- Specific certifications BEYOND those already scanned to
-  `/house/certifications` (13 cert scans + corporate registration are
-  live; new claims need their own scans)
+- Specific certifications BEYOND the 13 cert scans on
+  `/house/certifications` AND the international set added 2026-05-13
+  (BSCI, CE, EQS, FSC, SGS — see
+  `.seo/reference/international-positioning-2026-05-13.md`). New
+  claims beyond those still need their own scans.
 - Factory street addresses, GPS coordinates, phone numbers — per founder
   decision 2026-05-04, the public site stays at province-level only
   ("Henan / Zhejiang / Sichuan / Guizhou"). Do not publish Wuzhi or
