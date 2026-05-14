@@ -26,8 +26,8 @@ internalLinks:
   - "/craft/spot-uv"
   - "/craft/hot-foil"
   - "/craft/emboss"
-  - "/volumes/lancome-love"
-  - "/volumes/loreal-gem"
+  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/blogs/hot-foil-stamping-for-luxury-packaging"
   - "/blogs/hot-foil-vs-cold-foil-cost-and-finish"
   - "/begin"
@@ -86,7 +86,7 @@ Three signals for spot UV:
 
 The strongest pairing is **soft-touch laminate as the base + spot UV gloss on the hero**. The hand-feel of the soft-touch holds the buyer's attention for the extra second; the spot UV catches the light when they turn it. Together they read as more considered than either finish alone.
 
-Most cosmetic launches at the prestige tier — Lancôme, Estée Lauder, L'Oréal Paris work we have on file — combine the two. A few examples sit on [/volumes/lancome-love](/volumes/lancome-love) and [/volumes/loreal-gem](/volumes/loreal-gem). The wordmark catches the showroom light; the field around it absorbs the light into matte velvet.
+Most cosmetic launches at the prestige tier — Estée Lauder and the skincare houses we have on file — combine the two. A few examples sit on [/volumes/estee-holiday](/volumes/estee-holiday) and [/volumes/collgene](/volumes/collgene). The wordmark catches the showroom light; the field around it absorbs the light into matte velvet.
 
 Spot UV ranges from **±0.2 mm registration to ink and emboss**. The press operator dials the alignment on a sample sheet before the production run because no monitor renders the gloss-against-matte contrast accurately — the brand sample team approves on the physical piece.
 

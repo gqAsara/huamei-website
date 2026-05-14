@@ -76,18 +76,19 @@ Two ways a client can be named publicly. Editor agent must use both:
 1. **Grandfathered via /volumes** — every client in `src/lib/volumes.ts`
    is already on the live site and may be named freely in pillar pages,
    /blogs posts, and trade-press copy. Current /volumes roster includes
-   Lancôme Paris, Estée Lauder, L'Oréal Paris, Wuliangye, Yangshao,
-   Luoyang Dukang, Hongxing / Red Star Erguotou, Hetao Wang, Shede,
-   Danquan, Zhonghua, Taozui, Tian An Men Jiu, T2 True Brews, DEEPURE,
-   Collgene, Kefumei, Man Made Crayon, Glees Grove (read the file for
-   the canonical list).
+   Estée Lauder, Wuliangye, Yangshao, Luoyang Dukang, Hongxing / Red
+   Star Erguotou, Hetao Wang, Shede, Danquan, Zhonghua, Taozui, Tian An
+   Men Jiu, T2 True Brews, DEEPURE, Collgene, Kefumei, Man Made Crayon,
+   Glees Grove (read the file for the canonical list). **Lancôme and
+   L'Oréal are not authorized for public mention — removed 2026-05-13
+   per founder directive; do not re-introduce.**
 2. **Authorized via discovery (2026-05-04 blanket)** — every named
    client in `.seo/reference/discovery-2026-05-04.md` was authorized
    for public mention by the founder on 2026-05-04. File a per-client
    `.seo/permissions/<slug>.txt` at first public mention as audit trail,
    but do not gate publication on countersigned letters.
 
-Existing per-client files: lancome.txt, yue-sai.txt, serenjoy.txt
+Existing per-client files: yue-sai.txt, serenjoy.txt
 (all status = AUTHORIZED).
 
 ### Facts NOT yet confirmed (do not invent)

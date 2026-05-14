@@ -25,8 +25,8 @@ internalLinks:
   - "/craft/hot-foil"
   - "/craft/emboss"
   - "/craft/deboss"
-  - "/volumes/lancome-love"
-  - "/volumes/loreal-gem"
+  - "/volumes/estee-holiday"
+  - "/volumes/collgene"
   - "/blogs/hot-foil-stamping-for-luxury-packaging"
   - "/blogs/hot-foil-vs-cold-foil-cost-and-finish"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
@@ -93,9 +93,9 @@ We sample at full production stock during the 7–10 day sample round. The brand
 
 The strongest registered emboss-and-foil work in the Huamei archive sits on two case studies.
 
-**[Lancôme Love](/volumes/lancome-love)** is a heart-shape rigid box where the foil mark sits inside the embossed heart outline. The two passes register inside a curve, which is the hardest geometry — straight-line registration is forgiving, curved registration is not. The mark holds ±0.1 mm across the production run.
+**[Estée Lauder Holiday](/volumes/estee-holiday)** is a watercolour-wrapped rigid box where a foil starfield registers against an embossed mark on the lid. The two passes have to align across a printed gradient, which is the hardest backdrop — uneven substrate tone shifts the eye's read of even a slight offset. The mark holds ±0.1 mm across the production run.
 
-**[L'Oréal Gem](/volumes/loreal-gem)** is a faceted gold gem-form. Each facet of the gem is a separate registered foil pass against an embossed crystal-form. Multi-facet alignment is a step harder than single-mark alignment because every facet has to register to its neighbouring facet, not just to its own emboss. We pulled the dieline through three sample rounds before the production run.
+**[Collgene](/volumes/collgene)** is a tuck-end carton with a silver-foil wordmark registered against a flat emboss. The challenge is the carton's smaller footprint: less surface area means less press tolerance for substrate movement under heat. We pulled the dieline through three sample rounds before the production run.
 
 ## When ±0.1 mm is overkill
 
@@ -103,7 +103,7 @@ Honest counter-position: the tolerance only matters if the design uses it.
 
 For a single foil mark over an embossed shape with at least 1 mm of foil-to-emboss-edge distance, ±0.3 mm tolerance is usually fine. The eye does not catch the offset because the mark and the emboss do not have to read as one continuous shape.
 
-For a foil mark inside an embossed boundary with less than 1 mm of distance — the Lancôme Love and L'Oréal Gem geometries — ±0.1 mm is the difference between a clean luxury mark and a printed-looking mark.
+For a foil mark inside an embossed boundary with less than 1 mm of distance — the Estée Lauder Holiday and Collgene geometries — ±0.1 mm is the difference between a clean luxury mark and a printed-looking mark.
 
 If the dieline shows a foil shape contained inside an embossed boundary by less than 1 mm at any point, the project needs ±0.1 mm. Otherwise it does not. We will tell a buyer this at the brief stage rather than over-engineer a project that does not require it.
 

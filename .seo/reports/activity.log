@@ -70,3 +70,4 @@
 2026-05-11T21:09:44.963Z	site-engineer	external	IndexNow ping (HTTP 200) for 19 upgraded /craft/* + /industry/* URLs after PR #20
 2026-05-11T23:57:14.055Z	editor	publish	Cluster #7 published — /blogs/soft-touch-vs-spot-uv-when-each-is-right (990 words); cluster under Pillar 2; comparison query
 2026-05-12T00:03:21.253Z	site-engineer	external	IndexNow batch ping (HTTP 200) — cluster #7 + 4 index pages + 4 industry pages + sitemap. Sessions 21+22+23 verified live.
+2026-05-13T00:00:00.000Z	human	permission	Founder directive: remove all L'Oréal and Lancôme content from the site. Permission revoked. 4 /volumes cases deleted (lancome-cny, lancome-1111, lancome-love, loreal-gem). Brand mentions scrubbed from /craft, /industry, /blogs, /volumes pages and 10 blog posts. Image dirs deleted. .seo/permissions/lancome.txt deleted. SEO_CONTEXT.md authorized roster updated with do-not-reintroduce note.

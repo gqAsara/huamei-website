@@ -258,21 +258,21 @@ export default function CraftPage() {
             <h4>Oriental Memoirs</h4>
             <div className="tag">Drawer &middot; Laser-cut</div>
           </Link>
-          <Link className="cr-card" href="/volumes/lancome-love">
-            <div className="ph" style={{ backgroundImage: "url('/photos/cases/lancome-love/01.jpg')" }}>
-              <span className="rn">V.</span>
-            </div>
-            <div className="meta"><span>Cosmetics</span><span>2025</span></div>
-            <h4>Lancôme Love</h4>
-            <div className="tag">Heart-shape &middot; Foil</div>
-          </Link>
-          <Link className="cr-card" href="/volumes/loreal-gem">
-            <div className="ph" style={{ backgroundImage: "url('/photos/cases/loreal-gem/01.jpg')" }}>
-              <span className="rn">III.</span>
+          <Link className="cr-card" href="/volumes/estee-holiday">
+            <div className="ph" style={{ backgroundImage: "url('/photos/cases/estee-holiday/01.jpg')" }}>
+              <span className="rn">IV.</span>
             </div>
             <div className="meta"><span>Cosmetics</span><span>2024</span></div>
-            <h4>L&rsquo;Oréal Gem</h4>
-            <div className="tag">Faceted &middot; Bespoke</div>
+            <h4>Estée Lauder Holiday</h4>
+            <div className="tag">Watercolor &middot; Foil starfield</div>
+          </Link>
+          <Link className="cr-card" href="/volumes/collgene">
+            <div className="ph" style={{ backgroundImage: "url('/photos/cases/collgene/01.jpg')" }}>
+              <span className="rn">IX.</span>
+            </div>
+            <div className="meta"><span>Skincare</span><span>2025</span></div>
+            <h4>Collgene</h4>
+            <div className="tag">Tuck-end &middot; Silver foil</div>
           </Link>
         </div>
       </section>

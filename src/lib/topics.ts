@@ -110,11 +110,11 @@ const INDUSTRY_CATEGORIES: Record<string, string[]> = {
 const CRAFT_VOLUMES: Record<string, string[]> = {
   // ----- Structures -----
   rigid: [
-    "lancome-love", "lancome-1111", "estee-holiday", "loreal-gem", "kefumei",
+    "estee-holiday", "kefumei",
     "hetaowang", "shede-6", "wuliangye-68", "zhonghua-dragon", "tianamen-jiu",
     "hongxing", "yangshao",
   ],
-  magnetic:  ["lancome-cny", "wuliangye-clamshell"],
+  magnetic:  ["wuliangye-clamshell"],
   drawer:    ["oriental-memoirs", "dukang", "heigouqi"],
   folding:   [
     "pink-food-sleeve", "glees-grove", "heart-window", "lavender-orchid",
@@ -127,16 +127,16 @@ const CRAFT_VOLUMES: Record<string, string[]> = {
 
   // ----- Surfaces -----
   "hot-foil": [
-    "lancome-cny", "lancome-love", "estee-holiday", "loreal-gem",
+    "estee-holiday",
     "lavender-orchid", "mustard-deco", "heritage-tea", "taozui-9",
     "wuliangye-68", "zhonghua-dragon", "hongxing", "collgene",
   ],
-  emboss:      ["zhonghua-dragon", "estee-holiday", "loreal-gem"],
+  emboss:      ["zhonghua-dragon", "estee-holiday"],
   deboss:      ["yangshao", "glees-grove", "man-made-crayon"],
-  "soft-touch":["kefumei", "lancome-love", "lancome-1111"],
-  "spot-uv":   ["collgene", "kefumei", "lancome-1111"],
-  offset:      ["estee-holiday", "lancome-1111", "t2-tea", "pink-food-sleeve", "heart-window"],
-  wraps:       ["cobalt-drum", "lancome-love", "lancome-cny", "shede-6"],
+  "soft-touch":["kefumei"],
+  "spot-uv":   ["collgene", "kefumei"],
+  offset:      ["estee-holiday", "t2-tea", "pink-food-sleeve", "heart-window"],
+  wraps:       ["cobalt-drum", "shede-6"],
 };
 
 function volumeToRelated(slug: string): TopicRelated | null {
@@ -283,7 +283,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     pullQuote: "Two pieces, lifted straight up — the simplest gesture a luxury box can make.",
     meta: ["1.5–2.5 mm core", "Paper or cloth wrap", "Min 300 pcs"],
     commercialTitle: "Custom luxury rigid box manufacturer — since 1992",
-    commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production. Built for Lancôme, Estée Lauder, Wuliangye and others.",
+    commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production. Built for Estée Lauder, Wuliangye and others.",
     buyerFaq: [
       { q: "What's the minimum order for a custom rigid box?", a: "200+ pieces public floor. Some structures run lower on a per-project quote. Below 200 the per-piece cost rises because press setup and hand-assembly time stop amortizing." },
       { q: "How long does a custom rigid box take?", a: "Samples 7–10 days; production 20–28 days from approved sample. Foil, emboss, and registered emboss-and-foil are included in the production schedule — no extra time." },
@@ -299,7 +299,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     pullQuote: "The flap pulls home with a soft thunk; the seam disappears.",
     meta: ["4–8 N42 magnets", "Pull-tested 5,000 cycles", "24–32 days"],
     commercialTitle: "Magnetic closure rigid box manufacturer — luxury packaging",
-    commercialDescription: "Magnetic-flap rigid boxes with 6–50 g pull-force at 2,800 Gauss, hidden under the wrap. MOQ 200+, 7–10 day samples, 24–32 day production. Built for Lancôme, Wuliangye and major cosmetic brands.",
+    commercialDescription: "Magnetic-flap rigid boxes with 6–50 g pull-force at 2,800 Gauss, hidden under the wrap. MOQ 200+, 7–10 day samples, 24–32 day production. Built for Estée Lauder, Wuliangye and major cosmetic brands.",
     buyerFaq: [
       { q: "What's the minimum order quantity for a magnetic-flap rigid box?", a: "200+ pieces for rigid magnetic-flap construction. Some structures run lower on a per-project quote — ask in the brief." },
       { q: "How long does a magnetic-flap rigid box take to produce?", a: "Samples turn in 7–10 days. Production runs 24–32 days from approved sample. Magnet sourcing adds a week at very low volume." },
@@ -510,12 +510,12 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "Cosmetic and skincare outers are where the Huamei floor spends most of its press time. The brief is rarely loud: a soft-touch laminate, a foil wordmark, a spot-UV catch-light. The work is in the fit.",
       "Folding cartons for serum tubes and lipsticks; rigid two-piece for fragrance and palette sets; magnetic flaps where the unboxing is the moment. We register foil to emboss at ±0.1 mm, and the Pantone tolerance on press is {em}ΔE ≤ 2{/em}.",
-      "Houses on file include Lancôme, Estée Lauder, L'Oréal, and a small bench of indie skincare projects. Minimum 1,000 for folding, 300 for rigid. Lead time 14–18 days for cartons, 22–32 days for rigid.",
+      "Houses on file include Estée Lauder and a small bench of indie skincare projects. Minimum 1,000 for folding, 300 for rigid. Lead time 14–18 days for cartons, 22–32 days for rigid.",
     ],
     pullQuote: "The compact, the tube, the jar — and everything that sits around them.",
-    meta: ["9 in archive", "ΔE ≤ 2", "Soft-touch standard"],
+    meta: ["5 in archive", "ΔE ≤ 2", "Soft-touch standard"],
     commercialTitle: "Luxury cosmetic & skincare packaging manufacturer",
-    commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Lancôme, Estée Lauder, L'Oréal Paris.",
+    commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Estée Lauder and a small bench of skincare brands.",
     buyerFaq: [
       { q: "What's the MOQ for cosmetic packaging?", a: "1,000+ for folding cartons; 300+ for rigid; 200+ for magnetic-flap rigid. Below the floors a rigid box is usually cheaper per unit than a folding carton." },
       { q: "What lead time should I plan for?", a: "14–18 days for folding cartons; 20–32 days for rigid. Surface decoration — hot-foil, emboss, soft-touch, spot-UV — runs inside the production schedule. Sample turnaround 7–10 days." },

@@ -32,9 +32,7 @@ internalLinks:
   - "/craft/spot-uv"
   - "/craft/offset"
   - "/craft/recycled"
-  - "/volumes/lancome-1111"
   - "/volumes/estee-holiday"
-  - "/volumes/loreal-gem"
   - "/volumes/wuliangye-68"
   - "/volumes/dukang"
   - "/house/factory"
@@ -68,7 +66,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 4 May 2026.
 
-A luxury rigid box is a multi-layer construction of greyboard, paper or cloth wrap, surface decoration, and a closure system — assembled by hand, designed for the moment a buyer first opens it. The phrase "rigid box" is a manufacturing term, not a marketing one: it means the box keeps its shape because the inner board does, not because the printed sheet is folded into one. That distinction sets the cost curve, the lead time, and the conversation a brand should expect when it asks for one. Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei has built rigid boxes for global luxury beauty (Lancôme Paris, Estée Lauder, L'Oréal Paris) and Chinese spirits (Wuliangye, Yangshao, Hongxing, Luoyang Dukang) since 1992. The pages below are a working definition for buyers and designers — how the box is made, what it is made from, what it costs in time and tooling, and how it gets to the buyer's hand on launch day.
+A luxury rigid box is a multi-layer construction of greyboard, paper or cloth wrap, surface decoration, and a closure system — assembled by hand, designed for the moment a buyer first opens it. The phrase "rigid box" is a manufacturing term, not a marketing one: it means the box keeps its shape because the inner board does, not because the printed sheet is folded into one. That distinction sets the cost curve, the lead time, and the conversation a brand should expect when it asks for one. Across four factories in Henan, Zhejiang, Sichuan and Guizhou, Huamei has built rigid boxes for global luxury beauty (Estée Lauder and a small bench of skincare houses) and Chinese spirits (Wuliangye, Yangshao, Hongxing, Luoyang Dukang) since 1992. The pages below are a working definition for buyers and designers — how the box is made, what it is made from, what it costs in time and tooling, and how it gets to the buyer's hand on launch day.
 
 ## What counts as a luxury rigid box
 
@@ -100,9 +98,8 @@ The published minimum on rigid-box construction is 200 pieces; folding-carton wo
 
 Huamei was founded in Zhengzhou in 1992 and has grown to four factories across Henan, Zhejiang, Sichuan and Guizhou — 22,000 m² of paper and ink across four press floors, with more than three thousand people on the lines. Quality management runs against the [ISO 9001:2015 standard](https://www.iso.org/iso-9001-quality-management.html); cert scans live on [`/house/certifications`](/house/certifications). Construction, decoration, and assembly happen in-house, on the same site that prints the wrap — which keeps a foil-to-emboss registration question to a walk down the hall, not a courier across two suppliers. The work splits across cosmetic and spirits houses — see [`/industry/cosmetic`](/industry/cosmetic) and [`/industry/spirits`](/industry/spirits) — and it is published one volume at a time:
 
-- [Lancôme × Tmall 11.11](/volumes/lancome-1111) — magnetic flap, kite-collab printing
 - [Estée Lauder Holiday](/volumes/estee-holiday) — watercolor wrap, foil starfield
-- [L'Oréal Paris Gem](/volumes/loreal-gem) — faceted gold foil gem
+- [Collgene](/volumes/collgene) — tuck-end carton with silver foil
 - [Wuliangye 68](/volumes/wuliangye-68) — red and gold rigid for the spirits flagship
 - [Luoyang Dukang](/volumes/dukang) — octagonal theatre box
 

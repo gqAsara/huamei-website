@@ -25,7 +25,7 @@ internalLinks:
   - "/craft/rigid"
   - "/craft/folding"
   - "/craft/magnetic"
-  - "/volumes/lancome-love"
+  - "/volumes/estee-holiday"
   - "/volumes/wuliangye-68"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/greyboard-grades-for-luxury-rigid-construction"
@@ -57,7 +57,7 @@ The first structural decision on a luxury packaging project is rarely posed as a
 
 > Use a rigid box when the product is premium-positioned, MOQ is 200–5,000, and the unboxing experience is part of the brand. Use a folding carton when volume is 5,000+, freight cost dominates, and the box is single-use. A rigid box reads as luxury because its wall is 1.5–3.0 mm thick; a folding carton folds from a single 250–350 gsm sheet.
 
-A **rigid box** (sometimes called a "setup box") is built from greyboard between 1.5 and 3.0 mm thick, wrapped in a decorated paper or cloth layer. It arrives at the buyer already assembled. The walls are stiff. The buyer cannot fold it flat. It is the format of Lancôme launches, Wuliangye spirits gift packs, and Tiffany & Co. ring cases.
+A **rigid box** (sometimes called a "setup box") is built from greyboard between 1.5 and 3.0 mm thick, wrapped in a decorated paper or cloth layer. It arrives at the buyer already assembled. The walls are stiff. The buyer cannot fold it flat. It is the format of prestige cosmetic launches, Wuliangye spirits gift packs, and Tiffany & Co. ring cases.
 
 A **folding carton** is cut and scored from a single sheet of 250–350 gsm folding boxboard, shipped flat, and folded into shape at the fulfilment line. The walls are thin and creased. The buyer could unfold it back to a sheet. It is the format of toothpaste boxes, cereal boxes, and the cheaper end of mass-market beauty.
 
@@ -113,7 +113,7 @@ If a brand is unsure about format, the working rule is: **brief us on the volume
 
 ## Two house examples
 
-**[Lancôme Love](/volumes/lancome-love)** — 2.5 mm rigid heart-shape box with registered emboss-and-foil. A 3,000-piece CNY launch. Rigid was the only format that could deliver the registered emboss-and-foil at the alignment Lancôme expects.
+**[Estée Lauder Holiday](/volumes/estee-holiday)** — 2.5 mm rigid watercolour-wrapped box with a registered foil starfield. A 3,000-piece holiday launch. Rigid was the only format that could deliver the foil-to-emboss alignment at prestige standards.
 
 **[Wuliangye 68](/volumes/wuliangye-68)** — 3.0 mm rigid red-and-gold spirits box for a 200-piece limited edition. Folding carton was never on the table for a luxury spirits launch; the question was which greyboard thickness, not which format.
 

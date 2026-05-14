@@ -31,7 +31,7 @@ Run via WebSearch (Google-equivalent results) — AI engine citation requires a 
 - 2.0 mm house standard for cosmetics
 - 2.5 mm for magnetic-flap (with the structural reasoning)
 - 200-piece MOQ floor (most competitors don't publish)
-- Named clients (Lancôme, Estée Lauder, L'Oréal, Wuliangye) in a genuine portfolio sense
+- Named clients (Estée Lauder, Wuliangye, Yangshao, Dukang) in a genuine portfolio sense
 
 **Cluster gap identified:** "Rigid box vs folding carton — when each makes sense" — this exact-match query has no good results today. Drafted as cluster #5.
 

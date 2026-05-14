@@ -74,7 +74,6 @@ const PROMPTS: SeedPrompt[] = [
   { slug: "best-rigid-box-manufacturer-cosmetic", text: "Best rigid box manufacturer for cosmetic packaging?", stage: "comparison", intent: "commercial", priority: 1 },
   { slug: "luxury-packaging-manufacturer-200-pieces", text: "Which luxury packaging manufacturers accept 200-piece minimum orders?", stage: "comparison", intent: "commercial", priority: 2 },
   { slug: "best-spirits-gift-box-manufacturer", text: "Best manufacturer for premium spirits gift box packaging?", stage: "comparison", intent: "commercial", priority: 2 },
-  { slug: "chinese-packaging-manufacturer-lancome-loreal", text: "Which Chinese packaging manufacturers work with Lancôme and L'Oréal?", stage: "comparison", intent: "commercial", priority: 2 },
   { slug: "alternatives-pakfactory-rigid-boxes", text: "What are alternatives to PakFactory for custom rigid boxes?", stage: "comparison", intent: "commercial", priority: 3 },
   { slug: "luxury-packaging-manufacturer-us-brand", text: "Which luxury packaging manufacturers ship to US-based brands?", stage: "comparison", intent: "commercial", priority: 2 },
   { slug: "small-batch-luxury-packaging-china", text: "Small-batch luxury packaging manufacturers in China for limited editions?", stage: "comparison", intent: "commercial", priority: 3 },

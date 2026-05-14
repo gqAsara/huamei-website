@@ -25,7 +25,7 @@ internalLinks:
   - "/craft/magnetic"
   - "/craft/rigid"
   - "/craft/inserts"
-  - "/volumes/lancome-cny"
+  - "/volumes/wuliangye-clamshell"
   - "/volumes/heart-window"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
   - "/blogs/working-with-a-chinese-luxury-packaging-manufacturer"
@@ -111,7 +111,7 @@ There is also a third, subtler mode: **uneven pull across the closure line**. If
 
 ## What this looks like on a real project
 
-The two strongest examples in our archive are [Lancôme CNY](/volumes/lancome-cny) — a magnetic flap on a wide cosmetic gift box at the higher end of the range — and [Heart Window](/volumes/heart-window) — a smaller nested magnetic lift-off where pull-force runs in the low teens. Both are visible on the case-study pages with the full project specs.
+The two strongest examples in our archive are [Wuliangye Premium Brew](/volumes/wuliangye-clamshell) — a glass-lined magnetic clamshell where pull-force sits at the upper end of the range to hold the bottle's weight — and [Heart Window](/volumes/heart-window) — a smaller nested magnetic lift-off where pull-force runs in the low teens. Both are visible on the case-study pages with the full project specs.
 
 If you are speccing a magnetic closure box now, the route to start is short. Send the brief, the dieline, and a reference for the closure feel you want. We post a foil swatch and run a sample within ten days. The pull-force gets dialled live; you confirm by hand.
 

@@ -36,7 +36,7 @@ Hot-foil stamping for luxury packaging — how the press, the foil, and the subs
 ### Intro (60–90 words)
 
 - One-sentence definitive answer: Hot-foil stamping is the technique that pulls metallic, pearlescent, or pigmented foil onto paper or board under heat and pressure, leaving a reflective mark that ink alone cannot produce.
-- One sentence anchoring to Huamei: Seventeen foils on file in-house, run on Heidelberg and KBA offset presses across four factories — for cosmetic launches (Lancôme, Estée Lauder, L'Oréal Paris), spirits gift packs (Wuliangye, Yangshao, Dukang), and seasonal ranges since 1992.
+- One sentence anchoring to Huamei: Seventeen foils on file in-house, run on Heidelberg and KBA offset presses across four factories — for cosmetic launches (Estée Lauder and a small bench of skincare houses), spirits gift packs (Wuliangye, Yangshao, Dukang), and seasonal ranges since 1992.
 
 ### H2 — What hot-foil stamping is, in one paragraph (featured-snippet target)
 
@@ -94,7 +94,7 @@ A featured-snippet candidate. Definition + tolerance + how to spec it.
 - **Tolerance:** Held to ±0.1 mm at Huamei. (Industry typical: ±0.3 mm.)
 - **Why it's hard:** Two passes have to land on the same coordinate. Substrate moves under heat. Die wear adds drift over a 5,000-piece run.
 - **How to spec it:** Provide a single dieline showing the emboss outline AND the foil mark in one layer. Don't separate them. Specify foil colour and emboss type (sculpted vs flat).
-- **House example to cite:** Lancôme Love (heart-shape rigid + foil), L'Oréal Gem (faceted gold gem). Both visible on `/volumes/lancome-love` and `/volumes/loreal-gem`.
+- **House example to cite:** Estée Lauder Holiday (watercolor wrap + foil starfield), Collgene (tuck-end carton with silver foil). Both visible on `/volumes/estee-holiday` and `/volumes/collgene`.
 
 ### H2 — When hot-foil isn't the answer (~120 words)
 
@@ -134,8 +134,8 @@ Tie to Pillar 4 / `/blogs/working-with-a-chinese-luxury-packaging-manufacturer` 
 - `/craft/deboss`
 - `/craft/soft-touch`
 - `/craft/spot-uv`
-- `/volumes/lancome-love` (registered emboss-and-foil example)
-- `/volumes/loreal-gem` (faceted foil)
+- `/volumes/estee-holiday` (registered emboss-and-foil example)
+- `/volumes/collgene` (silver foil on tuck-end)
 - `/volumes/dukang` (warm metallics on spirits)
 - `/blogs/custom-luxury-rigid-box-manufacturing` (Pillar 1 — when foil sits inside the structure conversation)
 - `/blogs/working-with-a-chinese-luxury-packaging-manufacturer` (Pillar 4 — for the lead-time + sourcing context)
@@ -160,7 +160,7 @@ Editor decides — both are valid authority anchors.
 ## Founder questions (please answer before Editor draft)
 
 - **Q1. Byline:** Use Sonia Sun, same as Pillars 1+4? Or different author for this technical piece? *Recommend: Sonia, consistent with the editorial voice.*
-- **Q2. Hero photo:** Any specific project you'd like featured? Or pick one from /volumes that already has strong foil work (Lancôme Love, L'Oréal Gem, Dukang are the strongest visually)?
+- **Q2. Hero photo:** Any specific project you'd like featured? Or pick one from /volumes that already has strong foil work (Estée Lauder Holiday, Collgene, Dukang are the strongest visually)?
 - **Q3. CTA target:** End-of-article CTA — "I want a foiled box like this" → /begin, OR "See the full foil palette" → /craft/hot-foil? *Recommend: /begin (RFQ intent).*
 - **Q4. Specialty foils:** The brief lists 17 foils across 5 families (warm/cool/pigmented/holographic/specialty). Are there any specific colours you'd rather not name publicly? *Default: name them descriptively only — no Kurz Lux SKU codes, just optical labels like "champagne" or "antique gold".*
 

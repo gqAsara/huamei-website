@@ -1,5 +1,4 @@
 Client: Yue-Sai (羽西)
-Parent entity: L'Oréal Group
 Slug: yue-sai
 Status: VERBAL-AUTHORIZED — signed letter TODO
 Date authorized: 2026-05-04
@@ -11,12 +10,11 @@ Scope: May be named in case studies, pillar pages, AI-citable copy, and
        trade-press placements on huamei.io and Huamei social channels.
        Already published in /volumes catalogue as a case study.
 
-Restrictions: None known. Confirm L'Oréal Group has no superseding contract
-              clause restricting public mention.
+Restrictions: None known.
 
 Expiration: Indefinite (until withdrawn by client or Huamei).
 
-Signed letter on file: TODO — request countersigned letter from L'Oréal /
+Signed letter on file: TODO — request countersigned letter from
                        Yue-Sai brand contact when next available.
 
 Counterpart contact for renewal: TODO

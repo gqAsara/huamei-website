@@ -6,7 +6,7 @@ import "./industry.css";
 export const metadata = {
   title: "Luxury packaging by industry — cosmetic, spirits, gifting, wellness",
   description:
-    "Custom luxury packaging across four sectors: cosmetic & skincare (Lancôme, Estée Lauder, L'Oréal), wine spirits & tea (Wuliangye, Yangshao, Dukang), seasonal gifting, and wellness. MOQ 200+, since 1992.",
+    "Custom luxury packaging across four sectors: cosmetic & skincare (Estée Lauder, Collgene, Kefumei), wine spirits & tea (Wuliangye, Yangshao, Dukang), seasonal gifting, and wellness. MOQ 200+, since 1992.",
   alternates: { canonical: "/industry" },
 };
 
@@ -38,13 +38,13 @@ export default function IndustryPage() {
       <section className="in-ledger">
         <div className="ldh">
           <span>The four categories — <em>at a glance</em></span>
-          <span>31 projects on file</span>
+          <span>27 projects on file</span>
         </div>
 
         <Link href="/industry/cosmetic">
           <span className="rn">i.</span>
           <span className="nm">Cosmetic &amp; <em>Skincare</em></span>
-          <span className="ct">9 projects</span>
+          <span className="ct">5 projects</span>
           <span className="ar">→</span>
         </Link>
         <Link href="/industry/spirits">
@@ -90,11 +90,11 @@ export default function IndustryPage() {
         </Link>
 
         <Link className="in-plate x4 tall" href="/industry/cosmetic">
-          <div className="ph" style={{ backgroundImage: "url('/photos/cases/lancome-cny/01.jpg')" }} />
+          <div className="ph" style={{ backgroundImage: "url('/photos/cases/estee-holiday/01.jpg')" }} />
           <div className="veil" />
           <div className="top">
             <span className="rn">ii.</span>
-            <span className="meta">9 &middot; prestige &amp; indie</span>
+            <span className="meta">5 &middot; prestige &amp; indie</span>
           </div>
           <h3><em>Cosmetic</em> &amp; Skincare.</h3>
           <span className="cn">化妆 · 护肤</span>
@@ -103,7 +103,7 @@ export default function IndustryPage() {
             Unit and outer, matched.
           </p>
           <div className="foot">
-            <span>Lancôme &middot; Estée Lauder &middot; L&rsquo;Oréal</span>
+            <span>Estée Lauder &middot; Collgene &middot; Kefumei</span>
             <span className="gold">→</span>
           </div>
         </Link>

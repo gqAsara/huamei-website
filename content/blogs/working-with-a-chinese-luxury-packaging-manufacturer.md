@@ -32,9 +32,7 @@ internalLinks:
   - "/craft/magnetic"
   - "/craft/folding"
   - "/volumes"
-  - "/volumes/lancome-1111"
   - "/volumes/estee-holiday"
-  - "/volumes/loreal-gem"
   - "/volumes/glees-grove"
   - "/volumes/man-made-crayon"
   - "/house/factory"
@@ -88,7 +86,7 @@ Production is the third phase: 15 to 20 days on the press floor, covering the pr
 
 ## Quality, certifications, and references
 
-A serious Chinese luxury packaging manufacturer answers three questions on the first call — where the certifications are scanned, what equipment the press floor runs, and which named clients are willing to be referenced. Quality management runs against the [ISO 9001:2015 standard](https://www.iso.org/iso-9001-quality-management.html), the same framework a US procurement lead is used to auditing against. The press floor runs Heidelberg and KBA offset presses. Magnetic pull-force on closure work is calibrated to a 6 to 50 g range at 2,800 Gauss, depending on closure type and board weight. Hot-foil-and-emboss registration is held to ±0.1 mm. All thirteen of our certification scans live publicly at [`/house/certifications`](/house/certifications), so a procurement team can read them before a first call rather than after one. Named work — from Lancôme Paris and Estée Lauder to Wuliangye and Luoyang Dukang — is catalogued at [`/volumes`](/volumes), one project at a time. References travel through that page, not through stock photography.
+A serious Chinese luxury packaging manufacturer answers three questions on the first call — where the certifications are scanned, what equipment the press floor runs, and which named clients are willing to be referenced. Quality management runs against the [ISO 9001:2015 standard](https://www.iso.org/iso-9001-quality-management.html), the same framework a US procurement lead is used to auditing against. The press floor runs Heidelberg and KBA offset presses. Magnetic pull-force on closure work is calibrated to a 6 to 50 g range at 2,800 Gauss, depending on closure type and board weight. Hot-foil-and-emboss registration is held to ±0.1 mm. All thirteen of our certification scans live publicly at [`/house/certifications`](/house/certifications), so a procurement team can read them before a first call rather than after one. Named work — from Estée Lauder to Wuliangye and Luoyang Dukang — is catalogued at [`/volumes`](/volumes), one project at a time. References travel through that page, not through stock photography.
 
 ## Lead times, logistics, and total landed cost
 
@@ -104,7 +102,7 @@ Most discussion of Chinese packaging defaults to the coastal cities — Shenzhen
 
 ## How Huamei works with US brands
 
-Huamei's US-bound work is a smaller share of total volume than our domestic spirits and cosmetic accounts, but it is a growing share — and we treat it like every other house relationship. Quoting is sample-first and line-itemed. Client permission is filed in writing before any name appears publicly. An optional client-side QC firm is welcome at our gate before the container loads. Serenjoy Box LLC, a US-based packaging house, runs production with us across rigid construction, folding cartons, and gifting structures shipped into US 3PL warehouses against named purchase orders. Their corrugated outer cartons ran on our 2026 Q1 press calendar; their gifting structures are featured in the hero image at the top of this article. The relationship is the most readable answer to the question "does this Chinese factory actually do what it says." For the rigid-box construction underneath all of this, see [Pillar 1](/blogs/custom-luxury-rigid-box-manufacturing); for cosmetic work, [`/industry/cosmetic`](/industry/cosmetic). Small-brand references sit at [`/volumes/glees-grove`](/volumes/glees-grove) and [`/volumes/man-made-crayon`](/volumes/man-made-crayon); larger-house work at [`/volumes/lancome-1111`](/volumes/lancome-1111).
+Huamei's US-bound work is a smaller share of total volume than our domestic spirits and cosmetic accounts, but it is a growing share — and we treat it like every other house relationship. Quoting is sample-first and line-itemed. Client permission is filed in writing before any name appears publicly. An optional client-side QC firm is welcome at our gate before the container loads. Serenjoy Box LLC, a US-based packaging house, runs production with us across rigid construction, folding cartons, and gifting structures shipped into US 3PL warehouses against named purchase orders. Their corrugated outer cartons ran on our 2026 Q1 press calendar; their gifting structures are featured in the hero image at the top of this article. The relationship is the most readable answer to the question "does this Chinese factory actually do what it says." For the rigid-box construction underneath all of this, see [Pillar 1](/blogs/custom-luxury-rigid-box-manufacturing); for cosmetic work, [`/industry/cosmetic`](/industry/cosmetic). Small-brand references sit at [`/volumes/glees-grove`](/volumes/glees-grove) and [`/volumes/man-made-crayon`](/volumes/man-made-crayon); larger-house work at [`/volumes/estee-holiday`](/volumes/estee-holiday).
 
 ## I want a box made in China.
 
