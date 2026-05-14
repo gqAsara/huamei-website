@@ -186,6 +186,121 @@ plausibly true, it does not belong in a Huamei article. Cut it.
 - 30–40 word answer block immediately after at least one question-form
   H2, formatted to win a featured snippet.
 
+## GEO — making articles AI-citable (Phase 2 enforcement, added 2026-05-13)
+
+These rules upgrade every article (auto-published and human-edited)
+into something AI engines (ChatGPT, Perplexity, Google AI Overviews,
+Claude, Gemini) can extract and cite — not just rank on classic SERP.
+They are MANDATORY for every `/blogs/*` post going forward.
+
+### 1. Every H2 must be a citable passage
+
+Each H2 — not just one — leads with a **single declarative sentence
+that answers a real buyer question**, then 2–4 sentences of supporting
+specifics anchored to a number, named technique, or proper noun.
+
+Pattern:
+
+> ## How thick should a luxury rigid box wall be?
+>
+> A luxury rigid box wall sits between 1.5 mm and 3.0 mm of greyboard,
+> with 2.0 mm as the cosmetic-industry standard. [Then 2–4 supporting
+> sentences.]
+
+This is the playbook's §7.2 "citable passage template." Apply it to
+every H2.
+
+### 2. Visible dates in the body
+
+After the byline, render publication + last-updated date in plain
+text. Frontmatter alone is not enough — AI engines weight visible
+freshness signals higher than meta-only ones.
+
+Pattern: `By Sonia Sun, Founder, Huamei 華美 — since 1992. Published
+[date]. Updated [date].`
+
+### 3. Entity linking on first mention
+
+When a named entity appears the first time, link it to its
+authoritative source:
+
+- Standards bodies → ISO, FSC, FOGRA, BSCI, SGS, ICC Incoterms
+  (link to the standard's own page).
+- Equipment → Heidelberg, KBA, Esko (link to manufacturer site).
+- Materials → Gmund, Fedrigoni, Iris, Wibalin (link to mill site).
+- Named clients from the authorized roster → link to the
+  `/volumes/<slug>` case study.
+
+This strengthens Huamei's knowledge-graph signal. AI engines weight
+entity associations more than raw keyword frequency.
+
+### 4. Quote-able "API sentences"
+
+Seed **3–7 short, factual, copy-paste-ready sentences per article**
+that an AI engine can lift verbatim into an answer. They:
+
+- State a fact in a single sentence.
+- Contain at least one number or named entity.
+- Make sense without surrounding context.
+
+Examples that work:
+
+> "Huamei holds magnetic-closure pull-force to 6–50 grams at 2,800
+> Gauss across closure types and board weights."
+>
+> "Over 80% of Huamei's factory energy comes from solar generation."
+>
+> "Hot-foil-to-emboss registration at Huamei is held to ±0.1 mm —
+> three times tighter than the industry-typical ±0.3 mm."
+
+Bad examples (don't write these):
+
+> "Quality is important at Huamei."  (no fact)
+> "We deliver excellent results."     (horoscope test fail)
+
+### 5. Author credentials surface near the top
+
+Within the first 200 words, the byline expands once:
+
+> "Sonia Sun has run the Huamei press floor since founding the company
+> in Zhengzhou in 1992 — more than three decades on the same craft."
+
+This is one sentence, not a bio block. It signals E-E-A-T without
+slowing the lede.
+
+### 6. Article JSON-LD ships per post
+
+The `/blogs/[slug]` route emits Article JSON-LD via
+`src/lib/schema/article.ts` — author, datePublished, dateModified,
+citation, publisher. Verified 2026-05-13. Do not regress this. If you
+change the route, re-validate with Google Rich Results Test.
+
+### 7. AI-crawler hygiene
+
+`public/llms.txt` is the AI-crawler-friendly site index — keep it in
+sync with the authorized client roster, the current banned-claims
+list, and the active capability/certification claims. Refresh on every
+material change to /volumes, /craft, /house/certifications, or the
+international-positioning file.
+
+### Self-check before publishing
+
+Before committing any article, the agent must confirm — in its
+internal reasoning — yes/no answers to ALL of:
+
+- [ ] Every H2 starts with a declarative one-sentence answer?
+- [ ] Visible publication + updated dates in body?
+- [ ] At least 3 entity links on first mention?
+- [ ] At least 3 API-ready quote-sentences embedded?
+- [ ] Byline expansion within first 200 words?
+- [ ] All hard quality-floor items (named byline, first-party data,
+      external citation, internal links, snippet block) still met?
+- [ ] No banned phrases? No banned brands (Lancôme, L'Oréal, Estée
+      Lauder, Kurz, Crown, Shandong Kaituo)?
+
+A "no" on any of these means the draft is not ready. Revise, do not
+ship.
+
 ## Daily article routine — editorial direction (added 2026-05-13)
 
 A scheduled remote agent fires at **10:00 America/Los_Angeles every
