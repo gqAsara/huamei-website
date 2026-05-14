@@ -301,6 +301,73 @@ internal reasoning — yes/no answers to ALL of:
 A "no" on any of these means the draft is not ready. Revise, do not
 ship.
 
+## Opportunity loop — closed-system data flow (added 2026-05-13)
+
+The SEO program runs as four loops feeding the 10am-PT publish routine:
+
+```
+LOOP 1 — Registry (sources of truth)
+  .seo/keywords/primary.yaml      ← head terms with DataForSEO volume + competition
+  Sanity geoPrompt docs            ← AI prompts to track (Sanity Studio at /studio)
+  .seo/competitors.md              ← top 10 competitor brands+domains
+
+LOOP 2 — Measurement (Vercel cron, daily 11:00 UTC = 3am PT PDT)
+  /api/cron/geo-probe              ← probes ChatGPT/Claude/Perplexity on every active
+                                     geoPrompt; writes Sanity geoRun docs with
+                                     citations + competitor mentions.
+
+LOOP 3 — Scoring (runs inside the 10am routine, before drafting)
+  scripts/score-opportunities.ts   ← reads primary.yaml, dedupes against
+                                     content/blogs/, writes top N briefs to
+                                     .seo/briefs/auto-YYYY-MM-DD-RANK-slug.md
+  Score formula (v1):
+    seo_score = log10(volume + 10) × intent_weight × priority_weight
+                × no_article_bonus × competition_penalty × 10
+    intent_weight:    transactional 1.6, commercial 1.4, investigative 1.0,
+                      informational 0.7
+    priority_weight:  P1=2.0, P2=1.5, P3=1.0, P4=0.7, P5=0.5
+    no_article_bonus: 1.6 if no target article yet, 1.0 otherwise
+    competition_penalty: 1 − (competition × 0.3)  (max 30% penalty at comp=1.0)
+
+LOOP 4 — Production (10am-PT routine)
+  trig_01KPjanymcsUY3s9YfVVwHbA    ← reads top 5 briefs by rank, drafts +
+                                     commits + IndexNow-pings each, then
+                                     archives the brief to .seo/briefs/published/.
+```
+
+### Operating cadence
+
+| When | What | Cost |
+|---|---|---|
+| Monthly (manual) | `npx tsx scripts/dataforseo-enrich.ts` — re-pull volume/CPC/competition for the registry | ~$0.10 per run |
+| Monthly (manual) | Append new keywords to `primary.yaml` from `主打关键词.xlsx` or competitor research, then enrich | included |
+| Daily 11:00 UTC | Vercel cron fires `/api/cron/geo-probe` — AI citation tracking | ~$0.01/run (OpenRouter) |
+| Daily 17:00 UTC (10am PT PDT) | Remote routine: score → consume 5 briefs → publish → archive | included in agent run |
+
+### Where each data point lives
+
+- **Keyword + volume + competition** → `.seo/keywords/primary.yaml`
+- **Volume enrichment history** → `.seo/keywords/enrichment-log.jsonl`
+- **AI prompts + competitor brands** → Sanity (`geoPrompt`, `geoCompetitor`)
+- **AI citation history** → Sanity (`geoRun`)
+- **Active opportunity briefs** → `.seo/briefs/auto-*.md`
+- **Consumed/archived briefs** → `.seo/briefs/published/`
+- **GSC / GA4 / Bing data** → not yet auto-pulled; Analyst agent role to wire later
+
+### When to add new keywords
+
+Whenever a new commercial angle surfaces (founder discussion, competitor
+move, season change, new product line). Add to the LONG-TAIL section if
+it maps to a planned article; add to the HEAD section if it's a broader
+query that should drive opportunity scoring. Re-enrich after adding.
+
+### When the brief queue is empty
+
+The routine falls back to self-generation from the editorial mix below.
+This happens when all currently-tracked opportunities already have
+articles. The fix is to enrich more head terms (broaden the registry),
+not to push the routine harder.
+
 ## Daily article routine — editorial direction (added 2026-05-13)
 
 A scheduled remote agent fires at **10:00 America/Los_Angeles every
