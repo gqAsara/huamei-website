@@ -186,6 +186,50 @@ plausibly true, it does not belong in a Huamei article. Cut it.
 - 30–40 word answer block immediately after at least one question-form
   H2, formatted to win a featured snippet.
 
+## Daily article routine — editorial direction (added 2026-05-13)
+
+A scheduled remote agent fires at **10:00 America/Los_Angeles every
+day** and drafts **5 `/blogs/*` articles**, then auto-publishes them
+(see Publish policy in Rule 1). Topic ideas come from GSC + Bing
+queries Huamei is ranking near, competitor gaps in
+`.seo/competitors.md`, and the editorial direction below.
+
+**Cover this mix across each week (≈ 35 articles):**
+
+- **Industry news & trends** — what's happening in luxury packaging,
+  cosmetic launches, baijiu market, sustainable materials, supply
+  chain. Cite a named source dated within 30 days.
+- **Seasonal & holiday content** — Chinese New Year, Mid-Autumn,
+  Christmas, Valentine's, Lunar limited editions, Western holiday gift
+  packaging. Plan around the launch calendar (CNY brief locks in
+  February for October ship; Mid-Autumn brief in October for June
+  ship).
+- **Material & craft deep-dives** — papers, foils, structures,
+  finishes, machinery. The same anchor-to-numbers register the
+  pillars use.
+- **Buyer-journey content** — MOQ, lead times, sourcing, freight,
+  tariffs, customs, US/EU procurement audits.
+- **Sustainability & ESG** — drawing from
+  `.seo/reference/international-positioning-2026-05-13.md`. >80% solar,
+  transit-grade testing, FSC/BSCI/SGS, biomass investment.
+- **Comparison & decision content** — "X vs Y", "when to use Z",
+  format trade-offs. These are the highest-converting query shapes.
+
+**Each article still obeys the "Required of every article" list above**
+— named byline, first-party data point per 500 words, external
+citation, AI-extractable passages, internal links, featured-snippet
+answer block. The auto-publish authorization does NOT relax the
+quality floor.
+
+**Topic dedupe.** Before drafting, the routine must check
+`content/blogs/` for an existing post with the same slug or near-same
+title. If there's overlap, pick a different angle.
+
+**Authority build.** Every article should leave a concrete fact about
+Huamei's capability on the page — a number, a structure, a named
+client from the authorized roster, or a testing threshold. The point
+of the daily cadence is authority accretion, not word-count.
+
 ## Cold-start exception
 
 On a brand-new site with fewer than three /blogs posts, Editor cannot
@@ -227,9 +271,19 @@ reads `.seo/state.json` and proposes the next move.
 
 ## Rules every agent must obey
 
-1. **Never publish (commit to main, hit IndexNow, send an email) without
-   explicit human confirmation.** Drafting and PR-creation are fine; merging
-   and external sends are not.
+1. **Publish policy (updated 2026-05-13):**
+   - **Daily article routine** (the scheduled 10am-PT job that drafts 5
+     `/blogs/*` articles): **auto-publish authorized.** Commit each
+     article to `main`, push, hit IndexNow for the new URL +
+     `/sitemap.xml`. No human gate.
+   - **Everything else** — pillar refactors, /craft + /industry copy
+     changes, schema/metadata, /house pages, trade-press emails,
+     outreach posts on LinkedIn / Slack / Twitter, edits that touch
+     anything outside `content/blogs/*.md`: still require explicit
+     human confirmation. Open a PR, do not merge.
+   - **External sends** (email, social posts, IndexNow pings that are
+     NOT part of the daily routine) still require explicit human
+     confirmation regardless of channel.
 2. **Never write to `.seo/state.json` without a corresponding artifact** — a
    merged PR, a published URL, a logged mention CSV row. The dashboard must
    not diverge from reality.
