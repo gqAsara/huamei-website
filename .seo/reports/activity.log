@@ -87,3 +87,11 @@
 2026-05-14T17:18:40.960Z	daily-routine	publish	https://huamei.io/blogs/custom-gift-box-manufacturing — Custom gift box manufacturing: structure selection, MOQ, and lead times
 2026-05-14T17:18:41.006Z	daily-routine	publish	https://huamei.io/blogs/christmas-gift-box-custom-manufacturing — Christmas gift box manufacturing: brief calendar, structures, and decoration
 2026-05-14T17:18:41.048Z	daily-routine	publish	https://huamei.io/blogs/cosmetic-packaging-luxury-rigid-box — Cosmetic packaging: rigid box structures, surface treatments, and MOQ for beauty brands
+2026-05-15T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/magnetic-gift-box — The magnetic gift box: structure, pull-force, and how to order one for retail
+2026-05-15T10:30:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-paper-bag — The luxury paper bag: materials, handles, and what retail-grade construction requires
+2026-05-15T11:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/paper-boxes-luxury-packaging — Paper boxes for luxury packaging: rigid, folding, and collapsible construction compared
+2026-05-15T11:30:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-packaging-defined — What is luxury packaging: materials, construction, and what buyers are actually paying for
+2026-05-15T12:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/packaging-supplier-guide — How to choose a packaging supplier: five capability signals, certifications, and the audit checklist
+2026-05-15T12:05:00+08:00	daily-routine	warn	IndexNow pings returned "Host not in allowlist" for all 5 article URLs (known issue logged 2026-05-14, key present at 76205ecaf6357b1eaa711bff492ae6fa.txt — awaiting founder re-verification with IndexNow)
+2026-05-15T12:10:00+08:00	daily-routine	dedup	5 briefs skipped (exact-coverage overlap): packaging-manufacturer, perfume-box, gift-box, christmas-gift-box, cosmetic-packaging — already covered by articles published 2026-05-14
+2026-05-15T12:15:00+08:00	daily-routine	archive	5 briefs consumed: auto-2026-05-14-006-magnetic-gift-box, auto-2026-05-14-007-paper-bag, auto-2026-05-14-009-paper-boxes, auto-2026-05-14-010-luxury-packaging, auto-2026-05-15-007-packaging-supplier → .seo/briefs/published/
