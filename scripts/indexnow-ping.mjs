@@ -64,21 +64,38 @@ const body = JSON.stringify({
   urlList,
 });
 
-try {
-  const out = execSync(
-    `curl -sS -X POST -H "Content-Type: application/json" -w "%{http_code}" -d '${body.replace(/'/g, "'\\''")}' https://api.indexnow.org/indexnow`,
-    { encoding: "utf8" },
-  );
-  // Last 3 chars are the http code
-  const code = out.slice(-3);
-  if (code.startsWith("2")) {
-    console.log(`indexnow: HTTP ${code} for ${urlList.length} URLs.`);
-    process.exit(0);
-  } else {
-    console.error(`indexnow: HTTP ${code} — body: ${out.slice(0, -3)}`);
-    process.exit(0); // never block
+// Try endpoints in order until one returns a 2xx. Bing's direct
+// endpoint is usually the most permissive; the hub forwards to all
+// search engines but is the strictest on host allowlists. Use a real
+// browser-ish User-Agent so cloud IPs aren't reflexively blocked.
+const ENDPOINTS = [
+  "https://www.bing.com/indexnow",
+  "https://api.indexnow.org/indexnow",
+  "https://yandex.com/indexnow",
+];
+const UA = "Mozilla/5.0 (compatible; HuameiIndexNowBot/1.0; +https://huamei.io)";
+
+let success = false;
+for (const endpoint of ENDPOINTS) {
+  try {
+    const out = execSync(
+      `curl -sS -X POST -H "Content-Type: application/json" -H "User-Agent: ${UA}" -w "%{http_code}" -d '${body.replace(/'/g, "'\\''")}' ${endpoint}`,
+      { encoding: "utf8" },
+    );
+    const code = out.slice(-3);
+    const bodyText = out.slice(0, -3).trim();
+    if (code.startsWith("2")) {
+      console.log(`indexnow: HTTP ${code} via ${endpoint} for ${urlList.length} URLs.`);
+      success = true;
+      break;
+    } else {
+      console.error(`indexnow: HTTP ${code} via ${endpoint}${bodyText ? ` — ${bodyText.slice(0, 200)}` : ""}`);
+    }
+  } catch (e) {
+    console.error(`indexnow: ${endpoint} failed (${e.message})`);
   }
-} catch (e) {
-  console.error(`indexnow: ping failed (${e.message}); not blocking`);
-  process.exit(0);
 }
+if (!success) {
+  console.error("indexnow: all endpoints rejected. Not blocking. Check Bing Webmaster Tools verification.");
+}
+process.exit(0);
