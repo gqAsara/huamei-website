@@ -1,0 +1,73 @@
+name: Daily GSC pull
+
+# Runs at 12:00 UTC every day = 5:00 PT (PDT) / 4:00 PT (PST).
+# Sits before the 17:00 UTC routine so fresh GSC data is in the repo
+# when the scorer reads `.seo/reports/gsc-*.jsonl`.
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch: # manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write # to commit + push the .jsonl
+
+concurrency:
+  group: gsc-pull
+  cancel-in-progress: false
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          # Need full git history for clean rebase-on-conflict.
+          fetch-depth: 0
+          # Use the default GITHUB_TOKEN, which can push to the same repo
+          # because the workflow has `contents: write` permission.
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pull GSC data
+        env:
+          GSC_OAUTH_CLIENT_ID: ${{ secrets.GSC_OAUTH_CLIENT_ID }}
+          GSC_OAUTH_CLIENT_SECRET: ${{ secrets.GSC_OAUTH_CLIENT_SECRET }}
+          GSC_OAUTH_REFRESH_TOKEN: ${{ secrets.GSC_OAUTH_REFRESH_TOKEN }}
+        run: npx tsx scripts/gsc-pull.ts --min-impr 1
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "huamei-gsc-bot"
+          git config user.email "huamei-gsc-bot@users.noreply.github.com"
+
+          # Only commit if there's an actual change
+          if ! git diff --quiet -- .seo/reports/; then
+            today=$(date -u +%Y-%m-%d)
+            git add .seo/reports/gsc-*.jsonl
+            git commit -m "chore: GSC pull $today (auto)"
+            # Rebase against any commits that landed since checkout
+            git pull --rebase origin main
+            git push origin main
+            echo "✓ GSC snapshot pushed for $today"
+          else
+            echo "No GSC changes today — nothing to commit"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### GSC pull summary" >> $GITHUB_STEP_SUMMARY
+          if [ -f .seo/reports/gsc-$(date -u +%Y-%m-%d).jsonl ]; then
+            count=$(wc -l < .seo/reports/gsc-$(date -u +%Y-%m-%d).jsonl)
+            echo "Rows: $count" >> $GITHUB_STEP_SUMMARY
+          fi
