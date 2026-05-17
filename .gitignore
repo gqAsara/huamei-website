@@ -56,3 +56,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/photos/upgraded/
+scripts/image-upgrade/__pycache__/

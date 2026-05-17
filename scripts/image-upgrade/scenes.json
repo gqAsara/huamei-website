@@ -1,0 +1,82 @@
+{
+  "_README": "Prompt library for Huamei product photo background upgrades. Edit scene strings or add new scenes here — upgrade.py reads this file. Keep scene KEYS stable (used in output filenames and CLI). When adding a new product type, append to type_rules.",
+
+  "model": "google/gemini-3-pro-image-preview",
+  "_model_options": [
+    "google/gemini-2.5-flash-image           — Nano Banana, ~$0.04/img, baseline",
+    "google/gemini-3.1-flash-image-preview   — Nano Banana 2, higher fidelity",
+    "google/gemini-3-pro-image-preview       — Nano Banana Pro, best fidelity, more $"
+  ],
+
+  "prompt_template": "You are a luxury product photographer compositing a still life.\n\nTake the EXACT product shown in this image and place it, completely unchanged, into a new luxurious setting.\n\nPRESERVE (mandatory): every detail of the product itself — exact shape, exact proportions, exact colors, exact finishes, every line of text, every logo, every embossed pattern, every material texture. Do NOT redesign, recolor, restyle, rotate, or alter the product in any way. The product must remain pixel-faithful to the input.\n\nREPLACE: only the background, the surface the product sits on, the ambient lighting, and the cast shadow.\n\nNEW SCENE: {scene}\n\nLIGHTING & RENDERING: editorial luxury product photography, photorealistic, shot on Hasselblad H6D-100c with 80mm lens at f/4, ISO 100. Soft directional key light from camera-left, gentle fill, subtle rim light. Realistic contact shadow grounding the product on the new surface. Subtle environmental color reflection on the product's glossy faces (do not change product color, only reflect ambient hues). Shallow depth of field, product tack-sharp in focus, background softly blurred. Editorial 4:5 ratio. 8k. No text, no watermark, no extra props besides those described in the scene.",
+
+  "scenes": {
+    "chinese_study": "a traditional Chinese scholar's study (書房), placed on a dark zitan rosewood desk, antique inkstone and brush rest softly blurred beside, single ribbon of incense smoke, paper lantern glow from camera-right, deep walnut + cinnabar + warm gold palette, late afternoon light through carved lattice window",
+    "imperial_banquet": "an imperial banquet table, placed on red silk runner over dark lacquered wood, soft candlelight from gilt brass candlesticks, blurred celadon ware in background, vermilion + gold leaf + obsidian palette, cinematic warm tungsten glow",
+    "song_pavilion": "the stone threshold of a Song-dynasty garden pavilion, placed on a slab of weathered bluestone, distant moon gate and a single pine branch softly blurred, early evening overcast light, ink-wash + jade + soft graphite palette, faint mist",
+    "boudoir_marble": "an haute couture boudoir, placed on a Calacatta gold marble vanity, sheer linen drape and antique gilded mirror softly blurred, single peony in crystal vase, bone white + champagne gold + dusty rose palette, soft diffused window light",
+    "hotel_suite_night": "a five-star hotel suite by floor-to-ceiling window, placed on a black marble side table, blurred bokeh of city lights at blue hour, single crystal whiskey glass beside, obsidian + amber + smoked gold palette, warm rim light",
+    "parisian_apartment": "a Haussmann-era Parisian apartment, placed on a white marble console with brass edge, herringbone parquet floor blurred behind, antique gilt mirror reflecting soft afternoon Paris light through tall French windows, ivory + champagne + soft sage palette",
+    "amalfi_morning": "a travertine ledge of an Amalfi coast villa, placed on warm cream stone, sheer linen curtain billowing, distant turquoise Mediterranean sea softly blurred, 7am golden light, ivory + sea-foam + warm honey palette, faint salt mist",
+    "japanese_tea_room": "a Kyoto wabi-sabi tea room, placed on a dark walnut tea table, shoji screen diffusing overcast post-rain light, single ikebana branch softly blurred, moss garden visible through doorway, charcoal + warm beige + indigo palette",
+    "moss_garden": "a Chinese literati garden in early morning mist, placed on a slab of moss-edged stone, blurred bamboo and a single white magnolia bloom, soft overcast light, celadon + moss + pearl-grey palette, contemplative stillness",
+    "velvet_pedestal": "a private jeweller's salon, placed on a midnight-blue silk velvet pedestal, single soft museum spotlight creating gentle halo, blurred polished walnut cabinetry, midnight blue + pearl + rose gold palette, contact shadow grounded",
+    "rose_marble_vanity": "a rose-quartz marble vanity, placed on cool pink stone, blurred mother-of-pearl inlay panel behind, single dried hydrangea, soft north-facing daylight, pearl + blush + warm silver palette",
+    "song_temple_courtyard": "the courtyard of a Song-dynasty temple, placed on a slab of carved blue stone, blurred timber bracket-set roof and a single ginkgo leaf, late golden hour light, ochre + moss-green + faded vermilion palette, faint incense haze",
+    "ancient_brick_wall": "against a weathered Ming-dynasty grey-brick wall, placed on aged elm wood plank, single bonsai pine partially in frame, soft overcast morning light, ink-grey + warm umber + jade palette",
+    "boutique_interior": "the interior of a haute-couture flagship boutique, placed on a white-oak floor beside a velvet bench, blurred floor-to-ceiling display wall, soft warm overhead spots, ivory + champagne + cognac palette",
+    "marble_lobby": "a marble hotel lobby, placed on cool grey-veined marble floor, blurred brass-and-glass reception in background, single calla lily in tall vase, soft overhead ambient light, marble grey + brass + cream palette",
+    "fireplace_evening": "an alpine chalet beside a stone fireplace, placed on a slab of raw oak, firelight glow as warm rim, cashmere throw softly draped, snow-covered pine through frosted window, cognac + ember + cream palette",
+    "winter_window": "a window seat with snow falling outside, placed on a bleached-oak surface, sheer white linen and a sprig of fir softly blurred, soft cool daylight with warm interior tungsten fill, snow-white + warm gold + fir-green palette"
+  },
+
+  "type_rules": [
+    {
+      "type": "baijiu",
+      "match_any": ["wuliangye", "dukang", "taozui", "danquan", "shede", "hongxing", "tianamen", "heigouqi", "jiu", "baijiu"],
+      "scenes": ["chinese_study", "imperial_banquet", "song_pavilion"]
+    },
+    {
+      "type": "fragrance",
+      "match_any": ["souverain", "fragrance", "eclat-de-fes", "perfume"],
+      "scenes": ["boudoir_marble", "hotel_suite_night", "parisian_apartment"]
+    },
+    {
+      "type": "tea",
+      "match_any": ["heritage-tea", "t2-tea", "tea"],
+      "scenes": ["japanese_tea_room", "moss_garden", "song_pavilion"]
+    },
+    {
+      "type": "jewelry",
+      "match_any": ["jewell", "pink-drawer", "ring-box", "earring"],
+      "scenes": ["velvet_pedestal", "rose_marble_vanity", "boudoir_marble"]
+    },
+    {
+      "type": "chinese_heritage",
+      "match_any": ["yangshao", "oriental", "zhonghua", "dragon", "hetaowang", "kefumei", "collgene", "danquan-cave", "cobalt-drum", "taozui-9"],
+      "scenes": ["song_temple_courtyard", "ancient_brick_wall", "song_pavilion"]
+    },
+    {
+      "type": "shopper",
+      "match_any": ["shopper", "bag", "sleeve", "ribbon", "corded"],
+      "scenes": ["boutique_interior", "marble_lobby", "parisian_apartment"]
+    },
+    {
+      "type": "festive",
+      "match_any": ["advent", "love-forever", "heart-window", "calendar"],
+      "scenes": ["fireplace_evening", "winter_window", "boudoir_marble"]
+    },
+    {
+      "type": "western_cosmetic",
+      "match_any": ["757-cream", "lavender-orchid", "cosmetic", "skincare"],
+      "scenes": ["parisian_apartment", "amalfi_morning", "rose_marble_vanity"]
+    },
+    {
+      "type": "asian_minimal",
+      "match_any": ["bronze-jar", "huamei-logo", "sage-box", "mustard-deco", "glees-grove", "man-made-crayon", "advent-calendar", "love-forever-boxes"],
+      "scenes": ["japanese_tea_room", "rose_marble_vanity", "boutique_interior"]
+    }
+  ],
+
+  "fallback_scenes": ["parisian_apartment", "japanese_tea_room", "boudoir_marble"]
+}
