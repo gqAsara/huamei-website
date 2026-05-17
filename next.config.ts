@@ -3,6 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   trailingSlash: false,
 
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.sanity.io", pathname: "/images/pn9bcq7e/**" },
+    ],
+  },
+
   async redirects() {
     return [
       // Enforce no trailing slash on every URL.
