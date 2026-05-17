@@ -1,0 +1,42 @@
+name: Daily SEO digest
+
+# Runs at 13:30 UTC = 6:30 AM PT (PDT) / 5:30 AM PT (PST).
+# That's ~15 minutes after the routine's 12:15 UTC fire time, which
+# gives the routine the typical 30–60 min runtime to finish committing.
+
+on:
+  schedule:
+    - cron: "30 13 * * *"
+  workflow_dispatch: # manual trigger from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          # Need enough history to read recent activity.log entries.
+          fetch-depth: 50
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Send digest email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_TO_EMAIL: georgeqiao08@gmail.com
+          DIGEST_FROM_EMAIL: "Huamei SEO Bot <seo-bot@huamei.io>"
+        run: node scripts/seo-digest.mjs
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### SEO digest" >> $GITHUB_STEP_SUMMARY
+          echo "Sent at $(date -u +%Y-%m-%dT%H:%M:%SZ) for $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
