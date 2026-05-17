@@ -36,6 +36,45 @@ const KEYWORDS_PATH = resolve(process.cwd(), ".seo/keywords/primary.yaml");
 const BLOGS_DIR = resolve(process.cwd(), "content/blogs");
 const BRIEFS_DIR = resolve(process.cwd(), ".seo/briefs");
 const PUBLISHED_DIR = resolve(BRIEFS_DIR, "published");
+const REPORTS_DIR = resolve(process.cwd(), ".seo/reports");
+
+// GSC near-miss opportunities: queries ranking 11-30 (page 2-3) where a
+// rank push could plausibly land them on page 1. The scorer multiplies
+// the base score by a near-miss bonus when the keyword has GSC presence
+// in this range.
+type GscRow = {
+  query: string;
+  page: string;
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+};
+
+function loadLatestGsc(): Map<string, GscRow> {
+  const byQuery = new Map<string, GscRow>();
+  if (!existsSync(REPORTS_DIR)) return byQuery;
+  const files = readdirSync(REPORTS_DIR)
+    .filter((f) => /^gsc-\d{4}-\d{2}-\d{2}\.jsonl$/.test(f))
+    .sort();
+  if (files.length === 0) return byQuery;
+  const latest = files[files.length - 1];
+  const raw = readFileSync(join(REPORTS_DIR, latest), "utf8");
+  for (const line of raw.split("\n")) {
+    if (!line.trim()) continue;
+    try {
+      const r = JSON.parse(line) as GscRow;
+      // If the same query maps to multiple pages, keep the one with
+      // the most impressions (the primary ranking page).
+      const k = r.query.toLowerCase();
+      const prior = byQuery.get(k);
+      if (!prior || r.impressions > prior.impressions) byQuery.set(k, r);
+    } catch {
+      // skip malformed line
+    }
+  }
+  return byQuery;
+}
 
 type KeywordRow = {
   query: string;
@@ -123,28 +162,51 @@ type Scored = KeywordRow & {
   slug: string;
   opportunity_type: string;
   has_article: boolean;
+  gsc_position?: number;
+  gsc_impressions?: number;
+  gsc_page?: string;
 };
 
-function scoreKeyword(row: KeywordRow, blogSlugs: Set<string>): Scored {
+function scoreKeyword(row: KeywordRow, blogSlugs: Set<string>, gscByQuery: Map<string, GscRow>): Scored {
   const slug = slugify(row.query);
   const intentMul = INTENT_WEIGHT[row.intent] ?? 1.0;
   const priorityMul = PRIORITY_WEIGHT[row.priority] ?? 1.0;
   const has_article = articleExists(row.target_url) || blogSlugs.has(slug);
 
   // Base score: log of volume, weighted by intent + priority.
-  // Volume = 0 (untracked) maps to a small floor so the row can still score.
   const volume = row.volume_monthly ?? 0;
-  const volumeComponent = Math.log10(volume + 10); // 10 → 1.04, 100 → 2.04, 1000 → 3.0, 3600 → 3.56
-  const competitionPenalty = 1 - (row.competition ?? 0.5) * 0.3; // up to 30% penalty for max-comp
-
-  // No-article bonus: writing about a query that doesn't have a target yet is the highest-leverage move.
+  const volumeComponent = Math.log10(volume + 10);
+  const competitionPenalty = 1 - (row.competition ?? 0.5) * 0.3;
   const noArticleBonus = has_article ? 1.0 : 1.6;
 
-  const score = volumeComponent * intentMul * priorityMul * noArticleBonus * competitionPenalty * 10;
+  // GSC near-miss: rank 11-30 with non-zero impressions means we're close
+  // to page 1. Optimization here is higher-leverage than writing yet
+  // another new article. Scales 1.0 (no near-miss) to 2.5 (rank 11 with
+  // many impressions).
+  const gsc = gscByQuery.get(row.query.toLowerCase());
+  let nearMissBonus = 1.0;
+  if (gsc && gsc.position >= 11 && gsc.position <= 30) {
+    // The closer to position 11 (page 2 top), the bigger the bonus.
+    const positionFactor = (31 - gsc.position) / 20; // pos 11 → 1.0, pos 30 → 0.05
+    const impressionFactor = Math.min(1.0, gsc.impressions / 100); // saturates at 100 impressions
+    nearMissBonus = 1.0 + (1.5 * positionFactor * impressionFactor);
+  }
+
+  const score =
+    volumeComponent *
+    intentMul *
+    priorityMul *
+    noArticleBonus *
+    competitionPenalty *
+    nearMissBonus *
+    10;
 
   let opportunity_type = "new_content";
   let reason = "";
-  if (!has_article && volume > 100) {
+  if (gsc && gsc.position >= 11 && gsc.position <= 30 && nearMissBonus > 1.5) {
+    opportunity_type = "gsc_near_miss";
+    reason = `Ranking #${gsc.position.toFixed(0)} on Google for "${row.query}" with ${gsc.impressions} impressions — push to page 1 by adding/optimizing content`;
+  } else if (!has_article && volume > 100) {
     opportunity_type = "high_volume_gap";
     reason = `${volume.toLocaleString()} monthly searches, no article yet, ${row.intent} intent`;
   } else if (!has_article) {
@@ -152,10 +214,20 @@ function scoreKeyword(row: KeywordRow, blogSlugs: Set<string>): Scored {
     reason = `${row.intent} intent, ${row.stage} stage, no article yet`;
   } else {
     opportunity_type = "existing_target_optimize";
-    reason = `Article exists (${row.target_url ?? "via slug match"}); needs GSC data to know if optimization is warranted`;
+    reason = `Article exists (${row.target_url ?? "via slug match"})${gsc ? ` — GSC rank ${gsc.position.toFixed(0)}` : ""}`;
   }
 
-  return { ...row, score, reason, slug, opportunity_type, has_article };
+  return {
+    ...row,
+    score,
+    reason,
+    slug,
+    opportunity_type,
+    has_article,
+    gsc_position: gsc?.position,
+    gsc_impressions: gsc?.impressions,
+    gsc_page: gsc?.page,
+  };
 }
 
 function generateBrief(opp: Scored, rank: number, dateStamp: string): string {
@@ -267,9 +339,15 @@ async function main() {
 
   const blogSlugs = existingBlogSlugs();
   const briefSlugs = activeBriefSlugs();
+  const gscByQuery = loadLatestGsc();
+  if (gscByQuery.size > 0) {
+    console.log(`[scorer] GSC data: ${gscByQuery.size} ranked queries from latest snapshot.`);
+  } else {
+    console.log(`[scorer] No GSC data yet — run scripts/gsc-pull.ts to enable near-miss detection.`);
+  }
 
   const scored: Scored[] = rows
-    .map((r) => scoreKeyword(r, blogSlugs))
+    .map((r) => scoreKeyword(r, blogSlugs, gscByQuery))
     .sort((a, b) => b.score - a.score);
 
   let pool = scored;
