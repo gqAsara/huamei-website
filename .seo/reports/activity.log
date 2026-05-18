@@ -110,3 +110,8 @@
 2026-05-17T10:20:00+08:00	daily-routine	publish	https://huamei.io/blogs/rigid-box-tooling-costs — How rigid box tooling costs work: dies, moulds, and setup at MOQ 200+
 2026-05-17T10:25:00+08:00	daily-routine	warn	IndexNow pings returned HTTP 403 "Host not in allowlist" for all 5 article URLs (recurring issue — awaiting founder re-verification)
 2026-05-17T10:25:00+08:00	daily-routine	note	Opportunity scorer failed (missing yaml module — run: npm install yaml to fix); 5 articles self-generated from editorial mix
+2026-05-18T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/drawer-box-packaging-design-specifications — Drawer box packaging: structures, specifications, and when to choose it
+2026-05-18T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/valentines-day-packaging-2027 — Valentine's Day packaging 2027: production calendar, structures, and design brief
+2026-05-18T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/candle-home-fragrance-packaging-luxury — Luxury candle and home fragrance packaging: structures, finishes, and specifications
+2026-05-18T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-packaging-ecommerce-transit-protection — Luxury packaging for e-commerce: transit protection and unboxing design
+2026-05-18T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/clamshell-box-packaging-luxury-spirits — Clamshell box packaging: structure, specifications, and when to use it for spirits and gifting
