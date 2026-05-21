@@ -6,6 +6,7 @@
  *   - .seo/reports/activity.log (today's entries)
  *   - .seo/reports/gsc-<today>.jsonl + previous-day file (for delta)
  *   - .seo/briefs/auto-*.md (queue depth)
+ *   - Sanity geoRun docs (last 7 days, via SANITY_WRITE_TOKEN)
  *
  * Composes an HTML email summarizing the day and POSTs to Resend.
  *
@@ -23,10 +24,28 @@
  *   DIGEST_TO_EMAIL    (default: georgeqiao08@gmail.com)
  *   DIGEST_FROM_EMAIL  (default: "Huamei SEO Bot <seo-bot@huamei.io>")
  *   ROUTINE_DASHBOARD_URL  (default: https://claude.ai/code/routines/trig_01KPjanymcsUY3s9YfVVwHbA)
+ *
+ * GEO data is included automatically when the following Sanity env are set:
+ *   NEXT_PUBLIC_SANITY_PROJECT_ID
+ *   NEXT_PUBLIC_SANITY_DATASET
+ *   SANITY_WRITE_TOKEN  (read access only is enough)
  */
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { resolve, join } from "node:path";
+
+// Load .env.local into process.env (for local dev / dry-run). In CI,
+// vars come from workflow `env:` block — this loop is a no-op there
+// because .env.local isn't in the workflow checkout.
+{
+  const envPath = resolve(process.cwd(), ".env.local");
+  if (existsSync(envPath)) {
+    for (const line of readFileSync(envPath, "utf8").split("\n")) {
+      const m = line.match(/^([A-Z0-9_]+)=(.*)$/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
+    }
+  }
+}
 
 const REPO_ROOT = process.cwd();
 const ACTIVITY_LOG = resolve(REPO_ROOT, ".seo/reports/activity.log");
@@ -176,6 +195,128 @@ function activeBriefCount() {
   ).length;
 }
 
+/**
+ * Fetch last-7-days GEO probe summary from Sanity. Returns null if creds
+ * are missing or the query fails (digest still ships).
+ */
+async function fetchGeoSummary() {
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+  const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
+  const token = process.env.SANITY_WRITE_TOKEN;
+  if (!projectId || !token) return null;
+  const since = new Date(Date.now() - 7 * 86400_000).toISOString();
+  const query = `*[_type == "geoRun" && _createdAt > "${since}"]{
+    _id, _createdAt, runAt, promptText,
+    prompt->{text, intent, stage, priority},
+    engine, ourBrandMentioned, ourDomainCited, competitorsCited
+  } | order(_createdAt desc)[0...500]`;
+  const url = `https://${projectId}.api.sanity.io/v2025-01-01/data/query/${dataset}?query=${encodeURIComponent(query)}`;
+  let result;
+  try {
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+    if (!res.ok) return null;
+    const body = await res.json();
+    result = body.result;
+  } catch {
+    return null;
+  }
+  if (!Array.isArray(result) || result.length === 0) {
+    return { totalRuns: 0, huameiHits: 0, byEngine: {}, byPrompt: {}, competitorCounts: {}, byDay: {} };
+  }
+
+  const byEngine = {};
+  const byPrompt = {};
+  const competitorCounts = {};
+  const byDay = {};
+  let huameiHits = 0;
+
+  for (const r of result) {
+    const eng = r.engine ?? "?";
+    byEngine[eng] = byEngine[eng] ?? { runs: 0, huamei: 0 };
+    byEngine[eng].runs++;
+    const huameiYes = r.ourBrandMentioned === true || r.ourDomainCited === true;
+    if (huameiYes) {
+      byEngine[eng].huamei++;
+      huameiHits++;
+    }
+    const pTxt = r.promptText ?? r.prompt?.text ?? "?";
+    byPrompt[pTxt] = byPrompt[pTxt] ?? {
+      runs: 0,
+      huamei: 0,
+      intent: r.prompt?.intent,
+      priority: r.prompt?.priority,
+    };
+    byPrompt[pTxt].runs++;
+    if (huameiYes) byPrompt[pTxt].huamei++;
+    for (const c of r.competitorsCited ?? []) {
+      // competitorsCited is an array of {brand, domain} objects.
+      const name = typeof c === "string" ? c : (c.brand ?? c.domain ?? "?");
+      competitorCounts[name] = (competitorCounts[name] ?? 0) + 1;
+    }
+    const day = (r.runAt ?? r._createdAt ?? "").slice(0, 10);
+    if (day) byDay[day] = (byDay[day] ?? 0) + 1;
+  }
+
+  return {
+    totalRuns: result.length,
+    huameiHits,
+    byEngine,
+    byPrompt,
+    competitorCounts,
+    byDay,
+  };
+}
+
+function renderGeoSection(geo) {
+  if (!geo) return "";
+  const lines = [];
+  lines.push(`<h3 style="font-family:system-ui">🤖 AI search citations (last 7 days)</h3>`);
+  if (geo.totalRuns === 0) {
+    lines.push(`<p style="color:#a33;font-family:system-ui">No GEO probe runs in the last 7 days. The Vercel cron may be stalled. Investigate: <code>/api/cron/geo-probe</code>.</p>`);
+    return lines.join("\n");
+  }
+  const rate = ((geo.huameiHits / geo.totalRuns) * 100).toFixed(1);
+  lines.push(`<p style="font-family:system-ui;line-height:1.6">Huamei cited on <strong>${geo.huameiHits} / ${geo.totalRuns}</strong> runs (<strong>${rate}%</strong>) across ${Object.keys(geo.byEngine).length} engines, ${Object.keys(geo.byPrompt).length} prompts, ${Object.keys(geo.byDay).length} days.</p>`);
+
+  // Per-engine breakdown
+  if (Object.keys(geo.byEngine).length > 0) {
+    lines.push(`<p style="font-family:system-ui;line-height:1.6"><strong>By engine:</strong><br>`);
+    const engineRows = Object.entries(geo.byEngine).map(([eng, s]) => {
+      const pct = s.runs ? ((s.huamei / s.runs) * 100).toFixed(0) : "—";
+      return `${eng}: <code>${s.huamei}/${s.runs}</code> (${pct}%)`;
+    });
+    lines.push(engineRows.join("&nbsp;&nbsp;·&nbsp;&nbsp;"));
+    lines.push(`</p>`);
+  }
+
+  // Top competitors mentioned
+  const topComps = Object.entries(geo.competitorCounts).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  if (topComps.length > 0) {
+    lines.push(`<p style="font-family:system-ui;line-height:1.6"><strong>Competitors in AI answers (last 7d):</strong></p>`);
+    lines.push(`<ul style="font-family:system-ui;line-height:1.6">`);
+    for (const [name, n] of topComps) {
+      lines.push(`<li><code>${name}</code> — ${n} mentions</li>`);
+    }
+    lines.push(`</ul>`);
+  }
+
+  // Opportunity prompts: where Huamei never cited but probe ran ≥ 3 times
+  const misses = Object.entries(geo.byPrompt)
+    .filter(([, s]) => s.huamei === 0 && s.runs >= 3)
+    .sort((a, b) => b[1].runs - a[1].runs)
+    .slice(0, 5);
+  if (misses.length > 0) {
+    lines.push(`<p style="font-family:system-ui;line-height:1.6"><strong>Opportunity — prompts where Huamei is never cited:</strong></p>`);
+    lines.push(`<ul style="font-family:system-ui;line-height:1.6;color:#555">`);
+    for (const [prompt, s] of misses) {
+      lines.push(`<li>0/${s.runs} · <em>${s.intent ?? "?"}</em> · ${prompt.length > 100 ? prompt.slice(0, 100) + "…" : prompt}</li>`);
+    }
+    lines.push(`</ul>`);
+  }
+
+  return lines.join("\n");
+}
+
 function classifyEntries(entries) {
   const published = [];
   const errors = [];
@@ -196,11 +337,12 @@ function classifyEntries(entries) {
   return { published, errors, warnings, archive, dedup, other };
 }
 
-function composeEmail(date) {
+async function composeEmail(date) {
   const entries = todaysEntries(date);
   const buckets = classifyEntries(entries);
   const briefQueue = activeBriefCount();
   const gsc = gscDelta(date);
+  const geo = await fetchGeoSummary();
 
   // Status: OK if 5 articles published; PARTIAL if 1-4; FAILURE if 0
   let status, statusIcon;
@@ -272,6 +414,10 @@ function composeEmail(date) {
   lines.push(`<h3 style="font-family:system-ui">📋 Brief queue</h3>`);
   lines.push(`<p style="font-family:system-ui">${briefQueue} active briefs waiting for the routine. ${briefQueue < 5 ? '<strong style="color:#c80">Queue running low — re-score or add keywords.</strong>' : ""}</p>`);
 
+  // GEO citation tracking (from Sanity geoRun docs, last 7 days)
+  const geoSection = renderGeoSection(geo);
+  if (geoSection) lines.push(geoSection);
+
   // Warnings + errors
   if (buckets.warnings.length > 0 || buckets.errors.length > 0) {
     lines.push(`<h3 style="font-family:system-ui;color:#c80">⚠️ Warnings & errors (${buckets.warnings.length + buckets.errors.length})</h3>`);
@@ -322,7 +468,7 @@ async function sendEmail(subject, html) {
 async function main() {
   const flags = parseFlags();
   console.log(`[digest] composing for date=${flags.date}`);
-  const { subject, html, status, articleCount } = composeEmail(flags.date);
+  const { subject, html, status, articleCount } = await composeEmail(flags.date);
   console.log(`[digest] status=${status} articles=${articleCount}`);
   console.log(`[digest] subject: ${subject}`);
   if (flags.dryRun) {

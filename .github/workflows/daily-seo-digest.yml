@@ -33,6 +33,10 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DIGEST_TO_EMAIL: georgeqiao08@gmail.com
           DIGEST_FROM_EMAIL: "Huamei SEO Bot <seo-bot@huamei.io>"
+          # Read-only Sanity access so the digest can summarize GEO probe runs
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          SANITY_WRITE_TOKEN: ${{ secrets.SANITY_WRITE_TOKEN }}
         run: node scripts/seo-digest.mjs
 
       - name: Summary
