@@ -590,3 +590,313 @@ keywords:
     priority: 3
     notes: xlsx; niche
     last_enriched_at: 2026-05-14T05:51:52.879Z
+  - query: custom rigid box for cosmetic brand
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    target_url: /industry/cosmetic
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: rigid box manufacturer china low MOQ
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: luxury rigid box factory china
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: rigid setup box wholesale supplier
+    intent: commercial
+    stage: comparison
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: two piece rigid box manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: shoulder neck rigid box construction
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: telescope rigid box design
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: specialty paper for luxury packaging
+    intent: investigative
+    stage: evaluation
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: moulded pulp insert luxury packaging
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: buckram book cloth packaging
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: wibalin paper rigid box
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: gmund paper luxury box
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: fedrigoni paper packaging
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: EVA foam insert luxury box
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: satin ribbon pull tab box
+    intent: informational
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: perfume bottle gift box manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    target_url: /industry/cosmetic
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: candle gift box custom packaging
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    related_queries:
+      - custom candle box
+      - rigid candle box
+      - kraft candle box
+      - custom luxury candle box
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: tea gift box wholesale china
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: supplement bottle box manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: whisky gift box manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    target_url: /industry/spirits
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: champagne presentation box custom
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: cigar box manufacturer luxury
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: watch presentation box custom
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: jewelry rigid box manufacturer china
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: skincare set packaging manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    target_url: /industry/cosmetic
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: how to source packaging from china
+    intent: informational
+    stage: discovery
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: packaging manufacturer USA vs china
+    intent: investigative
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: B2B packaging supplier directory
+    intent: commercial
+    stage: discovery
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: find packaging manufacturer for startup
+    intent: informational
+    stage: discovery
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: packaging RFQ template luxury brand
+    intent: informational
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: packaging freight cost china to US
+    intent: informational
+    stage: decision
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: incoterms for packaging imports
+    intent: informational
+    stage: decision
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: packaging factory audit checklist
+    intent: informational
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: diwali gift box packaging
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    volume_monthly: 10
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: eid gift box custom packaging
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: lunar new year limited edition box
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: ramadan gift packaging supplier
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: thanksgiving corporate gift box
+    intent: commercial
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: advent calendar rigid box manufacturer
+    intent: commercial
+    stage: evaluation
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: pantone tolerance luxury packaging
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: FSC certified rigid box supplier
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: soy ink packaging printing
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: deboss vs blind emboss luxury box
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: soft touch lamination scratch resistance
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: spot UV registration tolerance
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: rigid box drop test standard
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: ISTA 3A testing luxury packaging
+    intent: investigative
+    stage: evaluation
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: ecommerce subscription box manufacturer
+    intent: commercial
+    stage: comparison
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: luxury rigid box price per unit
+    intent: commercial
+    stage: decision
+    priority: 2
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
+  - query: luxury packaging trends 2027
+    intent: informational
+    stage: discovery
+    priority: 3
+    notes: added 2026-05-25 — long-tail mining round 1
+    last_enriched_at: 2026-05-26T07:06:21.614Z
