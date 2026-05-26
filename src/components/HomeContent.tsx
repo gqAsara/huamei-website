@@ -445,14 +445,24 @@ export function HomeContent() {
               Five sections, one floor.
             </p>
             <div className="chips">
-              <span>P R O D U C T I O N</span>
-              <span>P E O P L E</span>
-              <span>C U S T O M E R &nbsp; S U C C E S S</span>
-              <span>S U S T A I N A B I L I T Y</span>
-              <span>N E W S</span>
+              <Link href="/blogs/custom-luxury-rigid-box-manufacturing">
+                R I G I D &nbsp; B O X
+              </Link>
+              <Link href="/blogs/hot-foil-stamping-for-luxury-packaging">
+                H O T - F O I L &nbsp; &amp; &nbsp; E M B O S S
+              </Link>
+              <Link href="/blogs/sustainable-luxury-packaging-manufacturer">
+                S U S T A I N A B I L I T Y
+              </Link>
+              <Link href="/blogs/working-with-a-chinese-luxury-packaging-manufacturer">
+                S O U R C I N G &nbsp; C H I N A
+              </Link>
+              <Link href="/blogs/best-chinese-luxury-packaging-manufacturers">
+                M A N U F A C T U R E R S
+              </Link>
             </div>
             <Link className="link" href="/blogs" style={{ marginTop: 18, display: "inline-block" }}>
-              Read the blogs →
+              Read all blogs →
             </Link>
           </div>
         </div>
