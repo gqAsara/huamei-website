@@ -1,7 +1,11 @@
 import { VolumesCatalogue } from "@/components/VolumesCatalogue";
 import { VOLUMES } from "@/lib/volumes";
 import { getAllVolumes, getAllIndustries } from "@/lib/sanity/queries";
+import { JsonLd } from "@/lib/schema/JsonLd";
+import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./volumes.css";
+
+const SITE = "https://huamei.io";
 
 export const metadata = {
   title: "Luxury packaging case studies — 26 projects on file",
@@ -34,5 +38,38 @@ export default async function VolumesPage() {
       ? sanityIndustries.map((i) => i.title)
       : FALLBACK_INDUSTRIES;
 
-  return <VolumesCatalogue volumes={volumes} industries={industries} />;
+  const collectionGraph = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE}/volumes#collection`,
+    name: "Luxury packaging case studies — Huamei volumes archive",
+    description:
+      "Selected case studies from the Huamei press floor across cosmetics, spirits, tea, wellness, and gifting categories.",
+    url: `${SITE}/volumes`,
+    publisher: { "@id": `${SITE}/#org` },
+    inLanguage: "en",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: volumes.length,
+      itemListElement: volumes.map((v, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE}/volumes/${v.slug}`,
+        name: v.name,
+      })),
+    },
+  };
+
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Case studies", path: "/volumes" },
+        ])}
+      />
+      <JsonLd data={collectionGraph} />
+      <VolumesCatalogue volumes={volumes} industries={industries} />
+    </>
+  );
 }

@@ -1,101 +1,78 @@
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { getAllBlogPosts, type BlogPost } from "@/lib/blogs";
 import "./blogs.css";
 
 export const metadata = {
   title: "Luxury packaging guides & technical references — Huamei blog",
   description:
-    "Editorial guides on luxury packaging manufacturing: rigid box construction, hot-foil stamping, magnetic closure pull-force, greyboard grades, MOQ economics, Chinese manufacturing. Written by the press floor.",
+    "Editorial guides on luxury packaging manufacturing: rigid box construction, hot-foil stamping, magnetic closure pull-force, greyboard grades, MOQ economics, Chinese manufacturing, and sustainability. 80+ posts, written from the press floor.",
   alternates: { canonical: "/blogs" },
 };
 
-type Post = { num: string; title: string; italic: string; when: string; href?: string };
-type Section = {
-  rn: string;
-  id: string;
-  title: string;
-  italic: string;
-  cn: string;
-  intro: string;
-  posts: Post[];
-};
+const SITE = "https://huamei.io";
 
-const SECTIONS: Section[] = [
-  {
-    rn: "I.",
-    id: "production",
-    title: "Production",
-    italic: " & process.",
-    cn: "工 · 序",
-    intro:
-      "Notes from the press floor — the materials we trust, the corners we won't cut, and the techniques we keep coming back to.",
-    posts: [
-      { num: "i.",   title: "Custom luxury rigid box manufacturing — ", italic: "what it actually means.", when: "May 2026", href: "/blogs/custom-luxury-rigid-box-manufacturing" },
-      { num: "ii.",  title: "Magnesium etched, ",      italic: "how a foil plate is born.",        when: "In preparation" },
-      { num: "iii.", title: "A morning at the ",       italic: "Yangshao kiln.",                   when: "In preparation" },
-      { num: "iv.",  title: "The pink we couldn't ",   italic: "match the first time.",            when: "In preparation" },
-    ],
-  },
-  {
-    rn: "II.",
-    id: "people",
-    title: "People",
-    italic: " of the house.",
-    cn: "人 · 才",
-    intro:
-      "Founders, masters, finishers — the names behind the work, and the ones who train the next press operator down the line.",
-    posts: [
-      { num: "i.",   title: "Master Wei, ",            italic: "on his thirty-eighth year at the press.", when: "In preparation" },
-      { num: "ii.",  title: "Sonia Sun ",              italic: "on the small room in 1992.",       when: "In preparation" },
-      { num: "iii.", title: "What a senior finisher ", italic: "actually does.",                   when: "In preparation" },
-    ],
-  },
-  {
-    rn: "III.",
-    id: "customers",
-    title: "Customer",
-    italic: " success.",
-    cn: "客 · 案",
-    intro:
-      "Projects told from the brief inward — the aesthetic decisions, the constraints, the route the box took before it shipped.",
-    posts: [
-      { num: "i.",   title: "The Souverain project: ", italic: "from sketch to ship.",          when: "In preparation" },
-      { num: "ii.",  title: "Glee's Grove — ",          italic: "twelve weeks, four iterations.",  when: "In preparation" },
-      { num: "iii.", title: "Collgene — ", italic: "tuck-end carton with a registered silver foil.", when: "In preparation" },
-    ],
-  },
-  {
-    rn: "IV.",
-    id: "sustainability",
-    title: "Sustainability",
-    italic: " & receipts.",
-    cn: "可 · 持",
-    intro:
-      "FSC papers, recovered foil, the carbon math — published, audited, and explained without offsets.",
-    posts: [
-      { num: "i.",   title: "The 2025 ",                italic: "receipts, audited.",              when: "In preparation" },
-      { num: "ii.",  title: "Why we don't ",            italic: "buy carbon offsets.",             when: "In preparation" },
-      { num: "iii.", title: "Foil recovery: ",          italic: "the math behind 34%.",            when: "In preparation" },
-    ],
-  },
-  {
-    rn: "V.",
-    id: "news",
-    title: "Company",
-    italic: " news.",
-    cn: "近 · 訊",
-    intro:
-      "What's new at Huamei — new floors, new partnerships, awards, hires, openings.",
-    posts: [
-      { num: "i.",   title: "A new floor ",             italic: "opens in Guizhou.",               when: "In preparation" },
-      { num: "ii.",  title: "Recognised at the ",       italic: "Pentawards 2025.",                when: "In preparation" },
-      { num: "iii.", title: "Why we changed our ",      italic: "name in 1998.",                   when: "In preparation" },
-    ],
-  },
-];
+function monthLabel(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+}
+
+function shortDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+function groupByMonth(posts: BlogPost[]): Array<{ key: string; label: string; posts: BlogPost[] }> {
+  const order: string[] = [];
+  const buckets = new Map<string, BlogPost[]>();
+  for (const p of posts) {
+    const d = new Date(p.publishedAt);
+    const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+    if (!buckets.has(key)) {
+      buckets.set(key, []);
+      order.push(key);
+    }
+    buckets.get(key)!.push(p);
+  }
+  return order.map((key) => ({
+    key,
+    label: monthLabel(buckets.get(key)![0].publishedAt),
+    posts: buckets.get(key)!,
+  }));
+}
 
 export default function BlogsPage() {
+  const posts = getAllBlogPosts();
+  const months = groupByMonth(posts);
+
+  const collectionGraph = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE}/blogs#collection`,
+    name: "Huamei Blog — luxury packaging guides and technical references",
+    description:
+      "Editorial guides on luxury packaging manufacturing from the Huamei press floor — rigid box construction, hot-foil stamping, magnetic closures, sustainability, sourcing, and seasonal launches.",
+    url: `${SITE}/blogs`,
+    publisher: { "@id": `${SITE}/#org` },
+    inLanguage: "en",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: posts.length,
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      itemListElement: posts.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE}/blogs/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  };
+
   return (
     <main className="su-wrap">
       <JsonLd
@@ -104,6 +81,7 @@ export default function BlogsPage() {
           { name: "Blogs", path: "/blogs" },
         ])}
       />
+      <JsonLd data={collectionGraph} />
       {/* Masthead */}
       <section className="su-mast">
         <div>
@@ -118,54 +96,51 @@ export default function BlogsPage() {
         <div className="aside">
           <p>
             Our <em>blogs</em> are where the press floor speaks — production and
-            process, the people we work with, the projects we ship,
-            sustainability with receipts, and the news from the four floors. Posted
-            when there is something worth saying.
+            process, materials and structures, the people we work with, the
+            projects we ship, sustainability with receipts, and the news from the
+            four floors. {posts.length} entries, newest first.
           </p>
-          <nav className="mg-toc" aria-label="Sections">
-            {SECTIONS.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="mg-toc-link">
-                <em>{s.rn}</em> {s.title}
-              </a>
-            ))}
-          </nav>
+          <p style={{ marginTop: 12 }}>
+            Want it in your inbox? Posts are emailed when finished. To be added
+            to the mailing list, write to{" "}
+            <a href="mailto:info@huamei.io">info@huamei.io</a>.
+          </p>
         </div>
       </section>
 
-      {/* Five categories */}
-      {SECTIONS.map((s) => (
-        <section key={s.id} id={s.id} className="mg-cat">
+      {/* All posts — by month */}
+      {months.map((m) => (
+        <section key={m.key} id={m.key} className="mg-cat">
           <div className="mg-cat-head">
             <div className="mg-cat-name">
-              <span className="rn">{s.rn}</span>
+              <span className="rn">{m.label.split(" ")[0].slice(0, 3)}.</span>
               <h2>
-                {s.title}
-                <em>{s.italic}</em>
+                {m.label.split(" ")[0]}
+                <em> {m.label.split(" ")[1]}.</em>
               </h2>
-              <span className="cn">{s.cn}</span>
             </div>
-            <p className="mg-cat-intro">{s.intro}</p>
+            <p className="mg-cat-intro">
+              {m.posts.length} {m.posts.length === 1 ? "entry" : "entries"} this
+              month.
+            </p>
           </div>
           <ul className="mg-forth-list">
-            {s.posts.map((p) => {
-              const ttl = (
-                <>
-                  <span className="num">{p.num}</span>
+            {m.posts.map((p, i) => (
+              <li
+                key={p.slug}
+                className="mg-forth-row mg-forth-row--live"
+              >
+                <Link href={`/blogs/${p.slug}`} className="mg-forth-link">
+                  <span className="num">
+                    {String(i + 1).padStart(2, "0")}.
+                  </span>
                   <span className="ttl">
                     {p.title}
-                    <em>{p.italic}</em>
                   </span>
-                  <span className="when">{p.when}</span>
-                </>
-              );
-              return p.href ? (
-                <li key={p.num} className="mg-forth-row mg-forth-row--live">
-                  <Link href={p.href} className="mg-forth-link">{ttl}</Link>
-                </li>
-              ) : (
-                <li key={p.num} className="mg-forth-row">{ttl}</li>
-              );
-            })}
+                  <span className="when">{shortDate(p.publishedAt)}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </section>
       ))}

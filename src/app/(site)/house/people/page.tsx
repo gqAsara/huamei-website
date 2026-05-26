@@ -3,11 +3,51 @@ import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
 
+const SITE = "https://huamei.io";
+
 export const metadata = {
   title: "People — three thousand craftspeople since 1992",
   description:
-    "More than three thousand people work at Huamei across four press floors. Founded by Sonia Sun in 1992.",
+    "More than three thousand people work at Huamei across four press floors. Founded by Sonia Sun in 1992. Press, finishing, QA, design, fulfilment.",
   alternates: { canonical: "/house/people" },
+};
+
+// AboutPage + Person schema. The Person entity ties Sonia Sun's byline
+// (used on every /blogs/* post) to a knowledge-graph identity so AI
+// engines can attribute Huamei content to a real person — an E-E-A-T win.
+const peopleGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${SITE}/house/people#page`,
+      url: `${SITE}/house/people`,
+      name: "People — Huamei",
+      description:
+        "More than three thousand people work at Huamei across four press floors. Founded by Sonia Sun in 1992.",
+      isPartOf: { "@id": `${SITE}/#website` },
+      about: { "@id": `${SITE}/#org` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE}/house/people#sonia-sun`,
+      name: "Sonia Sun",
+      alternateName: "孙",
+      jobTitle: "Founder",
+      worksFor: { "@id": `${SITE}/#org` },
+      url: `${SITE}/house/people`,
+      description:
+        "Sonia Sun founded Huamei in Zhengzhou, Henan, in 1992 and has run the press floor since — three decades on the same craft.",
+      knowsAbout: [
+        "Custom luxury packaging",
+        "Rigid box manufacturing",
+        "Hot-foil stamping",
+        "Registered emboss",
+        "Magnetic closure engineering",
+      ],
+    },
+  ],
 };
 
 export default function PeoplePage() {
@@ -20,6 +60,7 @@ export default function PeoplePage() {
           { name: "People", path: "/house/people" },
         ])}
       />
+      <JsonLd data={peopleGraph} />
       <header className="hs-subcover">
         <div className="kicker">
           <Link href="/house">← The House</Link>
