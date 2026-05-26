@@ -444,6 +444,81 @@
   letter-spacing: 0;
 }
 
+/* III¾b. Certifications — buyer-side decoder list */
+.cert-decoder {
+  max-width: 960px;
+  margin: 24px auto 64px;
+  padding: 36px 0 0;
+  border-top: 1px solid var(--foil-gold);
+}
+.cert-decoder-head { margin-bottom: 32px; max-width: 760px; }
+.cert-decoder-head .kicker {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .32em;
+  text-transform: uppercase; color: var(--foil-gold);
+  display: inline-flex; align-items: baseline; gap: 10px;
+  margin-bottom: 12px;
+}
+.cert-decoder-head .kicker .rn {
+  font-family: var(--font-display); font-style: italic; font-size: 13px;
+  color: var(--foil-gold); letter-spacing: 0; text-transform: none;
+}
+.cert-decoder-head h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(32px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -.012em;
+  color: var(--ink); margin: 0 0 14px;
+}
+.cert-decoder-head h2 em { font-style: italic; color: var(--foil-gold-2); }
+.cert-decoder-head .lede {
+  font-family: var(--font-body); font-size: 15.5px; line-height: 1.65;
+  color: var(--ink-2); margin: 0; max-width: 60ch;
+}
+.cert-decoder-head .lede a {
+  color: var(--ink);
+  border-bottom: .5px solid var(--rule);
+  text-decoration: none;
+  padding-bottom: 1px;
+  transition: color var(--dur) var(--ease-paper), border-color var(--dur) var(--ease-paper);
+}
+.cert-decoder-head .lede a:hover { color: var(--foil-gold-2); border-color: var(--foil-gold-2); }
+
+.cert-decoder-list {
+  margin: 0;
+  display: grid; grid-template-columns: 1fr;
+  border-top: .5px solid var(--rule-soft);
+}
+.cert-decoder-row {
+  display: grid; grid-template-columns: 260px 1fr;
+  gap: 32px;
+  padding: 22px 0;
+  border-bottom: .5px solid var(--rule-soft);
+  scroll-margin-top: 88px;
+}
+.cert-decoder-row dt {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.cert-decoder-row dt .rn {
+  font-family: var(--font-display); font-style: italic; font-size: 13px;
+  color: var(--foil-gold); letter-spacing: 0;
+}
+.cert-decoder-row dt .short {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 24px; line-height: 1.1; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.cert-decoder-row dt .long {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--ink-3);
+  margin-top: 2px;
+}
+.cert-decoder-row dd {
+  margin: 0;
+  font-family: var(--font-body); font-size: 15px; line-height: 1.65;
+  color: var(--ink-2); text-wrap: pretty;
+}
+@media (max-width: 760px) {
+  .cert-decoder-row { grid-template-columns: 1fr; gap: 10px; }
+}
+
 .cert-carousel { margin: 24px 0 0; }
 .cert-head {
   display: flex; justify-content: space-between; align-items: baseline;

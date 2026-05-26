@@ -394,7 +394,37 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* §VI Blogs — sage plate */}
+      {/* §VI Export — international supply-chain strip */}
+      <section className="sec sec-export">
+        <div className="sec-export-inner">
+          <div className="sec-export-head">
+            <div className="eyebrow">
+              <span className="rn">vi.</span>B U I L T &nbsp; F O R &nbsp; E X P O R T
+            </div>
+            <h2>
+              Audit-ready for <em>EU and US</em> procurement.
+            </h2>
+          </div>
+          <div className="sec-export-body">
+            <p>
+              More than 80% of the energy across Huamei's press floors is solar; the
+              shareholder portfolio also funds biomass and hydro generation, so the
+              green-energy claim sits on infrastructure, not on a certificate alone.
+              Every export run is checked against transit-grade thresholds — high
+              50 °C and low -30 °C environmental, a 24-hour vibration cycle, drop,
+              aging, and empty-box compression — so the box that leaves Henan is the
+              box a buyer in Paris or New York opens. The standards file behind that
+              work — <em>BSCI, CE, EQS, FSC, SGS</em> — is the one EU and US
+              procurement teams ask for before the first order.
+            </p>
+            <Link className="link" href="/house/standards">
+              Read the standards file →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* §VII Blogs — sage plate */}
       <section className="sec sec-sustain">
         <div className="sustain-inner">
           <div
@@ -403,7 +433,7 @@ export function HomeContent() {
           />
           <div className="sustain-copy">
             <div className="eyebrow">
-              <span className="rn">vi.</span>B L O G S
+              <span className="rn">vii.</span>B L O G S
             </div>
             <blockquote>
               Notes from the press floor — <em>posted</em> when there is something
@@ -428,11 +458,11 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* §VII Start CTA */}
+      {/* §VIII Start CTA */}
       <section className="sec sec-start">
         <div className="start-inner">
           <div className="eyebrow">
-            <span className="rn">vii.</span>S T A R T &nbsp; Y O U R &nbsp; D E S I G N
+            <span className="rn">viii.</span>S T A R T &nbsp; Y O U R &nbsp; D E S I G N
           </div>
           <h2>
             Begin with a <em>sketch,</em> a reference, or a structure on file.

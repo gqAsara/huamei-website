@@ -439,7 +439,45 @@
               color var(--dur) var(--ease-paper);
 }
 
-/* §VI Sustainability — sage plate */
+/* §VI Export — international supply-chain strip */
+.sec-export {
+  max-width: 1320px;
+  margin: 96px auto 0;
+  padding: 56px 40px 0;
+  border-top: 1px solid var(--foil-gold);
+}
+.sec-export-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+.sec-export-head h2 {
+  margin: 0 0 10px;
+  max-width: 14ch;
+}
+.sec-export-head .eyebrow { margin-bottom: 14px; }
+.sec-export-body p {
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  max-width: 64ch;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.sec-export-body p em {
+  font-style: italic;
+  color: var(--foil-gold-2);
+  letter-spacing: .01em;
+}
+@media (max-width: 960px) {
+  .sec-export-inner { grid-template-columns: 1fr; gap: 28px; }
+  .sec-export { padding: 40px 24px 0; margin-top: 64px; }
+  .sec-export-head h2 { max-width: 24ch; }
+}
+
+/* §VII Sustainability — sage plate */
 .sec-sustain { max-width: none; padding: 0; }
 .sustain-inner {
   max-width: 1320px; margin: 0 auto; padding: 0 40px;
