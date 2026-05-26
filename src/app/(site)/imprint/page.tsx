@@ -193,6 +193,13 @@ export default function ImprintPage() {
             catalogue, <em>Vol. I</em>, bound 2026.
           </p>
 
+          <p>
+            See also: <Link href="/house/about">/house/about</Link> — disambiguation,
+            founding facts, and factory locations (distinguishes this company
+            from Huamei Energy-saving Technology Group and other unrelated
+            entities sharing the name).
+          </p>
+
           <div className="lg-sign">
             <span>© 1992–2026 Huamei &middot; All rights reserved</span>
             <span className="italic">Rev. iv &middot; 24 April 2026</span>

@@ -65,6 +65,18 @@ export default function HousePage() {
           </p>
           <span className="arrow">Meet →</span>
         </Link>
+        <Link href="/house/about">
+          <span className="k">v. &middot; 簡介</span>
+          <h3>
+            <em>About</em> Huamei.
+          </h3>
+          <p className="lede">
+            Huamei Packaging &amp; Print Co., Ltd. (華美彩印) — founding facts,
+            factory locations, and how this house differs from companies with
+            similar names.
+          </p>
+          <span className="arrow">Read →</span>
+        </Link>
       </nav>
 
       {/* V. Contact */}
