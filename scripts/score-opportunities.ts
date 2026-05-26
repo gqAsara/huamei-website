@@ -147,6 +147,47 @@ function existingBlogSlugs(): Set<string> {
   );
 }
 
+/**
+ * Reads frontmatter from every content/blogs/*.md and returns the set of
+ * every keyword (primaryKeyword + secondaryKeywords[]) covered by any
+ * published blog, normalized to lower case.
+ *
+ * This is the operator → publish coordination channel: when the daily
+ * SEO operator extends an article's content to target a query, it
+ * appends the query to that article's `secondaryKeywords` frontmatter.
+ * The scorer reads that on the next fire and dedupes against it, so
+ * publish never drafts a brand-new article for a query the operator
+ * already extended.
+ */
+function coveredKeywordsFromBlogs(): Set<string> {
+  const covered = new Set<string>();
+  if (!existsSync(BLOGS_DIR)) return covered;
+  for (const f of readdirSync(BLOGS_DIR)) {
+    if (!f.endsWith(".md")) continue;
+    let raw: string;
+    try {
+      raw = readFileSync(join(BLOGS_DIR, f), "utf8");
+    } catch {
+      continue;
+    }
+    // Cheap frontmatter extraction (avoid pulling gray-matter into the
+    // script; the format is stable enough to grep).
+    const m = raw.match(/^---\n([\s\S]*?)\n---/);
+    if (!m) continue;
+    const fm = m[1];
+    const primary = /^primaryKeyword:\s*"?([^"\n]+?)"?\s*$/m.exec(fm);
+    if (primary) covered.add(primary[1].trim().toLowerCase());
+    const secBlock = /^secondaryKeywords:\s*\n((?:\s+-\s+.+\n?)+)/m.exec(fm);
+    if (secBlock) {
+      for (const line of secBlock[1].split("\n")) {
+        const lm = /^\s+-\s+"?([^"\n]+?)"?\s*$/.exec(line);
+        if (lm) covered.add(lm[1].trim().toLowerCase());
+      }
+    }
+  }
+  return covered;
+}
+
 function activeBriefSlugs(): Set<string> {
   if (!existsSync(BRIEFS_DIR)) return new Set();
   return new Set(
@@ -167,11 +208,23 @@ type Scored = KeywordRow & {
   gsc_page?: string;
 };
 
-function scoreKeyword(row: KeywordRow, blogSlugs: Set<string>, gscByQuery: Map<string, GscRow>): Scored {
+function scoreKeyword(
+  row: KeywordRow,
+  blogSlugs: Set<string>,
+  coveredKeywords: Set<string>,
+  gscByQuery: Map<string, GscRow>,
+): Scored {
   const slug = slugify(row.query);
   const intentMul = INTENT_WEIGHT[row.intent] ?? 1.0;
   const priorityMul = PRIORITY_WEIGHT[row.priority] ?? 1.0;
-  const has_article = articleExists(row.target_url) || blogSlugs.has(slug);
+  // Three dedupe signals: (1) target_url file exists, (2) slugified query
+  // matches an existing blog filename, (3) query appears verbatim in any
+  // blog's primaryKeyword or secondaryKeywords frontmatter — the operator
+  // writes there when it extends an article to cover a new query.
+  const has_article =
+    articleExists(row.target_url) ||
+    blogSlugs.has(slug) ||
+    coveredKeywords.has(row.query.trim().toLowerCase());
 
   // Base score: log of volume, weighted by intent + priority.
   const volume = row.volume_monthly ?? 0;
@@ -338,6 +391,10 @@ async function main() {
   console.log(`[scorer] ${rows.length} keywords loaded.`);
 
   const blogSlugs = existingBlogSlugs();
+  const coveredKeywords = coveredKeywordsFromBlogs();
+  if (coveredKeywords.size > 0) {
+    console.log(`[scorer] ${coveredKeywords.size} keywords covered by published blog frontmatter (incl. operator extensions).`);
+  }
   const briefSlugs = activeBriefSlugs();
   const gscByQuery = loadLatestGsc();
   if (gscByQuery.size > 0) {
@@ -347,7 +404,7 @@ async function main() {
   }
 
   const scored: Scored[] = rows
-    .map((r) => scoreKeyword(r, blogSlugs, gscByQuery))
+    .map((r) => scoreKeyword(r, blogSlugs, coveredKeywords, gscByQuery))
     .sort((a, b) => b.score - a.score);
 
   let pool = scored;

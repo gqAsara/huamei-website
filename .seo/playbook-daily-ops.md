@@ -15,6 +15,30 @@ do not auto-push.
 
 ---
 
+## Role separation — operator vs. publish routine
+
+There are TWO scheduled CCR routines on this repo. They are
+intentionally separated by concern, **not by topic**. Read this before
+acting so you never duplicate the publish routine's work.
+
+| | **Publish routine** (5:15 AM PT, `huamei-daily-seo-publish`) | **Operator routine — you** (7:00 AM PT, `huamei-daily-seo-ops`) |
+|---|---|---|
+| Creates new `content/blogs/<slug>.md` files? | **Yes — exactly 5/day.** Reads briefs, drafts, commits one article per commit. | **No.** The single exception is the manual-brief escalation in Step 2.5 below (you write a brief, not the article — the publish routine drafts it tomorrow). |
+| Edits existing blog `.md` files? | No. | **Yes.** Typos, factual corrections, frontmatter writeback (Step 2 below), internal-link additions, broken-link fixes. |
+| Edits frontmatter? | Writes new frontmatter when creating an article. | **Yes — appends to `secondaryKeywords` whenever Step 2 extends an article to cover a new query.** This is the coordination channel back to the publish routine. |
+| Touches `/craft`, `/industry`, `/house`, `/volumes`, schema helpers, `src/lib/*`? | No (publish only writes `/blogs`). | **Yes**, within autonomy (alt text, meta, schema additions, internal link additions). |
+| Reads `.seo/briefs/auto-*.md`? | Yes — consumes the top 5. | **Generally no.** Exception: Step 2.5 writes a brief at `auto-000-*` rank to put a topic at the head of tomorrow's queue. |
+| Pings IndexNow? | Yes — for the 5 new article URLs. | **Yes — for any URL it edited.** |
+| Appends to `.seo/reports/activity.log`? | Yes (one summary line). | **Yes (one summary line).** |
+
+**The non-duplication contract:** publish creates articles, operator
+optimizes the rest. You never write a new article. The publish
+routine never edits an existing one. If you find a topic that needs
+a *new* article (not just an extension of an existing one), you queue
+it via Step 2.5 — don't draft it yourself.
+
+---
+
 ## Step 0 — context refresh (3 min)
 
 Always run these, in this order:
@@ -103,6 +127,32 @@ For the top 2-3, EXECUTE one of:
 - Add an internal link from a related page using the query as
   anchor text (only where natural).
 
+**Frontmatter writeback (MANDATORY when you extend a blog).** Any
+time you add content to a `content/blogs/<slug>.md` that targets a
+new query, you MUST append that query to that file's frontmatter so
+the publish-routine scorer dedupes against it tomorrow. Do this in
+the SAME commit as the content change. Two cases:
+
+1. The query is the primary subject of your edit and the existing
+   `primaryKeyword` doesn't reflect it → leave `primaryKeyword` alone,
+   add the query as a new entry under `secondaryKeywords`.
+2. The query is closely related but secondary → add to
+   `secondaryKeywords` only.
+
+Example frontmatter edit:
+```yaml
+secondaryKeywords:
+  - "luxury packaging structure types"   ← existing
+  - "magnetic flap rigid box construction"  ← existing
+  - "rigid box vs paper box for cosmetic packaging"  ← NEW, added by operator
+```
+
+Without this writeback, the publish scorer slug-matches only and may
+generate a brand-new article targeting the same query tomorrow —
+keyword cannibalization. The scorer reads frontmatter on every fire
+(`coveredKeywordsFromBlogs()` in `scripts/score-opportunities.ts`),
+so the writeback is the back-channel that prevents duplication.
+
 ### 2b. Position 1-10 with CTR < 2% ("title/meta dust")
 
 These are pages Google ranks but searchers ignore. The fix is the
@@ -128,6 +178,100 @@ After each, run IndexNow:
 ```
 node scripts/indexnow-ping.mjs https://huamei.io/<path>
 ```
+
+---
+
+## Step 2.5 — escalate brand-new topic gaps to the publish queue (3 min)
+
+If Step 2's GSC pass surfaces a query that:
+
+- Has measurable impressions (≥ 10 over the rolling window), AND
+- Maps to **no existing article** even loosely (Step 2's coverage
+  check came up empty), AND
+- Is **not** something you can fix by extending an existing article
+  (i.e. the query represents a genuinely new topic / sector / angle)
+
+…then you do NOT draft an article yourself. You write a *manual
+brief* that the publish routine will consume on its next fire.
+
+### How to write a manual brief
+
+Filename:
+```
+.seo/briefs/auto-000-<rank>-<slug>.md
+```
+
+Notes on the filename:
+- The `auto-000-*` rank prefix forces the brief to sort before all
+  scored briefs (`auto-001-*` through `auto-NNN-*`), so the publish
+  routine consumes it first tomorrow.
+- `<rank>` is the order among manual briefs you generate this run
+  (use `01`, `02`, etc.). If a manual brief already exists at the
+  same rank, increment and avoid collision.
+- `<slug>` is the kebab-case query, ≤ 50 chars.
+
+Content shape — mirror the auto-generated brief format used by
+`scripts/score-opportunities.ts` so the routine reads it identically:
+
+```markdown
+---
+brief_id: "auto-000-01-<slug>"
+generated_at: "<ISO timestamp>"
+rank: 1
+target_query: "<the GSC query verbatim>"
+opportunity_type: "operator_escalation"
+seo_score: <impressions × 2, capped at 200>
+intent: "<inferred — usually 'commercial' or 'investigative'>"
+stage: "<inferred — usually 'evaluation' or 'comparison'>"
+priority: 1
+gsc_impressions: <number>
+gsc_position: <average position from GSC>
+notes: "Escalated by daily SEO operator on <date> — GSC shows this query has impressions but no Huamei page covers it."
+has_article: false
+---
+
+# Brief: <target query>
+
+**Why this one (operator escalation):** GSC shows <N> impressions
+at position <P> over the rolling window, and no existing article
+covers the topic. This is a content gap, not a near-miss.
+
+## Recommended angle
+
+[2-3 sentences on the angle the publish routine should take.
+Consider: what's the buyer's intent behind this query? What's the
+related Huamei capability? Which /craft, /industry, /volumes
+should it link to?]
+
+## Target structure (suggested)
+
+- H1 anchored to "<target query>"
+- 30-40 word featured-snippet answer
+- 5-7 H2 sections (declarative leads)
+- Internal links to: <list specific routes>
+- External citation to: <suggest a standards body or industry report>
+
+## Voice + dedupe guardrails
+
+- Apply `.seo/SEO_CONTEXT.md` Phase-2 GEO rules unchanged
+- No banned brands (Lancôme, L'Oréal, Estée Lauder, Kurz, Crown,
+  Shandong Kaituo)
+- Before drafting, grep `content/blogs/` for the target_query and
+  its near-variants — if anything overlaps, skip and we'll re-score
+```
+
+Commit:
+```
+git add .seo/briefs/auto-000-<rank>-<slug>.md
+git commit -m "seo-ops: escalate brand-new topic to publish queue — <query>"
+git push origin main
+```
+
+**Limit:** generate at most **2 manual briefs per day**. The publish
+routine drafts only 5 articles, and you don't want to crowd out
+scorer-discovered opportunities. If you find more than 2 worth
+escalating, pick the top 2 by GSC impressions and log the rest in
+your final report as findings for the founder.
 
 ---
 
@@ -290,4 +434,4 @@ Never invent work. Stop and log a clean day if nothing's actionable.
 
 ---
 
-Last updated: 2026-05-26 (day-one walkthrough)
+Last updated: 2026-05-26 (role-separation + frontmatter writeback + manual-brief escalation)
