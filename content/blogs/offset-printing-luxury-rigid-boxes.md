@@ -65,7 +65,7 @@ Press specification is a capability signal in the luxury rigid box market. Heide
 
 The ink train — the roller assembly that distributes ink from the duct to the blanket — is the specific component that matters on a rigid box project. An ink train delivering inconsistent density creates banding in a solid coverage area — a failure that shows clearly on the matte or soft-touch laminate field of a prestige rigid box. At Huamei, ink trains across all press lines are maintained to the manufacturer's tolerances, keeping density variation inside the FOGRA51 specification range for coated paper. FOGRA51 is the colour reference standard published by the [FOGRA Printing Technology Research Institute](https://www.fogra.org/en/) for sheetfed offset on coated stocks — the benchmark against which finished colour is measured before a production run ships.
 
-Soy-blend inks are available for select production runs, primarily for sustainability briefs or brands that require reduced-VOC certification. Soy-blend offset ink sets more slowly under high-coverage area and is more sensitive to inter-colour trapping on multi-pass runs, so it is specified per-project rather than as a default ink.
+Soy-blend inks are available for select production runs, primarily for sustainability briefs or brands that require reduced-VOC certification. Soy-blend offset ink sets more slowly under high-coverage area and is more sensitive to inter-colour trapping on multi-pass runs, so it is specified per-project rather than as a default ink. For the finish-side detail, see [soy-blend offset inks](/blogs/soy-ink-offset-printing-luxury-packaging).
 
 ## Paper weight and how it affects the print outcome
 
@@ -79,7 +79,7 @@ Wrap paper for a luxury rigid box runs between 120 and 400 gsm. That range spans
 
 ## How the print layer interacts with surface treatment
 
-The print layer is the base on which all subsequent surface treatments operate. Hot-foil stamping, emboss, deboss, soft-touch lamination, and spot-UV each interact with the printed surface differently, and the print specification must account for that interaction before the press run starts.
+The print layer is the base on which all subsequent surface treatments operate. Hot-foil stamping, emboss, deboss, soft-touch lamination, and spot-UV each interact with the printed surface differently, and the print specification must account for that interaction before the press run starts. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 For hot-foil stamping, the most important print interaction is ink chemistry: foil does not adhere equally well to all ink formulations. A field printed in a rubber-based black ink accepts foil adhesion differently than a UV-cured process black. The press operator specifies ink chemistry in advance for every area that will later receive foil — which means the print spec and the foil spec are not sequential decisions but simultaneous ones. At Huamei, print and foil specs are resolved in the same project brief to avoid re-run cost from a foil adhesion failure on press. Foil is pressed at 120–160°C with a dwell of 0.4–0.8 seconds; see [/craft/hot-foil](/craft/hot-foil) for the full parameters and [/craft/emboss](/craft/emboss) for how registered emboss-and-foil is coordinated with the print plan.
 

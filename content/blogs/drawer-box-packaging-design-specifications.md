@@ -49,9 +49,9 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 18 May 2026. Updated 18 May 2026.
 
-Sonia Sun has produced drawer box packaging at Huamei's Henan factory since founding the company in Zhengzhou in 1992 — including the [Oriental Memoirs](/volumes/oriental-memoirs) laser-cut gift set, a drawer format with a ribbon pull and a die-cut interior showcase used for premium gifting presentation.
+Sonia Sun has produced drawer box packaging at Huamei's Henan factory since founding the company in Zhengzhou in 1992 — including the [Oriental Memoirs](/volumes/oriental-memoirs) laser-cut gift set, a drawer format with a ribbon pull and a die-cut interior showcase used for premium gifting presentation. For the structural detail, see [drawer box vs. magnetic closure](/blogs/drawer-box-vs-magnetic-closure-luxury-packaging).
 
-The drawer box is the oldest luxury gift-box format in continuous production. It appears in tea chest design from the eighteenth century, in jewellery trade packaging from the mid-nineteenth, and today in premium gifting at MOQ 200 and above. Its longevity comes from a combination of structural qualities no other rigid box format fully replicates: the controlled reveal of a sliding tray, the structural rigidity of a nested sleeve, and the visible premium signal of a ribbon tab even before the box is opened.
+The drawer box is the oldest luxury gift-box format in continuous production. It appears in tea chest design from the eighteenth century, in jewellery trade packaging from the mid-nineteenth, and today in premium gifting at MOQ 200 and above. Its longevity comes from a combination of structural qualities no other rigid box format fully replicates: the controlled reveal of a sliding tray, the structural rigidity of a nested sleeve, and the visible premium signal of a ribbon tab even before the box is opened. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What is a drawer box?
 

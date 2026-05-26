@@ -76,7 +76,7 @@ Gloss laminate reflects light specularly, which creates the characteristic mirro
 
 The practical disadvantages of gloss are fingerprinting and surface scuffing. Gloss film picks up oil from handling immediately and visibly. On packaging that will be handled extensively before purchase — a retail shelf product reached for and set back multiple times — gloss shows wear in a way that matte does not. For gifting packaging that goes directly from carton to recipient, fingerprinting is less of a concern.
 
-A gloss wrap with a [rigid box](/craft/rigid) core is standard for spirits gift packaging in the Chinese market, where the colour language of celebration — deep red, imperial yellow, rich gold print — reads most strongly on a gloss surface. The same gloss wrap paired with a [hot-foil](/craft/hot-foil) mark is the most common premium finish combination in the baijiu and spirits gifting sector.
+A gloss wrap with a [rigid box](/craft/rigid) core is standard for spirits gift packaging in the Chinese market, where the colour language of celebration — deep red, imperial yellow, rich gold print — reads most strongly on a gloss surface. The same gloss wrap paired with a [hot-foil](/craft/hot-foil) mark is the most common premium finish combination in the baijiu and spirits gifting sector. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 ## What makes soft-touch lamination different?
 

@@ -57,7 +57,7 @@ The first structural decision on a luxury packaging project is rarely posed as a
 
 > Use a rigid box when the product is premium-positioned, MOQ is 200–5,000, and the unboxing experience is part of the brand. Use a folding carton when volume is 5,000+, freight cost dominates, and the box is single-use. A rigid box reads as luxury because its wall is 1.5–3.0 mm thick; a folding carton folds from a single 250–350 gsm sheet.
 
-A **rigid box** (sometimes called a "setup box") is built from greyboard between 1.5 and 3.0 mm thick, wrapped in a decorated paper or cloth layer. It arrives at the buyer already assembled. The walls are stiff. The buyer cannot fold it flat. It is the format of prestige cosmetic launches, Wuliangye spirits gift packs, and Tiffany & Co. ring cases.
+A **rigid box** (sometimes called a "setup box") is built from greyboard between 1.5 and 3.0 mm thick, wrapped in a decorated paper or cloth layer. It arrives at the buyer already assembled. The walls are stiff. The buyer cannot fold it flat. It is the format of prestige cosmetic launches, Wuliangye spirits gift packs, and Tiffany & Co. ring cases. For the structural detail, see [what a rigid box is](/blogs/rigid-box-what-it-is).
 
 A **folding carton** is cut and scored from a single sheet of 250–350 gsm folding boxboard, shipped flat, and folded into shape at the fulfilment line. The walls are thin and creased. The buyer could unfold it back to a sheet. It is the format of toothpaste boxes, cereal boxes, and the cheaper end of mass-market beauty.
 

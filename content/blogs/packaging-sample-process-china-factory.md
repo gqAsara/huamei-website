@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 23 May 2026. Updated 23 May 2026.
 
-Sonia Sun has run the Huamei sampling programme since founding the company in Zhengzhou in 1992 — across thousands of first-production samples for brands in China, the US, Europe, and Southeast Asia.
+Sonia Sun has run the Huamei sampling programme since founding the company in Zhengzhou in 1992 — across thousands of first-production samples for brands in China, the US, Europe, and Southeast Asia. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 A packaging sample is the proof that a factory can execute a brief before a full production order is placed. At Huamei, the sample cycle takes 7–10 working days from artwork lock to shipping a sample unit. For many brands, the sample is the first physical evidence of a design decision made on-screen — and the stage at which specification errors, colour surprises, and insert fit problems are caught without the cost implications of a 200-piece production run. This guide covers what a sample process requires, what happens at the factory, how to evaluate a sample rigorously, and when to approve for production.
 

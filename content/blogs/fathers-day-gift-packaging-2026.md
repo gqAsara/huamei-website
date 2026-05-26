@@ -55,7 +55,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 23 May 2026. Upda
 
 Sonia Sun has produced Father's Day gift packaging at Huamei for domestic and international brands since founding the company in Zhengzhou in 1992 — across spirits, grooming kits, and premium accessories for the Western and Chinese-market gift calendar.
 
-Father's Day (the third Sunday of June — 21 June 2026) is a significant retail event in Western markets and in Chinese urban retail, where imported spirits, premium grooming, and accessories dominate the category. The rigid box brief for Father's Day differs from Chinese New Year or Mid-Autumn in its colour register, in the product types it must hold, and in the export logistics window for Western-market brands sourcing from China. This guide covers the primary rigid box formats, surface finishes, export specifications, and the 2027 production calendar.
+Father's Day (the third Sunday of June — 21 June 2026) is a significant retail event in Western markets and in Chinese urban retail, where imported spirits, premium grooming, and accessories dominate the category. The rigid box brief for Father's Day differs from Chinese New Year or Mid-Autumn in its colour register, in the product types it must hold, and in the export logistics window for Western-market brands sourcing from China. This guide covers the primary rigid box formats, surface finishes, export specifications, and the 2027 production calendar. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## When should I order packaging for Father's Day?
 
@@ -101,4 +101,4 @@ For brands shipping finished gift boxes to US or European retailers, three expor
 
 "A grooming-kit rigid box at Huamei holds cavity clearance to 1.0–2.0 mm per side, confirmed against actual product units during sampling, so every item in the set is secure through courier handling."
 
-Contact at [/begin](/begin) to commission Father's Day 2027 samples. MOQ 200+ pieces; sample production runs 7–10 days; production follows in 15–20 days.
+Contact at [/begin](/begin) to commission Father's Day 2027 samples. MOQ 200+ pieces; sample production runs 7–10 days; production follows in 15–20 days. For the seasonal calendar context, see [Mother's Day gift packaging](/blogs/mothers-day-packaging-2027).

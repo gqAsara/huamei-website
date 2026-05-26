@@ -50,7 +50,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 21 May 2026. Updated 21 May 2026.
 
-Sonia Sun has navigated international sustainability certification requirements at Huamei since the company's founding in Zhengzhou in 1992 — across FSC chain-of-custody audits, BSCI social compliance reviews, and the progressive tightening of EU packaging regulations that has changed what international buyers require from a Chinese packaging manufacturer.
+Sonia Sun has navigated international sustainability certification requirements at Huamei since the company's founding in Zhengzhou in 1992 — across FSC chain-of-custody audits, BSCI social compliance reviews, and the progressive tightening of EU packaging regulations that has changed what international buyers require from a Chinese packaging manufacturer. The ESG framing — FSC, BSCI, solar share, transit-grade testing — is laid out in [sustainable luxury packaging](/blogs/sustainable-luxury-packaging-manufacturer).
 
 Sustainability requirements for packaging have moved in a consistent direction over the last decade: more documentation, more third-party verification, and more regulatory obligation placed on the brand — not just the factory. For US and EU brands sourcing luxury packaging from China in 2026, understanding what is required, what is good practice beyond the requirement, and how to audit a factory's credentials is foundational to procurement compliance.
 

@@ -50,7 +50,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 16 May 2026. Updated 16 May 2026.
 
-Sonia Sun has overseen rigid box production at Huamei since founding the company in Zhengzhou in 1992 — more than three decades of greyboard, wrap, and closure engineering across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
+Sonia Sun has overseen rigid box production at Huamei since founding the company in Zhengzhou in 1992 — more than three decades of greyboard, wrap, and closure engineering across four factories in Henan, Zhejiang, Sichuan, and Guizhou. For the structural detail, see [rigid box greyboard weight](/blogs/rigid-box-greyboard-weight-guide).
 
 The term "rigid box" appears in every luxury packaging brief, but it covers a wide range of structures, board weights, and construction methods. This page defines what a rigid box actually is, how it is built, what options exist at each stage of construction, and what to expect when ordering one for the first time.
 

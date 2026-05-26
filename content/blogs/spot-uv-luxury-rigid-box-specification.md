@@ -76,7 +76,7 @@ Gloss lamination accepts spot UV without the adhesion adjustment required for so
 
 ## How is spot UV registered to hot-foil and emboss elements?
 
-Registered spot UV — UV coating that must align to a [hot-foil](/craft/hot-foil) element or an emboss panel — is among the most demanding finishing operations on a rigid box wrap. Each finishing step uses a separate die or screen, and registration drift across the three operations (print, foil, UV) accumulates.
+Registered spot UV — UV coating that must align to a [hot-foil](/craft/hot-foil) element or an emboss panel — is among the most demanding finishing operations on a rigid box wrap. Each finishing step uses a separate die or screen, and registration drift across the three operations (print, foil, UV) accumulates. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 At Huamei, hot-foil registration is held to ±0.1 mm. For a registered spot UV element that must align to a foil element, the combined registration tolerance must be managed through the trapping specification in the design file. The standard approach for a UV outline that follows a foil perimeter is to extend the UV element 0.3 mm inside the foil boundary — so that any registration variation keeps the UV within the foil shape rather than creating a UV halo outside the foil edge.
 

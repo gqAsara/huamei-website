@@ -51,7 +51,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 19 May 2026. Updated 19 May 2026.
 
-Sonia Sun has managed colour approval for luxury rigid boxes at Huamei since founding the company in Zhengzhou in 1992 — more than three decades calibrating [Heidelberg](https://www.heidelberg.com/) and KBA offset presses to Pantone references across coated art, textured specialty, and soft-touch laminated substrates.
+Sonia Sun has managed colour approval for luxury rigid boxes at Huamei since founding the company in Zhengzhou in 1992 — more than three decades calibrating [Heidelberg](https://www.heidelberg.com/) and KBA offset presses to Pantone references across coated art, textured specialty, and soft-touch laminated substrates. For the finish-side detail, see [offset printing on luxury rigid boxes](/blogs/offset-printing-luxury-rigid-boxes).
 
 Colour is the most contested variable in luxury packaging production. A brand team approves a [Pantone](https://www.pantone.com/) reference on screen. The printer produces a press proof. The two do not match. The reason is almost never the printer's error — it is the gap between how colour is specified (a Pantone chip), how it is measured (screen), and how it is produced (offset ink on a specific substrate). This guide covers how that gap is managed at each step, from the colour brief to the signed-off production run.
 
@@ -75,7 +75,7 @@ Soft-touch laminate, which is applied over the printed surface as a post-print p
 
 ## How is foil colour specified separately from ink?
 
-Foil colour is not a Pantone match — it is a selection from the available foil palette, which at Huamei runs to seventeen curated colours.
+Foil colour is not a Pantone match — it is a selection from the available foil palette, which at Huamei runs to seventeen curated colours. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 The foil palette includes warm golds, champagne golds, rose golds, silver, platinum, and black, plus a selection of specialty holographic and pearlescent finishes. Each foil is a physical material — a carrier film coated with a metallic or coloured pigment layer — and its appearance changes with the angle of view and the surrounding wrap paper colour. A gold foil on a navy wrap reads differently from the same gold foil on a cream wrap, because the wrap colour is visible in the spaces between foil marks and influences the visual balance of the gold.
 

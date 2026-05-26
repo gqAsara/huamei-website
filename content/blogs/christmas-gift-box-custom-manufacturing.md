@@ -55,7 +55,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 14 May 2026. Updated 14 May 2026.
 
-Christmas is the highest-volume gifting season in the US and EU markets, and it has one of the tightest production windows for custom packaging. A brand that wants rigid gift boxes on shelves or in distribution centres by 1 December needs to have its brief in to a factory before September ends. Missing that window means either a rushed production run with reduced quality review time, or a switch to a simpler structure that can be made faster. The sections below cover the production calendar, the structure formats that work best for Christmas gifting, and the decoration choices that read as seasonal without being disposable. Sonia Sun has run Huamei 華美's four factories in Henan, Zhejiang, Sichuan, and Guizhou since 1992.
+Christmas is the highest-volume gifting season in the US and EU markets, and it has one of the tightest production windows for custom packaging. A brand that wants rigid gift boxes on shelves or in distribution centres by 1 December needs to have its brief in to a factory before September ends. Missing that window means either a rushed production run with reduced quality review time, or a switch to a simpler structure that can be made faster. The sections below cover the production calendar, the structure formats that work best for Christmas gifting, and the decoration choices that read as seasonal without being disposable. Sonia Sun has run Huamei 華美's four factories in Henan, Zhejiang, Sichuan, and Guizhou since 1992. For the structural detail, see [the luxury gift box guide](/blogs/luxury-gift-box-guide).
 
 ## When should I order custom Christmas gift boxes?
 
@@ -69,7 +69,7 @@ That timeline is not conservative — it is the minimum for a rigid custom box o
 
 Christmas gift packaging spans a wide brief range — from a single-item beauty gift set to an eight-bottle spirits selection to a multi-product wellness hamper. Each format calls for a different structure.
 
-**Single-item gift box.** A magnetic lid-over-base or telescoping lift-off handles the majority of single-item Christmas briefs. At 2.0–2.5 mm greyboard, the structure holds its shape through transit and presents cleanly in a retail fixture. The magnetic version creates a slow front-opening reveal; the lift-off version opens top-to-bottom. Both structures are in-file at Huamei, which eliminates structural tooling time from the sample round.
+**Single-item gift box.** A magnetic lid-over-base or telescoping lift-off handles the majority of single-item Christmas briefs. At 2.0–2.5 mm greyboard, the structure holds its shape through transit and presents cleanly in a retail fixture. The magnetic version creates a slow front-opening reveal; the lift-off version opens top-to-bottom. Both structures are in-file at Huamei, which eliminates structural tooling time from the sample round. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 **Multi-item gift set.** A drawer-and-slipcase or a base with a multi-compartment tray handles sets of two to six items. The drawer format spaces the opening into two motions — slipcase removed, drawer pulled — which works well for a curated set where the arrangement of items is part of the gift. The tray format presents all items at once on a single reveal, suited to a selection where visual abundance is the point.
 

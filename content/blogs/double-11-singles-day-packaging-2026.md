@@ -47,7 +47,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 24 May 2026. Updated 24 May 2026.
 
-Double 11 — November 11, 2026 — is the largest single-day e-commerce event by volume globally, with cosmetics, spirits, tea, and wellness categories among the highest-GMV segments on Tmall and JD. For brands that sell in mainland China or ship to Chinese-diaspora markets, the packaging decision for a Double 11 SKU must be locked by late June to have any reasonable buffer before the go-live date. This article covers the production calendar, structural requirements, and briefing specifics that separate a package that arrives on time from one that misses the window.
+Double 11 — November 11, 2026 — is the largest single-day e-commerce event by volume globally, with cosmetics, spirits, tea, and wellness categories among the highest-GMV segments on Tmall and JD. For brands that sell in mainland China or ship to Chinese-diaspora markets, the packaging decision for a Double 11 SKU must be locked by late June to have any reasonable buffer before the go-live date. This article covers the production calendar, structural requirements, and briefing specifics that separate a package that arrives on time from one that misses the window. For the gifting framing, see [luxury packaging for e-commerce transit](/blogs/luxury-packaging-ecommerce-transit-protection).
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — over three decades of seasonal packaging production for spirits, cosmetics, and gifting brands, across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
@@ -73,7 +73,7 @@ Brands briefing after 30 June can still hit November 11, but the buffer disappea
 
 Double 11 packaging must pass e-commerce transit standards — each unit ships individually through Cainiao, SF Express, or JD Logistics, without the protection of a master carton. The [ISTA](https://www.ista.org/) 3A protocol covers single-parcel e-commerce shipments; Huamei's transit-grade testing aligns with this protocol, including drop, vibration, and compression under the weight of stacked parcels in a sortation facility.
 
-For a luxury [rigid box](/craft/rigid), the structural specifications that matter most for Double 11 are:
+For a luxury [rigid box](/craft/rigid), the structural specifications that matter most for Double 11 are: The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 - **Greyboard weight:** minimum 1,500 gsm for boxes above 200 mm in any dimension. Lighter board compresses under sortation stacking.
 - **Closure specification:** a [magnetic closure](/craft/magnetic) specified at 6–50 g pull-force at 2,800 Gauss holds through the handling impacts of sortation and last-mile delivery. A weaker closure opens in transit and arrives with the box ajar.

@@ -51,7 +51,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
 
-The question every brand director eventually asks on a magnetic-flap rigid box is the same: how strong should the magnet be? The answer is a range, not a number, and the range is six to fifty grams of pull-force at 2,800 Gauss. Below six and the closure feels loose; above fifty and it snaps too hard for a luxury unbox. This page explains why the range is what it is, what determines where in the range a project should sit, and how to spec it on a brief without prescribing the wrong number.
+The question every brand director eventually asks on a magnetic-flap rigid box is the same: how strong should the magnet be? The answer is a range, not a number, and the range is six to fifty grams of pull-force at 2,800 Gauss. Below six and the closure feels loose; above fifty and it snaps too hard for a luxury unbox. This page explains why the range is what it is, what determines where in the range a project should sit, and how to spec it on a brief without prescribing the wrong number. For the structural detail, see [the magnetic gift box](/blogs/magnetic-gift-box).
 
 ## What pull-force is, and why it is the spec that matters
 

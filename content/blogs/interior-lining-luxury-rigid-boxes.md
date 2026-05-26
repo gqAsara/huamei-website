@@ -45,7 +45,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 24 May 2026. Updated 24 May 2026.
 
-The exterior of a rigid box carries the brand mark, the foil, the colour. The interior carries the product and the moment — the tactile encounter that happens when a buyer lifts the lid and first touches what is inside. Most packaging briefs describe the exterior in precise detail and leave the interior as "something nice inside." This article describes what the interior lining materials actually are, how each performs, and how to specify them correctly from the first brief.
+The exterior of a rigid box carries the brand mark, the foil, the colour. The interior carries the product and the moment — the tactile encounter that happens when a buyer lifts the lid and first touches what is inside. Most packaging briefs describe the exterior in precise detail and leave the interior as "something nice inside." This article describes what the interior lining materials actually are, how each performs, and how to specify them correctly from the first brief. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades of hand-assembled luxury rigid boxes for cosmetics, spirits, and gifting brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
@@ -75,7 +75,7 @@ For jewelry boxes, watch cases, and cosmetic sets in the mid-to-upper price tier
 
 True velvet or satin fabric linings are used for collector-edition spirits boxes, bespoke jewelry cases, and presentation sets where the interior is visible alongside the product on a retail display or gift table. The fabric is cut, positioned, and hand-bonded to the greyboard panel — a process that takes significantly longer than paper application and is reflected directly in the per-unit cost.
 
-Hand assembly is the cost driver for true luxury rigid boxes; a fabric-lined interior represents the upper end of that cost range. The production sequence for a fabric-lined box is: greyboard assembly, exterior wrap, interior fabric placement and bonding, insert installation, closure fit check. Each step passes through a different hand on the assembly line.
+Hand assembly is the cost driver for true luxury rigid boxes; a fabric-lined interior represents the upper end of that cost range. The production sequence for a fabric-lined box is: greyboard assembly, exterior wrap, interior fabric placement and bonding, insert installation, closure fit check. Each step passes through a different hand on the assembly line. For the structural detail, see [box inserts for luxury packaging](/blogs/box-inserts-luxury-packaging).
 
 For high-volume work where the interior finish is part of the product story — such as the [Wuliangye 68](/volumes/wuliangye-68) spirits case, where the interior holds the bottle upright in a display position — the structural and interior finish specifications are locked at the same time and sampled together before any production order moves.
 

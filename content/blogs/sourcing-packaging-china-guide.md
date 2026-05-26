@@ -49,7 +49,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 25 May 2026. Updated 25 May 2026.
 
-Most conversations between a US or EU buyer and a Chinese packaging manufacturer start with price and lead time. They end — if the relationship fails — at transit damage, supply-chain audit rejection, or an ESG disclosure that cannot be satisfied. The brands that sustain long-term procurement relationships with Chinese luxury packaging manufacturers are the ones that begin the conversation in the right order: stability, certifications, and quality testing first; price second.
+Most conversations between a US or EU buyer and a Chinese packaging manufacturer start with price and lead time. They end — if the relationship fails — at transit damage, supply-chain audit rejection, or an ESG disclosure that cannot be satisfied. The brands that sustain long-term procurement relationships with Chinese luxury packaging manufacturers are the ones that begin the conversation in the right order: stability, certifications, and quality testing first; price second. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades supplying luxury packaging to spirits, cosmetic, and gifting brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
@@ -61,7 +61,7 @@ These requirements have become baseline for major retail procurement teams. A Ch
 
 ## Why transit testing matters more than factory inspection
 
-A factory visit or a sample approval confirms quality at a specific point in time, in a controlled environment. What it cannot confirm is how the packaging behaves at the bottom of a 40-foot sea container in summer transit through the Suez route, where container temperatures can reach 50 °C, or in cold-chain distribution in northern European winter storage at -30 °C.
+A factory visit or a sample approval confirms quality at a specific point in time, in a controlled environment. What it cannot confirm is how the packaging behaves at the bottom of a 40-foot sea container in summer transit through the Suez route, where container temperatures can reach 50 °C, or in cold-chain distribution in northern European winter storage at -30 °C. Buyer-journey context for this is in [the packaging sample process at a Chinese factory](/blogs/packaging-sample-process-china-factory).
 
 Huamei tests all export-grade packaging against a five-protocol transit-testing system:
 

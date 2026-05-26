@@ -53,7 +53,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 20 May 2026. Updated 20 May 2026.
 
-The choice of foil colour is the most visible single decision on a luxury packaging brief — more visible than the paper choice, more visible than the structural format — and it is often made last, after the brief is otherwise locked. That sequence produces mismatches: a warm yellow-gold on a cool grey paper that reads muddy in the hand; a champagne foil on a textured uncoated stock that disappears in the grain. Sonia Sun has run hot-foil production at Huamei's Henan press floor since founding the company in Zhengzhou in 1992 — more than three decades calibrating foil choice to substrate, occasion, and market register. The seventeen colours stocked in-house cover the range a cosmetic, spirits, or wellness brief is likely to need. This guide is how to work through the selection.
+The choice of foil colour is the most visible single decision on a luxury packaging brief — more visible than the paper choice, more visible than the structural format — and it is often made last, after the brief is otherwise locked. That sequence produces mismatches: a warm yellow-gold on a cool grey paper that reads muddy in the hand; a champagne foil on a textured uncoated stock that disappears in the grain. Sonia Sun has run hot-foil production at Huamei's Henan press floor since founding the company in Zhengzhou in 1992 — more than three decades calibrating foil choice to substrate, occasion, and market register. The seventeen colours stocked in-house cover the range a cosmetic, spirits, or wellness brief is likely to need. This guide is how to work through the selection. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 ## How do you choose the right foil colour for luxury packaging?
 
@@ -95,7 +95,7 @@ Most luxury packaging briefs use one or two foil colours. A third foil on a sing
 
 The most useful information at brief stage: paper choice (or the substrate family — coated, uncoated, textured), the foil colour family (warm gold, cool gold, silver, pigment), whether foil combines with emboss, and the number of distinct foil touches. A physical foil swatch sample is sent with every first-round prototype so the colour can be confirmed in hand against the actual paper, not against a screen. Certification scans at [/house/certifications](/house/certifications).
 
-[Start a brief →](/begin)
+[Start a brief →](/begin). For the finish-side detail, see [hot-foil vs cold foil](/blogs/hot-foil-vs-cold-foil-cost-and-finish).
 
 ## Sources
 

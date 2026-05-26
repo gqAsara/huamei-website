@@ -71,7 +71,7 @@ Luxury packaging begins with the substrate. For a rigid box — the category mos
 
 The outer wrap is the visible surface. Coated art paper gives clean colour reproduction and a surface that accepts [hot-foil stamping](/craft/hot-foil) at ±0.1 mm registration — three times tighter than the industry-typical ±0.3 mm. Uncoated art paper reads softer and more tactile; it is preferred for brands whose register is natural or artisanal rather than glossy. Bookbinding cloth and faux leather sit at the premium end of the wrap palette, used where the tactile signal needs to sustain a minute of handling before the box is opened.
 
-Huamei holds eighty papers on file, across coated, uncoated, textured, and specialist categories. The [FSC](https://fsc.org/en) chain-of-custody certification covers the fibre sourcing for all paper and board used in production — a requirement for EU and US brand procurement audits.
+Huamei holds eighty papers on file, across coated, uncoated, textured, and specialist categories. The [FSC](https://fsc.org/en) chain-of-custody certification covers the fibre sourcing for all paper and board used in production — a requirement for EU and US brand procurement audits. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 ## The surface treatments: foil, emboss, and laminate
 
@@ -111,7 +111,7 @@ Huamei holds BSCI, CE, EQS, FSC, and SGS certifications. Certification scans are
 
 The cost of a luxury rigid box breaks down roughly into materials (greyboard, paper, foil, laminate), surface decoration (foil setup, emboss die, laminate run), and hand-assembly (the dominant variable at scale). At MOQ 200+ pieces — Huamei's public floor — the fixed costs of tooling and setup are amortised across fewer units, which raises the per-unit cost relative to a run of 2,000. At higher volumes, unit cost falls; the hand-assembly component is the least compressible part of the cost.
 
-The [Wuliangye 68](/volumes/wuliangye-68) red and gold rigid box and the [Luoyang Dukang](/volumes/dukang) octagonal theatre case both demonstrate what the full cost structure produces at the premium end of spirits gifting packaging.
+The [Wuliangye 68](/volumes/wuliangye-68) red and gold rigid box and the [Luoyang Dukang](/volumes/dukang) octagonal theatre case both demonstrate what the full cost structure produces at the premium end of spirits gifting packaging. For the structural detail, see [the luxury gift box guide](/blogs/luxury-gift-box-guide).
 
 [Start a brief →](/begin)
 

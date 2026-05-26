@@ -47,7 +47,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 25 May 2026. Updated 25 May 2026.
 
-A beauty brand's first custom packaging run is one of the highest-leverage decisions in the product launch. The box is not the product, but it is the first thing the customer touches, and it holds the product through transit, retail handling, and the unboxing moment. Done well, the packaging and the formulation read as the same object. Done poorly, the packaging contradicts the brand promise on the first contact. The brief is where both outcomes begin.
+A beauty brand's first custom packaging run is one of the highest-leverage decisions in the product launch. The box is not the product, but it is the first thing the customer touches, and it holds the product through transit, retail handling, and the unboxing moment. Done well, the packaging and the formulation read as the same object. Done poorly, the packaging contradicts the brand promise on the first contact. The brief is where both outcomes begin. Adjacent vertical-specific guidance lives in [cosmetic rigid box packaging](/blogs/cosmetic-packaging-luxury-rigid-box).
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades of rigid packaging for skincare, cosmetics, and beauty brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
@@ -55,7 +55,7 @@ Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou 
 
 > A custom cosmetic packaging box is a rigid or folding carton structure built to a brand's specific dimensions, printed with brand graphics, and finished with foil, emboss, or lamination. For skincare and beauty, it typically uses a greyboard lid-and-base or magnetic closure structure, with an interior insert holding the product in a fixed position.
 
-Two structural families cover the majority of cosmetic packaging briefs. The first is a rigid lidded box — a greyboard core wrapped in paper, with a separate lid that either sits over the base (lid-and-base) or slides open from one end (drawer). The second is a folding carton — a lighter-gauge board structure that assembles from a flat blank and is used for individual product cartons in a retail display or e-commerce shipper. The choice between the two is driven by the product weight, price point, and channel: a premium skincare set ships in a rigid box; a single-item retail SKU often ships in a folding carton.
+Two structural families cover the majority of cosmetic packaging briefs. The first is a rigid lidded box — a greyboard core wrapped in paper, with a separate lid that either sits over the base (lid-and-base) or slides open from one end (drawer). The second is a folding carton — a lighter-gauge board structure that assembles from a flat blank and is used for individual product cartons in a retail display or e-commerce shipper. The choice between the two is driven by the product weight, price point, and channel: a premium skincare set ships in a rigid box; a single-item retail SKU often ships in a folding carton. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What structure should a first cosmetic packaging brief use?
 

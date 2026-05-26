@@ -53,7 +53,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 17 May 2026. Updated 17 May 2026.
 
-Sonia Sun has manufactured gift packaging for China's major spirits brands at Huamei since founding the company in Zhengzhou in 1992 — across dozens of seasonal runs for baijiu, rice wine, and craft spirits brands sold at retail in China and exported internationally.
+Sonia Sun has manufactured gift packaging for China's major spirits brands at Huamei since founding the company in Zhengzhou in 1992 — across dozens of seasonal runs for baijiu, rice wine, and craft spirits brands sold at retail in China and exported internationally. Adjacent vertical-specific guidance lives in [baijiu packaging design](/blogs/baijiu-packaging-design-2026).
 
 The gift box for a premium spirits bottle is among the most demanding rigid packaging briefs. The bottle is heavy, fragile at the neck, and must arrive in retail condition after thousands of kilometres of transit — often through container temperature swings from above 50 °C in summer shipping lanes to below -30 °C in cold-climate delivery. At the same time, the box must communicate the occasion, the price tier, and the brand story through every surface it presents, before and after the bottle is removed.
 
@@ -67,7 +67,7 @@ The octagonal theatre box, as used in the [Luoyang Dukang](/volumes/dukang) brie
 
 ## How is a spirits bottle protected inside a rigid gift box?
 
-A spirits bottle inside a rigid box requires three types of protection: vertical support (to prevent the bottle from shifting under transit vibration), neck-cradle (to prevent the neck from striking the lid during drops), and base-pad (to absorb the impact energy when the box is set down hard).
+A spirits bottle inside a rigid box requires three types of protection: vertical support (to prevent the bottle from shifting under transit vibration), neck-cradle (to prevent the neck from striking the lid during drops), and base-pad (to absorb the impact energy when the box is set down hard). The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 At Huamei, spirits inserts are sampled and tested alongside the outer box. The insert specification runs through the same 7–10 day sample cycle as the outer, and fit is confirmed against the actual bottle — not a dimension reference — before production is released. Huamei's transit-grade quality testing includes 24-hour simulated transit vibration, drop testing, and temperature cycling at high 50 °C and low -30 °C, which models the actual conditions a container-shipped gift box encounters between a factory in Henan and a retail shelf in London or Los Angeles.
 

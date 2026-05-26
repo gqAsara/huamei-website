@@ -53,7 +53,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 16 May 2026. Updated 16 May 2026.
 
-Sonia Sun has produced Chinese New Year packaging at Huamei since 1992 — every year for over three decades, including the surge volumes that follow a major spirits or gifting launch. CNY is the highest-stakes single packaging window in the Chinese calendar, and the brands that miss the brief deadline pay for it in air freight.
+Sonia Sun has produced Chinese New Year packaging at Huamei since 1992 — every year for over three decades, including the surge volumes that follow a major spirits or gifting launch. CNY is the highest-stakes single packaging window in the Chinese calendar, and the brands that miss the brief deadline pay for it in air freight. Adjacent vertical-specific guidance lives in [baijiu packaging design](/blogs/baijiu-packaging-design-2026).
 
 Chinese New Year 2027 falls on [29 January](https://www.timeanddate.com/holidays/china/chinese-new-year) — the Year of the Goat. The brief calendar for that date is open now, and the brands that move in May or June 2026 will have the most time for sample iterations, revision rounds, and an unhurried sea-freight window. This guide covers the brief timeline, the structures most commonly specified for CNY, the foil and surface treatment choices that read best in red-and-gold seasonal campaigns, and what distinguishes a CNY package that survives the gift season from one that deflates on the shelf.
 
@@ -69,7 +69,7 @@ The [Mid-Autumn Festival packaging guide](/blogs/mid-autumn-festival-packaging-m
 
 Chinese New Year gift packaging concentrates in three structure categories, determined by the product category:
 
-**Spirits and baijiu.** A two-piece nested rigid box in 2.5–3.0 mm greyboard for a single bottle, or a two-bottle presentation set. The [Wuliangye 68](/volumes/wuliangye-68) case — a red and gold two-piece rigid set — is the standard format for premium baijiu CNY editions. The [Wuliangye clamshell](/volumes/wuliangye-clamshell) glass-lined construction shows the premium tier, where a hinged clamshell with glass liner signals collector-edition status. The [Yangshao Caitao](/volumes/yangshao) bottle-silhouette deboss demonstrates how surface structure can reflect the bottle's ceramic form in the outer box.
+**Spirits and baijiu.** A two-piece nested rigid box in 2.5–3.0 mm greyboard for a single bottle, or a two-bottle presentation set. The [Wuliangye 68](/volumes/wuliangye-68) case — a red and gold two-piece rigid set — is the standard format for premium baijiu CNY editions. The [Wuliangye clamshell](/volumes/wuliangye-clamshell) glass-lined construction shows the premium tier, where a hinged clamshell with glass liner signals collector-edition status. The [Yangshao Caitao](/volumes/yangshao) bottle-silhouette deboss demonstrates how surface structure can reflect the bottle's ceramic form in the outer box. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 The [Hongxing Erguotou](/volumes/hongxing) imperial yellow case represents the mid-tier spirits CNY format: a rigid set with a strong colour story (imperial yellow) and restrained gold foil — less ornate than premium baijiu, but unmistakably seasonal.
 

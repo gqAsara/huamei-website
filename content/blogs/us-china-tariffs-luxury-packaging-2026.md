@@ -49,9 +49,9 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 23 May 2026. Updated 23 May 2026.
 
-Sonia Sun has managed export packaging for US and European brands from Huamei's factories in Henan, Zhejiang, Sichuan, and Guizhou since founding the company in 1992 — including shipments subject to the Section 301 tariff schedule on Chinese goods.
+Sonia Sun has managed export packaging for US and European brands from Huamei's factories in Henan, Zhejiang, Sichuan, and Guizhou since founding the company in 1992 — including shipments subject to the Section 301 tariff schedule on Chinese goods. For the China-sourcing perspective, see [tariffs and landed-cost when sourcing from China](/blogs/sourcing-packaging-china-us-brands).
 
-Rigid boxes and luxury packaging imported from China to the United States are subject to additional duties under Section 301 of the Trade Act of 1974. These tariffs, layered on top of the standard Most-Favoured-Nation duty rate, have been in force since 2018–2019 and have seen further changes since 2025. For US brands sourcing gift boxes, rigid presentation cases, and specialty packaging from Chinese manufacturers, the tariff calculus is now part of every sourcing decision. This guide covers the HTS classification of rigid packaging, the applicable tariff frameworks, practical cost implications, and strategies US brands use to manage duty exposure.
+Rigid boxes and luxury packaging imported from China to the United States are subject to additional duties under Section 301 of the Trade Act of 1974. These tariffs, layered on top of the standard Most-Favoured-Nation duty rate, have been in force since 2018–2019 and have seen further changes since 2025. For US brands sourcing gift boxes, rigid presentation cases, and specialty packaging from Chinese manufacturers, the tariff calculus is now part of every sourcing decision. This guide covers the HTS classification of rigid packaging, the applicable tariff frameworks, practical cost implications, and strategies US brands use to manage duty exposure. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 ## What HTS code applies to rigid paperboard boxes from China?
 

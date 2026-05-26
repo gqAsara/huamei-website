@@ -47,7 +47,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 25 May 2026. Updated 25 May 2026.
 
-A retail paper bag is not always the last object a consumer touches when they carry a purchase out of a store or receive a courier parcel. For luxury brands, it is often the first. The carrier bag travels from the counter to the car, to the home, to the recipient's hands; it is the packaging the buyer holds for longer than any box. A custom paper bag that reads at the same level as the rigid box it carries is not a finishing detail — it is an extension of the same brief.
+A retail paper bag is not always the last object a consumer touches when they carry a purchase out of a store or receive a courier parcel. For luxury brands, it is often the first. The carrier bag travels from the counter to the car, to the home, to the recipient's hands; it is the packaging the buyer holds for longer than any box. A custom paper bag that reads at the same level as the rigid box it carries is not a finishing detail — it is an extension of the same brief. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades of custom packaging manufacture across rigid boxes, paper structures, and branded carrier formats for cosmetics, spirits, and gifting brands.
 
@@ -77,7 +77,7 @@ Two handle types account for the majority of luxury carrier briefs:
 
 ## How does a paper bag brief interact with the rigid box?
 
-A paper bag produced alongside a rigid box for the same brand launches needs to be dimensioned from the box outward, not independently. The bag's interior width, depth, and height are driven by the box's exterior dimensions plus a handling clearance — typically 15–25 mm on each side to allow the box to be inserted and removed without force. If the bag is specified first and the box second, or if both are specified independently, the result is often a carrier that either fits too tightly (the box must be forced in) or too loosely (the box shifts during carry and the bag loses its structured silhouette).
+A paper bag produced alongside a rigid box for the same brand launches needs to be dimensioned from the box outward, not independently. The bag's interior width, depth, and height are driven by the box's exterior dimensions plus a handling clearance — typically 15–25 mm on each side to allow the box to be inserted and removed without force. If the bag is specified first and the box second, or if both are specified independently, the result is often a carrier that either fits too tightly (the box must be forced in) or too loosely (the box shifts during carry and the bag loses its structured silhouette). For the structural detail, see [the luxury paper bag](/blogs/luxury-paper-bag).
 
 [T2 True Brews](/volumes/t2-tea), a tea brand in Huamei's volumes library, operates a packaging system where the rigid box and the carrier are briefed together from the outset — consistent exterior dimensions, the same paper-and-foil system, a carrier that looks like it was made for that specific box because it was. [Collgene](/volumes/collgene), a skincare client, runs a similar system for its gifting SKUs.
 

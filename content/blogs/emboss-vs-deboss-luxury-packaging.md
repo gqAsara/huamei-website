@@ -58,7 +58,7 @@ The decision between emboss and deboss is one of the most frequent surface-treat
 
 > Emboss raises a design element above the paper surface; deboss presses it below. Both use a sculpted die under heat and pressure. Emboss reads as decorative and catches raking light; deboss reads as architectural and holds shadow. On a luxury rigid box, registered emboss-and-foil — where the die and the foil stamp land on the same letterform — is the highest-detail decoration option, held to ±0.1 mm registration.
 
-Both processes use the same equipment: a sculpted die pressed against the paper under heat and pressure. The difference is directional. An emboss die pushes the paper away from the substrate — toward the viewer. A deboss die pushes it into the substrate — away from the viewer. The paper has to move; the die specifies how far and in which direction.
+Both processes use the same equipment: a sculpted die pressed against the paper under heat and pressure. The difference is directional. An emboss die pushes the paper away from the substrate — toward the viewer. A deboss die pushes it into the substrate — away from the viewer. The paper has to move; the die specifies how far and in which direction. For the finish-side detail, see [how to specify an emboss die](/blogs/emboss-die-specification-rigid-boxes).
 
 ## Die depth, paper weight, and why they are linked
 

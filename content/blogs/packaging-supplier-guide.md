@@ -55,7 +55,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 15 May 2026. Updated 15 May 2026.
 
-Sonia Sun has run the Huamei press floor since founding the company in Zhengzhou in 1992 — more than three decades on the supplier side of this conversation, which gives her a clear view of where sourcing decisions succeed and where they break down.
+Sonia Sun has run the Huamei press floor since founding the company in Zhengzhou in 1992 — more than three decades on the supplier side of this conversation, which gives her a clear view of where sourcing decisions succeed and where they break down. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 Choosing a packaging supplier is a decision that is easy to reverse at the sample stage and very expensive to reverse at the production stage. A supplier that produces a beautiful sample but cannot hold that quality at scale, cannot meet transit-grade testing standards, or cannot pass an [amfori BSCI](https://www.amfori.org/en/tools-and-services/amfori-bsci) social-compliance audit will cost a brand far more than the cost of the first order when the consequences land. This page sets out five signals to evaluate before a first order, and the audit checklist that distinguishes a supplier capable of a long-term relationship from one that can win a sample round.
 
@@ -69,7 +69,7 @@ The five factors are ordered by how difficult they are to fake. A beautiful samp
 
 A supplier's capability range is the inventory of what it can make reproducibly, not what it can attempt once. The difference matters at scale: a structure a supplier has never made before requires tooling development, trial runs, and iteration — all of which add time and cost to a first order. A structure that is already on file can be sampled directly from existing dies, with known tolerances and known lead times.
 
-Ask for the catalogue: how many box structures are on file? How many paper and board grades? How many surface-decoration combinations — foil colours, emboss dies, laminate types — have been run in production? Huamei holds ninety-nine structures, seventeen foil colours, and eighty papers — the accumulated production history of a factory operating since 1992. A supplier that cannot answer this question with a number is describing a factory that makes custom things, not a factory with a mature production system.
+Ask for the catalogue: how many box structures are on file? How many paper and board grades? How many surface-decoration combinations — foil colours, emboss dies, laminate types — have been run in production? Huamei holds ninety-nine structures, seventeen foil colours, and eighty papers — the accumulated production history of a factory operating since 1992. A supplier that cannot answer this question with a number is describing a factory that makes custom things, not a factory with a mature production system. Buyer-journey context for this is in [the luxury packaging manufacturer guide](/blogs/luxury-packaging-manufacturer-guide).
 
 The [rigid box](/craft/rigid) and [hot-foil stamping](/craft/hot-foil) capability pages at Huamei describe the process standards for two of the most-specified luxury packaging techniques. The registration tolerance for hot-foil at Huamei is ±0.1 mm — three times tighter than the industry-typical ±0.3 mm. That number comes from the production system, not the marketing materials.
 

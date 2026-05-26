@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 17 May 2026. Updated 17 May 2026.
 
-Sonia Sun has managed tooling and die fabrication for custom rigid box orders at Huamei since founding the company in Zhengzhou in 1992 — across every structure type in the library of ninety-nine structures, from flat-lid magnetic boxes to octagonal theatre presentations.
+Sonia Sun has managed tooling and die fabrication for custom rigid box orders at Huamei since founding the company in Zhengzhou in 1992 — across every structure type in the library of ninety-nine structures, from flat-lid magnetic boxes to octagonal theatre presentations. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 The per-unit cost of a custom luxury rigid box is not the full cost of the first order. Tooling — the brass dies, foam cutters, moulded pulp tools, and structural dielines required to produce a bespoke package — is a setup cost paid once on the first order and reused on every subsequent repeat. Understanding which tools are needed for a brief, what they cost, and how they amortise across volumes is the most important financial literacy a packaging buyer can have before placing a first order at MOQ 200+.
 

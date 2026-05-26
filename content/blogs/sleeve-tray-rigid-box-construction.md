@@ -53,7 +53,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 19 May 2026. Upda
 
 Sonia Sun has specified and produced sleeve-and-tray rigid structures at Huamei since founding the company in Zhengzhou in 1992 — across wellness, tea, and gifting briefs where the double-reveal format is the correct structure for the brand's unboxing intent.
 
-The sleeve-and-tray is one of the ninety-nine structures Huamei holds on file, and it is among the most frequently misspecified. Buyers sometimes request it when a lift-off lid or a drawer box is the better solution, and sometimes overlook it when a double-reveal format would serve the product. This guide covers when to specify it, how it is engineered in greyboard, and what surface treatments translate across the two separate pieces.
+The sleeve-and-tray is one of the ninety-nine structures Huamei holds on file, and it is among the most frequently misspecified. Buyers sometimes request it when a lift-off lid or a drawer box is the better solution, and sometimes overlook it when a double-reveal format would serve the product. This guide covers when to specify it, how it is engineered in greyboard, and what surface treatments translate across the two separate pieces. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What is a sleeve-and-tray rigid box?
 
@@ -69,7 +69,7 @@ The [rigid](/craft/rigid) specification for a sleeve-and-tray typically runs 2.0
 
 The sleeve-and-tray is the right structure when the brief calls for one or more of these conditions.
 
-**A double reveal.** The outer sleeve carries the brand mark, the foil, and the premium surface. The inner tray carries the product and its insert. The customer experiences the sleeve as the first object — they hold it, read it, turn it — and then slide the tray out to encounter the product. This two-step sequence is the sleeve-and-tray's defining characteristic. A lift-off lid reveals immediately; a sleeve-and-tray sequences the reveal.
+**A double reveal.** The outer sleeve carries the brand mark, the foil, and the premium surface. The inner tray carries the product and its insert. The customer experiences the sleeve as the first object — they hold it, read it, turn it — and then slide the tray out to encounter the product. This two-step sequence is the sleeve-and-tray's defining characteristic. A lift-off lid reveals immediately; a sleeve-and-tray sequences the reveal. For the structural detail, see [rigid box lid styles](/blogs/rigid-box-lid-styles-hinged-lift-off-book).
 
 **An independently useful tray.** Tea tins use a tray-and-lid format partly because the lid is separate and the tin is useful after the tea is consumed. The sleeve-and-tray equivalent is a tray that functions as a display platform, a storage vessel, or a secondary packaging piece after the outer sleeve is discarded. The [Heigouqi Wild Black Berry](/volumes/heigouqi) wellness packaging uses a sleeve-and-tray format where the inner tray doubles as a product stand on retail shelf.
 

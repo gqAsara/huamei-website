@@ -54,7 +54,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 22 May 2026. Upda
 
 Sonia Sun has run the Huamei press floor since founding the company in Zhengzhou in 1992 — producing both rigid packaging and paper carriers for brand programmes that span skincare, spirits, tea, cosmetics, and gifting categories across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
-The most common version of the rigid box vs. paper bag question is not a real competition — most premium brands use both, at different moments in the buyer journey. The rigid box is the product's home; the paper bag is the vehicle that carries it from the counter to the street. The question is better framed as: for which element of the programme is each format right, and what drives the cost and capability of each?
+The most common version of the rigid box vs. paper bag question is not a real competition — most premium brands use both, at different moments in the buyer journey. The rigid box is the product's home; the paper bag is the vehicle that carries it from the counter to the street. The question is better framed as: for which element of the programme is each format right, and what drives the cost and capability of each? The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What is the difference between a rigid box and a luxury paper bag?
 
@@ -62,7 +62,7 @@ The most common version of the rigid box vs. paper bag question is not a real co
 
 A rigid box — the standard format in [rigid box construction](/craft/rigid) — is built from greyboard that maintains its shape under load, wrapped in an outer paper that carries the printed finish. The structure does not collapse when empty; it sits on a shelf, in a wardrobe, or on a dressing table and retains its form. The box is part of the product's resting state.
 
-A luxury paper bag — a twisted-cord or flat-handle carrier in coated board — collapses flat when empty. It is designed for a single primary function: to carry the packaged product from the retail transaction to the consumer's destination. Its lifespan in brand service is measured in minutes to hours, not months.
+A luxury paper bag — a twisted-cord or flat-handle carrier in coated board — collapses flat when empty. It is designed for a single primary function: to carry the packaged product from the retail transaction to the consumer's destination. Its lifespan in brand service is measured in minutes to hours, not months. For the structural detail, see [the luxury paper bag](/blogs/luxury-paper-bag).
 
 ## When does a rigid box outperform a paper bag?
 

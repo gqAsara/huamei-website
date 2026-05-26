@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 11 May 2026.
 
-The question every small luxury brand asks first is the same: what is the minimum order quantity? The answer in our published catalogue is 200+ pieces for rigid construction. The longer answer is that the number is a function of which part of the process you are willing to absorb the setup cost of, and that some projects can ship at lower volumes if a brand brings the right brief. This page is the working manual to MOQ — what the floor is, what changes below it, and how to think about volume planning for a launch.
+The question every small luxury brand asks first is the same: what is the minimum order quantity? The answer in our published catalogue is 200+ pieces for rigid construction. The longer answer is that the number is a function of which part of the process you are willing to absorb the setup cost of, and that some projects can ship at lower volumes if a brand brings the right brief. This page is the working manual to MOQ — what the floor is, what changes below it, and how to think about volume planning for a launch. For the structural detail, see [how rigid box tooling costs work](/blogs/rigid-box-tooling-costs).
 
 ## The published floor
 

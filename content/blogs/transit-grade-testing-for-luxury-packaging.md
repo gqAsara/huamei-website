@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 14 May 2026.
 
-Most luxury packaging is designed to look right on a shelf. Far fewer packages are designed to arrive looking right after three weeks inside a forty-foot container on a South China Sea route. The difference between those two targets is transit-grade testing — a systematic protocol that puts a finished package through every major stress it will face between the factory floor and the retail display or the buyer's door. Huamei has built that protocol across four factories in Henan, Zhejiang, Sichuan, and Guizhou, and it covers five test categories. This page explains what each one measures, what logistics scenario it maps to, and why the test boundaries are set where they are.
+Most luxury packaging is designed to look right on a shelf. Far fewer packages are designed to arrive looking right after three weeks inside a forty-foot container on a South China Sea route. The difference between those two targets is transit-grade testing — a systematic protocol that puts a finished package through every major stress it will face between the factory floor and the retail display or the buyer's door. Huamei has built that protocol across four factories in Henan, Zhejiang, Sichuan, and Guizhou, and it covers five test categories. This page explains what each one measures, what logistics scenario it maps to, and why the test boundaries are set where they are. The ESG framing — FSC, BSCI, solar share, transit-grade testing — is laid out in [sustainable luxury packaging](/blogs/sustainable-luxury-packaging-manufacturer).
 
 ## How is luxury packaging tested for international shipping?
 
@@ -96,7 +96,7 @@ Rigid boxes are designed to carry stacking loads by transmitting force down thro
 
 ## Certifications on file
 
-Huamei holds BSCI, CE, EQS, FSC, and SGS certifications — each addressing a different aspect of production compliance: BSCI covers social-responsibility auditing, FSC covers sustainable paper sourcing, and SGS covers independent product-quality verification. Certification scans are published at [/house/certifications](/house/certifications).
+Huamei holds BSCI, CE, EQS, FSC, and SGS certifications — each addressing a different aspect of production compliance: BSCI covers social-responsibility auditing, FSC covers sustainable paper sourcing, and SGS covers independent product-quality verification. Certification scans are published at [/house/certifications](/house/certifications). The certifications and ESG side of this is laid out in [packaging sustainability for US and EU buyers](/blogs/packaging-sustainability-fsc-epr-us-eu-2026).
 
 Transit-testing protocols align with the [ISTA](https://www.ista.org/) framework for distribution packaging, which classifies test procedures by transport type (parcel, truckload, ocean freight) and product fragility.
 

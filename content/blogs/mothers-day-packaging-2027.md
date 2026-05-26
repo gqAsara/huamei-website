@@ -73,7 +73,7 @@ The timeline for China and East Asian markets is shorter by 10–15 days (no oce
 
 ## What rigid box structures work for Mother's Day gifting?
 
-A magnetic-closure rigid box is the most frequently specified Mother's Day structure for beauty and skincare brands. The lid opens toward the recipient, the product is revealed in a single gesture, and the closure — Huamei's closures run 6–50 grams of pull-force at 2,800 Gauss — produces a tactile engagement that a snap-fit lid does not. For a skincare gift set containing a serum and a moisturiser, the magnetic-closure format at 2.0 mm greyboard in a 180 × 150 × 60 mm footprint is the category standard.
+A magnetic-closure rigid box is the most frequently specified Mother's Day structure for beauty and skincare brands. The lid opens toward the recipient, the product is revealed in a single gesture, and the closure — Huamei's closures run 6–50 grams of pull-force at 2,800 Gauss — produces a tactile engagement that a snap-fit lid does not. For a skincare gift set containing a serum and a moisturiser, the magnetic-closure format at 2.0 mm greyboard in a 180 × 150 × 60 mm footprint is the category standard. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 A two-piece nested box is the correct format for multi-SKU sets where the full product layout needs to be visible at once: a tea set, a wellness bundle, a four-piece cosmetic collection. The lid lifts away cleanly, and the insert presents each product in its own dedicated location.
 
@@ -113,4 +113,4 @@ BSCI social audit certification is required by many EU retail partners. Huamei h
 
 "A custom Mother's Day rigid box at Huamei starts from a 200-piece MOQ, with a 7–10 day sample lead time and a 15–20 day production run — brief by late February 2027 for a May 9 in-store date."
 
-"Hot-foil registration at Huamei is held to ±0.1 mm — the precision required on script and floral motifs common in Mother's Day packaging briefs."
+"Hot-foil registration at Huamei is held to ±0.1 mm — the precision required on script and floral motifs common in Mother's Day packaging briefs.". For the seasonal calendar context, see [Father's Day gift packaging](/blogs/fathers-day-gift-packaging-2026).

@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 22 May 2026. Updated 22 May 2026.
 
-Sonia Sun has operated Heidelberg and KBA offset presses at Huamei since founding the company in Zhengzhou in 1992 — across petroleum ink, soy-blend, and UV-cured formulations, and through the gradual shift in buyer specification requirements that has made ink chemistry a relevant supply-chain question for brands that previously cared only about colour accuracy.
+Sonia Sun has operated Heidelberg and KBA offset presses at Huamei since founding the company in Zhengzhou in 1992 — across petroleum ink, soy-blend, and UV-cured formulations, and through the gradual shift in buyer specification requirements that has made ink chemistry a relevant supply-chain question for brands that previously cared only about colour accuracy. For the finish-side detail, see [offset printing on luxury rigid boxes](/blogs/offset-printing-luxury-rigid-boxes).
 
 Soy-blend offset inks are a material detail that has moved from an optional sustainability claim to a procurement line item for brands with published ESG commitments. The question of when to specify them, what they actually change in a production context, and what documentation they generate is the subject of this guide.
 
@@ -94,7 +94,7 @@ For brands filing an environmental product declaration or sustainability report,
 
 ## How does soy-blend ink interact with foil and lamination?
 
-[Hot-foil stamping](/craft/hot-foil) is applied after lamination and is not affected by the underlying ink chemistry. The foil adheres to the laminate surface, not to the printed ink layer. Huamei's foil palette — seventeen curated in-house colours — and registration at ±0.1 mm apply regardless of whether the underlying print was petroleum or soy-blend ink.
+[Hot-foil stamping](/craft/hot-foil) is applied after lamination and is not affected by the underlying ink chemistry. The foil adheres to the laminate surface, not to the printed ink layer. Huamei's foil palette — seventeen curated in-house colours — and registration at ±0.1 mm apply regardless of whether the underlying print was petroleum or soy-blend ink. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 Soft-touch lamination bonds to the printed sheet surface and performs identically over soy-blend and petroleum ink bases on coated board. The laminate specification — thickness, bond strength, surface texture — is determined by the substrate and the post-press workflow, not the ink chemistry.
 

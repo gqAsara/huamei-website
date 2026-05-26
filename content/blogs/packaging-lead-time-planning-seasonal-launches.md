@@ -51,13 +51,13 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 17 May 2026. Upda
 
 Sonia Sun has managed seasonal packaging production cycles at Huamei since founding the company in Zhengzhou in 1992 — across more than thirty years of Chinese New Year, Christmas, Mid-Autumn, and Valentine's runs for spirits, cosmetic, and gifting brands shipping to retail in Asia, Europe, and North America.
 
-The most common reason seasonal packaging misses its launch window is not the factory's production schedule — it is the buyer's brief arriving too late. Understanding how sample, production, and freight timelines stack is the single most useful thing a brand can do before placing a first seasonal order.
+The most common reason seasonal packaging misses its launch window is not the factory's production schedule — it is the buyer's brief arriving too late. Understanding how sample, production, and freight timelines stack is the single most useful thing a brand can do before placing a first seasonal order. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 ## How far in advance should I order custom luxury packaging for a seasonal launch?
 
 > For a seasonal product launch, order custom luxury packaging at least 8–10 weeks before your in-store or ship date: 7–10 days for sample approval, 15–20 days for production, and 15–25 days for ocean freight plus customs clearance. Add two weeks of buffer for first-order tooling or complex surface finishes.
 
-The 8–10 week figure is a floor, not a target. At Huamei, samples for standard structures — a two-piece nested rigid box, a magnetic-flap closure, a drawer box — are shipped in 7–10 days from brief confirmation. Production runs complete in 15–20 days from sample sign-off. Those two windows alone account for 3.5–4.5 weeks before goods leave the factory gate.
+The 8–10 week figure is a floor, not a target. At Huamei, samples for standard structures — a two-piece nested rigid box, a magnetic-flap closure, a drawer box — are shipped in 7–10 days from brief confirmation. Production runs complete in 15–20 days from sample sign-off. Those two windows alone account for 3.5–4.5 weeks before goods leave the factory gate. Buyer-journey context for this is in [the packaging sample process at a Chinese factory](/blogs/packaging-sample-process-china-factory).
 
 The freight and clearance window depends on the destination and [Incoterms](https://iccwbo.org/business-solutions/incoterms-rules/) agreed. Ocean freight from Chinese ports to US West Coast runs approximately 12–16 days at sea; East Coast adds another 5–7 days. Customs clearance on a first import entry adds 2–5 business days. EU ports (Rotterdam, Hamburg, Felixstowe) are broadly comparable. Air freight compresses the transit window to 3–5 days at a significant cost premium — viable for sample shipments and emergency top-ups, not for full production runs of rigid packaging.
 

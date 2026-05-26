@@ -51,7 +51,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 16 May 2026. Updated 16 May 2026.
 
-Sonia Sun has directed custom packaging production at Huamei since the company's founding in Zhengzhou in 1992 — more than three decades of building boxes for spirits, cosmetics, tea, wellness, and gifting brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
+Sonia Sun has directed custom packaging production at Huamei since the company's founding in Zhengzhou in 1992 — more than three decades of building boxes for spirits, cosmetics, tea, wellness, and gifting brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou. For the structural detail, see [the luxury gift box guide](/blogs/luxury-gift-box-guide).
 
 "Custom packaging boxes" is a category that covers everything from a folding carton for a skincare tube to a hand-assembled rigid set box for a premium baijiu. The structural and economic differences between formats are large — and the choice of format is one of the most consequential decisions in a packaging brief. This page maps the three main families of custom packaging boxes, explains what determines the right choice for each product, and describes what to expect when ordering.
 
@@ -63,7 +63,7 @@ Understanding these three families before writing a brief saves significant back
 
 ## Family 1: Rigid boxes
 
-A rigid box is a non-collapsible structure built on a [greyboard](/craft/rigid) core — a dense, compressed recycled-fibre sheet — wrapped in coated art paper and finished with laminate, foil, emboss, or spot UV. It ships pre-assembled from the factory. The lid and base are separate pieces: a two-piece nested set is the most common configuration, followed by a magnetic-flap single box, a clamshell hinge, and a book-style opening.
+A rigid box is a non-collapsible structure built on a [greyboard](/craft/rigid) core — a dense, compressed recycled-fibre sheet — wrapped in coated art paper and finished with laminate, foil, emboss, or spot UV. It ships pre-assembled from the factory. The lid and base are separate pieces: a two-piece nested set is the most common configuration, followed by a magnetic-flap single box, a clamshell hinge, and a book-style opening. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Rigid boxes are the default format for premium gifting, spirits, luxury cosmetics, and collector editions. The greyboard core gives the box a density and planted quality that paper-only formats cannot replicate — it signals price point before the customer reads a single word.
 

@@ -50,7 +50,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 18 May 2026. Updated 18 May 2026.
 
-Sonia Sun has manufactured book-style rigid boxes for spirits, tea, and gifting brands at Huamei since founding the company in Zhengzhou in 1992 — across more than three decades of hinge engineering, greyboard selection, and foil registration on spine-panel geometry.
+Sonia Sun has manufactured book-style rigid boxes for spirits, tea, and gifting brands at Huamei since founding the company in Zhengzhou in 1992 — across more than three decades of hinge engineering, greyboard selection, and foil registration on spine-panel geometry. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 The book-style box is a minority format in the rigid packaging catalogue — most buyers default to the two-piece nested set — but it is a better choice for certain briefs: collector objects that will be kept and displayed, presentations where the wide reveal matters, and products where a traditional book aesthetic reinforces the brand story. This guide explains how the format is constructed, what the main hinge and closure variants look like, and how to write a specification that gets to a correct sample on the first pass.
 
@@ -112,4 +112,4 @@ A complete specification for a book-style box brief covers:
 
 Samples from a complete specification take 7–10 days at Huamei. Production runs take 15–20 days from press start at MOQ 200+ pieces. Sampling before production release is standard on all book-style formats — the hinge tolerance and closure calibration require physical confirmation before a run begins.
 
-A note on [ISO 9001](https://www.iso.org/iso-9001-quality-management.html) dimensional standards: book-style boxes are classified as a custom assembly under ISO 9001 quality management frameworks, which means the critical-to-quality dimensions (hinge width, closure alignment, cover-to-base register) should be called out explicitly on the spec sheet rather than left to general-purpose tolerances.
+A note on [ISO 9001](https://www.iso.org/iso-9001-quality-management.html) dimensional standards: book-style boxes are classified as a custom assembly under ISO 9001 quality management frameworks, which means the critical-to-quality dimensions (hinge width, closure alignment, cover-to-base register) should be called out explicitly on the spec sheet rather than left to general-purpose tolerances. For the structural detail, see [rigid box lid styles](/blogs/rigid-box-lid-styles-hinged-lift-off-book).

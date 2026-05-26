@@ -52,7 +52,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 16 May 2026. Upda
 
 Sonia Sun has specified box inserts for luxury packaging at Huamei since the company's founding in Zhengzhou in 1992 — from EVA foam blocks for baijiu bottles to moulded pulp trays for skincare sets, across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
-The insert is the interior fitment of a luxury box: the structure that holds the product, shapes the unboxing sequence, and delivers the first tactile impression when the lid lifts. It also accounts for a significant and often underestimated share of per-unit cost — particularly when tooling, die-cutting, or custom moulding is involved. This guide compares the four main insert families used in luxury packaging, with decision criteria for each.
+The insert is the interior fitment of a luxury box: the structure that holds the product, shapes the unboxing sequence, and delivers the first tactile impression when the lid lifts. It also accounts for a significant and often underestimated share of per-unit cost — particularly when tooling, die-cutting, or custom moulding is involved. This guide compares the four main insert families used in luxury packaging, with decision criteria for each. For the structural detail, see [interior lining materials for rigid boxes](/blogs/interior-lining-luxury-rigid-boxes).
 
 ## What types of box inserts exist for luxury packaging?
 

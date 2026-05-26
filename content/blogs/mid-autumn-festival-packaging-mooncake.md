@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 14 May 2026.
 
-Mid-Autumn Festival falls in September or October, depending on the lunar calendar. The gift-packaging brief for that date should already be in motion by the time summer arrives. Mooncake sets, tea presentation cases, and baijiu gift boxes for the festival share a brief window between artwork approval and the moment the cartons need to be on a pallet. This page covers the structural formats that work for mooncake and festival gift sets, the decoration options that read well on seasonal packaging, and the calendar that puts a finished production order on the freight dock in time.
+Mid-Autumn Festival falls in September or October, depending on the lunar calendar. The gift-packaging brief for that date should already be in motion by the time summer arrives. Mooncake sets, tea presentation cases, and baijiu gift boxes for the festival share a brief window between artwork approval and the moment the cartons need to be on a pallet. This page covers the structural formats that work for mooncake and festival gift sets, the decoration options that read well on seasonal packaging, and the calendar that puts a finished production order on the freight dock in time. Adjacent vertical-specific guidance lives in [tea gift box manufacturing](/blogs/tea-gift-box-manufacturing).
 
 ## What is the lead time for Mid-Autumn Festival packaging?
 
@@ -68,7 +68,7 @@ A mooncake set is a multi-SKU problem. The standard festival set carries four or
 
 Three formats handle this well.
 
-**Drawer-and-slipcase.** A slipcase (wrapped greyboard outer) houses a pull-out drawer (thinner board, lined). The drawer carries a moulded tray insert that holds the mooncakes in position. The reveal happens in two stages — the slipcase is lifted, then the drawer pulled — which spaces out the opening moment and gives the receiver a pause before the product is visible. Used on tea presentation cases such as [Heritage Tea](/volumes/heritage-tea), a structure that translates directly to festival-set work. See [/craft/drawer](/craft/drawer) for structural specs.
+**Drawer-and-slipcase.** A slipcase (wrapped greyboard outer) houses a pull-out drawer (thinner board, lined). The drawer carries a moulded tray insert that holds the mooncakes in position. The reveal happens in two stages — the slipcase is lifted, then the drawer pulled — which spaces out the opening moment and gives the receiver a pause before the product is visible. Used on tea presentation cases such as [Heritage Tea](/volumes/heritage-tea), a structure that translates directly to festival-set work. See [/craft/drawer](/craft/drawer) for structural specs. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 **Magnetic clamshell.** A full-face magnetic closure opens to reveal a full tray. The advantage over a drawer is that the complete set is visible at once on opening — useful for an eight-cake arrangement where the pattern of the cakes themselves is part of the presentation. The magnetic pull-force for a lid heavy enough to carry a decorated wrap and closure hardware sits between 25 and 50 grams at 2,800 Gauss. See [/craft/magnetic](/craft/magnetic).
 

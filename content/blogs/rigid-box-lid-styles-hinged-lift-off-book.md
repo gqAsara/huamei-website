@@ -52,9 +52,9 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 23 May 2026. Updated 23 May 2026.
 
-Sonia Sun has specified and produced all three primary rigid box lid formats at Huamei since founding the company in Zhengzhou in 1992 — across cosmetics, spirits, tea, wellness, and gifting briefs for brands in China and internationally.
+Sonia Sun has specified and produced all three primary rigid box lid formats at Huamei since founding the company in Zhengzhou in 1992 — across cosmetics, spirits, tea, wellness, and gifting briefs for brands in China and internationally. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
-Of the ninety-nine structures Huamei holds on file, the lid format is the first structural choice in any rigid box brief. Three formats dominate luxury rigid box production: the lift-off lid, the hinged lid, and the book-style. Each produces a different unboxing sequence, a different re-close experience, and a different set of structural constraints. Specifying the wrong format adds cost without improving the brief. This guide defines each format, explains when to use it, and describes how magnetic closures, surface treatments, and transit performance interact with each.
+Of the ninety-nine structures Huamei holds on file, the lid format is the first structural choice in any rigid box brief. Three formats dominate luxury rigid box production: the lift-off lid, the hinged lid, and the book-style. Each produces a different unboxing sequence, a different re-close experience, and a different set of structural constraints. Specifying the wrong format adds cost without improving the brief. This guide defines each format, explains when to use it, and describes how magnetic closures, surface treatments, and transit performance interact with each. For the structural detail, see [book-style rigid box construction](/blogs/book-style-rigid-box-packaging).
 
 ## What is the difference between a lift-off lid, hinged lid, and book-style rigid box?
 

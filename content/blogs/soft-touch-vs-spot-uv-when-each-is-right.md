@@ -127,4 +127,4 @@ The press operator handles the rest. Sample turn 7–10 days; the physical sampl
 
 For the structural decision behind this — which greyboard thickness, which closure — read [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing). For the foil decision if you also want a metallic element, read [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
-[I want a box like this. →](/begin)
+[I want a box like this. →](/begin). For the finish-side detail, see [luxury packaging lamination types](/blogs/luxury-packaging-lamination-types).

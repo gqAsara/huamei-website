@@ -51,7 +51,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 18 May 2026. Updated 18 May 2026.
 
-Sonia Sun has manufactured skincare and cosmetic packaging at Huamei since founding the company in Zhengzhou in 1992 — across tuck-end cartons for mass-market SKUs, premium rigid gift boxes for travel-exclusive sets, and export-certified packaging for brands supplying retail in Europe and North America.
+Sonia Sun has manufactured skincare and cosmetic packaging at Huamei since founding the company in Zhengzhou in 1992 — across tuck-end cartons for mass-market SKUs, premium rigid gift boxes for travel-exclusive sets, and export-certified packaging for brands supplying retail in Europe and North America. Adjacent vertical-specific guidance lives in [luxury wellness packaging design](/blogs/luxury-wellness-packaging-design).
 
 Skincare packaging sits at the intersection of two requirements that do not always point in the same direction: the box must present as premium at the moment of gifting or retail discovery, and it must protect the product through transit conditions that a cosmetic bottle was not engineered to handle. A serum bottle in a foam insert that shifts in a drop is a customer-service event; a serum bottle in a correctly specified insert that arrives intact is the baseline. This guide covers the structural formats, insert types, surface finishes, and certifications that matter to skincare brands commissioning custom rigid boxes.
 
@@ -65,7 +65,7 @@ A magnetic-closure box — where the lid is attached at the back and held closed
 
 ## How are skincare inserts specified?
 
-An insert is a secondary structure inside the rigid box that locates each product, prevents movement in transit, and presents the product at the correct height and angle when the box is opened.
+An insert is a secondary structure inside the rigid box that locates each product, prevents movement in transit, and presents the product at the correct height and angle when the box is opened. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 For skincare, the three main insert types are:
 

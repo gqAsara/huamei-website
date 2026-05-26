@@ -46,7 +46,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 25 May 2026. Updated 25 May 2026.
 
-Every rigid box is a greyboard core wrapped in paper. The core is what gives the box its walls, its corners, and its weight-in-hand. It is also the part of the brief that is most often left unspecified — because buyers typically describe the paper, the finish, and the print, and assume the structural core will be handled by the manufacturer. That assumption works until the box arrives and the corners feel wrong, the lid drops too far, or the wall thickness is visible where the lid meets the base and reads as thin.
+Every rigid box is a greyboard core wrapped in paper. The core is what gives the box its walls, its corners, and its weight-in-hand. It is also the part of the brief that is most often left unspecified — because buyers typically describe the paper, the finish, and the print, and assume the structural core will be handled by the manufacturer. That assumption works until the box arrives and the corners feel wrong, the lid drops too far, or the wall thickness is visible where the lid meets the base and reads as thin. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades of rigid box manufacture across ninety-nine structural formats for spirits, cosmetics, gifting, and presentation packaging.
 
@@ -54,7 +54,7 @@ Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou 
 
 > A luxury rigid box wall typically uses 1.5 mm to 3.0 mm of greyboard, with 2.0 mm as the cosmetics-industry standard. A 1.5 mm core suits lighter retail boxes; 2.0 mm suits mid-to-premium gifting and cosmetics; 3.0 mm is used for collector-edition spirits and presentation cases where perceived weight is part of the brand brief.
 
-[ISO 4046](https://www.iso.org/standard/54727.html) defines greyboard as a multi-ply paperboard product used in packaging construction. In practice, rigid box greyboard is a compressed, dense board that behaves as a structural material rather than a printing substrate. The paper wrap — the printed, laminated, foil-stamped surface that the buyer sees and touches — is applied over the greyboard after it has been cut and scored. The greyboard's job is to hold shape; the paper's job is to carry the brand.
+[ISO 4046](https://www.iso.org/standard/54727.html) defines greyboard as a multi-ply paperboard product used in packaging construction. In practice, rigid box greyboard is a compressed, dense board that behaves as a structural material rather than a printing substrate. The paper wrap — the printed, laminated, foil-stamped surface that the buyer sees and touches — is applied over the greyboard after it has been cut and scored. The greyboard's job is to hold shape; the paper's job is to carry the brand. For the structural detail, see [greyboard grades for rigid construction](/blogs/greyboard-grades-for-luxury-rigid-construction).
 
 ## What does 1.5 mm greyboard suit?
 

@@ -123,4 +123,4 @@ We sample both hot-foil and cold-foil on the actual project stock during the 7�
 
 For a deeper read on hot-foil specifically — how the seventeen-foil palette is organized, how registered emboss-and-foil works at ±0.1 mm, when hot-foil is the wrong tool — read [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging). For where foil sits inside the full rigid-box build, read [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing).
 
-[I want a foiled box like this. →](/begin)
+[I want a foiled box like this. →](/begin). For the finish-side detail, see [hot-foil colour selection](/blogs/hot-foil-colour-selection-luxury-packaging).

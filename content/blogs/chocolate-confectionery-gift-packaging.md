@@ -53,7 +53,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 19 May 2026. Updated 19 May 2026.
 
-Sonia Sun has manufactured gift packaging for confectionery and food-adjacent gifting clients at Huamei since founding the company in Zhengzhou in 1992 — across rigid box, folding carton, and sleeve formats for seasonal gifting campaigns requiring transit-grade protection and food-contact-safe insert materials.
+Sonia Sun has manufactured gift packaging for confectionery and food-adjacent gifting clients at Huamei since founding the company in Zhengzhou in 1992 — across rigid box, folding carton, and sleeve formats for seasonal gifting campaigns requiring transit-grade protection and food-contact-safe insert materials. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 A chocolate gift box carries two obligations simultaneously: it must protect a fragile, temperature-sensitive product through transit, and it must communicate a gift's value within seconds of unwrapping. The structure, the insert, and the surface treatment each contribute to both functions. This guide covers the three main structures used for premium chocolate and confectionery packaging, the food-safe insert materials that meet international procurement standards, and the surface treatments that read as gift-quality at retail.
 
@@ -101,4 +101,4 @@ The [Man Made Crayon](/volumes/man-made-crayon) puzzle book-style box uses a kra
 
 A complete confectionery packaging brief states: structure type (lift-off rigid / clamshell / folding carton), external dimensions (length × width × height in millimetres), number of chocolate cavities and individual piece dimensions, insert material (moulded pulp / thermoformed PET / flocked card), wrap paper type and colour, surface treatments (foil colour, emboss die reference, laminate), certification requirements (FSC, BSCI, BRCGS), and transit destination (domestic China / international air / international sea freight).
 
-Huamei's 7–10 day sample cycle delivers a fully assembled box with the specified insert, wrap paper, and foil mark for approval. Production of 200+ sets follows at 15–20 days from sample sign-off. Start a confectionery packaging brief at [/begin](/begin).
+Huamei's 7–10 day sample cycle delivers a fully assembled box with the specified insert, wrap paper, and foil mark for approval. Production of 200+ sets follows at 15–20 days from sample sign-off. Start a confectionery packaging brief at [/begin](/begin). For the seasonal calendar context, see [Valentine's Day packaging](/blogs/valentines-day-packaging-2027).

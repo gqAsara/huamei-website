@@ -50,7 +50,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 22 May 2026. Updated 22 May 2026.
 
-Sonia Sun has manufactured packaging for health, wellness, and cosmetic brands at Huamei since founding the company in Zhengzhou in 1992 — more than three decades working through the structural, finish, and certification decisions that determine whether a supplement box arrives intact and reads as credible at retail.
+Sonia Sun has manufactured packaging for health, wellness, and cosmetic brands at Huamei since founding the company in Zhengzhou in 1992 — more than three decades working through the structural, finish, and certification decisions that determine whether a supplement box arrives intact and reads as credible at retail. Adjacent vertical-specific guidance lives in [luxury wellness packaging design](/blogs/luxury-wellness-packaging-design).
 
 Supplement and nutraceutical packaging occupies territory between two adjacent categories: the clinical trust signals that pharmaceutical packaging borrows from, and the aspirational finish that premium food and cosmetic packaging uses. The box that holds a 60-capsule collagen supplement must signal purity and quality on shelf, protect the container in transit from Henan to a distribution warehouse in California, and satisfy the supply-chain audit requirements of a US or European retail buyer. This guide works through the structural formats, insert types, surface finishes, and certifications that apply.
 
@@ -60,7 +60,7 @@ Supplement and nutraceutical packaging occupies territory between two adjacent c
 
 A two-piece nested set — a separate lid and base — is the correct starting point for multi-SKU supplement lines: a protein blend, a multivitamin sachet pack, and a collagen canister presented together as a wellness bundle. The lid lifts clear in one movement, revealing the full layout. The format is structurally simple, available in any depth, and easy to fill on a production line without specialised tooling.
 
-A magnetic-closure rigid box is the right format for a single hero product where the unboxing moment is part of the brand statement. [Rigid box construction](/craft/rigid) allows the lid to be attached at the back and held by embedded neodymium magnets; Huamei's magnetic closures run 6–50 grams of pull-force at 2,800 Gauss. For a lightweight supplement jar, 12–18 g per magnet is sufficient to produce a clean, controlled close without the lid falling open in handling.
+A magnetic-closure rigid box is the right format for a single hero product where the unboxing moment is part of the brand statement. [Rigid box construction](/craft/rigid) allows the lid to be attached at the back and held by embedded neodymium magnets; Huamei's magnetic closures run 6–50 grams of pull-force at 2,800 Gauss. For a lightweight supplement jar, 12–18 g per magnet is sufficient to produce a clean, controlled close without the lid falling open in handling. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 A book-style rigid box — a hinged clamshell — works for supplement formats that benefit from a full reveal on open: a two-compartment wellness kit, a 30-day protocol pack. The hinge is integral to the board construction and does not require a separate mechanism.
 

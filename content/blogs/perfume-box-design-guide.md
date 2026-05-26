@@ -47,7 +47,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 25 May 2026. Updated 25 May 2026.
 
-A perfume box holds a glass bottle worth considerably more than the box itself. That structural asymmetry defines the brief: the box must not allow the bottle to shift during shipping, must open in a single gesture, and must read as an extension of the fragrance brand — not as an afterthought wrapped around it. The design decisions that govern how a perfume box performs start at the structural drawing and end at the surface finish; each decision compounds the one before it.
+A perfume box holds a glass bottle worth considerably more than the box itself. That structural asymmetry defines the brief: the box must not allow the bottle to shift during shipping, must open in a single gesture, and must read as an extension of the fragrance brand — not as an afterthought wrapped around it. The design decisions that govern how a perfume box performs start at the structural drawing and end at the surface finish; each decision compounds the one before it. Adjacent vertical-specific guidance lives in [custom perfume box manufacturing](/blogs/custom-perfume-box-manufacturing).
 
 Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — more than three decades of rigid packaging for fragrance, skincare, and gifting brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
 
@@ -55,7 +55,7 @@ Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou 
 
 > A perfume box is a rigid secondary packaging structure that holds a fragrance bottle and presents it at retail or as a gift. It typically uses a greyboard core wrapped in paper, closed with a lid-and-base or magnetic closure, and surface-finished with foil, emboss, or soft-touch lamination.
 
-The greyboard core — the stiff board layer underneath the paper wrap — gives the box its structural rigidity and determines how well the corners hold shape across a retail lifespan of repeated handling. For most fragrance briefs, the core runs between 1.5 mm and 2.5 mm thick. Heavier cores add perceived weight and quality; lighter cores can lose corner definition when handled repeatedly on a retail shelf. This selection is made at the structural drawing stage, before any surface finish is applied.
+The greyboard core — the stiff board layer underneath the paper wrap — gives the box its structural rigidity and determines how well the corners hold shape across a retail lifespan of repeated handling. For most fragrance briefs, the core runs between 1.5 mm and 2.5 mm thick. Heavier cores add perceived weight and quality; lighter cores can lose corner definition when handled repeatedly on a retail shelf. This selection is made at the structural drawing stage, before any surface finish is applied. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What rigid box structure suits a perfume box?
 

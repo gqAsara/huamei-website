@@ -46,9 +46,9 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 24 May 2026. Updated 24 May 2026.
 
-A subscription box is not a single purchase. It is a packaging decision that a subscriber renews monthly or quarterly, and whose consistency — or inconsistency — they notice across every delivery. A subscriber who receives a box that looks and feels different from last month's, whose closure has softened or whose surface has shifted in tone, is a subscriber who notices the manufacturing, not the product inside. The purpose of a custom rigid box subscription program is to make that noticing impossible — to deliver a package that reads as the same object, month after month, until the brief changes.
+A subscription box is not a single purchase. It is a packaging decision that a subscriber renews monthly or quarterly, and whose consistency — or inconsistency — they notice across every delivery. A subscriber who receives a box that looks and feels different from last month's, whose closure has softened or whose surface has shifted in tone, is a subscriber who notices the manufacturing, not the product inside. The purpose of a custom rigid box subscription program is to make that noticing impossible — to deliver a package that reads as the same object, month after month, until the brief changes. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
-Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — three decades of repeat production runs for gifting, cosmetics, and DTC brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou.
+Sonia Sun has run Huamei's press floors since founding the company in Zhengzhou in 1992 — three decades of repeat production runs for gifting, cosmetics, and DTC brands across four factories in Henan, Zhejiang, Sichuan, and Guizhou. For the gifting framing, see [luxury packaging for DTC brands](/blogs/luxury-packaging-dtc-brands).
 
 ## What makes a rigid box suitable for subscription packaging programs?
 

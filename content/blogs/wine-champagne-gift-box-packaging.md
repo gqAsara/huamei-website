@@ -51,7 +51,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 18 May 2026. Updated 18 May 2026.
 
-Sonia Sun has manufactured bottle-presentation packaging for spirits and wine brands at Huamei since founding the company in Zhengzhou in 1992 — across baijiu, rice wine, champagne, and premium still wine in single-bottle and multi-bottle formats for China retail and international export.
+Sonia Sun has manufactured bottle-presentation packaging for spirits and wine brands at Huamei since founding the company in Zhengzhou in 1992 — across baijiu, rice wine, champagne, and premium still wine in single-bottle and multi-bottle formats for China retail and international export. Adjacent vertical-specific guidance lives in [spirits gift box manufacturing](/blogs/spirits-gift-box-manufacturer-guide).
 
 A wine or champagne gift box has one structural requirement that differs from most other rigid packaging: the bottle is tall, heavy, and fragile at the neck. A 750 mL wine bottle weighs approximately 1.3–1.5 kg full — the gift box structure must be specified to that weight load, not to a generic "bottle box" template. The insert must hold the bottle through a 40 cm drop onto a concrete floor. The exterior must survive a container transit from a factory in Henan to a wine merchant in London or a retailer in Chicago without scuffing, corner collapse, or closure failure. This guide covers the formats, insert types, surface finishes, and export specifications for wine and champagne gift packaging.
 
@@ -69,7 +69,7 @@ A magnetic-closure format — lid hinged at the back, held closed by embedded ma
 
 A 750 mL wine bottle weighs approximately 1.3–1.5 kg full — the gift box structure must be specified to that weight load, not to a generic bottle box template.
 
-The greyboard core carries the structural load. Wine gift box greyboard walls run 2.0–3.0 mm for single-bottle formats — the thicker core absorbs impact energy at the corners, where drop damage concentrates. For a two-bottle side-by-side format, 2.5–3.0 mm is the standard base specification to resist torsional racking under the combined 3 kg load.
+The greyboard core carries the structural load. Wine gift box greyboard walls run 2.0–3.0 mm for single-bottle formats — the thicker core absorbs impact energy at the corners, where drop damage concentrates. For a two-bottle side-by-side format, 2.5–3.0 mm is the standard base specification to resist torsional racking under the combined 3 kg load. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Magnetic-closure wine gift boxes require a higher pull-force calibration than lighter cosmetic or tea boxes. Huamei's magnetic closures run 6–50 grams of pull-force at 2,800 Gauss; for a 1.4 kg bottle in a magnetic-closure upright box, a two-magnet array at 20–40 g each is the correct specification — heavy enough to keep the bottle secure through handling, light enough to open one-handed.
 

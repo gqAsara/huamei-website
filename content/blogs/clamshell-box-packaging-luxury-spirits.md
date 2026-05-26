@@ -50,7 +50,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 18 May 2026. Updated 18 May 2026.
 
-Sonia Sun has produced clamshell packaging for premium spirits and gifting brands at Huamei since founding the company in Zhengzhou in 1992 — including the [Wuliangye Premium Brew](/volumes/wuliangye-clamshell) glass-lined clamshell, which uses a fabric hinge and a velvet interior lining to present a single bottle in an open-face symmetrical format that has become a reference case in the spirits gifting category.
+Sonia Sun has produced clamshell packaging for premium spirits and gifting brands at Huamei since founding the company in Zhengzhou in 1992 — including the [Wuliangye Premium Brew](/volumes/wuliangye-clamshell) glass-lined clamshell, which uses a fabric hinge and a velvet interior lining to present a single bottle in an open-face symmetrical format that has become a reference case in the spirits gifting category. Adjacent vertical-specific guidance lives in [spirits gift box manufacturing](/blogs/spirits-gift-box-manufacturer-guide).
 
 The clamshell is one of seven major structural families in Huamei's library of ninety-nine structures. It is the format that most completely encloses the product in a symmetrical bilateral presentation: the two halves open like a book, revealing the product at the centre of a composition where both sides carry equal decoration. For spirits and high-ceremony gifting, this bilateral symmetry carries specific cultural weight — the Chinese gifting register associates the opening of a clamshell with the formal presentation of a valued object, a moment that a hinged lid or a lifted two-piece cannot replicate.
 
@@ -64,7 +64,7 @@ The closure at the front is either magnetic (two neodymium disc magnets conceale
 
 ## What board weight and structure does a luxury clamshell require?
 
-A luxury clamshell uses 2.0–2.5 mm greyboard for both halves, with weight matched to the product load and the hinge tension required.
+A luxury clamshell uses 2.0–2.5 mm greyboard for both halves, with weight matched to the product load and the hinge tension required. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 Both halves carry equal structural load in a clamshell — unlike a nested two-piece box where the base holds the full product weight. The greyboard must resist deformation under the compression of the closure magnets: if the board deflects inward at the closure point, the magnet pull-force drops and the box no longer closes flush. At 2.0 mm, the board is rigid enough to maintain flush closure under magnet pull at standard gifting product weights up to 1 kg. Above 1 kg — the range for a 700 ml spirits bottle — the board typically moves to 2.5 mm.
 

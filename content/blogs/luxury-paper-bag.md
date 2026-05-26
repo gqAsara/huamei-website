@@ -53,7 +53,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 15 May 2026. Upda
 
 Sonia Sun has run the Huamei press floor since founding the company in Zhengzhou in 1992 — more than three decades building packaging that has to survive the journey from press room to retail floor without losing the finish that makes a brand look deliberate.
 
-A paper bag is often the last piece of packaging a buyer holds before the product is in their hands. That touchpoint matters more than its apparent simplicity suggests. The weight of the paper under the fingers, the tension of the cord handle, the flatness of a foil print at the bag seam — each detail signals whether the brand behind the bag attends to the same precision in its product. This page covers what separates luxury paper bags from commodity construction, what materials and handles are available, and what a brief needs to specify to get the result right.
+A paper bag is often the last piece of packaging a buyer holds before the product is in their hands. That touchpoint matters more than its apparent simplicity suggests. The weight of the paper under the fingers, the tension of the cord handle, the flatness of a foil print at the bag seam — each detail signals whether the brand behind the bag attends to the same precision in its product. This page covers what separates luxury paper bags from commodity construction, what materials and handles are available, and what a brief needs to specify to get the result right. For the structural detail, see [custom luxury paper bags](/blogs/custom-luxury-paper-bag).
 
 ## What makes a luxury paper bag different from a standard one?
 
@@ -73,7 +73,7 @@ Huamei holds eighty papers on file across [offset printing](/craft/offset) platf
 
 **Coated art paper.** Higher-gloss base for full-coverage colour reproduction, sharper foil registration, better fidelity on fine-detail screen prints. Requires laminate — matte or gloss — to resist scuffing at retail contact points. Cosmetic brands favour coated art for their carrier bags because the printed colour must match the product box exactly, and coated stock controls colour consistency better than uncoated.
 
-**Duplex board.** 300–400 gsm construction that gives the bag rigid-box feel without a greyboard core. Used for high-end gift bags where the carrier is part of the presentation — a spirits gifting bag, a jewellery presentation carrier — and will be kept rather than discarded.
+**Duplex board.** 300–400 gsm construction that gives the bag rigid-box feel without a greyboard core. Used for high-end gift bags where the carrier is part of the presentation — a spirits gifting bag, a jewellery presentation carrier — and will be kept rather than discarded. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 All paper sourced for Huamei production runs carries [FSC](https://fsc.org/en) chain-of-custody certification, confirming the fibre came from sustainably managed forests — a requirement for EU and US brand procurement audits under BSCI and FSC supply-chain standards.
 

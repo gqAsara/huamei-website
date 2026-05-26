@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 16 May 2026. Updated 16 May 2026.
 
-Sonia Sun has been on the factory side of China-to-international packaging shipments since founding Huamei in Zhengzhou in 1992 — across multiple tariff regimes, Incoterms revisions, and sourcing cycles for spirits, cosmetic, and gifting brands in the US, Europe, and Asia.
+Sonia Sun has been on the factory side of China-to-international packaging shipments since founding Huamei in Zhengzhou in 1992 — across multiple tariff regimes, Incoterms revisions, and sourcing cycles for spirits, cosmetic, and gifting brands in the US, Europe, and Asia. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 The practical question for US and EU brands sourcing luxury packaging from China is not whether Chinese manufacturing produces the right quality — it does, at scale, with the right factory. The question is what the landed cost actually looks like, what certification and compliance paperwork is required before a shipment clears customs, and what the correct Incoterms structure looks like for a first order. This guide answers all three.
 
@@ -69,7 +69,7 @@ The [WCO Harmonized System](https://www.wcoomd.org/en/topics/nomenclature/overvi
 
 The critical distinction between 4819.20 and 4819.50 is whether the box ships flat or pre-assembled. A folding carton that ships on a pallet in flat-pack is 4819.20. A rigid gift box shipped pre-assembled in a polybag and master carton is 4819.50. Getting this wrong at the importer-of-record filing stage creates a correction cycle that holds freight at port.
 
-A note on country-specific tariff schedules: the US HTS (Harmonized Tariff Schedule) and the EU Combined Nomenclature both use the HS 6-digit heading as their base and add 2-digit national subheadings. Classification at the 10-digit level — required for US import filing — requires a licensed customs broker or freight forwarder familiar with paper packaging. Do not rely on a factory to make this determination; HS classification is the importer's responsibility.
+A note on country-specific tariff schedules: the US HTS (Harmonized Tariff Schedule) and the EU Combined Nomenclature both use the HS 6-digit heading as their base and add 2-digit national subheadings. Classification at the 10-digit level — required for US import filing — requires a licensed customs broker or freight forwarder familiar with paper packaging. Do not rely on a factory to make this determination; HS classification is the importer's responsibility. For the China-sourcing perspective, see [US import tariffs on Chinese packaging](/blogs/us-china-tariffs-luxury-packaging-2026).
 
 ## What tariff rates apply to packaging boxes imported from China to the US?
 

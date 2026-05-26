@@ -61,7 +61,7 @@ The word "packaging manufacturer" covers a wide production spectrum — from a c
 
 > A packaging manufacturer converts raw materials — greyboard, paper, foil, and closure hardware — into finished presentation boxes and cases. A luxury packaging manufacturer adds hand assembly, surface decoration (hot-foil, emboss, spot-UV), and structural engineering for a specific opening experience. MOQ starts at 200 pieces; samples take 7–10 days.
 
-The production chain at a rigid box manufacturer runs through four distinct stages: substrate sourcing (greyboard and wrap paper), press work (offset printing and surface decoration), structure forming (die-cutting, laminating, gluing), and hand assembly (wrapping, registering foil to emboss, corner closing, inspection). Mass folding-carton production skips the final stage — the box is self-erecting from a printed flat sheet. Rigid box manufacturing does not skip it: a hand-assembly room is structural, not optional.
+The production chain at a rigid box manufacturer runs through four distinct stages: substrate sourcing (greyboard and wrap paper), press work (offset printing and surface decoration), structure forming (die-cutting, laminating, gluing), and hand assembly (wrapping, registering foil to emboss, corner closing, inspection). Mass folding-carton production skips the final stage — the box is self-erecting from a printed flat sheet. Rigid box manufacturing does not skip it: a hand-assembly room is structural, not optional. Sourcing and process notes for working at this distance are covered in [working with a Chinese luxury packaging manufacturer](/blogs/working-with-a-chinese-luxury-packaging-manufacturer).
 
 At Huamei, the press floor runs [Heidelberg](https://www.heidelberg.com) and [KBA](https://www.koenig-bauer.com) offset presses across four provinces. The hand-assembly workforce is over 3,000 people. The combination of mechanical precision on press and hand finish on the line is what the phrase "luxury packaging manufacturer" describes — not just a factory that prints on nicer paper.
 
@@ -103,4 +103,4 @@ Huamei factories run on more than 80% green energy, primarily solar. Shareholder
 
 For case studies: [Collgene](/volumes/collgene) (skincare rigid box, registered foil and emboss) and [Wuliangye 68](/volumes/wuliangye-68) (spirits rigid box, red and gold foil on heavyweight board) show the range of finished work across [cosmetic](/industry/cosmetic) and [spirits](/industry/spirits) sectors.
 
-To begin a conversation about a project, visit [/begin](/begin).
+To begin a conversation about a project, visit [/begin](/begin). Buyer-journey context for this is in [how to choose a packaging supplier](/blogs/packaging-supplier-guide).

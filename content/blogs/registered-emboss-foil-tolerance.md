@@ -52,7 +52,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
 
-Registered emboss-and-foil is a single decorative mark where the embossed die rises and the foil lights at the same point, in perfect alignment. The result is the foil-on-emboss effect that defines the unboxing moment of a luxury beauty box, a spirits gift pack, or a heritage-brand seasonal SKU. Most pages on the technique stop at the visual. This page is about the number — the tolerance — that decides whether the result reads as a designed mark or as a misaligned print.
+Registered emboss-and-foil is a single decorative mark where the embossed die rises and the foil lights at the same point, in perfect alignment. The result is the foil-on-emboss effect that defines the unboxing moment of a luxury beauty box, a spirits gift pack, or a heritage-brand seasonal SKU. Most pages on the technique stop at the visual. This page is about the number — the tolerance — that decides whether the result reads as a designed mark or as a misaligned print. For the finish-side detail, see [how to specify an emboss die](/blogs/emboss-die-specification-rigid-boxes).
 
 ## What the tolerance actually is
 

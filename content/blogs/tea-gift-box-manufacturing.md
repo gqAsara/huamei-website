@@ -54,7 +54,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 17 May 2026. Upda
 
 Sonia Sun has manufactured packaging for tea brands at Huamei since founding the company in Zhengzhou in 1992 — including work for [DEEPURE](/volumes/heritage-tea) and [T2 True Brews](/volumes/t2-tea), two very different formats on opposite ends of the tea gift-box spectrum.
 
-Tea packaging occupies an unusual position in luxury packaging: the product inside is light, dry, and relatively tolerant of structural variation, but the presentation standard is set by the occasion — gifting, retail display, export — and the structural decisions flow from that. A monocarton is sufficient for a teabag retail stack; a rigid drawer box with a gold-foil leaf motif and a satin ribbon pull is appropriate for a single-origin loose-leaf collector set. Understanding where a brief sits on that spectrum is the first decision in tea gift box manufacturing.
+Tea packaging occupies an unusual position in luxury packaging: the product inside is light, dry, and relatively tolerant of structural variation, but the presentation standard is set by the occasion — gifting, retail display, export — and the structural decisions flow from that. A monocarton is sufficient for a teabag retail stack; a rigid drawer box with a gold-foil leaf motif and a satin ribbon pull is appropriate for a single-origin loose-leaf collector set. Understanding where a brief sits on that spectrum is the first decision in tea gift box manufacturing. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## What structures are most common for premium tea gift boxes?
 
@@ -98,4 +98,4 @@ A complete tea gift box brief covers six elements. Missing any one typically add
 
 [ISO 9001:2015](https://www.iso.org/iso-9001-quality-management.html) quality management governs the production process across all four Huamei factories.
 
-To start a tea gift box brief, visit [/begin](/begin) and include the structure type, SKU list, and target in-market date. The team in Henan will confirm the sample and production timeline.
+To start a tea gift box brief, visit [/begin](/begin) and include the structure type, SKU list, and target in-market date. The team in Henan will confirm the sample and production timeline. For the seasonal calendar context, see [Mid-Autumn Festival mooncake packaging](/blogs/mid-autumn-festival-packaging-mooncake).

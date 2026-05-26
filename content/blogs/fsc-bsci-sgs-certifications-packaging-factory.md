@@ -49,13 +49,13 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 14 May 2026.
 
-International brand procurement teams — particularly those in the EU and North America — routinely include certification requirements in supplier qualification questionnaires. For luxury packaging sourced from Chinese manufacturers, the five certifications that appear most often are FSC, BSCI, CE, EQS, and SGS. Each covers a different domain: paper sourcing, labour standards, product safety, environmental quality, and independent verification. This page explains what each certification measures, why a brand's procurement team asks for it, and what a certified factory needs to demonstrate to earn and maintain it.
+International brand procurement teams — particularly those in the EU and North America — routinely include certification requirements in supplier qualification questionnaires. For luxury packaging sourced from Chinese manufacturers, the five certifications that appear most often are FSC, BSCI, CE, EQS, and SGS. Each covers a different domain: paper sourcing, labour standards, product safety, environmental quality, and independent verification. This page explains what each certification measures, why a brand's procurement team asks for it, and what a certified factory needs to demonstrate to earn and maintain it. The ESG framing — FSC, BSCI, solar share, transit-grade testing — is laid out in [sustainable luxury packaging](/blogs/sustainable-luxury-packaging-manufacturer).
 
 ## What certifications should a Chinese luxury packaging supplier have?
 
 > A Chinese luxury packaging supplier for US and EU brands should hold FSC (sustainable paper sourcing), BSCI (social compliance audit), and SGS (independent quality verification) at minimum. CE and EQS cover product safety and environmental quality standards respectively. These five certifications address the ESG, ethics, and material-sourcing requirements that most international brand procurement teams now require.
 
-The five certifications are not interchangeable — they cover different audit domains and different risk categories. A brand that only asks for one or two is leaving gaps in its supplier risk profile. The most complete picture comes from reviewing all five.
+The five certifications are not interchangeable — they cover different audit domains and different risk categories. A brand that only asks for one or two is leaving gaps in its supplier risk profile. The most complete picture comes from reviewing all five. For the China-sourcing perspective, see [the packaging supplier ESG audit checklist](/blogs/packaging-supplier-esg-audit-checklist).
 
 ## FSC — Forest Stewardship Council
 

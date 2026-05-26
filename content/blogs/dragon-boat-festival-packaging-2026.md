@@ -52,7 +52,7 @@ By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 23 May 2026. Upda
 
 Sonia Sun has produced Dragon Boat Festival gift packaging at Huamei since founding the company in Zhengzhou in 1992 — across zongzi gift sets, baijiu gifting formats, and festival tea packaging for brands across Henan, Zhejiang, Sichuan, and Guizhou.
 
-Dragon Boat Festival (端午节, Duanwu Jie) falls on the fifth day of the fifth lunar month — 11 June in 2026. [UNESCO-inscribed as intangible cultural heritage](https://ich.unesco.org/en/RL/dragon-boat-festival-00278), it sits alongside Chinese New Year and Mid-Autumn as one of the three major gift-giving occasions in the Chinese calendar. The gift packaging requirement is specific: zongzi (glutinous rice dumplings), baijiu, and premium tea dominate the category, and each has a different structural brief. This guide covers the most common rigid box formats, the festival's visual register, and the production calendar for orders placed now.
+Dragon Boat Festival (端午节, Duanwu Jie) falls on the fifth day of the fifth lunar month — 11 June in 2026. [UNESCO-inscribed as intangible cultural heritage](https://ich.unesco.org/en/RL/dragon-boat-festival-00278), it sits alongside Chinese New Year and Mid-Autumn as one of the three major gift-giving occasions in the Chinese calendar. The gift packaging requirement is specific: zongzi (glutinous rice dumplings), baijiu, and premium tea dominate the category, and each has a different structural brief. This guide covers the most common rigid box formats, the festival's visual register, and the production calendar for orders placed now. The construction context for this sits in [custom luxury rigid box manufacturing](/blogs/custom-luxury-rigid-box-manufacturing), which walks through greyboard, wrapping, and assembly tolerances end-to-end.
 
 ## When should I order packaging for Dragon Boat Festival?
 
@@ -98,4 +98,4 @@ A Duanwu gift brief has three elements not always present in a standard rigid bo
 
 "Huamei holds seventeen curated hot-foil colours in-house, including warm gold, antique gold, and bronzed gold — the standard foil palette for the green-and-gold Duanwu visual register."
 
-Contact at [/begin](/begin) to start a Duanwu 2027 brief. Sample production runs 7–10 days from artwork lock; production follows at 200+ pieces minimum in 15–20 days.
+Contact at [/begin](/begin) to start a Duanwu 2027 brief. Sample production runs 7–10 days from artwork lock; production follows at 200+ pieces minimum in 15–20 days. For the seasonal calendar context, see [Mid-Autumn Festival mooncake packaging](/blogs/mid-autumn-festival-packaging-mooncake).

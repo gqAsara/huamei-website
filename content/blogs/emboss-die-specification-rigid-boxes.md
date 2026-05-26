@@ -51,9 +51,9 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 19 May 2026. Updated 19 May 2026.
 
-Sonia Sun has specified and approved emboss dies for luxury rigid box packaging at Huamei since founding the company in Zhengzhou in 1992 — more than three decades working with single-level, multi-level, and combination foil-emboss dies on coated art, specialty textured, and uncoated wrap papers.
+Sonia Sun has specified and approved emboss dies for luxury rigid box packaging at Huamei since founding the company in Zhengzhou in 1992 — more than three decades working with single-level, multi-level, and combination foil-emboss dies on coated art, specialty textured, and uncoated wrap papers. For the finish-side detail, see [emboss vs deboss](/blogs/emboss-vs-deboss-luxury-packaging).
 
-Embossing is the surface treatment with the most latitude for error in a luxury packaging specification. A foil stamp is either on or off — the mark either prints or it does not. An emboss has variables across four dimensions: depth, die geometry, paper response, and registration to adjacent elements. A brief that specifies "an emboss" without depth, die type, and paper context produces a sample that will likely need two to three revision cycles before it reads as the designer intended. This guide covers the variables, how to specify each, and what the approval sequence looks like in production.
+Embossing is the surface treatment with the most latitude for error in a luxury packaging specification. A foil stamp is either on or off — the mark either prints or it does not. An emboss has variables across four dimensions: depth, die geometry, paper response, and registration to adjacent elements. A brief that specifies "an emboss" without depth, die type, and paper context produces a sample that will likely need two to three revision cycles before it reads as the designer intended. This guide covers the variables, how to specify each, and what the approval sequence looks like in production. For the press-side detail behind foil application, see [hot-foil stamping for luxury packaging](/blogs/hot-foil-stamping-for-luxury-packaging).
 
 ## How do you specify an emboss for luxury packaging?
 

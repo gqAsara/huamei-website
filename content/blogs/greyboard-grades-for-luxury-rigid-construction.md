@@ -54,7 +54,7 @@ geo:
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
 
-The single decision that decides whether a rigid box reads as luxury or as industrial is greyboard thickness. The wrap can be perfect, the foil can be flawless, the closure can be tuned to thirty grams of pull-force, and a buyer can still feel the difference between a 1.5 mm wall and a 2.5 mm wall the moment they pick the box up. This page is the working guide to greyboard grades — what each thickness is used for, where Huamei picks the line for each industry, and how to spec it on a brief without over-engineering.
+The single decision that decides whether a rigid box reads as luxury or as industrial is greyboard thickness. The wrap can be perfect, the foil can be flawless, the closure can be tuned to thirty grams of pull-force, and a buyer can still feel the difference between a 1.5 mm wall and a 2.5 mm wall the moment they pick the box up. This page is the working guide to greyboard grades — what each thickness is used for, where Huamei picks the line for each industry, and how to spec it on a brief without over-engineering. For the structural detail, see [rigid box greyboard weight](/blogs/rigid-box-greyboard-weight-guide).
 
 ## What greyboard is, and why thickness matters
 
