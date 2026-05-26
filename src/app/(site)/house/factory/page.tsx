@@ -3,6 +3,7 @@ import EquipmentCarousel from "@/components/EquipmentCarousel";
 import { EQUIPMENT } from "@/lib/equipment";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { videoObject } from "@/lib/schema/video";
 import "../house.css";
 
 export const metadata = {
@@ -21,6 +22,19 @@ export default function FactoryPage() {
           { name: "The House", path: "/house" },
           { name: "Factory", path: "/house/factory" },
         ])}
+      />
+      <JsonLd
+        data={videoObject({
+          id: "factory-floor",
+          name: "Huamei factory floor — luxury rigid box production",
+          description:
+            "A 2-minute look at Huamei's press floor: Heidelberg and KBA offset presses, hot-foil stamping, registered emboss, hand-assembly. Four factories across Henan, Zhejiang, Sichuan and Guizhou — 22,000 m² of paper and ink, founded 1992.",
+          thumbnailUrl: "/photos/factory-floor.jpg",
+          uploadDate: "2026-05-02T18:12:00+08:00",
+          contentUrl: "/video/factory-floor.mp4",
+          embedPageUrl: "/house/factory",
+          duration: "PT2M5S",
+        })}
       />
       <header className="hs-subcover">
         <div className="kicker">
@@ -42,6 +56,7 @@ export default function FactoryPage() {
           playsInline
           preload="metadata"
           aria-label="Huamei factory floor"
+          title="Huamei factory floor — luxury rigid box production"
         />
       </section>
 
