@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { after } from "next/server";
 import { createClient } from "@sanity/client";
 import { ENGINES, probeEngine, type Engine } from "@/lib/geo/engines";
 import { analyzeCitations, type CompetitorDef } from "@/lib/geo/citations";
@@ -84,11 +85,17 @@ async function processOne(
 /**
  * Fire the next batch in the chain. Uses Bearer CRON_SECRET so the
  * recipient route authorizes server-to-server regardless of how the
- * current invocation was authenticated. Fire-and-forget: we don't
- * await the response; the next batch runs in its own Vercel function
- * invocation with a fresh 5-min budget.
+ * current invocation was authenticated.
+ *
+ * The kickoff fetch is wrapped in `next/server`'s `after()` so Vercel
+ * keeps the outbound TCP connection alive *past* the response. Without
+ * `after()`, cron-triggered runs would freeze the function instance
+ * the moment the handler returns, killing the unawaited fetch before
+ * the TCP handshake completes — manifesting as "first batch ran, no
+ * chain links followed" (the 5/14–5/25 silent-chain pattern; see
+ * ADR-0010).
  */
-async function kickNextBatch(req: NextRequest, nextOffset: number, batchSize: number, engineFilter: string | null) {
+function kickNextBatch(req: NextRequest, nextOffset: number, batchSize: number, engineFilter: string | null) {
   if (!cronSecret) {
     console.warn("[geo-probe] cron secret missing — cannot chain to next batch");
     return;
@@ -99,18 +106,18 @@ async function kickNextBatch(req: NextRequest, nextOffset: number, batchSize: nu
   if (engineFilter) url.searchParams.set("engine", engineFilter);
   url.searchParams.delete("secret");
   url.searchParams.delete("promptId"); // don't carry the single-prompt filter into batches
-  try {
-    // Don't await the body — but do start the request. We can't truly
-    // fire-and-forget on Vercel functions because the function exits
-    // when we return; instead, we use waitUntil semantics by attaching
-    // to the returned promise without blocking on it.
-    fetch(url.toString(), {
-      method: "POST",
-      headers: { Authorization: `Bearer ${cronSecret}` },
-    }).catch((err) => console.warn("[geo-probe] chain fetch error", err));
-  } catch (err) {
-    console.warn("[geo-probe] chain kickoff failed", err);
-  }
+  const target = url.toString();
+  after(async () => {
+    try {
+      const res = await fetch(target, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${cronSecret}` },
+      });
+      console.log(`[geo-probe] chain dispatched offset=${nextOffset}: ${res.status}`);
+    } catch (err) {
+      console.warn("[geo-probe] chain fetch error", err);
+    }
+  });
 }
 
 export async function GET(req: NextRequest) {
@@ -215,8 +222,10 @@ async function run(req: NextRequest) {
   const hasMore = nextOffset < total;
 
   // Fire next batch if there's more and chaining isn't disabled.
+  // kickNextBatch is sync — it registers an `after()` callback that
+  // fires the chain link post-response.
   if (hasMore && chain) {
-    await kickNextBatch(req, nextOffset, batchSize, engineFilter);
+    kickNextBatch(req, nextOffset, batchSize, engineFilter);
   }
 
   return NextResponse.json({
