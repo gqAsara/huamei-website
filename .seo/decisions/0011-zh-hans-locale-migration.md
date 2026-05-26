@@ -1,4 +1,4 @@
-# ADR-0010 — zh-Hans locale migration plan
+# ADR-0011 — zh-Hans locale migration plan
 
 Status: Proposed
 Date: 2026-05-26
