@@ -148,20 +148,43 @@ export default function IndustryPage() {
         </Link>
       </section>
 
-      {/* Context strip */}
+      {/* Context strip — authorized roster only (per .seo/SEO_CONTEXT.md) */}
       <section className="in-context">
         <h2>
           Who we&rsquo;ve worked with. <span className="cn">合作</span>
         </h2>
         <ul className="rlist">
-          <li><span><em>Maison</em> de Parfum — Paris</span><span className="tag">Fragrance &middot; 9 yrs</span></li>
-          <li><span>Shiseido &middot; Ginza</span><span className="tag">Cosmetic &middot; 12 yrs</span></li>
-          <li><span>Piaget &amp; <em>Chaumet</em></span><span className="tag">Jewellery &middot; 6 yrs</span></li>
-          <li><span>Hennessy <em>X.O</em></span><span className="tag">Spirits &middot; annual</span></li>
-          <li><span>Louis Vuitton <em>Leather</em></span><span className="tag">Apparel &middot; 4 yrs</span></li>
-          <li><span>La Prairie</span><span className="tag">Skincare &middot; 8 yrs</span></li>
-          <li><span>Marou <em>Chocolat</em></span><span className="tag">Confection &middot; 3 yrs</span></li>
-          <li><span>TWG &middot; <em>Tea</em> &amp; Tisanes</span><span className="tag">Tea &middot; 5 yrs</span></li>
+          <li><Link href="/volumes/wuliangye-clamshell"><span><em>Wuliangye</em> 五粮液</span><span className="tag">Spirits &middot; baijiu</span></Link></li>
+          <li><Link href="/volumes/yangshao"><span>Yangshao <em>Caitao</em> 仰韶</span><span className="tag">Spirits &middot; baijiu</span></Link></li>
+          <li><Link href="/volumes/dukang"><span>Luoyang <em>Dukang</em> 杜康</span><span className="tag">Spirits &middot; baijiu</span></Link></li>
+          <li><Link href="/volumes/hongxing"><span><em>Red Star</em> Erguotou 红星</span><span className="tag">Spirits &middot; baijiu</span></Link></li>
+          <li><Link href="/volumes/t2-tea"><span>T2 <em>True Brews</em></span><span className="tag">Tea &middot; specialty</span></Link></li>
+          <li><Link href="/volumes/heritage-tea"><span><em>DEEPURE</em> Heritage Tea</span><span className="tag">Tea &middot; gifting</span></Link></li>
+          <li><Link href="/volumes/collgene"><span>Collgene</span><span className="tag">Skincare &middot; carton</span></Link></li>
+          <li><Link href="/volumes/kefumei"><span><em>Kefumei</em> 可复美</span><span className="tag">Skincare &middot; rigid</span></Link></li>
+          <li><Link href="/volumes/glees-grove"><span>Glees Grove <em>Soaps</em></span><span className="tag">Wellness &middot; folding</span></Link></li>
+          <li><Link href="/volumes/man-made-crayon"><span>Man Made <em>Crayon</em></span><span className="tag">Gifting &middot; book-style</span></Link></li>
+        </ul>
+      </section>
+
+      {/* Editorial cluster — internal links to /blogs by sector */}
+      <section className="in-context">
+        <h2>
+          Read on, <em>by industry.</em> <span className="cn">讀</span>
+        </h2>
+        <ul className="rlist">
+          <li><Link href="/blogs/baijiu-packaging-design-2026"><span>Baijiu packaging — <em>structure codes, foils, seasonal calendar</em></span><span className="tag">Spirits</span></Link></li>
+          <li><Link href="/blogs/wine-champagne-gift-box-packaging"><span>Wine &amp; champagne gift box packaging</span><span className="tag">Spirits</span></Link></li>
+          <li><Link href="/blogs/tea-gift-box-manufacturing"><span>Tea gift box manufacturing — <em>structures &amp; finishes</em></span><span className="tag">Tea</span></Link></li>
+          <li><Link href="/blogs/cosmetic-packaging-luxury-rigid-box"><span>Cosmetic packaging — <em>luxury rigid box</em></span><span className="tag">Cosmetic</span></Link></li>
+          <li><Link href="/blogs/skincare-packaging-rigid-box-guide"><span>Skincare packaging — structures, inserts, certifications</span><span className="tag">Skincare</span></Link></li>
+          <li><Link href="/blogs/perfume-box-design-guide"><span>Perfume box design — <em>structure, paper, finish</em></span><span className="tag">Fragrance</span></Link></li>
+          <li><Link href="/blogs/supplement-packaging-rigid-box-guide"><span>Supplement &amp; nutraceutical packaging</span><span className="tag">Wellness</span></Link></li>
+          <li><Link href="/blogs/candle-home-fragrance-packaging-luxury"><span>Candle &amp; home fragrance packaging</span><span className="tag">Wellness</span></Link></li>
+          <li><Link href="/blogs/chinese-new-year-gift-packaging-2027"><span>Chinese New Year packaging — <em>2027 calendar</em></span><span className="tag">Seasonal</span></Link></li>
+          <li><Link href="/blogs/mid-autumn-festival-packaging-mooncake"><span>Mid-Autumn festival packaging — <em>mooncake gift box</em></span><span className="tag">Seasonal</span></Link></li>
+          <li><Link href="/blogs/jewelry-watch-rigid-box-packaging"><span>Jewelry &amp; watch rigid box packaging</span><span className="tag">Gifting</span></Link></li>
+          <li><Link href="/blogs/luxury-packaging-dtc-brands"><span>Luxury packaging for DTC brands</span><span className="tag">DTC</span></Link></li>
         </ul>
       </section>
 

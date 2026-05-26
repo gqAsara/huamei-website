@@ -277,6 +277,80 @@ export default function CraftPage() {
         </div>
       </section>
 
+      {/* Editorial — internal links from /craft into the /blogs cluster */}
+      <section className="cr-related">
+        <div className="head">
+          <h3>Read on, <em>by craft.</em></h3>
+          <Link className="more" href="/blogs">All blogs →</Link>
+        </div>
+        <div className="cr-grid">
+          <Link className="cr-card" href="/blogs/hot-foil-stamping-for-luxury-packaging">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/surfaces/hot-foil.jpg')" }}>
+              <span className="rn">i.</span>
+            </div>
+            <div className="meta"><span>Surface</span><span>Foil</span></div>
+            <h4>Hot-foil stamping for luxury packaging</h4>
+            <div className="tag">17 colours &middot; in-house</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/registered-emboss-foil-tolerance">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/surfaces/emboss.jpg')" }}>
+              <span className="rn">ii.</span>
+            </div>
+            <div className="meta"><span>Surface</span><span>Emboss</span></div>
+            <h4>Registered emboss-and-foil tolerance</h4>
+            <div className="tag">±0.1 mm &middot; spec guide</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/greyboard-grades-for-luxury-rigid-construction">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/structures/rigid.jpg')" }}>
+              <span className="rn">iii.</span>
+            </div>
+            <div className="meta"><span>Structure</span><span>Material</span></div>
+            <h4>Greyboard grades for luxury rigid box</h4>
+            <div className="tag">1.5 – 3.0 mm core</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/magnetic-pull-force-explained">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/structures/magnetic.jpg')" }}>
+              <span className="rn">iv.</span>
+            </div>
+            <div className="meta"><span>Structure</span><span>Closure</span></div>
+            <h4>Magnetic closure box — pull-force</h4>
+            <div className="tag">6 – 50 g at 2,800 Gauss</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/luxury-packaging-lamination-types">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/surfaces/soft-touch.jpg')" }}>
+              <span className="rn">v.</span>
+            </div>
+            <div className="meta"><span>Surface</span><span>Lamination</span></div>
+            <h4>Lamination types compared</h4>
+            <div className="tag">matte &middot; gloss &middot; soft-touch</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/spot-uv-luxury-rigid-box-specification">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/surfaces/spot-uv.jpg')" }}>
+              <span className="rn">vi.</span>
+            </div>
+            <div className="meta"><span>Surface</span><span>Spot UV</span></div>
+            <h4>Spot UV on luxury rigid boxes</h4>
+            <div className="tag">design spec &middot; substrate</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/specialty-paper-rigid-box-wrapping">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/structures/folding.jpg')" }}>
+              <span className="rn">vii.</span>
+            </div>
+            <div className="meta"><span>Material</span><span>Paper</span></div>
+            <h4>Specialty paper for rigid box wrapping</h4>
+            <div className="tag">coated &middot; textured &middot; specialty</div>
+          </Link>
+          <Link className="cr-card" href="/blogs/interior-lining-luxury-rigid-boxes">
+            <div className="ph" style={{ backgroundImage: "url('/photos/generated/structures/inserts.jpg')" }}>
+              <span className="rn">viii.</span>
+            </div>
+            <div className="meta"><span>Material</span><span>Interior</span></div>
+            <h4>Interior lining materials — velvet, flocked, textile</h4>
+            <div className="tag">lining &middot; tray inserts</div>
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="cr-cta">
         <div className="k">Begin with craft</div>
