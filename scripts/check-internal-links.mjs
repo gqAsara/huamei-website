@@ -14,13 +14,28 @@ function* walk(dir) {
   }
 }
 
-// Collect known routes from app/ (very rough — looks for page.tsx / page.mdx)
+// Collect known routes from src/app/ (looks for page.tsx / page.mdx).
+// Dynamic segments like [slug] are recorded as prefix patterns so that
+// /craft/magnetic, /volumes/yangshao, etc. resolve against /craft/[slug].
 const routes = new Set(['/']);
-for (const f of walk('app')) {
+const dynamicPrefixes = new Set(); // e.g. "/craft" for /craft/[slug]/page.tsx
+for (const f of walk('src/app')) {
   if (f.endsWith('page.tsx') || f.endsWith('page.mdx')) {
-    let route = '/' + f.replace(/^app\//, '').replace(/\/page\.(tsx|mdx)$/, '').replace(/\/\(.*?\)/g, '');
-    route = route.replace(/\/\[lang\]/, ''); // strip locale segment for relative checks
-    routes.add(route || '/');
+    // Strip src/app prefix and page file suffix, then remove route groups
+    // (e.g. (site)) from every segment, then rebuild the path.
+    const segments = f
+      .replace(/^src\/app\//, '')
+      .replace(/\/page\.(tsx|mdx)$/, '')
+      .split('/')
+      .filter(s => s && !s.startsWith('(') && s !== '[lang]');
+    let route = '/' + segments.join('/');
+    route = route || '/';
+    if (route.includes('[')) {
+      // Dynamic route — record the static prefix so /prefix/anything resolves
+      dynamicPrefixes.add(route.replace(/\/\[.*/, ''));
+    } else {
+      routes.add(route);
+    }
   }
 }
 
@@ -32,7 +47,9 @@ for (const f of walk('content')) {
   let m;
   while ((m = linkRe.exec(src))) {
     const link = m[1].split('#')[0].split('?')[0].replace(/\/$/, '');
-    if (!routes.has(link) && !routes.has(link + '/') && !link.startsWith('http')) {
+    // Static route match or dynamic prefix match (/craft/magnetic → /craft)
+    const isDynamic = [...dynamicPrefixes].some(p => link === p || link.startsWith(p + '/'));
+    if (!routes.has(link) && !routes.has(link + '/') && !isDynamic && !link.startsWith('http')) {
       missing.add(`${f}: ${link}`);
     }
   }
