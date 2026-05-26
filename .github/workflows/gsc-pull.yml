@@ -50,12 +50,13 @@ jobs:
           git config user.name "huamei-gsc-bot"
           git config user.email "huamei-gsc-bot@users.noreply.github.com"
 
-          # Only commit if there's an actual change
-          if ! git diff --quiet -- .seo/reports/; then
+          # Stage first so the check below catches NEW files (not just diffs
+          # in already-tracked ones). `git diff --quiet` alone misses
+          # untracked files — that was the silent bug 5/18-5/25.
+          git add .seo/reports/gsc-*.jsonl
+          if ! git diff --cached --quiet; then
             today=$(date -u +%Y-%m-%d)
-            git add .seo/reports/gsc-*.jsonl
             git commit -m "chore: GSC pull $today (auto)"
-            # Rebase against any commits that landed since checkout
             git pull --rebase origin main
             git push origin main
             echo "✓ GSC snapshot pushed for $today"
