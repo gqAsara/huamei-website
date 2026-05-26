@@ -1,0 +1,263 @@
+/* /house/standards — international standards & sustainable supply chain
+   Reuses hs-wrap / hs-subcover / hs-section-head from ../house.css */
+
+.st-wrap { /* hs-wrap base + page hooks */ }
+
+/* Lede */
+.st-lede {
+  max-width: 760px;
+  margin: 48px auto 96px;
+}
+.st-lede .byline {
+  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--ink-3);
+  margin: 0 0 28px;
+  padding-bottom: 14px;
+  border-bottom: .5px solid var(--rule-soft);
+}
+.st-lede .lede-q {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(28px, 3vw, 38px); line-height: 1.18; letter-spacing: -.012em;
+  color: var(--ink);
+  margin: 0 0 18px; text-wrap: balance;
+}
+.st-lede .lede-a {
+  font-family: var(--font-body); font-size: 18px; line-height: 1.7;
+  color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
+}
+.st-lede .lede-a em { font-style: italic; color: var(--foil-gold-2); font-weight: 500; }
+.st-lede .lede-bio {
+  font-family: var(--font-body); font-style: italic;
+  font-size: 15px; line-height: 1.65;
+  color: var(--ink-3); margin: 24px 0 0;
+  padding-top: 18px; border-top: .5px solid var(--rule-soft);
+}
+
+/* Generic section copy */
+.st-section {
+  max-width: 880px;
+  margin: 0 auto 88px;
+}
+.st-section > p {
+  font-family: var(--font-body); font-size: 17px; line-height: 1.72;
+  color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
+}
+.st-section > p em { font-style: italic; color: var(--foil-gold-2); }
+.st-section .st-answer {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 24px); line-height: 1.45;
+  color: var(--ink); margin-bottom: 24px; text-wrap: balance;
+}
+.st-section .st-answer em { font-style: italic; color: var(--foil-gold-2); }
+
+/* Sustainability — quick-fact grid */
+.st-facts {
+  margin: 36px 0 0;
+  padding: 32px 0 0;
+  border-top: .5px solid var(--rule-soft);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  list-style: none;
+}
+.st-facts li {
+  display: flex; flex-direction: column; gap: 6px;
+  border-left: .5px solid var(--rule-soft);
+  padding-left: 20px;
+}
+.st-facts li:first-child { border-left: 0; padding-left: 0; }
+.st-facts .n {
+  font-family: var(--font-display); font-weight: 400; font-size: 40px;
+  line-height: .95; color: var(--ink); letter-spacing: -.02em;
+}
+.st-facts .l {
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--foil-gold);
+}
+.st-facts .s {
+  font-family: var(--font-body); font-style: italic; font-size: 13.5px;
+  color: var(--ink-3); line-height: 1.45;
+}
+
+/* Transit-grade test table */
+.st-tests {
+  margin: 32px 0 32px;
+  border-top: 1px solid var(--foil-gold);
+}
+.st-tests-head {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.6fr 1.6fr;
+  gap: 20px;
+  padding: 14px 0 12px;
+  border-bottom: .5px solid var(--rule);
+  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--foil-gold);
+}
+.st-test-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.6fr 1.6fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: .5px solid var(--rule-soft);
+  scroll-margin-top: 96px;
+}
+.st-test-name {
+  font-family: var(--font-display); font-weight: 400; font-size: 18px;
+  line-height: 1.25; color: var(--ink); letter-spacing: -.005em;
+}
+.st-test-th {
+  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  color: var(--foil-gold-2); line-height: 1.35;
+}
+.st-test-sim,
+.st-test-prev {
+  font-family: var(--font-body); font-size: 14px; line-height: 1.55;
+  color: var(--ink-2); text-wrap: pretty;
+}
+
+.st-pull {
+  margin: 32px 0 0 !important;
+  padding: 0 0 0 28px !important;
+  border-left: 2px solid var(--foil-gold);
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: clamp(20px, 2.2vw, 26px) !important; line-height: 1.32 !important;
+  color: var(--ink) !important;
+  max-width: 56ch;
+}
+
+/* International certifications — mini cards */
+.st-certs {
+  margin: 32px 0 24px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+  border-top: 1px solid var(--foil-gold);
+  border-bottom: .5px solid var(--rule-soft);
+}
+.st-cert {
+  padding: 24px 28px;
+  border-bottom: .5px solid var(--rule-soft);
+  border-right: .5px solid var(--rule-soft);
+  scroll-margin-top: 96px;
+}
+.st-cert:nth-child(2n) { border-right: 0; }
+.st-cert:nth-last-child(-n+2) { border-bottom: 0; }
+.st-cert header {
+  display: flex; flex-direction: column; gap: 4px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: .5px dotted var(--ink-5);
+}
+.st-cert h4 {
+  margin: 0;
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 26px; line-height: 1; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.st-cert-full {
+  font-family: var(--font-body); font-style: italic;
+  font-size: 13px; color: var(--ink-3); line-height: 1.4;
+}
+.st-cert dl {
+  margin: 0; display: grid; grid-template-columns: 1fr; gap: 10px;
+}
+.st-cert dt {
+  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--foil-gold);
+}
+.st-cert dd {
+  margin: 0 0 6px;
+  font-family: var(--font-body); font-size: 14px; line-height: 1.55;
+  color: var(--ink-2); text-wrap: pretty;
+}
+.st-cert dd a {
+  color: var(--ink); text-decoration: none;
+  border-bottom: .5px solid var(--rule);
+  transition: color var(--dur) var(--ease-paper),
+              border-color var(--dur) var(--ease-paper);
+}
+.st-cert dd a:hover { color: var(--foil-gold-2); border-color: var(--foil-gold-2); }
+
+.st-foot-link {
+  font-family: var(--font-body); font-style: italic;
+  font-size: 14.5px; line-height: 1.6;
+  color: var(--ink-3); margin: 0 !important;
+}
+.st-foot-link a {
+  color: var(--ink); text-decoration: none;
+  border-bottom: .5px solid var(--rule);
+}
+.st-foot-link a:hover { color: var(--foil-gold-2); border-color: var(--foil-gold-2); }
+
+/* Buyer bullets */
+.st-buyer {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid; grid-template-columns: 1fr; gap: 0;
+}
+.st-buyer li {
+  padding: 16px 0;
+  border-bottom: .5px solid var(--rule-soft);
+  font-family: var(--font-body); font-size: 15.5px; line-height: 1.6;
+  color: var(--ink-2); text-wrap: pretty;
+}
+.st-buyer li:first-child { border-top: 1px solid var(--foil-gold); }
+.st-buyer li strong {
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: 17px; color: var(--ink); margin-right: 10px;
+  letter-spacing: -.005em;
+}
+.st-buyer li a {
+  color: var(--ink); text-decoration: none;
+  border-bottom: .5px solid var(--rule);
+}
+.st-buyer li a:hover { color: var(--foil-gold-2); border-color: var(--foil-gold-2); }
+
+/* CTA */
+.st-cta {
+  margin: 16px -48px 0;
+  padding: 72px 56px;
+  background: var(--noir); color: var(--paper-white);
+  text-align: center;
+}
+.st-cta h4 {
+  margin: 0 auto 14px;
+  max-width: 28ch;
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 40px); line-height: 1.15;
+  color: var(--paper-white); text-wrap: balance;
+}
+.st-cta h4 em { font-style: italic; color: var(--foil-gold-hi); }
+.st-cta p {
+  margin: 0 auto 28px;
+  max-width: 56ch;
+  font-family: var(--font-body); font-size: 14.5px; line-height: 1.6;
+  color: var(--paper); opacity: .8;
+}
+.st-cta-link {
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--paper-white);
+  border: .5px solid var(--paper-white);
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: background var(--dur) var(--ease-paper),
+              color var(--dur) var(--ease-paper);
+}
+.st-cta-link:hover {
+  background: var(--paper-white); color: var(--ink);
+}
+
+@media (max-width: 960px) {
+  .st-facts { grid-template-columns: repeat(2, 1fr); }
+  .st-facts li:nth-child(3) { border-left: 0; padding-left: 0; }
+  .st-tests-head,
+  .st-test-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .st-tests-head { display: none; }
+  .st-test-row { padding: 18px 0; }
+  .st-test-th::before { content: "Threshold — "; color: var(--foil-gold); font-style: normal; }
+  .st-test-sim::before { content: "Simulates — "; color: var(--foil-gold); }
+  .st-test-prev::before { content: "Prevents — "; color: var(--foil-gold); }
+  .st-certs { grid-template-columns: 1fr; }
+  .st-cert { border-right: 0; }
+  .st-cert:nth-last-child(2) { border-bottom: .5px solid var(--rule-soft); }
+}

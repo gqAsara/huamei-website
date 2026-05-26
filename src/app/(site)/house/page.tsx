@@ -54,6 +54,18 @@ export default function HousePage() {
           </p>
           <span className="arrow">View →</span>
         </Link>
+        <Link href="/house/standards">
+          <span className="k">iii½. &middot; 標準</span>
+          <h3>
+            International <em>standards.</em>
+          </h3>
+          <p className="lede">
+            Over 80% solar, transit-grade testing at +50 °C / -30 °C, and BSCI, CE,
+            EQS, FSC, SGS, ISO 9001 / 14001 / 45001 on file — the international
+            supply-chain posture.
+          </p>
+          <span className="arrow">Read →</span>
+        </Link>
         <Link href="/house/people">
           <span className="k">iv. &middot; 人才</span>
           <h3>

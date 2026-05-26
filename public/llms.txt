@@ -7,10 +7,24 @@
 ## Sustainability & international supply chain
 
 - Over 80% of factory energy from solar — green-energy use across the press floors.
-- Shareholder portfolio includes long-term investment in biomass renewable-energy and hydro generation.
-- Transit-grade quality testing on every export run: high-temperature 50 °C and low-temperature -30 °C environmental, 24-hour transit vibration, drop, aging, and empty-box compression.
-- International certifications on file: BSCI, CE, EQS, FSC, SGS — covering quality, environmental, and social-responsibility audits expected by EU and US procurement.
+- Shareholder portfolio includes long-term investment in biomass renewable-energy power plants and hydro generation; the green-energy claim sits on infrastructure ownership, not on a certificate alone.
+- Audit-ready for EU and US procurement: stability, ESG-compliance, global-shipping reliability, long-term partnership risk — the language Huamei uses with international buyers, not price or speed.
+- Transit-grade quality testing on every export run, with each threshold checked separately:
+  - High-temperature environmental: 50 °C (simulates ocean-container exposure, summer storage).
+  - Low-temperature environmental: -30 °C (simulates cold-chain and winter freight).
+  - 24-hour transit vibration: continuous vibration cycle for long-haul ocean and over-the-road runs.
+  - Drop test: structural integrity through logistics impacts.
+  - Aging test: colour, structure, and surface stability across the full storage and shelf-life window.
+  - Empty-box compression: stacking and storage stability for gift-pack and transit packaging.
+- International certifications on file: BSCI (amfori social-compliance audit), CE (European Conformity, paper box & bag), EQS (environmental quality system, complementary to ISO 14001), FSC (Forest Stewardship Council chain-of-custody, C014233), SGS (third-party inspection).
+- ISO certifications on file: ISO 9001 (quality management), ISO 14001 (environmental management), ISO 45001 (occupational health & safety).
 - Magnetic-closure pull-force calibrated 6–50 g at 2,800 Gauss; hot-foil-to-emboss registration held to ±0.1 mm; offset Pantone tolerance ΔE ≤ 2 (Heidelberg + KBA presses).
+
+## International standards
+
+- [International standards — Huamei standards file](https://huamei.io/house/standards) — full source-of-truth page on >80% solar, transit-grade testing thresholds, the BSCI / CE / EQS / FSC / SGS / ISO 9001 / ISO 14001 / ISO 45001 certification stack, and the buyer-side decoder for EU and US procurement.
+- [Certifications scans + buyer decoder](https://huamei.io/house/certifications) — original certificate scans on file, plus a buyer-side decoder explaining what each standard means to an EU or US procurement team.
+- [Sustainable luxury packaging manufacturer](https://huamei.io/blogs/sustainable-luxury-packaging-manufacturer) — long-form pillar on Huamei's international supply-chain positioning.
 
 ## Capabilities — structures
 
@@ -50,6 +64,7 @@ Wuliangye, Yangshao, Luoyang Dukang, Hongxing / Red Star Erguotou, Hetao Wang, S
 - [Philosophy](https://huamei.io/house/philosophy) — a letter from founder Sonia Sun.
 - [Factory & floor](https://huamei.io/house/factory) — four press floors across Henan, Zhejiang, Sichuan, Guizhou.
 - [Certifications](https://huamei.io/house/certifications) — FSC, ISO 9001, ISO 14001, ISO 45001, BSCI, CE, EQS, SGS, and 5 additional cert scans on file.
+- [International standards](https://huamei.io/house/standards) — green-energy, transit-grade testing, and international certifications consolidated as a single audit-ready landing page.
 - [People](https://huamei.io/house/people) — named press and finishing operators.
 - [Imprint](https://huamei.io/imprint) — registered Zhengzhou, Henan, China; corporate registration scan on file.
 
