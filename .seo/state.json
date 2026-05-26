@@ -3,9 +3,9 @@
   "version": 3,
   "currentPhase": 1,
   "phaseName": "Technical Hygiene",
-  "lastShipped": "https://github.com/gqAsara/huamei-website/pull/23",
-  "nextAction": "Four PRs landed 2026-05-11 evening: #20 (commercial upgrade 19 craft+industry pages), #21 (hub-and-spoke cross-links from commercial → blogs), #22 (/industry Service schema + commercial index metadata), #23 (cluster #7 soft-touch vs spot-UV). Plus processing-time correction sweep (no '+1 week for hot-foil' style claims). Site at 3 pillars + 7 clusters = 10 blog posts; 19 commercial landing pages with FAQ + trust line + cross-links; all 4 index pages with commercial metadata. Sitemap clean (218 image entries). IndexNow refreshed across the batch. Next moves blocked on founder: GSC data sharing; Pillar 3 FSC/EUDR data; LinkedIn page (for Org.sameAs + outreach unblock); rotate SANITY_WRITE_TOKEN.",
-  "lastUpdated": "2026-05-11T18:55:00Z",
+  "lastShipped": "https://github.com/gqAsara/huamei-website/commit/9674703f7b80f966eaea64dcab9b2e73b22012a1",
+  "nextAction": "Pillar 3 (Sustainable luxury packaging manufacturer) shipped 2026-05-26 — closes the four-pillar set (P1 rigid box, P2 hot-foil, P3 sustainability, P4 China manufacturer). Pillar 3 cites the 2026-05-13 international-positioning data verbatim (>80% solar, biomass/hydro shareholder investment, 50 °C / -30 °C / 24h transit / drop / aging / empty-box compression tests, BSCI/CE/EQS/FSC/SGS). Honesty section flags three remaining gaps: per-SKU PCF, full LCA, EUDR data pack. IndexNow pinged. Next moves still blocked on founder: GSC data sharing; LinkedIn page (for Org.sameAs + outreach unblock); rotate SANITY_WRITE_TOKEN; founder review of FSC chain-of-custody licence code and recycled-content % claims (currently said 'available on request').",
+  "lastUpdated": "2026-05-26T07:06:11Z",
   "phase0Tasks": {
     "gsc": "done",
     "ga4": "done",
@@ -32,7 +32,7 @@
   "phase3Pillars": {
     "p1_rigid_box_manufacturing": "published",
     "p2_hot_foil_emboss_finishing": "published",
-    "p3_sustainable_luxury_packaging": "blocked",
+    "p3_sustainable_luxury_packaging": "published",
     "p4_china_packaging_manufacturer": "published"
   },
   "metrics": {
@@ -51,7 +51,7 @@
     "Pillar 1 hero image (1600×900) not yet on disk at /public/blogs/custom-luxury-rigid-box-manufacturing/hero.jpg — page renders without it; founder shared a tea-box photo 2026-05-04 but the screenshot tmp path was wiped before save; founder to re-upload to ~/Desktop or ~/Downloads",
     "Pillar 4 hero image (Serenjoy box photo) not yet on disk at /public/blogs/working-with-a-chinese-luxury-packaging-manufacturer/hero.jpg — page renders without it; founder to upload",
     "GSC URL Inspection: founder ran out of daily quota 2026-05-05 after submitting ~10 of 15 /craft/* URLs (got to /craft/spot-uv); remaining /craft/offset + /craft/wraps to submit when quota resets",
-    "Pillar 3 (Sustainability) blocked until founder provides FSC + recycled-content + EUDR data",
+    "Pillar 3 (Sustainable luxury packaging manufacturer) shipped 2026-05-26 at commit 9674703 — open follow-ups: founder review of FSC chain-of-custody licence code and recycled-content % claim (currently scoped as 'available on request'); per-SKU PCF and full LCA still to commission; EUDR data pack still in build",
     "Site accessibility baseline 0.86 — dedicated audit branch needed before Lighthouse threshold can be raised to 0.90",
     "Phase 1 Commit #4 (hreflang) blocked per ADR 0003 until zh-Hans content is ready",
     "Baseline GEO score blocked until GSC has ~7-14 days of impression data for non-zero traffic input",
