@@ -166,3 +166,8 @@
 2026-05-26T11:30:00+08:00	daily-routine	publish	https://huamei.io/blogs/custom-gift-box-guide — Custom gift box manufacturing: MOQ, lead times, and what to include in a production brief
 2026-05-26T12:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/paper-gift-box-guide — Paper gift box: substrates, finishes, and how paper choice shapes a packaging brief
 2026-05-26T15:01:00.000Z	seo-ops	daily-audit	1 commit pushed (check-internal-links.mjs fix: was walking app/ instead of src/app/ causing 698 false-positive broken-link reports; now correctly resolves all 698 as valid routes); 0 GSC quick-wins (data too thin — 22 rows, no near-miss meets ≥5 impression threshold); IndexNow 403 — Bing host-not-allowlisted (founder to add huamei.io in Bing Webmaster Tools); all 5 yesterday posts passed quality/banned-phrase check
+2026-05-27T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/custom-mailer-boxes — Custom mailer boxes: structures, print specs, and MOQ guide for DTC brands
+2026-05-27T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/custom-printed-gift-boxes — Custom printed gift boxes: offset, foil, and emboss specs for brand packaging
+2026-05-27T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/wig-box-packaging — Wig box packaging: structures, interior sizing, and custom print guide for hair brands
+2026-05-27T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/custom-luxury-gift-box — Custom luxury gift boxes: materials, closures, and how to order from a manufacturer
+2026-05-27T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-spirits-gift-box-manufacturer — Premium spirits gift box manufacturer: what to evaluate, how to brief, what Huamei delivers
