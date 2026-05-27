@@ -598,27 +598,27 @@ function titleize(slug: string): string {
 // to investigative /blogs/* content. Slug must match a file in content/blogs.
 const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   // Structures
-  rigid: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction", "rigid-box-vs-folding-carton"],
-  magnetic: ["magnetic-pull-force-explained", "custom-luxury-rigid-box-manufacturing"],
-  drawer: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
-  folding: ["rigid-box-vs-folding-carton", "moq-realities-luxury-packaging"],
-  book: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
-  inserts: ["custom-luxury-rigid-box-manufacturing"],
-  shoppers: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
+  rigid: ["custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
+  magnetic: ["magnetic-closure-box-guide", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-luxury-gift-box"],
+  drawer: ["drawer-box-vs-magnetic-closure-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
+  folding: ["folding-gift-box-guide", "rigid-box-vs-folding-carton", "moq-realities-luxury-packaging"],
+  book: ["rigid-box-lid-styles-hinged-lift-off-book", "luxury-unboxing-experience-design", "custom-luxury-rigid-box-manufacturing"],
+  inserts: ["box-inserts-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
+  shoppers: ["custom-luxury-paper-bag", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
   bespoke: ["moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
   // Surfaces
-  "hot-foil": ["hot-foil-stamping-for-luxury-packaging", "hot-foil-vs-cold-foil-cost-and-finish", "registered-emboss-foil-tolerance"],
+  "hot-foil": ["hot-foil-stamping-for-luxury-packaging", "hot-foil-colour-selection-luxury-packaging", "registered-emboss-foil-tolerance"],
   emboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
   deboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging"],
-  "soft-touch": ["soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
-  "spot-uv": ["soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
-  offset: ["hot-foil-stamping-for-luxury-packaging"],
+  "soft-touch": ["soft-touch-vs-spot-uv-when-each-is-right", "spot-uv-luxury-rigid-box-specification", "hot-foil-stamping-for-luxury-packaging"],
+  "spot-uv": ["spot-uv-luxury-rigid-box-specification", "soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
+  offset: ["screen-printing-vs-foil-stamping-luxury-packaging", "soy-ink-offset-printing-luxury-packaging", "hot-foil-stamping-for-luxury-packaging"],
   wraps: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
   // Industries
-  cosmetic: ["custom-luxury-rigid-box-manufacturing", "magnetic-pull-force-explained", "greyboard-grades-for-luxury-rigid-construction"],
-  spirits: ["custom-luxury-rigid-box-manufacturing", "working-with-a-chinese-luxury-packaging-manufacturer", "greyboard-grades-for-luxury-rigid-construction"],
-  seasonal: ["custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
-  wellness: ["moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
+  cosmetic: ["custom-cosmetic-packaging-box", "perfume-box-design-guide", "custom-luxury-gift-box"],
+  spirits: ["premium-spirits-gift-box-manufacturer", "baijiu-packaging-design-2026", "working-with-a-chinese-luxury-packaging-manufacturer"],
+  seasonal: ["qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
+  wellness: ["supplement-packaging-rigid-box-guide", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
 };
 
 // Read post titles + descriptions lazily from content/blogs at module init
