@@ -85,7 +85,7 @@ The insert matters as much as the box dimensions. A tissue paper liner distribut
 
 ## What print and finish options work on wig box packaging?
 
-Print on a wig box exterior follows the same offset process as any rigid gift box: Heidelberg and KBA press, FOGRA colour profile, paper wrap applied flat before assembly. The exterior surface area on a wig box is larger than a typical cosmetics box due to the box depth — which means the exterior is a meaningful brand canvas.
+Print on a wig box exterior follows the same offset process as any rigid gift box: [Heidelberg](https://www.heidelberg.com/) and [KBA](https://www.kba.com/en/) press, [FOGRA](https://www.fogra.org/en/) colour profile, paper wrap applied flat before assembly. The exterior surface area on a wig box is larger than a typical cosmetics box due to the box depth — which means the exterior is a meaningful brand canvas.
 
 Surface finish options:
 

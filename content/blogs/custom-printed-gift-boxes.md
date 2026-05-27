@@ -65,7 +65,7 @@ The [craft/offset printing](/craft/offset) page covers the full colour print pro
 
 ## What print methods are used on custom printed gift boxes?
 
-Offset lithography is the primary print method for gift boxes at Huamei. Offset runs on Heidelberg and KBA presses with colour profiles built to [FOGRA](https://www.fogra.org/en/) standards — the German print-technology research institute whose profiles are the industry standard for consistent colour reproduction. FOGRA-profiled offset print on a gift box wrap delivers the same Pantone match across a 10,000-unit run that it delivered on the proof stage sample.
+Offset lithography is the primary print method for gift boxes at Huamei. Offset runs on [Heidelberg](https://www.heidelberg.com/) and [KBA](https://www.kba.com/en/) presses with colour profiles built to [FOGRA](https://www.fogra.org/en/) standards — the German print-technology research institute whose profiles are the industry standard for consistent colour reproduction. FOGRA-profiled offset print on a gift box wrap delivers the same Pantone match across a 10,000-unit run that it delivered on the proof stage sample.
 
 The alternative to offset is digital print, which is faster and has no minimum order. Digital is used for sample stages, short runs, and variable-data applications. Production runs at 200+ pieces almost always shift to offset for better colour density, surface finish quality, and per-unit economics.
 
@@ -73,7 +73,7 @@ For the outer wrap, the substrate choice directly affects print output:
 
 - **Coated art paper (120–200 gsm).** High surface brightness; the best substrate for photographic images and fine halftone detail. Slightly cooler to the touch than textured alternatives.
 - **Uncoated / textured paper.** Lower surface brightness but warmer tactile quality. Ink absorbs slightly differently; colour is richer and more saturated.
-- **Specialty paper (Gmund, Fedrigoni).** Named-mill papers carry their own surface character — texture, weight, natural fibre content. These set the premium tier and are available in Huamei's eighty-paper library.
+- **Specialty paper ([Gmund](https://www.gmund.com/), [Fedrigoni](https://www.fedrigoni.com/)).** Named-mill papers carry their own surface character — texture, weight, natural fibre content. These set the premium tier and are available in Huamei's eighty-paper library.
 
 ## What surface finishes go on a custom printed gift box?
 

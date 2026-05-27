@@ -75,7 +75,7 @@ Custom mailer boxes are built on one of three structural platforms, each suited 
 
 ## What print and finish options are available on custom mailer boxes?
 
-Print on a custom mailer box at Huamei runs offset on Heidelberg and KBA presses, with colour profiles built to FOGRA standards for consistent reproduction across runs. The exterior wrap is printed flat before assembly, which allows full-bleed design without structural constraints.
+Print on a custom mailer box at Huamei runs offset on [Heidelberg](https://www.heidelberg.com/) and [KBA](https://www.kba.com/en/) presses, with colour profiles built to [FOGRA](https://www.fogra.org/en/) standards for consistent reproduction across runs. The exterior wrap is printed flat before assembly, which allows full-bleed design without structural constraints.
 
 Surface finishes available on a custom mailer box:
 
