@@ -1,23 +1,27 @@
 ---
-brief_id: "auto-2026-05-26-009-mailer-box"
-generated_at: "2026-05-26T12:17:25.609Z"
+skipped: "already covered by luxury-packaging-defined.md (primaryKeyword: luxury packaging)"
+---
+
+---
+brief_id: "auto-2026-05-25-009-luxury-packaging"
+generated_at: "2026-05-25T12:17:11.114Z"
 rank: 9
-target_query: "Mailer box"
+target_query: "luxury packaging"
 opportunity_type: "high_volume_gap"
-seo_score: 64
+seo_score: 87.5
 intent: "commercial"
-stage: "evaluation"
-priority: 3
-volume_monthly: 12100
-competition: 1
-cpc_usd: 1.82
-notes: "xlsx; secondary capability"
+stage: "comparison"
+priority: 1
+volume_monthly: 590
+competition: 0.99
+cpc_usd: 7.98
+notes: "590 monthly, comp 99 — brand-defining term, hard rank"
 has_article: false
 ---
 
-# Brief: Mailer box
+# Brief: luxury packaging
 
-**Why this one (auto-scored 64):** 12,100 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 87.5):** 590 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -37,7 +41,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is Mailer box?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is luxury packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

@@ -1,23 +1,27 @@
 ---
-brief_id: "auto-2026-05-26-010-corrugated-box"
-generated_at: "2026-05-26T12:17:25.609Z"
-rank: 10
-target_query: "Corrugated Box"
+skipped: "already covered by cosmetic-packaging-luxury-rigid-box.md and custom-cosmetic-packaging-box.md"
+---
+
+---
+brief_id: "auto-2026-05-25-007-cosmetic-packaging-box"
+generated_at: "2026-05-25T12:17:11.113Z"
+rank: 7
+target_query: "cosmetic packaging box"
 opportunity_type: "high_volume_gap"
-seo_score: 62.7
+seo_score: 93.2
 intent: "commercial"
 stage: "evaluation"
-priority: 3
-volume_monthly: 9900
-competition: 1
-cpc_usd: 20.85
-notes: "xlsx; secondary capability"
+priority: 1
+volume_monthly: 320
+competition: 0.58
+cpc_usd: 6.94
+notes: "xlsx; cosmetic + perfume is core sector"
 has_article: false
 ---
 
-# Brief: Corrugated Box
+# Brief: cosmetic packaging box
 
-**Why this one (auto-scored 62.7):** 9,900 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 93.2):** 320 monthly searches, no article yet, commercial intent
 
 ## Voice + structure guardrails
 
@@ -26,6 +30,14 @@ Follow `.seo/SEO_CONTEXT.md` Phase-2 GEO rules: every H2 leads with a declarativ
 ## What to anchor on
 
 Buyer-facing register. Lead the article with the load-bearing answer (MOQ, lead time, capability range). Tie to Huamei's published facts: 1992 founding, four-province footprint, 200+ MOQ floor, 7–10 day samples, 15–20 day production, BSCI/CE/EQS/FSC/SGS certifications, >80% solar share. End with a clear `/begin` CTA.
+
+## Related queries (use as H2 question forms)
+
+- makeup subscription boxes
+- monthly makeup box
+- makeup sample box
+- custom cosmetic packaging
+- cosmetic packaging for small business
 
 ## Recommended internal links
 
@@ -37,7 +49,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is Corrugated Box?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is cosmetic packaging box?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

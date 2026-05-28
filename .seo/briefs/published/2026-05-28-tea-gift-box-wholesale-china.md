@@ -1,23 +1,20 @@
 ---
-brief_id: "auto-2026-05-25-008-paper-boxes"
-generated_at: "2026-05-25T12:17:11.113Z"
-rank: 8
-target_query: "paper boxes"
-opportunity_type: "high_volume_gap"
-seo_score: 88.6
+brief_id: "auto-2026-05-28-007-tea-gift-box-wholesale-china"
+generated_at: "2026-05-28T12:18:39.988Z"
+rank: 7
+target_query: "tea gift box wholesale china"
+opportunity_type: "long_tail_gap"
+seo_score: 28.6
 intent: "commercial"
-stage: "evaluation"
+stage: "comparison"
 priority: 2
-volume_monthly: 5400
-competition: 0.98
-cpc_usd: 2
-notes: "xlsx"
+notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: paper boxes
+# Brief: tea gift box wholesale china
 
-**Why this one (auto-scored 88.6):** 5,400 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 28.6):** commercial intent, comparison stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -37,7 +34,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is paper boxes?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is tea gift box wholesale china?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

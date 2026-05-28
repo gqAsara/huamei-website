@@ -1,23 +1,20 @@
 ---
-brief_id: "auto-2026-05-25-009-luxury-packaging"
-generated_at: "2026-05-25T12:17:11.114Z"
-rank: 9
-target_query: "luxury packaging"
-opportunity_type: "high_volume_gap"
-seo_score: 87.5
+brief_id: "auto-2026-05-28-004-luxury-rigid-box-factory-china"
+generated_at: "2026-05-28T12:18:39.988Z"
+rank: 4
+target_query: "luxury rigid box factory china"
+opportunity_type: "long_tail_gap"
+seo_score: 28.6
 intent: "commercial"
 stage: "comparison"
-priority: 1
-volume_monthly: 590
-competition: 0.99
-cpc_usd: 7.98
-notes: "590 monthly, comp 99 — brand-defining term, hard rank"
+priority: 2
+notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: luxury packaging
+# Brief: luxury rigid box factory china
 
-**Why this one (auto-scored 87.5):** 590 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 28.6):** commercial intent, comparison stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -37,7 +34,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is luxury packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is luxury rigid box factory china?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

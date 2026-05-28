@@ -1,4 +1,8 @@
 ---
+skipped: "already covered by hot-foil-stamping-for-luxury-packaging.md"
+---
+
+---
 brief_id: "auto-2026-05-26-007-hot-foil-stamping"
 generated_at: "2026-05-26T12:17:25.609Z"
 rank: 7

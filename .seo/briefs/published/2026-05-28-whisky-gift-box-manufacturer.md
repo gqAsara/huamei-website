@@ -1,22 +1,21 @@
 ---
-brief_id: "auto-2026-05-26-008-gift-box-manufacturer"
-generated_at: "2026-05-26T12:17:25.609Z"
+brief_id: "auto-2026-05-28-008-whisky-gift-box-manufacturer"
+generated_at: "2026-05-28T12:18:39.988Z"
 rank: 8
-target_query: "gift box manufacturer"
-opportunity_type: "high_volume_gap"
-seo_score: 66
+target_query: "whisky gift box manufacturer"
+opportunity_type: "long_tail_gap"
+seo_score: 28.6
 intent: "commercial"
-stage: "comparison"
+stage: "evaluation"
 priority: 2
-volume_monthly: 260
-competition: 0.64
-cpc_usd: 5.81
+target_url: "/industry/spirits"
+notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: gift box manufacturer
+# Brief: whisky gift box manufacturer
 
-**Why this one (auto-scored 66):** 260 monthly searches, no article yet, commercial intent
+**Why this one (auto-scored 28.6):** commercial intent, evaluation stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -25,6 +24,10 @@ Follow `.seo/SEO_CONTEXT.md` Phase-2 GEO rules: every H2 leads with a declarativ
 ## What to anchor on
 
 Buyer-facing register. Lead the article with the load-bearing answer (MOQ, lead time, capability range). Tie to Huamei's published facts: 1992 founding, four-province footprint, 200+ MOQ floor, 7–10 day samples, 15–20 day production, BSCI/CE/EQS/FSC/SGS certifications, >80% solar share. End with a clear `/begin` CTA.
+
+## Target URL: `/industry/spirits`
+
+No article exists at this slug yet. Draft a new one. Target query is the H1 anchor.
 
 ## Recommended internal links
 
@@ -36,7 +39,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is gift box manufacturer?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is whisky gift box manufacturer?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

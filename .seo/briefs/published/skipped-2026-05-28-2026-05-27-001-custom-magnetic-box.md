@@ -1,4 +1,8 @@
 ---
+skipped: "already covered by magnetic-closure-box-guide.md (primaryKeyword: magnetic box)"
+---
+
+---
 brief_id: "auto-2026-05-27-001-custom-magnetic-box"
 generated_at: "2026-05-27T12:17:42.291Z"
 rank: 1
