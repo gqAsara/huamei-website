@@ -1,8 +1,8 @@
 ---
-brief_id: "auto-2026-05-29-009-rigid-box-manufacturer-china-low-moq"
-generated_at: "2026-05-29T12:16:59.978Z"
+brief_id: "auto-2026-05-30-009-ecommerce-subscription-box-manufacturer"
+generated_at: "2026-05-30T12:16:28.278Z"
 rank: 9
-target_query: "rigid box manufacturer china low MOQ"
+target_query: "ecommerce subscription box manufacturer"
 opportunity_type: "long_tail_gap"
 seo_score: 28.6
 intent: "commercial"
@@ -12,7 +12,7 @@ notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: rigid box manufacturer china low MOQ
+# Brief: ecommerce subscription box manufacturer
 
 **Why this one (auto-scored 28.6):** commercial intent, comparison stage, no article yet
 
@@ -34,7 +34,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is rigid box manufacturer china low MOQ?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is ecommerce subscription box manufacturer?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

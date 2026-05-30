@@ -1,21 +1,20 @@
 ---
-brief_id: "auto-2026-05-29-007-perfume-bottle-with-box-packaging"
-generated_at: "2026-05-29T12:16:59.977Z"
-rank: 7
-target_query: "perfume bottle with box packaging"
+brief_id: "auto-2026-05-30-003-champagne-presentation-box-custom"
+generated_at: "2026-05-30T12:16:28.278Z"
+rank: 3
+target_query: "champagne presentation box custom"
 opportunity_type: "long_tail_gap"
-seo_score: 49.5
+seo_score: 28.6
 intent: "commercial"
 stage: "evaluation"
-priority: 1
-volume_monthly: 10
-notes: "xlsx; cosmetic + perfume is core sector"
+priority: 2
+notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: perfume bottle with box packaging
+# Brief: champagne presentation box custom
 
-**Why this one (auto-scored 49.5):** commercial intent, evaluation stage, no article yet
+**Why this one (auto-scored 28.6):** commercial intent, evaluation stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -35,7 +34,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is perfume bottle with box packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is champagne presentation box custom?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 
