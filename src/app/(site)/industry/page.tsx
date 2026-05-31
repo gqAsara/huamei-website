@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { industryItemList } from "@/lib/schema/collection";
 import "./industry.css";
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function IndustryPage() {
           { name: "Industry", path: "/industry" },
         ])}
       />
+      <JsonLd data={industryItemList()} />
       {/* Masthead */}
       <section className="in-mast">
         <div className="k">

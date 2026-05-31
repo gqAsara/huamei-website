@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
+import { craftItemList } from "@/lib/schema/collection";
 import "./craft.css";
 
 export const metadata = {
@@ -111,6 +112,7 @@ export default function CraftPage() {
           { name: "Craft", path: "/craft" },
         ])}
       />
+      <JsonLd data={craftItemList()} />
       {/* Masthead */}
       <section className="cr-mast">
         <div className="ltop">
