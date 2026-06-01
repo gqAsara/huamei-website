@@ -598,14 +598,14 @@ function titleize(slug: string): string {
 // to investigative /blogs/* content. Slug must match a file in content/blogs.
 const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   // Structures
-  rigid: ["luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
+  rigid: ["two-piece-rigid-box-manufacturer", "rigid-box-manufacturer-china-low-moq", "luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
   magnetic: ["magnetic-gift-box-packaging", "magnetic-box-packaging", "magnetic-closure-box-guide", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-magnetic-box-guide", "custom-luxury-gift-box"],
   drawer: ["advent-calendar-rigid-box-manufacturer", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
-  folding: ["mailer-box", "folding-gift-box-guide", "rigid-box-vs-folding-carton", "moq-realities-luxury-packaging", "folding-gift-box-magnetic-closure"],
+  folding: ["mailer-box", "folding-gift-box-guide", "custom-corrugated-box-manufacturer", "rigid-box-vs-folding-carton", "moq-realities-luxury-packaging", "folding-gift-box-magnetic-closure"],
   book: ["rigid-box-lid-styles-hinged-lift-off-book", "luxury-unboxing-experience-design", "custom-luxury-rigid-box-manufacturing"],
   inserts: ["box-inserts-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "interior-lining-luxury-rigid-boxes"],
   shoppers: ["custom-luxury-paper-bag", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
-  bespoke: ["moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "packaging-sample-process-china-factory"],
+  bespoke: ["packaging-manufacturer-usa-vs-china", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "packaging-sample-process-china-factory"],
   // Surfaces
   "hot-foil": ["hot-foil-stamping-process", "hot-foil-stamping-for-luxury-packaging", "hot-foil-colour-selection-luxury-packaging", "registered-emboss-foil-tolerance", "hot-foil-vs-cold-foil-cost-and-finish"],
   emboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging", "emboss-vs-deboss-luxury-packaging", "emboss-die-specification-rigid-boxes"],
@@ -617,7 +617,7 @@ const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   // Industries
   cosmetic: ["cosmetic-packaging-box", "custom-cosmetic-packaging-box", "perfume-box-design-guide", "custom-luxury-gift-box", "rigid-box-cosmetic-brand", "cosmetic-packaging-luxury-rigid-box"],
   spirits: ["premium-spirits-gift-box-manufacturer", "baijiu-packaging-design-2026", "working-with-a-chinese-luxury-packaging-manufacturer", "whisky-gift-box-manufacturer", "tea-gift-box-wholesale-china"],
-  seasonal: ["advent-calendar-rigid-box-manufacturer", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
+  seasonal: ["advent-calendar-rigid-box-manufacturer", "diwali-gift-box-packaging", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
   wellness: ["supplement-packaging-rigid-box-guide", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
 };
 
