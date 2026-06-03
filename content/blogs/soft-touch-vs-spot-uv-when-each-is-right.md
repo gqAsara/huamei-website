@@ -1,6 +1,6 @@
 ---
-title: "Soft-touch laminate vs spot UV — when each finish is the right call"
-description: "When to specify soft-touch laminate, when to specify spot UV, and when to use both together on a luxury rigid box. The substrate constraints, registration tolerances, and pairing rules."
+title: "Soft-Touch vs Spot UV: When to Use Each on Luxury Packaging"
+description: "When to specify soft-touch laminate vs spot UV on a luxury rigid box — substrate constraints, registration tolerances, and how to pair both finishes for the strongest result."
 slug: "soft-touch-vs-spot-uv-when-each-is-right"
 section: "blogs"
 primaryKeyword: "soft-touch vs spot UV packaging"
