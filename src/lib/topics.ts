@@ -598,12 +598,12 @@ function titleize(slug: string): string {
 // to investigative /blogs/* content. Slug must match a file in content/blogs.
 const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   // Structures
-  rigid: ["two-piece-rigid-box-manufacturer", "rigid-box-manufacturer-china-low-moq", "luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
+  rigid: ["rigid-setup-box-wholesale-supplier", "paper-tube-packaging-vs-rigid-box", "two-piece-rigid-box-manufacturer", "rigid-box-manufacturer-china-low-moq", "luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
   magnetic: ["magnetic-gift-box-packaging", "magnetic-box-packaging", "folding-magnetic-box", "magnetic-closure-box-guide", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-magnetic-box-guide", "custom-luxury-gift-box"],
   drawer: ["advent-calendar-rigid-box-manufacturer", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
   folding: ["mailer-box", "folding-gift-box-guide", "folding-magnetic-box", "custom-corrugated-box-manufacturer", "rigid-box-vs-folding-carton", "moq-realities-luxury-packaging", "folding-gift-box-magnetic-closure"],
   book: ["rigid-box-lid-styles-hinged-lift-off-book", "luxury-unboxing-experience-design", "custom-luxury-rigid-box-manufacturing"],
-  inserts: ["box-inserts-luxury-packaging", "watch-presentation-box-custom", "jewelry-rigid-box-manufacturer-china", "jewelry-watch-rigid-box-packaging", "custom-luxury-rigid-box-manufacturing", "interior-lining-luxury-rigid-boxes"],
+  inserts: ["tech-accessories-luxury-packaging", "box-inserts-luxury-packaging", "watch-presentation-box-custom", "jewelry-rigid-box-manufacturer-china", "jewelry-watch-rigid-box-packaging", "custom-luxury-rigid-box-manufacturing", "interior-lining-luxury-rigid-boxes"],
   shoppers: ["custom-luxury-paper-bag", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
   bespoke: ["packaging-manufacturer-usa-vs-china", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "packaging-sample-process-china-factory"],
   // Surfaces
@@ -615,9 +615,9 @@ const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   offset: ["screen-printing-vs-foil-stamping-luxury-packaging", "soy-ink-offset-printing-luxury-packaging", "hot-foil-stamping-for-luxury-packaging"],
   wraps: ["custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
   // Industries
-  cosmetic: ["cosmetic-packaging-box", "custom-cosmetic-packaging-box", "perfume-bottle-with-box-packaging", "perfume-box-design-guide", "custom-luxury-gift-box", "rigid-box-cosmetic-brand", "cosmetic-packaging-luxury-rigid-box"],
+  cosmetic: ["skincare-set-packaging-manufacturer", "cosmetic-packaging-box", "custom-cosmetic-packaging-box", "perfume-bottle-with-box-packaging", "perfume-box-design-guide", "custom-luxury-gift-box", "rigid-box-cosmetic-brand", "cosmetic-packaging-luxury-rigid-box"],
   spirits: ["premium-spirits-gift-box-manufacturer", "champagne-presentation-box-custom", "wine-champagne-gift-box-packaging", "baijiu-packaging-design-2026", "working-with-a-chinese-luxury-packaging-manufacturer", "whisky-gift-box-manufacturer", "tea-gift-box-wholesale-china"],
-  seasonal: ["advent-calendar-rigid-box-manufacturer", "diwali-gift-box-packaging", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
+  seasonal: ["ramadan-eid-luxury-gift-box-packaging", "advent-calendar-rigid-box-manufacturer", "diwali-gift-box-packaging", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
   wellness: ["supplement-packaging-rigid-box-guide", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
 };
 
