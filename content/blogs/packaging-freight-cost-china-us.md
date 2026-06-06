@@ -23,6 +23,8 @@ updatedAt: "2026-06-06T10:00:00+08:00"
 schema: "Article"
 internalLinks:
   - "/craft/rigid"
+  - "/craft/magnetic"
+  - "/volumes/collgene"
   - "/blogs/incoterms-packaging-imports-china"
   - "/blogs/packaging-rfq-template-luxury-brand"
   - "/blogs/us-china-tariffs-luxury-packaging-2026"
@@ -63,7 +65,7 @@ These are order-of-magnitude benchmarks. Actual rates change with freight market
 
 FCL (Full Container Load) means the buyer rents the entire 20-foot or 40-foot container for their shipment. LCL (Less than Container Load) means the buyer's cargo is consolidated with other shippers' goods in a shared container and priced per cubic meter. The economic crossover point — where FCL becomes cheaper than LCL — is typically 10–12 CBM for a 20-foot container on most trade lanes.
 
-Luxury rigid boxes are low-density cargo relative to their volume: they are large, rigid, and often palletised with air space. A pallet of 500 magnetic-closure gift boxes (350 mm × 250 mm × 100 mm) occupies approximately 1.5–2 CBM. A production run of 5,000 boxes occupies roughly 15–20 CBM — enough to justify FCL over LCL for most configurations.
+Luxury rigid boxes are low-density cargo relative to their volume: they are large, rigid, and often palletised with air space. A pallet of 500 [magnetic-closure gift boxes](/craft/magnetic) (350 mm × 250 mm × 100 mm) occupies approximately 1.5–2 CBM. A production run of 5,000 boxes occupies roughly 15–20 CBM — enough to justify FCL over LCL for most configurations.
 
 "For a Huamei luxury rigid box run of 2,000–3,000 pieces, shipment volume typically falls in the 8–12 CBM range — the LCL-to-FCL decision point — so buyers should request both LCL and FCL quotes from their freight forwarder before booking."
 
@@ -90,5 +92,7 @@ US import duty on luxury packaging boxes falls under HTS codes that vary by cons
 Under [ICC Incoterms 2020](https://iccwbo.org/business-solutions/incoterms-rules/) FOB terms, the buyer pays duty and brokerage directly. Under DDP terms, the factory includes duty in the quoted price — at risk of rate changes between quote and arrival. Brands importing packaging on a regular programme should retain a licensed US customs broker to confirm the correct HTS classification and current applicable duty rate before committing to production volume.
 
 "A luxury rigid box shipment from China at FOB value of $8,000 — 2,000 boxes at $4 each — will incur customs brokerage, ISF, port handling, and inland drayage fees of $400–$900 in addition to ocean freight, bringing total landed cost per box to $1.20–$1.80 above the FOB unit price depending on freight mode and shipment size."
+
+The [Collgene case study](/volumes/collgene) shows a skincare packaging programme shipped FOB Ningbo, where production and freight timelines were locked in from the brief stage to meet a US in-hands date without air-freight escalation.
 
 Brief a production enquiry at [/begin](/begin) with the required quantity, structure specification, and in-hands date, and Huamei's team will confirm the production schedule and loading port to allow accurate freight budgeting.

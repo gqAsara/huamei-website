@@ -62,7 +62,7 @@ The attachment method — hot-melt or PVA — depends on the lining material. Fo
 
 ## What ribbon weight and width should be specified?
 
-Ribbon weight and width determine whether the pull-tab reads as refined or as afterthought. Standard satin ribbon for luxury pull-tabs runs 6–16 mm wide and is woven from 100% polyester or acetate, with a satin surface on one or both faces. Narrower ribbon (6–8 mm) reads lighter and suits cosmetic and gifting formats where the tray is shallower and the product lightweight. Wider ribbon (12–16 mm) is used in spirits and watch formats where the tray is deeper and the product heavier — the wider ribbon provides a grip area proportionate to the effort required.
+Standard satin ribbon for luxury pull-tabs runs 6–16 mm wide and is woven from 100% polyester or acetate, with a satin surface on one or both faces. Ribbon weight and width determine whether the pull-tab reads as refined or as afterthought. Narrower ribbon (6–8 mm) reads lighter and suits cosmetic and gifting formats where the tray is shallower and the product lightweight. Wider ribbon (12–16 mm) is used in spirits and watch formats where the tray is deeper and the product heavier — the wider ribbon provides a grip area proportionate to the effort required.
 
 Ribbon colour should be specified to match the interior lining, not the exterior. A navy exterior with ivory lining takes an ivory or champagne ribbon. A matte black exterior with midnight velvet lining takes a black satin ribbon. A mismatch reads as the ribbon and lining being sourced separately — which, in a well-run luxury packaging programme, they should not be.
 
