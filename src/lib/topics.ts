@@ -598,8 +598,8 @@ function titleize(slug: string): string {
 // to investigative /blogs/* content. Slug must match a file in content/blogs.
 const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   // Structures
-  rigid: ["rigid-setup-box-wholesale-supplier", "paper-tube-packaging-vs-rigid-box", "two-piece-rigid-box-manufacturer", "rigid-box-manufacturer-china-low-moq", "luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
-  magnetic: ["magnetic-gift-box-packaging", "magnetic-box-packaging", "folding-magnetic-box", "magnetic-closure-box-guide", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-magnetic-box-guide", "custom-luxury-gift-box"],
+  rigid: ["window-cutout-clear-panel-rigid-box", "premium-food-brand-luxury-packaging", "rigid-setup-box-wholesale-supplier", "paper-tube-packaging-vs-rigid-box", "two-piece-rigid-box-manufacturer", "rigid-box-manufacturer-china-low-moq", "luxury-rigid-box-price-per-unit", "fsc-certified-rigid-box-supplier", "gift-box-manufacturer-guide", "custom-luxury-rigid-box-manufacturing", "rigid-box-greyboard-weight-guide", "rigid-box-lid-styles-hinged-lift-off-book"],
+  magnetic: ["mens-grooming-packaging-luxury-rigid-box", "magnetic-gift-box-packaging", "magnetic-box-packaging", "folding-magnetic-box", "magnetic-closure-box-guide", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-magnetic-box-guide", "custom-luxury-gift-box"],
   drawer: ["advent-calendar-rigid-box-manufacturer", "drawer-box-vs-magnetic-closure-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
   folding: ["mailer-box", "folding-gift-box-guide", "folding-magnetic-box", "custom-corrugated-box-manufacturer", "rigid-box-vs-folding-carton", "moq-realities-luxury-packaging", "folding-gift-box-magnetic-closure"],
   book: ["book-cloth-buckram-rigid-box", "rigid-box-lid-styles-hinged-lift-off-book", "luxury-unboxing-experience-design", "custom-luxury-rigid-box-manufacturing"],
@@ -607,18 +607,18 @@ const TOPIC_RELATED_BLOGS: Record<string, string[]> = {
   shoppers: ["custom-luxury-paper-bag", "custom-luxury-rigid-box-manufacturing", "moq-realities-luxury-packaging"],
   bespoke: ["incoterms-packaging-imports-china", "packaging-freight-cost-china-us", "packaging-manufacturer-usa-vs-china", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing", "packaging-sample-process-china-factory"],
   // Surfaces
-  "hot-foil": ["hot-foil-stamping-process", "hot-foil-stamping-for-luxury-packaging", "hot-foil-colour-selection-luxury-packaging", "registered-emboss-foil-tolerance", "hot-foil-vs-cold-foil-cost-and-finish"],
+  "hot-foil": ["easter-spring-gift-packaging-2027", "hot-foil-stamping-process", "hot-foil-stamping-for-luxury-packaging", "hot-foil-colour-selection-luxury-packaging", "registered-emboss-foil-tolerance", "hot-foil-vs-cold-foil-cost-and-finish"],
   emboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging", "emboss-vs-deboss-luxury-packaging", "emboss-die-specification-rigid-boxes"],
   deboss: ["registered-emboss-foil-tolerance", "hot-foil-stamping-for-luxury-packaging", "emboss-vs-deboss-luxury-packaging"],
-  "soft-touch": ["soft-touch-vs-spot-uv-when-each-is-right", "spot-uv-luxury-rigid-box-specification", "hot-foil-stamping-for-luxury-packaging"],
+  "soft-touch": ["premium-food-brand-luxury-packaging", "soft-touch-vs-spot-uv-when-each-is-right", "spot-uv-luxury-rigid-box-specification", "hot-foil-stamping-for-luxury-packaging"],
   "spot-uv": ["spot-uv-luxury-rigid-box-specification", "soft-touch-vs-spot-uv-when-each-is-right", "hot-foil-stamping-for-luxury-packaging"],
   offset: ["screen-printing-vs-foil-stamping-luxury-packaging", "soy-ink-offset-printing-luxury-packaging", "hot-foil-stamping-for-luxury-packaging"],
   wraps: ["book-cloth-buckram-rigid-box", "custom-luxury-rigid-box-manufacturing", "greyboard-grades-for-luxury-rigid-construction"],
   // Industries
-  cosmetic: ["skincare-set-packaging-manufacturer", "cosmetic-packaging-box", "custom-cosmetic-packaging-box", "perfume-bottle-with-box-packaging", "perfume-box-design-guide", "custom-luxury-gift-box", "rigid-box-cosmetic-brand", "cosmetic-packaging-luxury-rigid-box"],
+  cosmetic: ["mens-grooming-packaging-luxury-rigid-box", "refillable-cosmetic-packaging-design", "skincare-set-packaging-manufacturer", "cosmetic-packaging-box", "custom-cosmetic-packaging-box", "perfume-bottle-with-box-packaging", "perfume-box-design-guide", "custom-luxury-gift-box", "rigid-box-cosmetic-brand", "cosmetic-packaging-luxury-rigid-box"],
   spirits: ["premium-spirits-gift-box-manufacturer", "champagne-presentation-box-custom", "wine-champagne-gift-box-packaging", "baijiu-packaging-design-2026", "working-with-a-chinese-luxury-packaging-manufacturer", "whisky-gift-box-manufacturer", "tea-gift-box-wholesale-china"],
-  seasonal: ["ramadan-eid-luxury-gift-box-packaging", "advent-calendar-rigid-box-manufacturer", "diwali-gift-box-packaging", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
-  wellness: ["packaging-carbon-footprint-scope-3", "supplement-packaging-rigid-box-guide", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
+  seasonal: ["easter-spring-gift-packaging-2027", "ramadan-eid-luxury-gift-box-packaging", "advent-calendar-rigid-box-manufacturer", "diwali-gift-box-packaging", "qixi-festival-gift-packaging-2026", "dragon-boat-festival-packaging-2026", "double-11-singles-day-packaging-2026"],
+  wellness: ["premium-food-brand-luxury-packaging", "packaging-carbon-footprint-scope-3", "supplement-packaging-rigid-box-guide", "moq-realities-luxury-packaging", "custom-luxury-rigid-box-manufacturing"],
 };
 
 // Read post titles + descriptions lazily from content/blogs at module init
