@@ -1,6 +1,6 @@
 ---
-title: "Soft-Touch vs Spot UV: When to Use Each on Luxury Packaging"
-description: "When to specify soft-touch laminate vs spot UV on a luxury rigid box — substrate constraints, registration tolerances, and how to pair both finishes for the strongest result."
+title: "Spot UV vs Soft-Touch: Which Finish for Luxury Packaging?"
+description: "Soft-touch gives velvet drag; spot UV adds selective gloss contrast. Substrate limits, ±0.1 mm registration, and three pairing rules for luxury rigid boxes."
 slug: "soft-touch-vs-spot-uv-when-each-is-right"
 section: "blogs"
 primaryKeyword: "soft-touch vs spot UV packaging"
@@ -9,6 +9,7 @@ secondaryKeywords:
   - "matte vs gloss packaging finish"
   - "luxury packaging surface finish"
   - "soft touch and spot uv combination"
+  - "compare spot uv vs soft-touch finishes"
 intent: "investigative-commercial"
 wordCount: 990
 author:
