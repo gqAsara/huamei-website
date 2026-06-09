@@ -239,3 +239,9 @@
 2026-06-08T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/wibalin-paper-rigid-box — Wibalin paper for rigid boxes: what it is, when to use it, and how to brief it
 2026-06-08T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/gmund-paper-luxury-box — Gmund paper for luxury boxes: properties, decoration behaviour, and how to brief it
 2026-06-08T15:00:00.000Z	seo-ops	daily-audit	1 commit pushed (1b3c31e — hub→spoke TOPIC_RELATED_BLOGS wired for Jun-8 posts: Gmund+Wibalin→wraps, Wibalin→deboss+book, Gmund→hot-foil, moulded-pulp→inserts, candle-gift-box→seasonal, supplement-bottle→cosmetic+wellness); all 5 Jun-8 posts passed GEO+quality+banned-phrase check; 0 GSC quick-wins (data thin — no query at pos 11-20 with ≥5 impressions in 37-row snapshot); IndexNow 403 still outstanding (Bing allowlist — founder action required)
+2026-06-09T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/fedrigoni-paper-packaging — Fedrigoni paper packaging: how to specify it for luxury rigid boxes
+2026-06-09T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/halloween-gift-packaging-2026 — Halloween gift packaging 2026: structure, finish, and order timeline from China
+2026-06-09T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-coffee-brand-packaging — Premium coffee brand packaging: gift box structures and finishes for specialty roasters
+2026-06-09T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-gift-hamper-packaging — Luxury gift hamper packaging: multi-product rigid box structures and insert systems
+2026-06-09T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-packaging-gulf-market — Luxury packaging for the Gulf market: sourcing from China for Saudi Arabia and UAE
+2026-06-09T10:00:00+08:00	daily-routine	note	scorer-broken: npx tsx scripts/score-opportunities.ts failed — missing 'yaml' dependency; TODO: npm install yaml
