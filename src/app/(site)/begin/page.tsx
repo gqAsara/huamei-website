@@ -4,7 +4,7 @@ import "./begin.css";
 export const metadata = {
   title: "Begin a project",
   description:
-    "A short, considered intake form. Our team will reply asap. 300 piece minimum, 2–4 weeks lead time on demand.",
+    "A short, considered intake form. Our team will reply asap. 200+ piece minimum, 2–4 weeks lead time on demand.",
   alternates: { canonical: "/begin" },
 };
 
@@ -150,7 +150,7 @@ export default function BeginPage() {
                 <div className="bg-field">
                   <label>Quantity</label>
                   <div className="bg-chips">
-                    <label className="bg-chip"><input type="radio" name="qty" value="300-1k" defaultChecked /><span className="f"><span className="rn">i.</span>300 – 1k</span></label>
+                    <label className="bg-chip"><input type="radio" name="qty" value="200-1k" defaultChecked /><span className="f"><span className="rn">i.</span>200 – 1k</span></label>
                     <label className="bg-chip"><input type="radio" name="qty" value="1k-5k" /><span className="f"><span className="rn">ii.</span>1k – 5k</span></label>
                     <label className="bg-chip"><input type="radio" name="qty" value="5k-25k" /><span className="f"><span className="rn">iii.</span>5k – 25k</span></label>
                     <label className="bg-chip"><input type="radio" name="qty" value="25k-100k" /><span className="f"><span className="rn">iv.</span>25k – 100k</span></label>
@@ -275,7 +275,7 @@ export default function BeginPage() {
           <div className="card">
             <h5>House minimums <span className="rn">ii.</span></h5>
             <dl>
-              <div className="r"><dt>Run</dt><dd><em>300</em> pieces</dd></div>
+              <div className="r"><dt>Run</dt><dd><em>200+</em> pieces</dd></div>
               <div className="r"><dt>Lead time</dt><dd><em>2 — 4</em> wks on demand</dd></div>
               <div className="r"><dt>Samples</dt><dd>Free on large quantities</dd></div>
               <div className="r"><dt>Studio fee</dt><dd>None</dd></div>

@@ -126,7 +126,7 @@ export function Footer() {
               </a>
             </div>
             <div className="sub">
-              Founder-led enquiries only &nbsp;&middot;&nbsp; 300 pcs minimum
+              Founder-led enquiries only &nbsp;&middot;&nbsp; 200+ pcs minimum
             </div>
           </div>
           <div className="tile">

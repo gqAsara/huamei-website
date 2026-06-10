@@ -119,7 +119,7 @@ export default function HousePage() {
           <div className="v">
             <Link href="/begin">Begin a project →</Link>
           </div>
-          <div className="sub">300 pcs minimum &middot; 2 — 4 weeks on demand</div>
+          <div className="sub">200+ pcs minimum &middot; 2 — 4 weeks on demand</div>
         </div>
       </section>
     </main>

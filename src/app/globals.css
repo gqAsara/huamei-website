@@ -321,6 +321,19 @@ a {
 }
 a:hover { border-bottom-color: var(--foil-gold); color: var(--foil-gold-2); }
 
+/* Keyboard focus — visible ring for keyboard users only (:focus-visible
+   leaves mouse clicks untouched). Dark gold meets WCAG AA on paper tones;
+   offset keeps it clear of link underlines. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--foil-gold-2);
+  outline-offset: 2px;
+}
+
 /* Selection */
 ::selection { background: var(--foil-gold); color: var(--paper-white); }
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EquipmentCarousel from "@/components/EquipmentCarousel";
+import HouseCta from "@/components/HouseCta";
 import { EQUIPMENT } from "@/lib/equipment";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
@@ -46,13 +47,18 @@ export default function FactoryPage() {
         <span className="cn">廠 · 房</span>
       </header>
 
-      <section className="hs-floor-video-section" id="factory">
+      <div className="hs-section-head" id="factory">
+        <h3>
+          Huamei factory floor — <em>luxury rigid box production.</em>
+        </h3>
+        <span className="stamp">2 min &middot; press floor walkthrough</span>
+      </div>
+      <section className="hs-floor-video-section">
         <video
           src="/video/factory-floor.mp4"
           poster="/photos/factory-floor.jpg"
-          autoPlay
+          controls
           muted
-          loop
           playsInline
           preload="metadata"
           aria-label="Huamei factory floor"
@@ -69,6 +75,15 @@ export default function FactoryPage() {
         </div>
         <EquipmentCarousel items={EQUIPMENT} />
       </section>
+
+      <HouseCta
+        heading={
+          <>
+            Put your next run on <em>this floor.</em>
+          </>
+        }
+        sub="Heidelberg and KBA presses, finishing under one roof. Samples in 7 – 10 days, production in 15 – 20. MOQ 200+ pieces."
+      />
     </main>
   );
 }

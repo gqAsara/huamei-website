@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HouseCta from "@/components/HouseCta";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
@@ -125,6 +126,14 @@ export default function PhilosophyPage() {
           </p>
         </div>
       </section>
+
+      <HouseCta
+        heading={
+          <>
+            Build a box that wants to be <em>remembered.</em>
+          </>
+        }
+      />
     </main>
   );
 }

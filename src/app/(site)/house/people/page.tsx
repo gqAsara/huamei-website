@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HouseCta from "@/components/HouseCta";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "../house.css";
@@ -99,6 +100,14 @@ export default function PeoplePage() {
           <div className="row"><span className="n">240</span><span className="l">Fulfilment &amp; logistics</span></div>
         </div>
       </section>
+
+      <HouseCta
+        heading={
+          <>
+            Three thousand hands, ready for <em>your brief.</em>
+          </>
+        }
+      />
     </main>
   );
 }

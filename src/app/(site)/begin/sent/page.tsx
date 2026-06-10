@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import { LeadEvent } from "@/components/LeadEvent";
 import "./sent.css";
 
 export const metadata = {
@@ -12,6 +14,9 @@ export const metadata = {
 export default function SentPage() {
   return (
     <main className="sent-wrap">
+      <Suspense fallback={null}>
+        <LeadEvent />
+      </Suspense>
       <section className="sent-mast">
         <div className="rn">vi. &middot; Received</div>
         <h1>

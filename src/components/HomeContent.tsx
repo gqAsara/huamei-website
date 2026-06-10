@@ -478,7 +478,7 @@ export function HomeContent() {
             Begin with a <em>sketch,</em> a reference, or a structure on file.
           </h2>
           <p>
-            Minimum order 300 pcs &nbsp;&middot;&nbsp; Fastest delivery in 2 wks
+            Minimum order 200+ pcs &nbsp;&middot;&nbsp; Fastest delivery in 2 wks
             &nbsp;&middot;&nbsp; Corrections are free.
           </p>
           <div className="start-actions">

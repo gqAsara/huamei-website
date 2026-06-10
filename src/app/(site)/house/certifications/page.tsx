@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CertificationCarousel from "@/components/CertificationCarousel";
+import HouseCta from "@/components/HouseCta";
 import { CERTIFICATIONS } from "@/lib/certifications";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
@@ -156,6 +157,15 @@ export default function CertificationsPage() {
       </section>
 
       <CertificationCarousel items={CERTIFICATIONS} />
+
+      <HouseCta
+        heading={
+          <>
+            A supplier file your <em>procurement team</em> can read tonight.
+          </>
+        }
+        sub="FSC, BSCI, SGS, CE, EQS, ISO 9001 / 14001 / 45001 — scans available on request. Founder-led reply within 48 hours. MOQ 200+ pieces."
+      />
     </main>
   );
 }

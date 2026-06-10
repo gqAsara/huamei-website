@@ -28,6 +28,46 @@ function badRequest(error: string) {
   return NextResponse.json({ ok: false, error }, { status: 400 });
 }
 
+// 303 target after a submission. Carries non-sensitive lead-mix dimensions
+// (industry, quantity band) so /begin/sent can fire a tagged GA4
+// `generate_lead` event. Used for both real and honeypot submissions so the
+// two responses are indistinguishable to a bot.
+function sentRedirect(request: Request, payload: Record<string, string | string[]>) {
+  const url = new URL("/begin/sent", request.url);
+  const industry = payload["industry"];
+  const qty = payload["qty"];
+  if (typeof industry === "string" && industry) url.searchParams.set("i", industry);
+  if (typeof qty === "string" && qty) url.searchParams.set("q", qty);
+  return NextResponse.redirect(url, 303);
+}
+
+// Plain-language receipt to the buyer. Failure here must never fail the
+// submission — the internal intake email has already gone out.
+async function sendConfirmation(key: string, toEmail: string, name: string) {
+  const html = `<div style="background:#f4efe6;padding:32px"><div style="max-width:560px;margin:0 auto;background:#fff;padding:36px 40px;border:.5px solid #c9bfb2"><div style="font:500 11px/1.2 -apple-system,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#8f6e2b;margin-bottom:6px">Brief received</div><div style="font:italic 28px/1.1 Georgia,serif;color:#1a1614;margin:0 0 24px">Your brief is in our keeping.</div><p style="font:400 15px/1.65 Georgia,serif;color:#2e2822;margin:0 0 16px">${name ? name + " — w" : "W"}e read every brief by hand, the day it lands. A founder-led reply arrives within forty-eight hours, often sooner.</p><p style="font:400 15px/1.65 Georgia,serif;color:#2e2822;margin:0 0 16px">If something urgent surfaces in the meantime, write to <a href="mailto:info@huamei.io" style="color:#8f6e2b">info@huamei.io</a> directly. Sonia reads that inbox first thing each morning.</p><p style="font:400 14px/1.6 Georgia,serif;color:#6b615a;margin:24px 0 0">— Huamei Studio, 華美 · since 1992</p></div></div>`;
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: FROM,
+        to: [toEmail],
+        subject: "Your brief is in our keeping — Huamei 華美",
+        html,
+        reply_to: TO,
+      }),
+    });
+    if (!res.ok) {
+      console.error("[commission] confirmation email non-OK", res.status, await res.text());
+    }
+  } catch (err) {
+    console.error("[commission] confirmation email failed", err);
+  }
+}
+
 export async function POST(request: Request) {
   // Parse formData defensively. The original handler awaited
   // request.formData() unconditionally and threw 500 on raw POSTs without a
@@ -69,7 +109,7 @@ export async function POST(request: Request) {
   // keep dropping. Returning 4xx would tell them which field to skip.
   const trap = payload[HONEYPOT_FIELD];
   if (typeof trap === "string" && trap.trim().length > 0) {
-    return NextResponse.redirect(new URL("/begin/sent", request.url), 303);
+    return sentRedirect(request, payload);
   }
   delete payload[HONEYPOT_FIELD];
 
@@ -118,9 +158,12 @@ export async function POST(request: Request) {
         { status: 502 },
       );
     }
+
+    // Intake delivered — send the buyer a receipt. Non-fatal by design.
+    await sendConfirmation(KEY, email, name);
   } else {
     console.log("[commission] new submission (no RESEND_API_KEY set, not sending)", payload);
   }
 
-  return NextResponse.redirect(new URL("/begin/sent", request.url), 303);
+  return sentRedirect(request, payload);
 }
