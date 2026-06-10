@@ -1,20 +1,25 @@
 ---
-brief_id: "auto-2026-06-08-010-fedrigoni-paper-packaging"
-generated_at: "2026-06-08T12:17:16.096Z"
-rank: 10
-target_query: "fedrigoni paper packaging"
+skipped: "already covered by content/blogs/specialty-paper-rigid-box-wrapping.md — primaryKeyword 'specialty paper luxury packaging' is identical"
+original_brief: "auto-2026-06-10-002-specialty-paper-for-luxury-packaging"
+skipped_at: "2026-06-10"
+---
+---
+brief_id: "auto-2026-06-10-002-specialty-paper-for-luxury-packaging"
+generated_at: "2026-06-10T12:17:01.881Z"
+rank: 2
+target_query: "specialty paper for luxury packaging"
 opportunity_type: "long_tail_gap"
-seo_score: 13.6
+seo_score: 20.4
 intent: "investigative"
 stage: "evaluation"
-priority: 3
+priority: 2
 notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: fedrigoni paper packaging
+# Brief: specialty paper for luxury packaging
 
-**Why this one (auto-scored 13.6):** investigative intent, evaluation stage, no article yet
+**Why this one (auto-scored 20.4):** investigative intent, evaluation stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -34,7 +39,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is fedrigoni paper packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is specialty paper for luxury packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 
