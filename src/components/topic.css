@@ -9,14 +9,14 @@
   border-bottom: 1px solid var(--foil-gold);
 }
 .tp-mast .crumbs {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--ink-3); margin-bottom: 16px;
 }
 .tp-mast .crumbs a { color: var(--ink-3); border: 0; text-decoration: none; }
 .tp-mast .crumbs a:hover { color: var(--foil-gold-2); }
 .tp-mast .crumbs .sep { color: var(--ink-4); margin: 0 10px; }
 .tp-mast .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 18px;
+  font-family: var(--font-display); font-style: italic; font-size: 23.5px;
   color: var(--foil-gold); margin-bottom: 8px;
 }
 .tp-mast h1 {
@@ -26,17 +26,17 @@
 }
 .tp-mast h1 em { font-style: italic; color: var(--foil-gold-2); }
 .tp-mast .cn {
-  font-family: var(--font-cn); font-size: 22px; letter-spacing: .18em;
+  font-family: var(--font-cn); font-size: 28.5px; letter-spacing: .18em;
   color: var(--foil-gold); margin-top: 16px;
 }
 .tp-mast .lede {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 24px; line-height: 1.35; color: var(--ink-2);
+  font-size: 31px; line-height: 1.35; color: var(--ink-2);
   max-width: 38ch; margin: 0 0 0 auto; text-wrap: pretty;
 }
 .tp-mast .meta {
   margin-top: 18px;
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   display: flex; gap: 18px; align-items: baseline;
 }
@@ -61,16 +61,16 @@
 .tp-prose-aside .figure img { object-fit: cover; }
 .tp-prose-aside .figcap {
   display: flex; gap: 10px; align-items: baseline;
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   padding-top: 8px; border-top: .5px solid var(--rule-soft);
 }
 .tp-prose-aside .figcap .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 12px;
+  font-family: var(--font-display); font-style: italic; font-size: 15.5px;
   color: var(--foil-gold); letter-spacing: 0; text-transform: none;
 }
 .tp-prose-aside .figcap em {
-  font-family: var(--font-display); font-style: italic; font-size: 12px;
+  font-family: var(--font-display); font-style: italic; font-size: 15.5px;
   letter-spacing: 0; text-transform: none; color: var(--ink-2);
 }
 
@@ -87,10 +87,10 @@
 }
 .tp-sec-head h2 em { font-style: italic; color: var(--foil-gold-2); }
 .tp-sec-head .roman {
-  font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--foil-gold);
 }
 .tp-sec-head .stamp {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3);
 }
 
@@ -102,12 +102,12 @@
   margin-bottom: 32px;
 }
 .tp-prose-side {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-4);
   text-align: right; padding-top: 8px;
 }
 .tp-prose-body {
-  font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--ink-2);
+  font-family: var(--font-body); font-size: 21px; line-height: 1.65; color: var(--ink-2);
 }
 .tp-prose-body p { margin: 0 0 18px; text-wrap: pretty; max-width: none; }
 .tp-prose-body p:first-child::first-letter {
@@ -118,7 +118,7 @@
 .tp-prose-body em { font-style: italic; color: var(--ink); }
 .tp-prose-pull {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 22px; line-height: 1.3; color: var(--ink);
+  font-size: 28.5px; line-height: 1.3; color: var(--ink);
   padding: 0 0 0 20px;
   border-left: 1px solid var(--foil-gold);
   align-self: start; max-width: 30ch;
@@ -139,21 +139,21 @@
 }
 .tp-index-row:hover { color: var(--ink); padding-left: 6px; }
 .tp-index-row .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 21px; color: var(--foil-gold);
 }
 .tp-index-row .body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .tp-index-row .name {
-  font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.15;
+  font-family: var(--font-display); font-weight: 400; font-size: 28.5px; line-height: 1.15;
   color: var(--ink); letter-spacing: -.005em;
 }
 .tp-index-row .name em { font-style: italic; }
 .tp-index-row:hover .name { color: var(--foil-gold-2); }
 .tp-index-row .desc {
-  font-family: var(--font-body); font-size: 13px; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 17px; color: var(--ink-3);
   line-height: 1.45; text-wrap: pretty;
 }
 .tp-index-row .meta {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink-4); text-align: right;
 }
 
@@ -188,23 +188,23 @@
   box-shadow: 0 0 0 .5px var(--rule-soft);
 }
 .tp-step .stage {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--foil-gold);
   display: flex; gap: 10px; align-items: baseline;
 }
 .tp-step .stage .num {
-  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  font-family: var(--font-display); font-style: italic; font-size: 19.5px;
   color: var(--foil-gold); letter-spacing: 0;
 }
 .tp-step h4 {
   margin: 0;
-  font-family: var(--font-display); font-weight: 400; font-size: 24px;
+  font-family: var(--font-display); font-weight: 400; font-size: 31px;
   line-height: 1.15; letter-spacing: -.005em; color: var(--ink);
 }
 .tp-step h4 em { font-style: italic; }
 .tp-step p {
   margin: 0;
-  font-family: var(--font-body); font-size: 13.5px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 17.5px; line-height: 1.55;
   color: var(--ink-2); max-width: 36ch; text-wrap: pretty;
 }
 
@@ -221,23 +221,23 @@
 .tp-rel:hover .cover { transform: translateY(-3px); }
 .tp-rel .cover .rn {
   position: absolute; top: 12px; left: 14px;
-  font-family: var(--font-display); font-style: italic; font-size: 16px;
+  font-family: var(--font-display); font-style: italic; font-size: 21px;
   color: var(--foil-gold-hi);
   text-shadow: 0 1px 2px rgba(20, 16, 14, .4);
 }
 .tp-rel .meta {
   display: flex; justify-content: space-between; align-items: baseline;
-  font-family: var(--font-label); font-size: 9px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 11.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-4);
   padding-top: 4px; border-top: .5px solid var(--rule-soft);
 }
 .tp-rel h4 {
   margin: 0;
-  font-family: var(--font-display); font-weight: 400; font-size: 20px;
+  font-family: var(--font-display); font-weight: 400; font-size: 26px;
   line-height: 1.15; letter-spacing: -.005em; color: var(--ink);
 }
 .tp-rel .tag {
-  font-family: var(--font-body); font-style: italic; font-size: 13px; color: var(--ink-3);
+  font-family: var(--font-body); font-style: italic; font-size: 17px; color: var(--ink-3);
 }
 
 /* Related — carousel variant (industry pages) */
@@ -262,7 +262,7 @@
   border-top: .5px solid var(--rule-soft);
 }
 .tp-related-controls .count {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   display: inline-flex; align-items: center; gap: 12px;
 }
@@ -274,7 +274,7 @@
   background: transparent;
   cursor: pointer;
   font-family: var(--font-display);
-  font-size: 22px; line-height: 1;
+  font-size: 28.5px; line-height: 1;
   color: var(--ink-2);
   transition: border-color var(--dur) var(--ease-paper), color var(--dur) var(--ease-paper);
 }
@@ -305,12 +305,12 @@
   border-bottom: .5px dotted var(--ink-5);
 }
 .tp-specs dt {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .tp-specs dd {
   margin: 0;
-  font-family: var(--font-body); font-size: 13.5px; line-height: 1.4; color: var(--ink);
+  font-family: var(--font-body); font-size: 17.5px; line-height: 1.4; color: var(--ink);
 }
 
 /* CTA */
@@ -319,7 +319,7 @@
   background: var(--noir); color: var(--paper-white);
 }
 .tp-cta .kicker {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--foil-gold-hi); margin-bottom: 14px;
 }
 .tp-cta h3 {
@@ -328,7 +328,7 @@
   margin: 0 auto 16px; max-width: 24ch;
 }
 .tp-cta p {
-  font-family: var(--font-body); font-size: 14.5px; line-height: 1.5;
+  font-family: var(--font-body); font-size: 19px; line-height: 1.5;
   color: var(--paper); opacity: .78; max-width: 50ch; margin: 0 auto 30px;
 }
 .tp-cta .actions { display: inline-flex; align-items: center; gap: 24px; }
@@ -338,7 +338,7 @@
 .tp-cta .hm-plate:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .tp-cta .hm-plate .roman { color: var(--foil-gold-hi); }
 .tp-cta .alt {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--paper-white);
   border-bottom: .5px solid rgba(244, 239, 230, .4); padding-bottom: 3px;
   text-decoration: none;
@@ -375,7 +375,7 @@
 .tp-readmore-title {
   display: block;
   font-family: var(--font-display, Georgia, serif);
-  font-size: 18px;
+  font-size: 23.5px;
   line-height: 1.3;
   letter-spacing: -0.005em;
   grid-column: 1;
@@ -383,7 +383,7 @@
 }
 .tp-readmore-desc {
   display: block;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.5;
   color: var(--ink-soft, #6b615a);
   grid-column: 1;
@@ -394,7 +394,7 @@
   grid-row: 1 / span 2;
   align-self: center;
   color: var(--foil-gold-hi, #8f6e2b);
-  font-size: 18px;
+  font-size: 23.5px;
 }
 
 /* Buyer FAQ — commercial-intent Q&A block added 2026-05-11. Lives between
@@ -414,21 +414,21 @@
 }
 .tp-faq-row h3 {
   font-family: var(--font-display, Georgia, serif);
-  font-size: 20px;
+  font-size: 26px;
   line-height: 1.25;
   letter-spacing: -0.005em;
   margin: 0 0 10px;
   color: var(--ink, #1a1614);
 }
 .tp-faq-row p {
-  font-size: 15px;
+  font-size: 19.5px;
   line-height: 1.65;
   color: var(--ink-soft, #6b615a);
   margin: 0;
 }
 .tp-cta-trust {
   margin-bottom: 10px;
-  font-size: 11px;
+  font-size: 14.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
 }

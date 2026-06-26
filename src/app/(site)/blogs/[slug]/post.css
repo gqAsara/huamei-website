@@ -9,7 +9,7 @@
 .mp-back {
   padding: 24px 0 0;
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: .28em;
   text-transform: uppercase;
 }
@@ -35,7 +35,7 @@
 }
 .mp-kicker {
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: .32em;
   text-transform: uppercase;
   color: var(--foil-gold);
@@ -53,7 +53,7 @@
 }
 .mp-byline {
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: .26em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -84,7 +84,7 @@
 .mp-hero figcaption {
   margin-top: 10px;
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: .26em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -93,7 +93,7 @@
 /* Prose body — the rendered markdown */
 .mp-prose {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 22px;
   line-height: 1.72;
   color: var(--ink-2);
 }
@@ -115,7 +115,7 @@
   font-family: var(--font-display);
   font-weight: 400;
   font-style: italic;
-  font-size: 22px;
+  font-size: 28.5px;
   color: var(--ink);
   margin: 36px 0 14px;
 }
@@ -141,7 +141,7 @@
   border-left: 2px solid var(--foil-gold);
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 19px;
+  font-size: 24.5px;
   line-height: 1.5;
   color: var(--ink);
   border-radius: 2px;
@@ -167,7 +167,7 @@
 
 .mp-prose code {
   font-family: var(--font-mono, ui-monospace);
-  font-size: 14.5px;
+  font-size: 19px;
   background: var(--paper-2);
   padding: 1px 5px;
   border-radius: 2px;
@@ -190,7 +190,7 @@
 }
 .mp-cites .lbl {
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: .32em;
   text-transform: uppercase;
   color: var(--foil-gold);
@@ -203,7 +203,7 @@
 }
 .mp-cites li {
   font-family: var(--font-body);
-  font-size: 14.5px;
+  font-size: 19px;
   line-height: 1.6;
   color: var(--ink-2);
   margin: 0 0 8px;
@@ -221,6 +221,6 @@
 @media (max-width: 720px) {
   .mp-wrap { padding: 0 24px 64px; }
   .mp-article { margin-top: 32px; }
-  .mp-prose { font-size: 16px; }
+  .mp-prose { font-size: 21px; }
   .mp-prose p:first-of-type::first-letter { font-size: 52px; }
 }

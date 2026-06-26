@@ -8,7 +8,7 @@
   border-bottom: 1px solid var(--foil-gold);
 }
 .bg-mast .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 16px;
+  font-family: var(--font-display); font-style: italic; font-size: 21px;
   color: var(--foil-gold); margin-bottom: 10px;
 }
 .bg-mast h1 {
@@ -18,16 +18,16 @@
 }
 .bg-mast h1 em { font-style: italic; color: var(--foil-gold-2); }
 .bg-mast .cn {
-  font-family: var(--font-cn); font-size: 22px; letter-spacing: .18em;
+  font-family: var(--font-cn); font-size: 28.5px; letter-spacing: .18em;
   color: var(--foil-gold); margin-top: 16px;
 }
 .bg-mast .intro {
-  font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.35;
+  font-family: var(--font-display); font-style: italic; font-size: 28.5px; line-height: 1.35;
   color: var(--ink-2); margin: 0 0 0 auto; max-width: 40ch; text-wrap: pretty;
 }
 .bg-mast .intro + .meta {
   margin: 18px 0 0 auto; max-width: 40ch;
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   display: flex; gap: 18px;
 }
@@ -56,9 +56,9 @@
 .bg-steps .step:last-child { border-right: 0; }
 .bg-steps .step.on { color: var(--ink); }
 .bg-steps .step.on .n { color: var(--foil-gold); background: transparent; }
-.bg-steps .n { font-family: var(--font-display); font-style: italic; font-size: 16px; line-height: 1; }
+.bg-steps .n { font-family: var(--font-display); font-style: italic; font-size: 21px; line-height: 1; }
 .bg-steps .t {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .28em; text-transform: uppercase;
 }
 
 /* Fieldsets */
@@ -67,16 +67,16 @@
   display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: start;
 }
 .bg-group .head .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  font-family: var(--font-display); font-style: italic; font-size: 19.5px;
   color: var(--foil-gold); margin-bottom: 4px;
 }
 .bg-group .head h3 {
-  font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.15;
+  font-family: var(--font-display); font-weight: 400; font-size: 28.5px; line-height: 1.15;
   color: var(--ink); margin: 0 0 10px; letter-spacing: -.005em;
 }
 .bg-group .head h3 em { font-style: italic; }
 .bg-group .head p {
-  font-family: var(--font-body); font-size: 12.5px; line-height: 1.5;
+  font-family: var(--font-body); font-size: 16px; line-height: 1.5;
   color: var(--ink-3); margin: 0; text-wrap: pretty;
 }
 
@@ -84,13 +84,13 @@
 .bg-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; }
 .bg-field:last-child { margin-bottom: 0; }
 .bg-field > label {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3);
   display: flex; justify-content: space-between; align-items: baseline;
 }
 .bg-field > label .opt {
   color: var(--ink-4); text-transform: none; letter-spacing: .04em;
-  font-family: var(--font-body); font-style: italic; font-size: 11px;
+  font-family: var(--font-body); font-style: italic; font-size: 14.5px;
 }
 .bg-field input[type="text"],
 .bg-field input[type="email"],
@@ -98,7 +98,7 @@
 .bg-field select,
 .bg-field textarea {
   font: inherit;
-  font-family: var(--font-body); font-size: 15px; color: var(--ink);
+  font-family: var(--font-body); font-size: 19.5px; color: var(--ink);
   background: transparent; border: 0;
   border-bottom: .5px solid var(--rule);
   padding: 8px 2px; outline: none;
@@ -110,7 +110,7 @@
 .bg-field select:focus,
 .bg-field textarea:focus { border-bottom-color: var(--foil-gold); }
 .bg-field .hint {
-  font-family: var(--font-body); font-style: italic; font-size: 12px;
+  font-family: var(--font-body); font-style: italic; font-size: 15.5px;
   color: var(--ink-4); margin-top: 2px;
 }
 .bg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
@@ -123,13 +123,13 @@
   display: inline-flex; align-items: baseline; gap: 8px;
   padding: 9px 14px;
   border: .5px solid var(--rule);
-  font-family: var(--font-body); font-size: 13px; color: var(--ink-2);
+  font-family: var(--font-body); font-size: 17px; color: var(--ink-2);
   background: transparent;
   transition: all var(--dur-fast) var(--ease-out);
   border-radius: 2px;
 }
 .bg-chip .f .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--ink-4);
+  font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--ink-4);
 }
 .bg-chip:hover .f { border-color: var(--foil-gold); color: var(--ink); }
 .bg-chip input:checked + .f {
@@ -150,14 +150,14 @@
   min-height: 76px;
 }
 .bg-card .f .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--foil-gold);
 }
 .bg-card .f .t {
-  font-family: var(--font-display); font-size: 17px; color: var(--ink); line-height: 1.15;
+  font-family: var(--font-display); font-size: 22px; color: var(--ink); line-height: 1.15;
 }
 .bg-card .f .t em { font-style: italic; }
 .bg-card .f .d {
-  font-family: var(--font-body); font-size: 11.5px; color: var(--ink-3); line-height: 1.4;
+  font-family: var(--font-body); font-size: 15px; color: var(--ink-3); line-height: 1.4;
 }
 .bg-card:hover .f { border-color: var(--foil-gold); background: var(--paper); }
 .bg-card input:checked + .f { background: var(--ink); border-color: var(--ink); }
@@ -176,13 +176,13 @@
 .bg-drop:hover { background: var(--paper); }
 .bg-drop .l { display: flex; flex-direction: column; gap: 4px; }
 .bg-drop .l .t {
-  font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--ink);
+  font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--ink);
 }
 .bg-drop .l .d {
-  font-family: var(--font-body); font-size: 12px; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 15.5px; color: var(--ink-3);
 }
 .bg-drop .r {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em; text-transform: uppercase;
   color: var(--foil-gold);
   border: .5px solid var(--foil-gold);
   padding: 8px 14px;
@@ -197,20 +197,20 @@
   display: flex; justify-content: space-between; align-items: center; gap: 24px;
 }
 .bg-submit .agree {
-  font-family: var(--font-body); font-size: 12.5px; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 16px; color: var(--ink-3);
   max-width: 46ch; line-height: 1.5;
   display: flex; gap: 10px; align-items: flex-start;
 }
 .bg-submit .agree input { margin-top: 4px; accent-color: var(--foil-gold); }
 .bg-submit .actions { display: inline-flex; gap: 16px; align-items: center; flex-shrink: 0; }
 .bg-submit .hm-plate {
-  padding: 12px 22px; font-size: 11px;
+  padding: 12px 22px; font-size: 14.5px;
   background: var(--ink); color: var(--paper-white); border-color: var(--ink);
   cursor: pointer;
 }
 .bg-submit .hm-plate .roman { color: var(--foil-gold-hi); }
 .bg-submit .save {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   border-bottom: .5px dotted var(--ink-4); padding-bottom: 2px; text-decoration: none;
 }
@@ -223,7 +223,7 @@
   display: flex; flex-direction: column; gap: 10px;
 }
 .bg-aside .card h5 {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--foil-gold);
   margin: 0;
   display: flex; justify-content: space-between;
@@ -231,16 +231,16 @@
 .bg-aside .card h5 .rn {
   color: var(--ink-3);
   font-family: var(--font-display); font-style: italic;
-  letter-spacing: 0; font-size: 14px;
+  letter-spacing: 0; font-size: 18px;
 }
 .bg-aside .card .t {
-  font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.2;
+  font-family: var(--font-display); font-weight: 400; font-size: 28.5px; line-height: 1.2;
   color: var(--ink); letter-spacing: -.005em;
 }
 .bg-aside .card .t em { font-style: italic; color: var(--foil-gold-2); }
 .bg-aside .card p {
   margin: 0;
-  font-family: var(--font-body); font-size: 13px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 17px; line-height: 1.55;
   color: var(--ink-2); text-wrap: pretty;
 }
 .bg-aside .card dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 0; }
@@ -251,29 +251,29 @@
 }
 .bg-aside .card dl .r:last-child { border-bottom: 0; }
 .bg-aside .card dl dt {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .bg-aside .card dl dd {
   margin: 0;
-  font-family: var(--font-body); font-size: 13px; color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; color: var(--ink);
 }
 .bg-aside .card dl dd em { font-style: italic; color: var(--foil-gold); }
 .bg-aside .quote {
   padding: 8px 0 0 18px;
   border-left: 1px solid var(--foil-gold);
-  font-family: var(--font-display); font-style: italic; font-size: 17px;
+  font-family: var(--font-display); font-style: italic; font-size: 22px;
   line-height: 1.35; color: var(--ink);
 }
 .bg-aside .quote cite {
   display: block; margin-top: 10px;
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   font-style: normal;
 }
 .bg-aside .direct { display: flex; flex-direction: column; gap: 6px; }
 .bg-aside .direct a {
-  font-family: var(--font-body); font-size: 15px; color: var(--ink);
+  font-family: var(--font-body); font-size: 19.5px; color: var(--ink);
   border-bottom: .5px solid var(--rule); padding-bottom: 4px;
   text-decoration: none;
   transition: border-bottom-color var(--dur-fast) var(--ease-out);
@@ -281,7 +281,7 @@
 }
 .bg-aside .direct a:hover { border-bottom-color: var(--foil-gold); }
 .bg-aside .direct .sub {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-4);
 }
 
@@ -304,18 +304,18 @@
 .bg-next .s:first-child { padding-left: 0; }
 .bg-next .s:last-child { border-right: 0; }
 .bg-next .s .n {
-  font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--foil-gold);
 }
 .bg-next .s .d {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .bg-next .s .h {
-  font-family: var(--font-display); font-size: 18px; color: var(--ink); line-height: 1.2;
+  font-family: var(--font-display); font-size: 23.5px; color: var(--ink); line-height: 1.2;
 }
 .bg-next .s .h em { font-style: italic; }
 .bg-next .s p {
-  font-family: var(--font-body); font-size: 12.5px; line-height: 1.5;
+  font-family: var(--font-body); font-size: 16px; line-height: 1.5;
   color: var(--ink-2); margin: 0;
 }
 

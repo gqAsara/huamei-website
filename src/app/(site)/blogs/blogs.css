@@ -9,12 +9,12 @@
   display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end;
 }
 .su-mast .k {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .36em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .36em;
   text-transform: uppercase; color: var(--ink-3); margin-bottom: 26px;
   display: inline-flex; align-items: center; gap: 14px;
 }
 .su-mast .k .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 14px;
+  font-family: var(--font-display); font-style: italic; font-size: 18px;
   color: var(--foil-gold-2); letter-spacing: 0; text-transform: none;
 }
 .su-mast h1 {
@@ -24,13 +24,13 @@
 }
 .su-mast h1 em { font-style: italic; color: var(--foil-gold-2); }
 .su-mast .cn {
-  font-family: var(--font-cn); font-size: 28px; letter-spacing: .24em;
+  font-family: var(--font-cn); font-size: 36.5px; letter-spacing: .24em;
   color: var(--foil-gold); margin-top: 16px; display: block;
 }
 .su-mast .aside { padding-bottom: 20px; }
 .su-mast .aside p {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 20px; line-height: 1.45; color: var(--ink-2); margin: 0 0 24px; text-wrap: pretty;
+  font-size: 26px; line-height: 1.45; color: var(--ink-2); margin: 0 0 24px; text-wrap: pretty;
 }
 .su-mast .aside .certs {
   display: flex; flex-wrap: wrap; gap: 8px;
@@ -38,12 +38,12 @@
 }
 .su-mast .aside .cert {
   padding: 8px 14px; border: .5px solid var(--ink-4);
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink-2);
 }
 .su-mast .aside .cert em {
   font-family: var(--font-display); font-style: italic; color: var(--foil-gold-2);
-  letter-spacing: 0; text-transform: none; font-size: 12px; margin-right: 6px;
+  letter-spacing: 0; text-transform: none; font-size: 15.5px; margin-right: 6px;
 }
 
 /* CTA */
@@ -57,7 +57,7 @@
   border: .5px solid var(--rule-soft); pointer-events: none;
 }
 .su-cta .k {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--foil-gold-2); margin-bottom: 16px;
 }
 .su-cta h3 {
@@ -66,7 +66,7 @@
   margin: 0 auto 14px; max-width: 30ch;
 }
 .su-cta p {
-  font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 19.5px; line-height: 1.55; color: var(--ink-3);
   max-width: 52ch; margin: 0 auto 26px;
 }
 .su-cta .actions { display: inline-flex; align-items: center; gap: 22px; }
@@ -79,7 +79,7 @@
   display: flex; flex-wrap: wrap; gap: 12px 22px;
 }
 .mg-toc-link {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3);
   text-decoration: none;
   border-bottom: .5px solid transparent;
@@ -107,7 +107,7 @@
   align-items: baseline;
 }
 .mg-cat-name .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 22px;
+  font-family: var(--font-display); font-style: italic; font-size: 28.5px;
   color: var(--foil-gold);
 }
 .mg-cat-name h2 {
@@ -118,12 +118,12 @@
 }
 .mg-cat-name h2 em { font-style: italic; color: var(--foil-gold-2); }
 .mg-cat-name .cn {
-  font-family: var(--font-cn); font-size: 16px; letter-spacing: .22em;
+  font-family: var(--font-cn); font-size: 21px; letter-spacing: .22em;
   color: var(--ink-3);
 }
 .mg-cat-intro {
   margin: 0;
-  font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+  font-family: var(--font-body); font-size: 19.5px; line-height: 1.6;
   color: var(--ink-3); text-wrap: pretty;
 }
 
@@ -140,7 +140,7 @@
 }
 .mg-forth-head h2 em { font-style: italic; color: var(--foil-gold-2); }
 .mg-forth-head .r {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .mg-forth-list { list-style: none; padding: 0; margin: 0; }
@@ -151,16 +151,16 @@
   border-bottom: .5px solid var(--rule-soft);
 }
 .mg-forth-row .num {
-  font-family: var(--font-display); font-style: italic; font-size: 22px;
+  font-family: var(--font-display); font-style: italic; font-size: 28.5px;
   color: var(--foil-gold);
 }
 .mg-forth-row .ttl {
-  font-family: var(--font-display); font-weight: 400; font-size: 24px;
+  font-family: var(--font-display); font-weight: 400; font-size: 31px;
   line-height: 1.2; color: var(--ink-3);
 }
 .mg-forth-row .ttl em { font-style: italic; color: var(--ink-2); }
 .mg-forth-row .when {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-4);
 }
 .mg-forth-row--live { display: block; padding: 0; }
@@ -177,7 +177,7 @@
 .mg-forth-row--live .ttl em { color: var(--foil-gold-2); }
 .mg-forth-row--live .when { color: var(--foil-gold); }
 .mg-forth-foot {
-  font-family: var(--font-body); font-style: italic; font-size: 14px;
+  font-family: var(--font-body); font-style: italic; font-size: 18px;
   color: var(--ink-3); margin: 24px 0 0;
 }
 .mg-forth-foot a { color: var(--foil-gold-2); text-decoration: underline; text-decoration-thickness: .5px; }

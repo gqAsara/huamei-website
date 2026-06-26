@@ -15,7 +15,7 @@
 .sent-mast .rn {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 15px;
+  font-size: 19.5px;
   color: var(--foil-gold);
   margin-bottom: 16px;
   letter-spacing: 0.02em;
@@ -36,7 +36,7 @@
 }
 .sent-mast .cn {
   font-family: var(--font-cn);
-  font-size: 22px;
+  font-size: 28.5px;
   letter-spacing: 0.32em;
   color: var(--foil-gold);
   margin-top: 22px;
@@ -66,7 +66,7 @@
 .sent-rule em {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 16px;
+  font-size: 21px;
   letter-spacing: 0.02em;
   color: var(--foil-gold-hi);
 }
@@ -90,7 +90,7 @@
 /* Body prose */
 .sent-body .prose {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--ink-3);
   max-width: 56ch;
@@ -133,18 +133,18 @@
 .sent-steps .n {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 16px;
+  font-size: 21px;
   color: var(--foil-gold);
 }
 .sent-steps .k {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 22px;
   color: var(--ink);
   letter-spacing: -0.005em;
 }
 .sent-steps .v {
   font-family: var(--font-body);
-  font-size: 12.5px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-3);
   text-wrap: pretty;
@@ -167,7 +167,7 @@
 }
 .sent-mark .char {
   font-family: var(--font-cn);
-  font-size: 28px;
+  font-size: 36.5px;
   line-height: 1;
   color: var(--foil-gold-hi);
 }
@@ -180,7 +180,7 @@
   flex-wrap: wrap;
   gap: 14px;
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -204,7 +204,7 @@
 /* Closing signature */
 .sent-sig {
   font-family: var(--font-label);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ink-4);
@@ -213,7 +213,7 @@
 .sent-sig em {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 0.02em;
   text-transform: none;
   color: var(--ink-2);

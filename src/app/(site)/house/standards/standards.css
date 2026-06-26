@@ -9,7 +9,7 @@
   margin: 48px auto 96px;
 }
 .st-lede .byline {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
   margin: 0 0 28px;
   padding-bottom: 14px;
@@ -22,13 +22,13 @@
   margin: 0 0 18px; text-wrap: balance;
 }
 .st-lede .lede-a {
-  font-family: var(--font-body); font-size: 18px; line-height: 1.7;
+  font-family: var(--font-body); font-size: 23.5px; line-height: 1.7;
   color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
 }
 .st-lede .lede-a em { font-style: italic; color: var(--foil-gold-2); font-weight: 500; }
 .st-lede .lede-bio {
   font-family: var(--font-body); font-style: italic;
-  font-size: 15px; line-height: 1.65;
+  font-size: 19.5px; line-height: 1.65;
   color: var(--ink-3); margin: 24px 0 0;
   padding-top: 18px; border-top: .5px solid var(--rule-soft);
 }
@@ -39,7 +39,7 @@
   margin: 0 auto 88px;
 }
 .st-section > p {
-  font-family: var(--font-body); font-size: 17px; line-height: 1.72;
+  font-family: var(--font-body); font-size: 22px; line-height: 1.72;
   color: var(--ink-2); margin: 0 0 18px; text-wrap: pretty;
 }
 .st-section > p em { font-style: italic; color: var(--foil-gold-2); }
@@ -69,11 +69,11 @@
   line-height: .95; color: var(--ink); letter-spacing: -.02em;
 }
 .st-facts .l {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--foil-gold);
 }
 .st-facts .s {
-  font-family: var(--font-body); font-style: italic; font-size: 13.5px;
+  font-family: var(--font-body); font-style: italic; font-size: 17.5px;
   color: var(--ink-3); line-height: 1.45;
 }
 
@@ -88,7 +88,7 @@
   gap: 20px;
   padding: 14px 0 12px;
   border-bottom: .5px solid var(--rule);
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--foil-gold);
 }
 .st-test-row {
@@ -100,16 +100,16 @@
   scroll-margin-top: 96px;
 }
 .st-test-name {
-  font-family: var(--font-display); font-weight: 400; font-size: 18px;
+  font-family: var(--font-display); font-weight: 400; font-size: 23.5px;
   line-height: 1.25; color: var(--ink); letter-spacing: -.005em;
 }
 .st-test-th {
-  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  font-family: var(--font-display); font-style: italic; font-size: 19.5px;
   color: var(--foil-gold-2); line-height: 1.35;
 }
 .st-test-sim,
 .st-test-prev {
-  font-family: var(--font-body); font-size: 14px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 18px; line-height: 1.55;
   color: var(--ink-2); text-wrap: pretty;
 }
 
@@ -147,23 +147,23 @@
 .st-cert h4 {
   margin: 0;
   font-family: var(--font-display); font-weight: 400;
-  font-size: 26px; line-height: 1; letter-spacing: -.01em;
+  font-size: 34px; line-height: 1; letter-spacing: -.01em;
   color: var(--ink);
 }
 .st-cert-full {
   font-family: var(--font-body); font-style: italic;
-  font-size: 13px; color: var(--ink-3); line-height: 1.4;
+  font-size: 17px; color: var(--ink-3); line-height: 1.4;
 }
 .st-cert dl {
   margin: 0; display: grid; grid-template-columns: 1fr; gap: 10px;
 }
 .st-cert dt {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--foil-gold);
 }
 .st-cert dd {
   margin: 0 0 6px;
-  font-family: var(--font-body); font-size: 14px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 18px; line-height: 1.55;
   color: var(--ink-2); text-wrap: pretty;
 }
 .st-cert dd a {
@@ -176,7 +176,7 @@
 
 .st-foot-link {
   font-family: var(--font-body); font-style: italic;
-  font-size: 14.5px; line-height: 1.6;
+  font-size: 19px; line-height: 1.6;
   color: var(--ink-3); margin: 0 !important;
 }
 .st-foot-link a {
@@ -195,13 +195,13 @@
 .st-buyer li {
   padding: 16px 0;
   border-bottom: .5px solid var(--rule-soft);
-  font-family: var(--font-body); font-size: 15.5px; line-height: 1.6;
+  font-family: var(--font-body); font-size: 20px; line-height: 1.6;
   color: var(--ink-2); text-wrap: pretty;
 }
 .st-buyer li:first-child { border-top: 1px solid var(--foil-gold); }
 .st-buyer li strong {
   font-family: var(--font-display); font-weight: 400; font-style: italic;
-  font-size: 17px; color: var(--ink); margin-right: 10px;
+  font-size: 22px; color: var(--ink); margin-right: 10px;
   letter-spacing: -.005em;
 }
 .st-buyer li a {
@@ -228,11 +228,11 @@
 .st-cta p {
   margin: 0 auto 28px;
   max-width: 56ch;
-  font-family: var(--font-body); font-size: 14.5px; line-height: 1.6;
+  font-family: var(--font-body); font-size: 19px; line-height: 1.6;
   color: var(--paper); opacity: .8;
 }
 .st-cta-link {
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 14.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--paper-white);
   border: .5px solid var(--paper-white);
   padding: 14px 28px;

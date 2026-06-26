@@ -9,12 +9,12 @@
   display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 56px; align-items: end;
 }
 .cr-mast .ltop {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .34em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .34em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .cr-mast .ltop .gold {
   color: var(--foil-gold); margin-right: 8px;
-  font-family: var(--font-display); font-style: italic; font-size: 13px;
+  font-family: var(--font-display); font-style: italic; font-size: 17px;
   letter-spacing: 0; text-transform: none;
 }
 .cr-mast .centre { text-align: center; }
@@ -25,16 +25,16 @@
 }
 .cr-mast .centre h1 em { font-style: italic; color: var(--foil-gold-2); }
 .cr-mast .centre .cn {
-  font-family: var(--font-cn); font-size: 28px; letter-spacing: .24em;
+  font-family: var(--font-cn); font-size: 36.5px; letter-spacing: .24em;
   color: var(--foil-gold); margin-top: 14px;
 }
 .cr-mast .rtop {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 22px; line-height: 1.35; color: var(--ink-2); text-wrap: pretty;
+  font-size: 28.5px; line-height: 1.35; color: var(--ink-2); text-wrap: pretty;
   max-width: 30ch; margin-left: auto;
 }
 .cr-mast .rtop .caps {
-  font-family: var(--font-label); font-style: normal; font-size: 9.5px; letter-spacing: .32em;
+  font-family: var(--font-label); font-style: normal; font-size: 12.5px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--ink-4);
   display: block; margin-top: 16px;
 }
@@ -49,7 +49,7 @@
   font-size: 58px; line-height: .9; color: var(--foil-gold); letter-spacing: -.01em;
 }
 .cr-lede p {
-  font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--ink-2);
+  font-family: var(--font-body); font-size: 22px; line-height: 1.7; color: var(--ink-2);
   margin: 0; text-wrap: pretty; max-width: none;
 }
 .cr-lede p em { font-style: italic; color: var(--ink); }
@@ -75,7 +75,7 @@
   margin-left: 18px; letter-spacing: .12em; vertical-align: baseline;
 }
 .cr-band-head .count {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3); text-align: right;
 }
 .cr-band-head .count .n {
@@ -90,7 +90,7 @@
 }
 .cr-band-body .intro {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 20px; line-height: 1.4; color: var(--ink-2);
+  font-size: 26px; line-height: 1.4; color: var(--ink-2);
   max-width: 38ch; text-wrap: pretty; margin: 0;
 }
 .cr-band-body .featured {
@@ -103,20 +103,20 @@
   background: #1a1614 center / cover no-repeat; flex-shrink: 0;
 }
 .cr-band-body .featured .meta {
-  font-family: var(--font-label); font-size: 9px; letter-spacing: .3em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 11.5px; letter-spacing: .3em; text-transform: uppercase;
   color: var(--foil-gold-2); margin-bottom: 5px;
 }
 .cr-band-body .featured .t {
-  font-family: var(--font-display); font-size: 18px; line-height: 1.2; color: var(--ink);
+  font-family: var(--font-display); font-size: 23.5px; line-height: 1.2; color: var(--ink);
   margin: 0 0 6px;
 }
 .cr-band-body .featured .t em { font-style: italic; }
 .cr-band-body .featured .q {
-  font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.5; color: var(--ink-3);
   margin: 0 0 10px; text-wrap: pretty;
 }
 .cr-band-body .featured a {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em; text-transform: uppercase;
   color: var(--ink); border-bottom: .5px solid var(--rule); padding-bottom: 2px; text-decoration: none;
 }
 .cr-band-body .featured a:hover { color: var(--foil-gold-2); border-bottom-color: var(--foil-gold); }
@@ -145,10 +145,10 @@
   padding-top: 4px;
 }
 .cr-show-card .meta .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--foil-gold);
 }
 .cr-show-card .meta .lbl {
-  font-family: var(--font-display); font-size: 14px; line-height: 1.2;
+  font-family: var(--font-display); font-size: 18px; line-height: 1.2;
   color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .cr-show-card .meta .lbl em { font-style: italic; }
@@ -171,24 +171,24 @@
 }
 .cr-it:hover { padding-left: 4px; }
 .cr-it .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 19.5px; color: var(--foil-gold);
 }
 .cr-it .lbl { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .cr-it .name {
-  font-family: var(--font-display); font-weight: 400; font-size: 21px; line-height: 1.15;
+  font-family: var(--font-display); font-weight: 400; font-size: 27.5px; line-height: 1.15;
   letter-spacing: -.005em; color: var(--ink);
 }
 .cr-it .name em { font-style: italic; }
 .cr-it:hover .name { color: var(--foil-gold-2); }
 .cr-it .desc {
-  font-family: var(--font-body); font-size: 12.5px; color: var(--ink-3); line-height: 1.45;
+  font-family: var(--font-body); font-size: 16px; color: var(--ink-3); line-height: 1.45;
 }
 .cr-it .count {
-  font-family: var(--font-label); font-size: 9px; letter-spacing: .26em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 11.5px; letter-spacing: .26em; text-transform: uppercase;
   color: var(--ink-4); text-align: right; white-space: nowrap;
 }
 .cr-it .count .arrow {
-  font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--foil-gold);
   letter-spacing: 0; text-transform: none; margin-left: 6px;
 }
 
@@ -238,7 +238,7 @@
 }
 .cr-related h3 em { font-style: italic; color: var(--foil-gold-2); }
 .cr-related .more {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .28em; text-transform: uppercase;
   color: var(--ink-2); border-bottom: .5px solid var(--rule);
   padding-bottom: 2px; text-decoration: none;
 }
@@ -256,23 +256,23 @@
 .cr-card:hover .ph { transform: translateY(-3px); }
 .cr-card .ph .rn {
   position: absolute; top: 10px; left: 12px;
-  font-family: var(--font-display); font-style: italic; font-size: 14px;
+  font-family: var(--font-display); font-style: italic; font-size: 18px;
   color: var(--foil-gold-hi);
   text-shadow: 0 1px 2px rgba(20, 16, 14, .4);
 }
 .cr-card .meta {
   display: flex; justify-content: space-between;
-  font-family: var(--font-label); font-size: 8.5px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink-4);
   padding-top: 4px; border-top: .5px solid var(--rule-soft);
 }
 .cr-card h4 {
   margin: 0;
-  font-family: var(--font-display); font-weight: 400; font-size: 17px; line-height: 1.15;
+  font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.15;
   color: var(--ink); letter-spacing: -.005em;
 }
 .cr-card .tag {
-  font-family: var(--font-body); font-style: italic; font-size: 12px; color: var(--ink-3);
+  font-family: var(--font-body); font-style: italic; font-size: 15.5px; color: var(--ink-3);
 }
 
 /* CTA */
@@ -286,7 +286,7 @@
   border: .5px solid var(--rule-soft); pointer-events: none;
 }
 .cr-cta .k {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--foil-gold-2); margin-bottom: 16px;
 }
 .cr-cta h3 {
@@ -295,7 +295,7 @@
   margin: 0 auto 16px; max-width: 26ch;
 }
 .cr-cta p {
-  font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--ink-3);
+  font-family: var(--font-body); font-size: 19.5px; line-height: 1.55; color: var(--ink-3);
   max-width: 52ch; margin: 0 auto 28px;
 }
 .cr-cta .actions { display: inline-flex; align-items: center; gap: 22px; }

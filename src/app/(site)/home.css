@@ -27,7 +27,7 @@
 }
 .context-body { position: relative; padding: 0 56px 72px; max-width: 760px; }
 .context-body .eyebrow {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .36em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .36em;
   text-transform: uppercase; color: var(--foil-gold-hi);
   margin: 0 0 22px;
   display: inline-flex; align-items: center; gap: 14px;
@@ -40,14 +40,14 @@
 }
 .context-body h1 em { font-style: italic; }
 .context-body .sub {
-  font-family: var(--font-body); font-size: 16.5px; line-height: 1.7;
+  font-family: var(--font-body); font-size: 21.5px; line-height: 1.7;
   color: var(--paper); opacity: .86; max-width: 52ch; margin: 0 0 36px;
 }
 .context-body .hero-meta {
   display: inline-flex; align-items: center; gap: 18px;
   flex-wrap: nowrap; white-space: nowrap;
   padding-top: 18px; border-top: .5px solid rgba(212, 178, 108, .4);
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--paper-white); opacity: .78;
 }
 .context-body .hero-meta .dot { color: var(--foil-gold-hi); opacity: .8; }
@@ -59,12 +59,12 @@
 .sec { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
 .sec + .sec { margin-top: 96px; }
 .sec .eyebrow {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .34em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .34em;
   text-transform: uppercase; color: var(--ink-3);
   display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px;
 }
 .sec .eyebrow .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 13px;
+  font-family: var(--font-display); font-style: italic; font-size: 17px;
   color: var(--foil-gold); letter-spacing: 0; text-transform: none;
 }
 .sec h2 {
@@ -74,11 +74,11 @@
 }
 .sec h2 em { font-style: italic; }
 .sec p {
-  font-family: var(--font-body); font-size: 15.5px; line-height: 1.65;
+  font-family: var(--font-body); font-size: 20px; line-height: 1.65;
   color: var(--ink-2); max-width: 56ch; margin: 0 0 20px;
 }
 .sec .link {
-  font-family: var(--font-label); font-size: 10.5px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 13.5px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink);
   border-bottom: .5px solid var(--rule); padding-bottom: 4px; display: inline-block;
   text-decoration: none;
@@ -111,21 +111,21 @@
 .sec-video-over h2 {
   color: var(--paper-white); font-size: clamp(30px, 3.2vw, 44px); max-width: 18ch;
 }
-.sec-video-over p { color: var(--paper); opacity: .85; font-size: 14.5px; max-width: 48ch; margin: 0; }
+.sec-video-over p { color: var(--paper); opacity: .85; font-size: 19px; max-width: 48ch; margin: 0; }
 
 .house-facts {
   display: grid; grid-template-columns: repeat(4, auto); gap: 36px; margin-top: 22px;
 }
 .house-facts > div { display: flex; flex-direction: column; gap: 4px; }
 .house-facts .n {
-  font-family: var(--font-display); font-weight: 400; font-size: 28px;
+  font-family: var(--font-display); font-weight: 400; font-size: 36.5px;
   color: var(--paper-white); letter-spacing: -.01em; line-height: 1;
 }
 .house-facts .n .u {
-  font-style: italic; color: var(--foil-gold-hi); font-size: 18px; margin-left: 1px;
+  font-style: italic; color: var(--foil-gold-hi); font-size: 23.5px; margin-left: 1px;
 }
 .house-facts .l {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--paper); opacity: .72;
 }
 
@@ -155,7 +155,7 @@
 .hcar-card .img.tone-noir  { background: var(--noir);  border: .5px solid var(--noir); }
 .hcar-card .img.tone-sage  { background: var(--sage);  border: .5px solid var(--sage); }
 .hcar-card .img .plate-label {
-  font-family: var(--font-label); font-size: 11.5px; letter-spacing: .42em;
+  font-family: var(--font-label); font-size: 15px; letter-spacing: .42em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .hcar-card .img.tone-noir .plate-label { color: var(--foil-gold-hi); }
@@ -168,14 +168,14 @@
 }
 .hcar-card:hover .meta { border-bottom-color: var(--foil-gold); }
 .hcar-card .meta .rn {
-  font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 21px; color: var(--foil-gold);
 }
 .hcar-card .meta .lbl {
-  font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--ink);
+  font-family: var(--font-display); font-size: 23.5px; font-weight: 400; color: var(--ink);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .hcar-card .meta .num {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .hcar-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
@@ -184,7 +184,7 @@
   appearance: none; cursor: pointer;
   width: 40px; height: 40px;
   border: .5px solid var(--rule); background: transparent;
-  color: var(--ink-2); font-size: 16px; line-height: 1;
+  color: var(--ink-2); font-size: 21px; line-height: 1;
   transition: color var(--dur-fast) var(--ease-out),
               border-color var(--dur-fast) var(--ease-out);
 }
@@ -213,11 +213,11 @@
 }
 .cr-row .diag svg { width: 100%; height: 100%; }
 .cr-row .lbl {
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .22em;
+  font-family: var(--font-label); font-size: 14.5px; letter-spacing: .22em;
   text-transform: uppercase; color: inherit;
 }
 .cr-row .num {
-  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  font-family: var(--font-display); font-style: italic; font-size: 19.5px;
   color: var(--ink-4); transition: color var(--dur-med) var(--ease-paper);
 }
 .cr-row:hover { color: var(--ink); }
@@ -249,13 +249,13 @@
 .caps-stage-cap { margin-top: 18px; max-width: 44ch; }
 .caps-stage-cap .verb {
   display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px;
-  font-family: var(--font-display); font-size: 28px; font-weight: 400;
+  font-family: var(--font-display); font-size: 36.5px; font-weight: 400;
   line-height: 1.05; color: var(--ink);
 }
-.caps-stage-cap .verb .rn { font-style: italic; color: var(--foil-gold); font-size: 16px; }
+.caps-stage-cap .verb .rn { font-style: italic; color: var(--foil-gold); font-size: 21px; }
 .caps-stage-cap .verb em { font-style: italic; color: var(--ink); }
 .caps-stage-cap .desc {
-  font-family: var(--font-body); font-size: 14.5px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 19px; line-height: 1.55;
   color: var(--ink-2); text-wrap: pretty;
 }
 
@@ -274,21 +274,21 @@
 }
 .tix-row:last-of-type { border-bottom: 0; }
 .tix-row .tix-rn {
-  font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--foil-gold);
+  font-family: var(--font-display); font-style: italic; font-size: 23.5px; color: var(--foil-gold);
 }
 .tix-row .tix-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .tix-row .tix-name {
-  font-family: var(--font-display); font-size: 26px; line-height: 1.12; font-weight: 400;
+  font-family: var(--font-display); font-size: 34px; line-height: 1.12; font-weight: 400;
   color: var(--ink-3); letter-spacing: -.005em;
   transition: color var(--dur-med) var(--ease-paper);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .tix-row .tix-tag {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-4);
 }
 .tix-row .tix-year {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .22em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--ink-4); align-self: center;
 }
 .tix-row::after {
@@ -351,27 +351,27 @@
 .tix-caption > * { grid-column: 1 / -1; }
 .tix-foil-rule { grid-column: 1 / -1; height: 1px; width: 36px; background: var(--foil-gold); opacity: .85; margin-bottom: 4px; }
 .tix-client {
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .32em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .32em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .tix-h {
-  font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.1;
+  font-family: var(--font-display); font-weight: 400; font-size: 36.5px; line-height: 1.1;
   color: var(--ink); margin: 0;
 }
 .tix-desc {
-  font-family: var(--font-body); font-size: 13.5px; line-height: 1.55;
+  font-family: var(--font-body); font-size: 17.5px; line-height: 1.55;
   color: var(--ink-2); max-width: 44ch; margin: 0; text-wrap: pretty;
 }
 .tix-meta {
   grid-column: 1 / -1;
   display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
   padding-top: 8px; border-top: .5px solid var(--rule-soft); margin-top: 4px;
-  font-family: var(--font-label); font-size: 9.5px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--ink-3);
 }
 .tix-num {
   position: absolute; right: 0; top: -40px;
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 14.5px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3);
   display: flex; gap: 10px; align-items: baseline;
 }
@@ -409,7 +409,7 @@
 
 .sec-industry .cats .rn {
   font-family: var(--font-display); font-style: italic; color: var(--foil-gold);
-  font-size: 14px;
+  font-size: 18px;
 }
 .sec-industry .cats .ico {
   display: inline-flex; align-items: center; justify-content: center;
@@ -426,13 +426,13 @@
 }
 .sec-industry .cats a:hover .t { color: var(--foil-gold-2); }
 .sec-industry .cats .meta {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .3em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .3em;
   text-transform: uppercase; color: var(--ink-3);
   text-align: right;
   white-space: nowrap;
 }
 .sec-industry .cats .arr {
-  font-family: var(--font-display); font-style: italic; font-size: 22px;
+  font-family: var(--font-display); font-style: italic; font-size: 28.5px;
   color: var(--ink-3);
   margin-left: 14px;
   transition: transform var(--dur) var(--ease-paper),
@@ -459,7 +459,7 @@
 .sec-export-head .eyebrow { margin-bottom: 14px; }
 .sec-export-body p {
   font-family: var(--font-body);
-  font-size: 16.5px;
+  font-size: 21.5px;
   line-height: 1.7;
   color: var(--ink-2);
   max-width: 64ch;
@@ -500,11 +500,11 @@
   margin: 0 0 18px; padding: 0; border: 0; max-width: 16ch;
 }
 .sustain-copy p {
-  color: var(--paper); opacity: .88; max-width: 40ch; margin-bottom: 22px; font-size: 14.5px;
+  color: var(--paper); opacity: .88; max-width: 40ch; margin-bottom: 22px; font-size: 19px;
 }
 .sustain-copy .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .sustain-copy .chips span {
-  font-family: var(--font-label); font-size: 10px; letter-spacing: .22em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--paper-white);
   padding: 7px 11px; border: .5px solid rgba(244, 239, 230, .5);
 }
@@ -524,7 +524,7 @@
 }
 .start-inner p {
   color: var(--paper); opacity: .78; margin: 0 auto 34px; max-width: 60ch;
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .24em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 14.5px; letter-spacing: .24em; text-transform: uppercase;
 }
 .start-actions { display: inline-flex; align-items: center; gap: 28px; }
 .hm-plate.inv {
@@ -533,7 +533,7 @@
 .hm-plate.inv .roman { color: var(--foil-gold-hi); }
 .hm-plate.inv:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .start-mail {
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .26em;
+  font-family: var(--font-label); font-size: 14.5px; letter-spacing: .26em;
   text-transform: uppercase; color: var(--paper-white);
   border-bottom: .5px solid rgba(244, 239, 230, .4); padding-bottom: 3px;
   text-decoration: none;

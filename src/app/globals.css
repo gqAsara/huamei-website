@@ -50,13 +50,13 @@
   --fs-hero:        clamp(3.5rem, 7vw, 6.5rem);
   --fs-h1:          clamp(2.5rem, 4.5vw, 4rem);
   --fs-h2:          clamp(1.75rem, 3vw, 2.5rem);
-  --fs-h3:          1.5rem;
-  --fs-body-lg:     1.125rem;
-  --fs-body:        1rem;
-  --fs-body-sm:     0.9375rem;
-  --fs-caption:     0.8125rem;
-  --fs-label:       0.75rem;
-  --fs-label-sm:    0.6875rem;
+  --fs-h3:          1.95rem;
+  --fs-body-lg:     1.46rem;
+  --fs-body:        1.3rem;
+  --fs-body-sm:     1.219rem;
+  --fs-caption:     1.056rem;
+  --fs-label:       0.975rem;
+  --fs-label-sm:    0.894rem;
 
   /* Line-heights & tracking */
   --lh-tight:       1.05;
@@ -191,6 +191,10 @@ html, body {
   font-feature-settings: "liga", "kern", "onum";
   overflow-x: clip;
 }
+/* Anchor the rem base to 16px so the enlarged --fs-* rem variables scale
+   exactly once; without this, html inheriting the bumped --fs-body would
+   re-inflate every rem-based size a second time. */
+html { font-size: 16px; }
 
 /* Display heading — oversized hero */
 .hm-hero, h1.hm-hero {
