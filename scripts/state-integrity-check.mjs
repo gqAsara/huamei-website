@@ -37,7 +37,7 @@ try {
     console.error('⚠ state-integrity: .seo/state.json failed schema validation:');
     for (const e of validate.errors) console.error('  ' + ajv.errorsText([e]));
   }
-} catch (e) {
+} catch {
   // ajv not installed yet — skip. The CI workflow will catch it.
 }
 

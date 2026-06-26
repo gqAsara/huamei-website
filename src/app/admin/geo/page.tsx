@@ -34,7 +34,7 @@ function CitationCell({ r }: { r: RunSummary | undefined }) {
   return <td className="cell missed" title="Not cited">○</td>;
 }
 
-function StageGroup({ stage, label }: { stage: string; label: string }) {
+function StageGroup({ label }: { label: string }) {
   return (
     <tr className="group">
       <td colSpan={ENGINES.length + 2} className="group-head">
@@ -155,7 +155,7 @@ export default async function GeoDashboard({
               if (list.length === 0) return null;
               return (
                 <>
-                  <StageGroup key={`g-${key}`} stage={key} label={label} />
+                  <StageGroup key={`g-${key}`} label={label} />
                   {list.map((p) => (
                     <tr key={p._id}>
                       <td className="td-prompt">

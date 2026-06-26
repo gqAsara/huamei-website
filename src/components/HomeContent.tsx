@@ -407,7 +407,7 @@ export function HomeContent() {
           </div>
           <div className="sec-export-body">
             <p>
-              More than 80% of the energy across Huamei's press floors is solar; the
+              More than 80% of the energy across Huamei&apos;s press floors is solar; the
               shareholder portfolio also funds biomass and hydro generation, so the
               green-energy claim sits on infrastructure, not on a certificate alone.
               Every export run is checked against transit-grade thresholds — high
