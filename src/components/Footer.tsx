@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="hm-footer-top">
           <div className="brand">
             <div className="lat">Huamei</div>
-            <img
+            <Image
               src="/huamei-mark-512.png"
               alt="華美"
               width={72}

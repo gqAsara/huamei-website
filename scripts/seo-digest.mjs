@@ -69,10 +69,6 @@ function parseFlags() {
   return { dryRun, date };
 }
 
-function isoDayPrefix(date) {
-  return date; // already YYYY-MM-DD
-}
-
 /**
  * Activity log entries: `<iso-timestamp>\t<agent>\t<event>\t<details>`
  * Returns entries whose timestamp falls on `date` (YYYY-MM-DD), in

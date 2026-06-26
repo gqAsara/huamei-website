@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -62,7 +63,7 @@ export function PrimaryNav() {
         <Link className="hm-wm" href="/">
           <span className="lat">Huamei</span>
           <span className="bar" />
-          <img
+          <Image
             src="/huamei-mark-512.png"
             alt="華美"
             width={40}
