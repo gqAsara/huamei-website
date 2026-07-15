@@ -297,8 +297,8 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "The flap pulls home with a soft thunk; the seam disappears.",
     meta: ["4–8 N42 magnets", "Pull-tested 5,000 cycles", "24–32 days"],
-    commercialTitle: "Magnetic closure rigid box manufacturer — luxury packaging",
-    commercialDescription: "Magnetic-flap rigid boxes with 6–50 g pull-force at 2,800 Gauss, hidden under the wrap. MOQ 200+, 7–10 day samples, 24–32 day production. Built for Wuliangye and a skincare-and-spirits bench.",
+    commercialTitle: "Magnetic closure pull-force 6–50 g — luxury box manufacturer",
+    commercialDescription: "Magnetic rigid boxes with 6–50 g pull-force at 2,800 Gauss. MOQ 200+, 7–10 day samples, 24–32 day production. Magnet hidden under wrap — no visible hardware.",
     buyerFaq: [
       { q: "What's the minimum order quantity for a magnetic-flap rigid box?", a: "200+ pieces for rigid magnetic-flap construction. Some structures run lower on a per-project quote — ask in the brief." },
       { q: "How long does a magnetic-flap rigid box take to produce?", a: "Samples turn in 7–10 days. Production runs 24–32 days from approved sample. Magnet sourcing adds a week at very low volume." },
@@ -475,8 +475,8 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     ],
     pullQuote: "ΔE ≤ 2 — the floor's hard ceiling on colour.",
     meta: ["8-col Heidelberg", "ΔE ≤ 2", "GMG contract proofs"],
-    commercialTitle: "Offset print manufacturer for luxury packaging — Pantone ΔE ≤ 2",
-    commercialDescription: "8-colour Heidelberg XL 106 offset, ISO 12647-2 colour managed to ΔE ≤ 2. Soy inks house standard. GMG-certified contract proofs. MOQ 1,000+ for offset; digital fills below that.",
+    commercialTitle: "Offset print factory for luxury packaging — Pantone ΔE ≤ 2",
+    commercialDescription: "8-colour Heidelberg offset, ISO 12647-2 managed to Pantone ΔE ≤ 2. Soy inks standard. GMG contract proofs. MOQ 1,000+; digital short-run below that.",
     buyerFaq: [
       { q: "What's the colour tolerance you hold on press?", a: "ΔE ≤ 2 against Pantone, GMG-certified contract proof. The four 'extra' colour stations beyond CMYK carry Pantone spots, white, varnish, or speciality inks." },
       { q: "What's the minimum for offset?", a: "1,000+ pieces. Below that the press setup cost dominates per-piece price; digital short-run fills the volume below 1,000." },
