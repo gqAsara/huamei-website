@@ -1,6 +1,6 @@
 ---
 title: "Registered emboss-and-foil — what ±0.1 mm tolerance actually means"
-description: "How registered emboss-and-foil is held to ±0.1 mm on a luxury rigid box, why most factories run looser, and how to spec it on a dieline so the press operator can deliver it."
+description: "Registered emboss-and-foil at ±0.1 mm — three times tighter than the ±0.3 mm industry norm. How Huamei holds this tolerance and how to specify it on your dieline."
 slug: "registered-emboss-foil-tolerance"
 section: "blogs"
 primaryKeyword: "registered emboss-and-foil tolerance"
