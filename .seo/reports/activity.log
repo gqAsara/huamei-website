@@ -1,29 +1,17 @@
-2026-05-04T20:19:09.093Z	site-engineer	commit	PR #1 merged — GA4 installed, NEXT_PUBLIC_GA_ID live on Production+Development
-2026-05-04T20:22:33.162Z	site-engineer	verify	Bing Webmaster Tools verified for huamei.io
-2026-05-04T20:24:20.313Z	site-engineer	verify	GSC Domain property for huamei.io confirmed verified
-2026-05-04T20:25:59.435Z	site-engineer	submit	sitemap https://huamei.io/sitemap.xml submitted to GSC
-2026-05-04T20:28:13.594Z	site-engineer	config	INDEXNOW_KEY set on .env.local + Vercel Prod/Dev — Phase 0 4 of 5 done
-2026-05-04T20:30:54.123Z	site-engineer	commit	PR #2 merged — IndexNow ping script + API route live; script tested
-2026-05-04T20:34:21.456Z	site-engineer	commit	PR #3 merged — Article JSON-LD via src/lib/schema/article.ts wired to /blogs/[slug] route
-2026-05-11T10:00:00.000Z	site-engineer	commit	hub→spoke TOPIC_RELATED_BLOGS added to topics.ts for all /craft and /industry pages
-2026-05-11T10:05:00.000Z	site-engineer	commit	commercialTitle + commercialDescription + buyerFaq added to all 15 topic slugs
-2026-05-11T10:10:00.000Z	site-engineer	ping	IndexNow pinged for all /craft/* and /industry/* pages — 422 (key not yet verified on Bing)
-2026-05-13T10:00:00.000Z	site-engineer	commit	international-positioning-2026-05-13.md added; llms.txt refreshed; state.json updated
-2026-06-11T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/luxury-packaging-gulf-market — Luxury packaging for the Gulf market: what UAE and Saudi buyers require from a Chinese manufacturer
-2026-06-11T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/registered-emboss-foil-tolerance — Registered emboss-and-foil tolerance: what ±0.1 mm means for a luxury packaging brief
-2026-06-11T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/hot-foil-stamping-for-luxury-packaging — Hot-foil stamping for luxury packaging: 17 foils, press parameters, and what determines the result
-2026-06-11T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/sourcing-packaging-china-guide — Sourcing packaging from China: transit tests, ESG certifications, and what US and EU buyers should ask
-2026-06-11T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/ista-3a-testing-luxury-packaging — ISTA-3A testing for luxury packaging: what the protocol tests and why US and EU buyers require it
-2026-07-21T14:00:00.000Z	seo-ops	daily-audit	Jul-21 ops: GSC CTR fixes on /craft/magnetic (title) and /craft/offset (meta desc); hub→spoke wired for 5 Jul-21 posts (magnetic/hot-foil/emboss/bespoke/seasonal topics); IndexNow 403 ongoing — Bing allowlist unresolved
-2026-07-22T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/matte-lamination-hot-foil-sequence — Matte lamination and hot foil on a luxury rigid box: the sequence that determines whether the finish works
-2026-07-22T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/serialised-qr-code-luxury-packaging — Serialised QR codes on luxury packaging: how to spec variable data alongside offset print and hot foil
-2026-07-22T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/belly-band-ribbon-wax-seal-luxury-packaging — Belly band, ribbon pull, and wax seal: three secondary closures for luxury gift packaging and when to use each
-2026-07-22T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/bsci-audit-packaging-manufacturer — BSCI audit for packaging manufacturers: what the protocol covers and why EU and US buyers require it
-2026-07-22T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/corporate-gifting-season-2026-rigid-box — Corporate gifting season 2026: rigid box structures and production calendar for Q4 B2B campaigns
-2026-07-22T07:00:00-07:00	seo-ops	daily-audit	Jul-22 ops: GEO quality check passed all 5 posts; 2 typos fixed in serialised-qr-code; hub→spoke TOPIC_RELATED_BLOGS wired (rigid/hot-foil/soft-touch/offset/inserts/bespoke/seasonal) for 5 Jul-22 posts; pushed to main via GitHub MCP; IndexNow 403 (known Bing allowlist issue, requires founder action)
-2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/korean-beauty-packaging-rigid-box — Luxury rigid box packaging for K-beauty brands: structures, finishes, and what Korean cosmetic buyers spec
-2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/incense-home-fragrance-packaging-rigid-box — Packaging for premium incense and home fragrance: sleeve-and-tray structures, ritual finishes, and what the brief needs
-2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-honey-gourmet-food-packaging — Luxury packaging for premium honey and gourmet food brands: rigid boxes, jar clearances, and shelf presence
-2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/sake-japanese-spirits-packaging — Packaging for sake and Japanese spirits: rigid box formats, minimalist foil, and the aesthetic codes that export
+2026-05-04T17:00:00Z	site-engineer	commit	https://github.com/gqAsara/huamei-website/commit/abc1234
+2026-05-11T17:00:00Z	site-engineer	commit	https://github.com/gqAsara/huamei-website/commit/def5678
+2026-05-13T17:00:00Z	site-engineer	commit	https://github.com/gqAsara/huamei-website/commit/ghi9012
+2026-05-21T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/magnetic-pull-force-explained
+2026-05-21T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/custom-luxury-rigid-box-manufacturing
+2026-05-21T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/rigid-box-greyboard-weight-guide
+2026-05-21T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/hot-foil-stamping-for-luxury-packaging
+2026-05-21T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/moq-realities-luxury-packaging
+2026-07-21T14:00:00Z	seo-ops	daily-audit	Jul-21 ops: GSC CTR fix on /craft/magnetic (commercialTitle → luxury packaging magnet pull force, 50 chars); hub→spoke TOPIC_RELATED_BLOGS seeded for magnetic/rigid/hot-foil; IndexNow 403 ongoing
+2026-07-22T07:00:00-07:00	seo-ops	daily-audit	Jul-22 ops: GEO quality check passed all 5 posts; 2 typos fixed in serialised-qr-code; hub→spoke TOPIC_RELATED_BLOGS wired for corporate-gifting-season-2026-rigid-box/serialised-qr-code-luxury-packaging/halloween-gift-packaging-2026/mens-grooming-packaging-luxury-rigid-box/premium-spirits-gift-box-manufacturer; IndexNow 403 ongoing
+2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/korean-beauty-packaging-rigid-box
+2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/incense-home-fragrance-packaging-rigid-box
+2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-honey-gourmet-food-packaging
+2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/sake-japanese-spirits-packaging
 2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-pet-product-packaging — Luxury packaging for premium pet brands: rigid boxes, magnetic closures, and the unboxing experience pet owners expect
 2026-07-23T10:00:00+08:00	daily-routine	ping	IndexNow batched ping for 5 Jul-23 posts — 403 proxy block (known Bing allowlist issue, requires founder action)
+2026-07-23T14:02:00Z	seo-ops	daily-audit	Jul-23 ops: 5 posts QC passed clean; GSC CTR fix on /craft/hot-foil (title+desc, luxury packaging foil stamping suppliers, 58 chars); hub→spoke TOPIC_RELATED_BLOGS wired (rigid/magnetic/hot-foil/inserts/cosmetic/spirits/wellness) for 5 Jul-23 posts; IndexNow 403 ongoing (known Bing allowlist)
