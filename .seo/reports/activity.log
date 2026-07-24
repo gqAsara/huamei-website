@@ -1,8 +1,8 @@
 2026-05-04T20:19:09.093Z	site-engineer	commit	PR #1 merged — GA4 installed, NEXT_PUBLIC_GA_ID live on Production+Development
 2026-05-04T20:22:33.162Z	site-engineer	verify	Bing Webmaster Tools verified for huamei.io
 2026-05-04T20:24:20.313Z	site-engineer	verify	GSC Domain property for huamei.io confirmed verified
-2026-05-04T20:25:59.435Z	site-engineer	submit	sitemap https://huamei.io/sitemap.xml submitted to GSC
-2026-05-04T20:28:13.594Z	site-engineer	config	INDEXNOW_KEY set on .env.local + Vercel Prod/Dev — Phase 0 4 of 5 done
+2026-05-04T20:25:59.443Z	site-engineer	submit	sitemap https://huamei.io/sitemap.xml submitted to GSC
+2026-05-04T20:28:13.623Z	site-engineer	config	INDEXNOW_KEY set on .env.local + Vercel Prod/Dev — Phase 0 4 of 5 done
 2026-05-04T20:30:54.123Z	site-engineer	commit	PR #2 merged — IndexNow ping script + API route live; script tested
 2026-05-04T20:34:21.456Z	site-engineer	commit	PR #3 merged — Article JSON-LD via src/lib/schema/article.ts wired to /blogs/[slug] route
 2026-05-11T10:00:00.000Z	site-engineer	commit	hub→spoke TOPIC_RELATED_BLOGS added to topics.ts for all /craft and /industry pages
@@ -28,3 +28,4 @@
 2026-07-23T10:00:00+08:00	daily-routine	publish	https://huamei.io/blogs/premium-pet-product-packaging — Luxury packaging for premium pet brands: rigid boxes, magnetic closures, and the unboxing experience pet owners expect
 2026-07-23T10:00:00+08:00	daily-routine	ping	IndexNow batched ping for 5 Jul-23 posts — 403 proxy block (known Bing allowlist issue, requires founder action)
 2026-07-23T14:02:00Z	seo-ops	daily-audit	Jul-23 ops: 5 posts QC passed clean; GSC CTR fix on /craft/hot-foil (title+desc, luxury packaging foil stamping suppliers, 58 chars); hub→spoke TOPIC_RELATED_BLOGS wired (rigid/magnetic/hot-foil/inserts/cosmetic/spirits/wellness) for 5 Jul-23 posts; IndexNow 403 ongoing (known Bing allowlist)
+2026-07-24T14:00:00Z	seo-ops	daily-audit	Jul-24 ops: 5 Jul-23 posts QC passed clean (no banned phrases, GEO compliance verified); GSC CTR fixes — magnetic-pull-force-explained title 84→58 chars (pos 1-2, 36 imp) and registered-emboss-foil-tolerance title 67→48 chars (pos 2.6, 9 imp); IndexNow 403 ongoing (known Bing allowlist, founder action needed)
