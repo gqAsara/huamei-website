@@ -1,6 +1,6 @@
 ---
-title: "Magnetic closure pull-force on a luxury rigid box — what 6 to 50 grams actually means"
-description: "A luxury packaging magnet should hold 6–50 grams at 2,800 Gauss — but the right number depends on lid weight and closure geometry. This guide shows how to specify pull-force on your brief."
+title: "Luxury Packaging Magnet Pull-Force: 6–50 g at 2,800 Gauss"
+description: "Luxury packaging magnet pull-force ranges 6–50 g at 2,800 Gauss. Lid weight and closure geometry determine the right number — how to specify it on your brief."
 slug: "magnetic-pull-force-explained"
 section: "blogs"
 primaryKeyword: "magnetic closure pull-force luxury packaging"
@@ -18,7 +18,7 @@ author:
   factory: "Henan"
   url: "/house/people"
 publishedAt: "2026-05-08T19:30:00+08:00"
-updatedAt: "2026-05-11T18:30:00+08:00"
+updatedAt: "2026-07-24T14:00:00Z"
 schema: "Article"
 internalLinks:
   - "/craft"
@@ -47,9 +47,9 @@ geo:
   freshnessTarget: "annual"
 ---
 
-# Magnetic closure pull-force on a luxury rigid box — what 6 to 50 grams actually means
+# Luxury Packaging Magnet Pull-Force: 6–50 g at 2,800 Gauss
 
-By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
+By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 24 July 2026.
 
 The question every brand director eventually asks on a magnetic-flap rigid box is the same: how strong should the magnet be? The answer is a range, not a number, and the range is six to fifty grams of pull-force at 2,800 Gauss. Below six and the closure feels loose; above fifty and it snaps too hard for a luxury unbox. This page explains why the range is what it is, what determines where in the range a project should sit, and how to spec it on a brief without prescribing the wrong number. For the structural detail, see [the magnetic gift box](/blogs/magnetic-gift-box).
 
