@@ -1,6 +1,6 @@
 ---
-title: "Registered emboss-and-foil — what ±0.1 mm tolerance actually means"
-description: "Registered emboss-and-foil at ±0.1 mm — three times tighter than the ±0.3 mm industry norm. How Huamei holds this tolerance and how to specify it on your dieline."
+title: "Registered Emboss-and-Foil Tolerance: ±0.1 mm"
+description: "Registered emboss-and-foil at ±0.1 mm — three times tighter than the ±0.3 mm industry norm. How to specify it on your dieline."
 slug: "registered-emboss-foil-tolerance"
 section: "blogs"
 primaryKeyword: "registered emboss-and-foil tolerance"
@@ -18,7 +18,7 @@ author:
   factory: "Henan"
   url: "/house/people"
 publishedAt: "2026-05-08T20:30:00+08:00"
-updatedAt: "2026-05-08T20:30:00+08:00"
+updatedAt: "2026-07-24T14:00:00Z"
 schema: "Article"
 internalLinks:
   - "/craft"
@@ -48,9 +48,9 @@ geo:
   freshnessTarget: "annual"
 ---
 
-# Registered emboss-and-foil — what ±0.1 mm tolerance actually means
+# Registered Emboss-and-Foil Tolerance: ±0.1 mm
 
-By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 8 May 2026.
+By Sonia Sun, Founder, Huamei 華美 — since 1992. Updated 24 July 2026.
 
 Registered emboss-and-foil is a single decorative mark where the embossed die rises and the foil lights at the same point, in perfect alignment. The result is the foil-on-emboss effect that defines the unboxing moment of a luxury beauty box, a spirits gift pack, or a heritage-brand seasonal SKU. Most pages on the technique stop at the visual. This page is about the number — the tolerance — that decides whether the result reads as a designed mark or as a misaligned print. For the finish-side detail, see [how to specify an emboss die](/blogs/emboss-die-specification-rigid-boxes).
 
