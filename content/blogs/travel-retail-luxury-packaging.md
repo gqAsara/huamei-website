@@ -24,7 +24,7 @@ schema: "Article"
 internalLinks:
   - "/craft/rigid"
   - "/craft/magnetic"
-  - "/industry/cosmetics"
+  - "/industry/cosmetic"
   - "/volumes/wuliangye-clamshell"
   - "/volumes/yangshao"
   - "/blogs/custom-luxury-rigid-box-manufacturing"
