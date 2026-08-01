@@ -3,7 +3,7 @@ import { HomeContent } from "@/components/HomeContent";
 export const metadata = {
   title: { absolute: "Huamei 華美 — Premium custom luxury packaging" },
   description:
-    "Huamei is a custom luxury packaging house with factories across four Chinese provinces — Henan, Zhejiang, Sichuan and Guizhou. Founded 1992. Rigid boxes, drawer boxes, magnetic closures, hot-foil, emboss, lamination — for cosmetic & skincare, wine spirits & tea, seasonal gifting, and wellness categories.",
+    "Custom luxury packaging since 1992 — rigid boxes, magnetic closures, hot-foil, emboss. Huamei (Hua Mei 華美) — Henan, Zhejiang, Sichuan, Guizhou. MOQ 200+.",
   alternates: { canonical: "/" },
 };
 
