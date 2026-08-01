@@ -96,7 +96,7 @@ Collectible board game packaging starts at 200 pieces minimum, making limited-ed
 
 "A collector-edition board game box run at Huamei starts at 200 pieces — the same MOQ as all rigid box formats — making a Kickstarter backer-tier packaging run commercially viable without minimum commitments that exceed campaign pledges."
 
-The 200-piece minimum is the public floor; internal records show some structures go as low as 100 for specific formats, but the published floor is 200 to keep the pricing tier structure consistent. For crowdfunding campaigns, a 200-piece run allows a collector tier of 150–180 backers with 20–50 pieces held for press, photography, and retail sample.
+The 200-piece minimum applies to all rigid box formats, including collector-edition game boxes. For crowdfunding campaigns, a 200-piece run covers a collector tier of 150–180 backers with 20–50 pieces held for press, photography, and retail sample — with no excess inventory risk.
 
 [ISO 9001:2015](https://www.iso.org/iso-9001-quality-management.html) quality management governs every production run. For collector-edition game boxes specifically, that means checking lid-to-base fit on every fifty-piece sample (the fit loosens as the run progresses if the greyboard shifts in humidity), verifying foil adhesion on the first and last fifty units, and confirming insert fit with actual game components, not substitute weights.
 
