@@ -1,6 +1,6 @@
 ---
 title: "Drawer box packaging: structures, specifications, and when to choose it"
-description: "A manufacturer's guide to the ribbon-pull drawer box — how it is built, what board weights and surface finishes it supports, when it outperforms a magnetic-flap lid, and how to specify it from MOQ 200 upward."
+description: "Ribbon-pull drawer box: board weights, surface finishes, when it outperforms a magnetic-flap lid, and how to spec it. MOQ 200+, lead time 22–30 days."
 slug: "drawer-box-packaging-design-specifications"
 section: "blogs"
 primaryKeyword: "drawer box packaging"

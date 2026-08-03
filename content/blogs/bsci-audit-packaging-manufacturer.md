@@ -1,6 +1,6 @@
 ---
 title: "BSCI audit for packaging manufacturers: what the protocol covers and why EU and US buyers require it"
-description: "BSCI (now operated by amfori) is the most common social compliance audit framework required by EU and US luxury brand procurement teams. This guide explains what a BSCI audit covers, how scores are graded, and why Huamei's certification satisfies it."
+description: "BSCI audit for packaging manufacturers: what the nine protocol areas cover, how A–F grades apply, and why Huamei holds active BSCI certification in China."
 slug: "bsci-audit-packaging-manufacturer"
 section: "blogs"
 primaryKeyword: "BSCI audit packaging manufacturer"

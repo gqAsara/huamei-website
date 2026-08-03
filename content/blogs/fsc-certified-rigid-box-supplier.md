@@ -1,6 +1,6 @@
 ---
 title: "FSC certified rigid box supplier: what the certification covers and how to verify it"
-description: "A buyer's guide to FSC certification for rigid box suppliers — chain-of-custody scope, what FSC labelling requires from the brand, how to verify a factory's FSC status, and how FSC fits alongside BSCI, SGS, and CE in a procurement audit."
+description: "FSC certification for rigid box suppliers and wholesalers: chain-of-custody scope, how to verify factory status, and how FSC fits alongside BSCI, SGS, and CE."
 slug: "fsc-certified-rigid-box-supplier"
 section: "blogs"
 primaryKeyword: "FSC certified rigid box supplier"

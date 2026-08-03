@@ -1,6 +1,6 @@
 ---
 title: "ISTA 3A transit testing for luxury packaging: what it covers and how to apply it"
-description: "A technical overview of ISTA 3A transit testing — random vibration, atmospheric conditioning, and drop sequences — and how luxury rigid box packaging is qualified against export-grade transit standards before shipping intercontinental routes."
+description: "ISTA 3A transit testing for luxury packaging: vibration, atmospheric conditioning, and drop sequences to qualify rigid boxes for intercontinental export."
 slug: "ista-3a-testing-luxury-packaging"
 section: "blogs"
 primaryKeyword: "ISTA 3A testing luxury packaging"
