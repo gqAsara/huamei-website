@@ -8,13 +8,6 @@ import "@/app/(site)/home.css";
 
 const FEATURED_CASES = VOLUMES.filter((v) => v.featured);
 
-const HERO_FACTS = [
-  "Founded in 1992",
-  "22,000 m² Production Base",
-  "200,000+ Boxes Daily Capacity",
-  "Global Brand Partner",
-];
-
 const ADVANTAGES = [
   {
     title: "30+ Years Manufacturing Experience",
@@ -145,16 +138,6 @@ export function HomeContent() {
             <span>Consistency.</span>
             <span>Elevation.</span>
           </h1>
-          <p className="sub">
-            With 30+ years of manufacturing experience, Huamei delivers custom
-            packaging solutions for international brands with reliable quality,
-            scalable production, and sustainable materials.
-          </p>
-          <ul className="hero-facts" aria-label="Huamei at a glance">
-            {HERO_FACTS.map((fact) => (
-              <li key={fact}>{fact}</li>
-            ))}
-          </ul>
           <div className="hero-actions">
             <Link className="hero-primary" href="/begin">
               Request a Quote
