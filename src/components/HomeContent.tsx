@@ -124,8 +124,8 @@ export function HomeContent() {
       <section className="context-hero">
         <div className="photo">
           <Image
-            src="/photos/home/hero-factory.png"
-            alt="Huamei packaging factory production floor"
+            src="/photos/home/hero-press-floor.png"
+            alt="Huamei packaging factory technician operating press equipment"
             fill
             sizes="100vw"
             priority
@@ -134,16 +134,16 @@ export function HomeContent() {
         <div className="veil" />
         <div className="context-body">
           <h1>
-            <span>Trust.</span>
-            <span>Consistency.</span>
-            <span>Elevation.</span>
+            <span>Trust</span>
+            <span>Consistency</span>
+            <span>Elevation</span>
           </h1>
           <div className="hero-actions">
             <Link className="hero-primary" href="/begin">
               Request a Quote
             </Link>
             <Link className="hero-secondary" href="/craft">
-              Explore Packaging Solutions <span aria-hidden="true">→</span>
+              Explore Packaging Solutions
             </Link>
           </div>
         </div>
