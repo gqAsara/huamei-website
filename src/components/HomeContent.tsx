@@ -140,7 +140,11 @@ export function HomeContent() {
         </div>
         <div className="veil" />
         <div className="context-body">
-          <h1>Trust. Consistency. Elevation.</h1>
+          <h1>
+            <span>Trust.</span>
+            <span>Consistency.</span>
+            <span>Elevation.</span>
+          </h1>
           <p className="sub">
             With 30+ years of manufacturing experience, Huamei delivers custom
             packaging solutions for international brands with reliable quality,
