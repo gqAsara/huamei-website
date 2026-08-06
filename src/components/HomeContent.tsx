@@ -8,6 +8,40 @@ import "@/app/(site)/home.css";
 
 const FEATURED_CASES = VOLUMES.filter((v) => v.featured);
 
+const HERO_FACTS = [
+  "Founded in 1992",
+  "22,000 m² Production Base",
+  "200,000+ Boxes Daily Capacity",
+  "Global Brand Partner",
+];
+
+const ADVANTAGES = [
+  {
+    title: "30+ Years Manufacturing Experience",
+    description:
+      "Since 1992, Huamei has specialized in premium paper packaging manufacturing, serving customers worldwide.",
+    icon: "/photos/home/advantage-experience.png",
+  },
+  {
+    title: "Large-Scale Production Capability",
+    description:
+      "Advanced equipment and experienced teams ensure stable quality and efficient mass production.",
+    icon: "/photos/home/advantage-production.png",
+  },
+  {
+    title: "Sustainable Packaging Solutions",
+    description:
+      "FSC-certified materials, recycled paper options, and eco-friendly production processes support global sustainability goals.",
+    icon: "/photos/home/advantage-sustainability.png",
+  },
+  {
+    title: "Reliable Quality Control",
+    description:
+      "From raw materials to final inspection, every step follows strict quality management standards.",
+    icon: "/photos/home/advantage-quality.png",
+  },
+];
+
 type CapStage = {
   rn: string;
   lbl: string;
@@ -97,8 +131,8 @@ export function HomeContent() {
       <section className="context-hero">
         <div className="photo">
           <Image
-            src="/photos/house-showroom.jpg"
-            alt="Huamei showroom — one of four factories"
+            src="/photos/home/hero-factory.png"
+            alt="Huamei packaging factory production floor"
             fill
             sizes="100vw"
             priority
@@ -106,55 +140,53 @@ export function HomeContent() {
         </div>
         <div className="veil" />
         <div className="context-body">
-          <div className="eyebrow">
-            <span className="rule" /> I &nbsp; · &nbsp; T H E &nbsp; H O U S E &nbsp; · &nbsp; S I N C E &nbsp; 1 9 9 2
-          </div>
-          <h1>
-            The shape of a<br />
-            <em>promise becoming</em> physical.
-          </h1>
+          <h1>Trust. Consistency. Elevation.</h1>
           <p className="sub">
-            A packaging house for founder-led brands in cosmetic &amp; skincare, wine
-            spirits &amp; tea, seasonal gifting, and wellness. Thirty-four years of
-            work for Fortune 500 distributors — now, directly for you.
+            With 30+ years of manufacturing experience, Huamei delivers custom
+            packaging solutions for international brands with reliable quality,
+            scalable production, and sustainable materials.
           </p>
-          <div className="hero-meta">
-            <span>Henan &middot; Zhejiang &middot; Sichuan &middot; Guizhou</span>
-            <span className="dot">&middot;</span>
-            <span>22,000 m²</span>
-            <span className="dot">&middot;</span>
-            <span>3,000+ people</span>
-            <span className="dot">&middot;</span>
-            <span className="cn">包 · 装 · 如 · 禮</span>
+          <ul className="hero-facts" aria-label="Huamei at a glance">
+            {HERO_FACTS.map((fact) => (
+              <li key={fact}>{fact}</li>
+            ))}
+          </ul>
+          <div className="hero-actions">
+            <Link className="hero-primary" href="/begin">
+              Request a Quote
+            </Link>
+            <Link className="hero-secondary" href="/craft">
+              Explore Packaging Solutions <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* §I House — full-bleed band */}
-      <section className="sec sec-house">
-        <div className="sec-video">
-          <div className="sec-video-photo">
-            <Image
-              src="/photos/factory-floor.jpg"
-              alt="A Huamei press floor — one of four factories"
-              fill
-              sizes="100vw"
-            />
+      {/* §I Advantages */}
+      <section className="home-advantages">
+        <div className="advantages-inner">
+          <div className="advantages-head">
+            <div className="advantages-eyebrow">Our Advantage</div>
+            <h2>Why Global Brands Choose Huamei</h2>
+            <p>
+              We combine craftsmanship, technology, and service to create packaging
+              that elevates your brand and performs globally.
+            </p>
           </div>
-          <div className="sec-video-veil" />
-          <div className="sec-video-over">
-            <div className="eyebrow">
-              <span className="rn">i.</span>T H E &nbsp; F L O O R
-            </div>
-            <h2>
-              22,000 m² of <em>paper &amp; ink,</em> across four provinces.
-            </h2>
-            <div className="house-facts">
-              <div><span className="n">34</span><span className="l">Years of making</span></div>
-              <div><span className="n">22,000 m²</span><span className="l">Press floor</span></div>
-              <div><span className="n">3,000<span className="u">+</span></span><span className="l">Craftsmen on site</span></div>
-              <div><span className="n">2<span className="u">wk</span></span><span className="l">Fastest delivery</span></div>
-            </div>
+          <div className="advantages-grid">
+            {ADVANTAGES.map((advantage) => (
+              <article className="advantage-card" key={advantage.title}>
+                <Image
+                  src={advantage.icon}
+                  alt=""
+                  width={512}
+                  height={512}
+                  sizes="88px"
+                />
+                <h3>{advantage.title}</h3>
+                <p>{advantage.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
