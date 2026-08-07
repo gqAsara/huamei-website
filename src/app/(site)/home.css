@@ -209,7 +209,7 @@
 /* Process */
 .home-process {
   padding: 96px 0 102px;
-  background: #fbfaf7;
+  background: var(--paper);
 }
 .home-process-head {
   margin-bottom: 42px;
@@ -279,17 +279,17 @@
   line-height: 1;
 }
 .process-grid h3 {
-  max-width: 14ch;
-  margin: 0 auto;
+  margin: 0;
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.15;
+  white-space: nowrap;
   color: var(--ink);
 }
 .process-note {
   margin: 42px 0 0;
-  text-align: center;
+  text-align: left;
   font-family: var(--font-label);
   font-size: 17px;
   line-height: 1.5;
@@ -763,7 +763,7 @@
     gap: 30px 12px;
   }
   .process-grid h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .process-note {
     margin-top: 34px;
