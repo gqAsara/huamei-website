@@ -250,14 +250,6 @@ export function HomeContent() {
       </section>
 
       <section className="home-commitment" aria-labelledby="commitment-title">
-        <div className="commitment-bg" aria-hidden="true">
-          <Image
-            src="/photos/home/sustainability/materials-bg.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-          />
-        </div>
         <div className="home-section-inner commitment-inner">
           <div className="commitment-copy">
             <div className="home-eyebrow">Our Commitment</div>

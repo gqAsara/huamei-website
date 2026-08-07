@@ -304,7 +304,9 @@
 .capability-feature {
   display: grid;
   grid-template-columns: minmax(420px, .92fr) 1.55fr;
+  width: calc(100% + 40px);
   min-height: 390px;
+  margin-left: -40px;
   border: 1px solid #d8cdbb;
 }
 .capability-copy {
@@ -312,7 +314,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 44px 38px;
+  padding: 44px 38px 44px 40px;
   background: rgba(255, 255, 255, .38);
 }
 .capability-copy h2 {
@@ -345,7 +347,8 @@
 .capability-list {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  margin: 0;
+  width: calc(100% + 40px);
+  margin: 0 0 0 -40px;
   padding: 0;
   border: 1px solid #d8cdbb;
   border-top: 0;
@@ -368,7 +371,8 @@
 .capability-list img {
   width: 76px;
   height: 76px;
-  object-fit: cover;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .capability-list h3 {
   margin: 0;
@@ -381,21 +385,9 @@
 
 /* Commitment */
 .home-commitment {
-  position: relative;
-  isolation: isolate;
   min-height: 520px;
   padding: 102px 0;
-  overflow: hidden;
-  background: #f7f5ef;
-}
-.commitment-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-.commitment-bg img {
-  object-fit: cover;
-  object-position: center;
+  background: var(--paper);
 }
 .commitment-inner {
   display: grid;
@@ -425,6 +417,9 @@
 }
 .commitment-list li {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 .commitment-list img {
@@ -454,7 +449,7 @@
 /* Footprint */
 .home-footprint {
   padding: 104px 0 112px;
-  background: #f0f1ed;
+  background: var(--paper);
 }
 .footprint-grid {
   display: grid;
@@ -485,7 +480,9 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  align-self: stretch;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
 }
 .footprint-cards article {
   min-width: 0;
@@ -658,6 +655,8 @@
   }
   .capability-feature {
     grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
   }
   .capability-copy {
     padding: 38px 32px;
@@ -673,6 +672,8 @@
   }
   .capability-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    margin-left: 0;
   }
   .capability-list li:nth-child(3) {
     border-right: 0;
@@ -800,10 +801,6 @@
   .capability-list img {
     width: 66px;
     height: 66px;
-  }
-  .commitment-bg img {
-    object-position: 70% center;
-    opacity: .5;
   }
   .commitment-inner {
     gap: 38px;
