@@ -1,8 +1,11 @@
+skipped: "already covered by existing content/blogs articles"
+skipped_date: "2026-08-09"
+
 ---
-brief_id: "auto-2026-08-06-002-eid-gift-box-custom-packaging"
+brief_id: "auto-2026-08-06-003-ramadan-gift-packaging-supplier"
 generated_at: "2026-08-06T12:28:35.297Z"
-rank: 2
-target_query: "eid gift box custom packaging"
+rank: 3
+target_query: "ramadan gift packaging supplier"
 opportunity_type: "long_tail_gap"
 seo_score: 19
 intent: "commercial"
@@ -12,7 +15,7 @@ notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: eid gift box custom packaging
+# Brief: ramadan gift packaging supplier
 
 **Why this one (auto-scored 19):** commercial intent, evaluation stage, no article yet
 
@@ -34,7 +37,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is eid gift box custom packaging?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is ramadan gift packaging supplier?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 

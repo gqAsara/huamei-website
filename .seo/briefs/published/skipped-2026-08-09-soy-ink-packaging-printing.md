@@ -1,20 +1,23 @@
+skipped: "already covered by existing content/blogs articles"
+skipped_date: "2026-08-09"
+
 ---
-brief_id: "auto-2026-08-06-005-how-to-source-packaging-from-china"
+brief_id: "auto-2026-08-06-004-soy-ink-packaging-printing"
 generated_at: "2026-08-06T12:28:35.297Z"
-rank: 5
-target_query: "how to source packaging from china"
+rank: 4
+target_query: "soy ink packaging printing"
 opportunity_type: "long_tail_gap"
-seo_score: 9.5
-intent: "informational"
-stage: "discovery"
+seo_score: 13.6
+intent: "investigative"
+stage: "evaluation"
 priority: 3
 notes: "added 2026-05-25 — long-tail mining round 1"
 has_article: false
 ---
 
-# Brief: how to source packaging from china
+# Brief: soy ink packaging printing
 
-**Why this one (auto-scored 9.5):** informational intent, discovery stage, no article yet
+**Why this one (auto-scored 13.6):** investigative intent, evaluation stage, no article yet
 
 ## Voice + structure guardrails
 
@@ -34,7 +37,7 @@ Pick at least 2 of these (the routine's `/blogs/*` route schema requires it):
 
 ## Featured-snippet answer to target
 
-Write a 30–40 word declarative answer under a question-form H2 such as: `## What is how to source packaging from china?`. Lead with the answer, then 2–3 supporting sentences with a number.
+Write a 30–40 word declarative answer under a question-form H2 such as: `## What is soy ink packaging printing?`. Lead with the answer, then 2–3 supporting sentences with a number.
 
 ## Dedupe check
 
