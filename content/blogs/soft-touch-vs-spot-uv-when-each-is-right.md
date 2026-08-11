@@ -1,5 +1,5 @@
 ---
-title: "Spot UV vs Soft-Touch for Luxury Packaging: When Each Works"
+title: "Spot UV vs soft-touch finishes for luxury packaging: decision guide"
 description: "Compare spot UV vs soft-touch lamination on luxury rigid boxes — substrate limits, ±0.1 mm tolerance, three pairing rules. The decision guide for your brief."
 slug: "soft-touch-vs-spot-uv-when-each-is-right"
 section: "blogs"
