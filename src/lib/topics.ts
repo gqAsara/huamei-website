@@ -235,8 +235,8 @@ const HOT_FOIL: Topic = {
   ctaTitle: "Pull a foil sample, or send us a die.",
   ctaDesc: "We will press your wordmark on three stocks — coated, uncoated, and Gmund cloth — in your chosen foil and post the swatches within five working days.",
   heroImage: "/photos/generated/surfaces/hot-foil.jpg",
-  commercialTitle: "Hot-foil stamping supplier for luxury packaging — 17 foils",
-  commercialDescription: "17 curated foil colours in-house, ±0.1 mm emboss-and-foil registration. MOQ 200+, 7–10 day samples for rigid boxes and cartons.",
+  commercialTitle: "Hot-foil stamping suppliers for luxury packaging — 17 foils in-house",
+  commercialDescription: "17 foil colours in-house. ±0.1 mm foil-to-emboss registration — three times tighter than industry standard. MOQ 200+, samples in 7–10 days for rigid boxes and cartons.",
   buyerFaq: [
     { q: "How many foil colours do you stock?", a: "17 in-house across five optical families — warm metallics (5), cool metallics (4), pigmented (4), holographic / pearlescent (2), specialty (2). Free swatch set posted within 5–7 days." },
     { q: "What registration do you hold for emboss-and-foil?", a: "±0.1 mm at Huamei. Industry typical is ±0.3 mm. The press operator re-checks alignment every 200 sheets across the run." },
