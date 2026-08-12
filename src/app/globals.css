@@ -138,9 +138,9 @@
   --color-ink-blue:     var(--ink-blue);
 
   /* Fonts (set via next/font in app/layout.tsx) */
-  --font-display: var(--font-display-family), 'Garamond', 'Times New Roman', serif;
-  --font-body:    var(--font-body-family), 'Georgia', 'Times New Roman', serif;
-  --font-label:   var(--font-label-family), 'Helvetica Neue', Arial, sans-serif;
+  --font-display: var(--font-display-family), 'Cormorant Garamond', Georgia, serif;
+  --font-body:    var(--font-body-family), Montserrat, Arial, sans-serif;
+  --font-label:   var(--font-label-family), Montserrat, Arial, sans-serif;
   --font-cn:      var(--font-cn-family), 'Songti SC', serif;
 
   /* Type scale → text-* utilities */
@@ -189,12 +189,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga", "kern", "onum";
-  /* Fraunces display character: let optical size track font-size, and turn on
-     the "wonky" alternate letterforms for the high-contrast, swashy display
-     look. Inherited site-wide; non-variable fonts (Lora, Inter) ignore these
-     axes, so only the Fraunces headings are affected. */
-  font-optical-sizing: auto;
-  font-variation-settings: "SOFT" 0, "WONK" 1;
   overflow-x: clip;
 }
 /* Anchor the rem base to 16px so the enlarged --fs-* rem variables scale

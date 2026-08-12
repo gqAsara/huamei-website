@@ -1,32 +1,25 @@
 import {
-  Fraunces,
-  Lora,
-  Inter,
+  Cormorant_Garamond,
+  Montserrat,
   Noto_Serif_SC,
 } from "next/font/google";
 
-// Fraunces is a variable font: omit `weight` to load the full 100–900 range,
-// and pull in the optical-size + SOFT + WONK axes. WONK (the "wonky" alternate
-// letterforms) and optical sizing are what give headings the high-contrast,
-// swashy display character. They're toggled on in globals.css via
-// font-optical-sizing / font-variation-settings.
-export const fontDisplay = Fraunces({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT", "WONK"],
-  display: "swap",
-  variable: "--font-display-family",
-});
-
-export const fontBody = Lora({
+export const fontDisplay = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-display-family",
+});
+
+export const fontBody = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
   variable: "--font-body-family",
 });
 
-export const fontLabel = Inter({
+export const fontLabel = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
