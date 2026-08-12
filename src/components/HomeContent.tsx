@@ -1,496 +1,354 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { VOLUMES } from "@/lib/volumes";
+import { FootprintCarousel } from "@/components/FootprintCarousel";
 import "@/app/(site)/home.css";
 
-const FEATURED_CASES = VOLUMES.filter((v) => v.featured);
-
-type CapStage = {
-  rn: string;
-  lbl: string;
-  verb: string;
-  italic: string;
-  desc: string;
-  image: string;
-};
-
-const CAP_STAGES: CapStage[] = [
+const ADVANTAGES = [
   {
-    rn: "i.", lbl: "Consultation",
-    verb: "We ", italic: "listen.",
-    desc: "Bilingual account lead · brief intake · reference review · samples dispatched · budget & schedule framed before a line is drawn.",
-    image: "/photos/consultation.jpg",
+    number: "01",
+    title: "30+ Years Manufacturing Experience",
+    copy: "Since 1992, Huamei has specialized in premium paper packaging manufacturing, serving customers worldwide.",
   },
   {
-    rn: "ii.", lbl: "Design",
-    verb: "We ", italic: "design.",
-    desc: "Structural & graphic design · typography · material sourcing · white-model mock-up, then a working prototype in 72 hours.",
-    image: "/photos/design-office-1.jpg",
+    number: "02",
+    title: "Large-Scale Production Capability",
+    copy: "Advanced equipment and experienced teams ensure stable quality and efficient mass production.",
   },
   {
-    rn: "iii.", lbl: "The Press",
-    verb: "We ", italic: "print.",
-    desc: "Offset & digital presses, in-house plate-making, four- to eight-colour proofing. 22,000 m² across Henan, Zhejiang, Sichuan and Guizhou.",
-    image: "/photos/press-die-cut-cropped.jpg",
+    number: "03",
+    title: "Sustainable Packaging Solutions",
+    copy: "FSC-certified materials, recycled paper options, and eco-friendly production processes support global sustainability goals.",
   },
   {
-    rn: "iv.", lbl: "Finishing",
-    verb: "We ", italic: "finish.",
-    desc: "Hot-foil in gold, copper, silver · blind & registered emboss · spot varnish · soft-touch · UV and die-cut.",
-    image: "/photos/finishing-1.jpg",
-  },
-  {
-    rn: "v.", lbl: "Assembly",
-    verb: "We ", italic: "hand-assemble.",
-    desc: "Closures, ribbon, magnets, lining, inserts, wrapping. One hundred and twenty craftsmen in the factory — everything that a machine cannot do.",
-    image: "/photos/assembly-1.jpg",
-  },
-  {
-    rn: "vi.", lbl: "Fulfilment",
-    verb: "We ", italic: "ship.",
-    desc: "DDP on request · tracked global freight · quality hold & warehousing. Fastest delivery in two weeks from sample to dispatch.",
-    image: "/photos/fulfilment-1.jpg",
+    number: "04",
+    title: "Reliable Quality Control",
+    copy: "From raw materials to final inspection, every step follows strict quality management standards.",
   },
 ];
 
-type CraftCard = {
-  rn: string;
-  lbl: string;
-  num: string;
-  href: string;
-  image?: string;
-  tone?: string;
-  plate?: string;
-};
+const PROCESS = [
+  {
+    title: "Design & Engineering",
+    image: "/photos/home-reference/process/01-design-engineering.jpg",
+    alt: "Paperboard packaging structural dieline",
+  },
+  {
+    title: "Material Selection",
+    image: "/photos/home-reference/process/02-material-selection.jpg",
+    alt: "FSC-certified paper and packaging materials",
+  },
+  {
+    title: "Prototype Development",
+    image: "/photos/home-reference/process/03-prototype-development.jpg",
+    alt: "Custom packaging prototype development",
+  },
+  {
+    title: "Mass Production",
+    image: "/photos/home-reference/process/04-mass-production.jpg",
+    alt: "Huamei automated packaging production",
+  },
+  {
+    title: "Quality Inspection",
+    image: "/photos/home-reference/process/05-quality-inspection.jpg",
+    alt: "Finished packaging sample for quality inspection",
+  },
+  {
+    title: "Global Shipping",
+    image: "/photos/home-reference/process/06-global-shipping.jpg",
+    alt: "Finished packaging loaded for global shipping",
+  },
+];
 
-const CRAFT_CARDS: CraftCard[] = [
-  { rn: "I.",   lbl: "Rigid & telescoping",   num: "14", href: "/craft/rigid",     image: "/photos/case-01-fragrance-souverain.jpg" },
-  { rn: "II.",  lbl: "Magnetic closure",      num: "11", href: "/craft/magnetic",  image: "/photos/bronze-jar-black-box.jpg" },
-  { rn: "III.", lbl: "Drawer & slipcase",     num: "9",  href: "/craft/drawer",    image: "/photos/huamei-pink-drawer.jpg" },
-  { rn: "IV.",  lbl: "Folding cartons",       num: "22", href: "/craft/folding",   image: "/photos/757-cream-box.jpg" },
-  { rn: "V.",   lbl: "Shoppers & carriers",   num: "12", href: "/craft/shoppers",  image: "/photos/shopper-sophisticated.jpg" },
-  { rn: "VI.",  lbl: "Book-style & clamshell", num: "7", href: "/craft/book",      tone: "tone-paper", plate: "B O O K — S T Y L E" },
-  { rn: "VII.", lbl: "Inserts & cradles",     num: "18", href: "/craft/inserts",   tone: "tone-sage",  plate: "I N S E R T S" },
+const CAPABILITIES = [
+  "Offset Printing",
+  "Automatic Die Cutting",
+  "Surface Finishing",
+  "Assembly Lines",
+  "Quality Inspection",
+];
+
+const COMMITMENTS = [
+  {
+    number: "01",
+    title: "FSC Certified Materials",
+    copy: "Responsible paper sourcing options.",
+  },
+  {
+    number: "02",
+    title: "Recycled Paperboard",
+    copy: "Supporting circular packaging solutions.",
+  },
+  {
+    number: "03",
+    title: "Solar Powered Factory",
+    copy: "85% of factory energy supported by solar photovoltaic panels.",
+  },
+  {
+    number: "04",
+    title: "EU PPWR Ready",
+    copy: "Supporting material traceability and compliance documentation.",
+  },
+];
+
+const FOOTPRINT = [
+  {
+    number: "01",
+    title: "Global Delivery",
+    copy: "On-time logistics, shipping worldwide.",
+  },
+  {
+    number: "02",
+    title: "Our Facilities",
+    copy: "22,000 m² production base in China.",
+  },
+  {
+    number: "03",
+    title: "Premium Quality",
+    copy: "Crafted packaging that elevates your brand.",
+  },
+];
+
+const PARTNERS = [
+  { number: "01", slug: "niulanshan", name: "Niulanshan", image: "/photos/home-reference/partners/01-niulanshan.png", width: 104, height: 150 },
+  { number: "02", slug: "wuliangye", name: "Wuliangye", image: "/photos/home-reference/partners/02-wuliangye.png", width: 173, height: 44 },
+  { number: "03", slug: "yangshao", name: "Yangshao", image: "/photos/home-reference/partners/03-yangshao.png", width: 83, height: 60 },
+  { number: "04", slug: "red-star", name: "Red Star", image: "/photos/home-reference/partners/04-red-star.png", width: 180, height: 150 },
+  { number: "05", slug: "shede", name: "Shede", image: "/photos/home-reference/partners/05-shede.png", width: 174, height: 150 },
+  { number: "06", slug: "kefumei", name: "Kefumei", image: "/photos/home-reference/partners/06-kefumei.png", width: 440, height: 148 },
+  { number: "07", slug: "verity", name: "Verity", image: "/photos/home-reference/partners/07-verity.png", width: 411, height: 150 },
+  { number: "08", slug: "stora-enso", name: "Stora Enso", image: "/photos/home-reference/partners/08-stora-enso.png", width: 167, height: 150 },
+  { number: "09", slug: "alibaba", name: "Alibaba", image: "/photos/home-reference/partners/09-alibaba.png", width: 398, height: 150 },
+  { number: "10", slug: "nacomi", name: "Nacomi", image: "/photos/home-reference/partners/10-nacomi.png", width: 144, height: 46 },
 ];
 
 export function HomeContent() {
-  const [capIdx, setCapIdx] = useState(0);
-  const [caseIdx, setCaseIdx] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const cap = CAP_STAGES[capIdx];
-
-  function scrollCraft(dir: number) {
-    const t = trackRef.current;
-    if (!t) return;
-    const card = t.querySelector(".hcar-card") as HTMLElement | null;
-    const step = (card?.offsetWidth ?? 280) + 22;
-    t.scrollBy({ left: dir * step * 2, behavior: "smooth" });
-  }
-
   return (
-    <>
-      {/* Hero */}
-      <section className="context-hero">
-        <div className="photo">
-          <Image
-            src="/photos/house-showroom.jpg"
-            alt="Huamei showroom — one of four factories"
-            fill
-            sizes="100vw"
-            priority
-          />
-        </div>
-        <div className="veil" />
-        <div className="context-body">
-          <div className="eyebrow">
-            <span className="rule" /> I &nbsp; · &nbsp; T H E &nbsp; H O U S E &nbsp; · &nbsp; S I N C E &nbsp; 1 9 9 2
-          </div>
-          <h1>
-            The shape of a<br />
-            <em>promise becoming</em> physical.
-          </h1>
-          <p className="sub">
-            A packaging house for founder-led brands in cosmetic &amp; skincare, wine
-            spirits &amp; tea, seasonal gifting, and wellness. Thirty-four years of
-            work for Fortune 500 distributors — now, directly for you.
+    <main className="premium-home">
+      <section className="premium-home__hero" aria-labelledby="home-hero-title">
+        <Image
+          className="premium-home__hero-image"
+          src="/photos/home-reference/hero-v3.png"
+          alt="Huamei paper packaging production facility"
+          fill
+          sizes="100vw"
+          priority
+          unoptimized
+        />
+        <div className="premium-home__hero-shade" />
+        <div className="premium-home__hero-inner">
+          <p className="premium-home__eyebrow premium-home__eyebrow--light">
+            Premium Paper Packaging · Since 1992
           </p>
-          <div className="hero-meta">
-            <span>Henan &middot; Zhejiang &middot; Sichuan &middot; Guizhou</span>
-            <span className="dot">&middot;</span>
-            <span>22,000 m²</span>
-            <span className="dot">&middot;</span>
-            <span>3,000+ people</span>
-            <span className="dot">&middot;</span>
-            <span className="cn">包 · 装 · 如 · 禮</span>
+          <h1 id="home-hero-title" className="premium-home__hero-title">
+            <span>Trust.</span>
+            <span>Consistency.</span>
+            <span>Elevation.</span>
+          </h1>
+          <p className="premium-home__hero-copy">
+            With 30+ years of manufacturing experience, Huamei delivers custom
+            packaging solutions for international brands with reliable quality,
+            scalable production, and sustainable materials.
+          </p>
+          <div className="premium-home__actions">
+            <Link className="premium-home__button premium-home__button--ghost" href="/begin">
+              Request a Quote
+            </Link>
+            <Link className="premium-home__hero-link" href="#advantage">
+              Explore Packaging Solutions
+            </Link>
           </div>
+          <dl className="premium-home__facts">
+            <div><dt>1992</dt><dd>Founded</dd></div>
+            <div><dt>22,000 m²</dt><dd>Production Base</dd></div>
+            <div><dt>200,000+</dt><dd>Boxes Daily Capacity</dd></div>
+            <div><dt>Global</dt><dd>Brand Partner</dd></div>
+          </dl>
         </div>
       </section>
 
-      {/* §I House — full-bleed band */}
-      <section className="sec sec-house">
-        <div className="sec-video">
-          <div className="sec-video-photo">
+      <section id="advantage" className="premium-home__section premium-home__advantage">
+        <div className="premium-home__section-intro">
+          <div>
+            <p className="premium-home__eyebrow">Our Advantage</p>
+            <h2>Why Global Brands<br />Choose Huamei</h2>
+          </div>
+          <p className="premium-home__lead">
+            We combine craftsmanship, technology, and service to create packaging
+            that elevates your brand and performs globally.
+          </p>
+        </div>
+        <div className="premium-home__advantage-grid">
+          <div className="premium-home__portrait-media">
             <Image
-              src="/photos/factory-floor.jpg"
-              alt="A Huamei press floor — one of four factories"
+              src="/photos/home-reference/advantage-inspection.png"
+              alt="A Huamei craftsperson inspecting a premium paper box"
+              fill
+              sizes="(max-width: 900px) 100vw, 46vw"
+            />
+          </div>
+          <ol className="premium-home__advantage-list">
+            {ADVANTAGES.map((item) => (
+              <li key={item.number}>
+                <span className="premium-home__index">{item.number}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="process" className="premium-home__section premium-home__process">
+        <div className="premium-home__process-head">
+          <p className="premium-home__eyebrow premium-home__eyebrow--light">From Concept to Delivery</p>
+          <h2>A Process Built<br />Around Precision</h2>
+          <p>Every detail is controlled from initial concept to final delivery.</p>
+        </div>
+        <ol className="premium-home__process-list">
+          {PROCESS.map((item, index) => (
+            <li key={item.title}>
+              <div className="premium-home__process-media">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 620px) 78vw, (max-width: 900px) 42vw, 16vw"
+                />
+              </div>
+              <div className="premium-home__process-step-copy">
+                <span className="premium-home__process-number">{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.title}</h3>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section id="capability" className="premium-home__section premium-home__capability">
+        <div className="premium-home__section-intro premium-home__section-intro--wide">
+          <div>
+            <p className="premium-home__eyebrow">Our Capability</p>
+            <h2>Advanced Manufacturing<br />Capability</h2>
+          </div>
+          <p className="premium-home__lead">
+            Combining advanced equipment with skilled craftsmanship, HUAMEI ensures
+            consistent quality for every order.
+          </p>
+        </div>
+        <div className="premium-home__capability-stage">
+          <div className="premium-home__capability-media">
+            <Image
+              src="/photos/home-reference/capability.jpg"
+              alt="Huamei advanced offset printing equipment"
               fill
               sizes="100vw"
             />
           </div>
-          <div className="sec-video-veil" />
-          <div className="sec-video-over">
-            <div className="eyebrow">
-              <span className="rn">i.</span>T H E &nbsp; F L O O R
-            </div>
-            <h2>
-              22,000 m² of <em>paper &amp; ink,</em> across four provinces.
-            </h2>
-            <div className="house-facts">
-              <div><span className="n">34</span><span className="l">Years of making</span></div>
-              <div><span className="n">22,000 m²</span><span className="l">Press floor</span></div>
-              <div><span className="n">3,000<span className="u">+</span></span><span className="l">Craftsmen on site</span></div>
-              <div><span className="n">2<span className="u">wk</span></span><span className="l">Fastest delivery</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* §II Craft — horizontal carousel */}
-      <section className="sec sec-craft">
-        <div className="sec-head">
-          <div className="eyebrow">
-            <span className="rn">ii.</span>C R A F T &nbsp; · &nbsp; N I N E T Y — N I N E &nbsp; S T R U C T U R E S
-          </div>
-          <h2>A box is <em>not a container.</em></h2>
-          <p>Each form is chosen for the gesture it asks a buyer to make. Corrections are free.</p>
-        </div>
-        <div className="hcar">
-          <div className="hcar-track" ref={trackRef} tabIndex={0}>
-            {CRAFT_CARDS.map((c) => (
-              <Link key={c.rn} className="hcar-card" href={c.href}>
-                {c.image ? (
-                  <div className="img" style={{ backgroundImage: `url('${c.image}')` }} />
-                ) : (
-                  <div className={`img ${c.tone ?? ""}`}>
-                    <span className="plate-label">{c.plate}</span>
-                  </div>
-                )}
-                <div className="meta">
-                  <span className="rn">{c.rn}</span>
-                  <span className="lbl">{c.lbl}</span>
-                  <span className="num">{c.num}</span>
-                </div>
-              </Link>
+          <ol className="premium-home__capability-list">
+            {CAPABILITIES.map((item, index) => (
+              <li key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item}</strong>
+              </li>
             ))}
-          </div>
-          <div className="hcar-foot">
-            <Link className="link" href="/craft">See all structures →</Link>
-            <div className="hcar-nav">
-              <button className="hcar-btn" onClick={() => scrollCraft(-1)} aria-label="Previous">←</button>
-              <button className="hcar-btn" onClick={() => scrollCraft(1)} aria-label="Next">→</button>
-            </div>
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* §III Process — flip-stage */}
-      <section className="sec sec-caps">
-        <div className="sec-col">
-          <div className="eyebrow">
-            <span className="rn">iii.</span>T H E &nbsp; P R O C E S S
-          </div>
-          <h2>From <em>sketch</em> to sealed crate.</h2>
-          <p>Six stages under one roof — brief to dispatch, with bilingual account craft at every step.</p>
-          <div className="cr-carousel">
-            {CAP_STAGES.map((s, i) => (
-              <button
-                key={s.rn}
-                className={`cr-row${i === capIdx ? " on" : ""}`}
-                onClick={() => setCapIdx(i)}
-              >
-                <span className="diag">
-                  <svg viewBox="0 0 52 36" fill="none" stroke="currentColor" strokeWidth="0.8">
-                    <path d="M8 10 L38 10 L42 14 L42 26 L12 26 L8 22 Z" />
-                    <path d="M14 16 L34 16 M14 20 L30 20" />
-                  </svg>
-                </span>
-                <span className="lbl">{s.lbl}</span>
-                <span className="num">{s.rn}</span>
-              </button>
-            ))}
-          </div>
-          <Link className="link" href="/craft">See the catalogue →</Link>
-        </div>
-        <div className="sec-photo">
-          <div className="caps-plate tone-photo">
-            {CAP_STAGES.map((s, i) => (
-              <div
-                key={s.rn}
-                className={`caps-plate-img${i === capIdx ? " on" : ""}`}
-                style={{ backgroundImage: `url('${s.image}')` }}
-              />
-            ))}
-          </div>
-          <div className="caps-stage-cap">
-            <div className="verb">
-              <span className="rn">{cap.rn}</span>
-              {cap.verb}
-              <em>{cap.italic}</em>
-            </div>
-            <div className="desc">{cap.desc}</div>
-          </div>
-        </div>
-      </section>
-
-      {/* §IV Case studies — typographic-index turn, auto-pulled from VOLUMES.featured */}
-      <section className="sec sec-volumes">
-        <div className="sec-head">
-          <div className="eyebrow">
-            <span className="rn">iv.</span>C A S E &nbsp; S T U D I E S &nbsp; · &nbsp; S E L E C T E D &nbsp; W O R K
-          </div>
-          <h2>
-            <em>Case studies.</em>
-          </h2>
-          <p>A short contents page — hover a title, turn the page.</p>
-        </div>
-        <div className="tix">
-          <div className="tix-index" role="listbox" aria-label="Case studies">
-            <div className="tix-top-rule" />
-            {FEATURED_CASES.map((l, i) => (
-              <button
-                key={l.slug}
-                className={`tix-row${i === caseIdx ? " on" : ""}`}
-                onClick={() => setCaseIdx(i)}
-                onMouseEnter={() => setCaseIdx(i)}
-              >
-                <span className="tix-rn">{l.num}.</span>
-                <span className="tix-body">
-                  <span className="tix-name">{l.name}</span>
-                  <span className="tix-tag">{l.tag}</span>
-                </span>
-                <span className="tix-year">{l.year}</span>
-              </button>
-            ))}
-            <div className="tix-bot-rule" />
-            <Link className="link tix-seeall" href="/volumes">See all case studies →</Link>
-          </div>
-          <div className="tix-stage">
-            <div className="tix-book">
-              {FEATURED_CASES.map((l, i) => (
-                <Link
-                  key={l.slug}
-                  href={`/volumes/${l.slug}`}
-                  className={`tix-leaf${i === caseIdx ? " on" : ""}`}
-                  aria-hidden={i !== caseIdx}
-                  tabIndex={i === caseIdx ? 0 : -1}
-                >
-                  <div className="tix-photo" style={{ backgroundImage: `url('${l.cover}')` }} />
-                  <div className="tix-caption">
-                    <div className="tix-foil-rule" />
-                    <div className="tix-client">{l.client}</div>
-                    <h3 className="tix-h">{l.name}</h3>
-                    <div className="tix-meta">
-                      <span>{l.tag}</span>
-                      <span>{l.year}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="tix-num">
-              <span>{String(caseIdx + 1).padStart(2, "0")}</span>
-              <span className="tix-sep">/</span>
-              <span>{String(FEATURED_CASES.length).padStart(2, "0")}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* §V Industry — clickable category tiles with line-art icons */}
-      <section className="sec sec-industry">
-        <div className="sec-industry-inner">
-          <div className="left">
-            <div className="eyebrow">
-              <span className="rn">v.</span>I N D U S T R Y
-            </div>
-            <h2>We know <em>your</em> category.</h2>
-            <p>
-              Categories we serve most often — each with its own structural vocabulary,
-              schedule, and press-floor muscle memory.
-            </p>
-          </div>
-          <ul className="cats">
-            <li>
-              <Link href="/industry/cosmetic">
-                <span className="rn">i.</span>
-                <span className="ico" aria-hidden="true">
-                  {/* Cosmetic — slim serum bottle with pump and label band */}
-                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="0.9" strokeLinejoin="miter">
-                    <path d="M17 6 H23 V11 H17 Z" />
-                    <path d="M19 11 H21 V14 H19 Z" />
-                    <path d="M14 14 H26 V33 H14 Z" />
-                    <path d="M14 21 H26" />
-                    <path d="M14 28 H26" />
-                  </svg>
-                </span>
-                <span className="t">Cosmetic &amp; skincare</span>
-                <span className="meta">Skin &middot; make-up</span>
-                <span className="arr">→</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/industry/spirits">
-                <span className="rn">ii.</span>
-                <span className="ico" aria-hidden="true">
-                  {/* Wine, spirits & tea — bottle with shoulder + label */}
-                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="0.9" strokeLinejoin="miter">
-                    <path d="M18 4 H22 V12 L25 16 V34 H15 V16 L18 12 Z" />
-                    <path d="M15 21 H25 V28 H15 Z" />
-                  </svg>
-                </span>
-                <span className="t">Wine, spirits &amp; tea</span>
-                <span className="meta">Bottle &middot; box</span>
-                <span className="arr">→</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/industry/seasonal">
-                <span className="rn">iii.</span>
-                <span className="ico" aria-hidden="true">
-                  {/* Seasonal & gifting — flat-lid box with crossed ribbon and bow */}
-                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="0.9" strokeLinejoin="miter">
-                    <path d="M8 14 H32 V34 H8 Z" />
-                    <path d="M20 14 V34" />
-                    <path d="M8 22 H32" />
-                    <path d="M16 14 C16 9, 20 9, 20 14" />
-                    <path d="M24 14 C24 9, 20 9, 20 14" />
-                  </svg>
-                </span>
-                <span className="t">Seasonal &amp; gifting</span>
-                <span className="meta">CNY &middot; holiday</span>
-                <span className="arr">→</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/industry/wellness">
-                <span className="rn">iv.</span>
-                <span className="ico" aria-hidden="true">
-                  {/* Wellness — slim stem with a single elegant leaf */}
-                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="0.9" strokeLinejoin="round">
-                    <path d="M20 6 V34" />
-                    <path d="M20 18 C12 18, 10 12, 14 8 C20 8, 21 14, 20 18 Z" />
-                  </svg>
-                </span>
-                <span className="t">Wellness</span>
-                <span className="meta">Botanical &middot; supplement</span>
-                <span className="arr">→</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* §VI Export — international supply-chain strip */}
-      <section className="sec sec-export">
-        <div className="sec-export-inner">
-          <div className="sec-export-head">
-            <div className="eyebrow">
-              <span className="rn">vi.</span>B U I L T &nbsp; F O R &nbsp; E X P O R T
-            </div>
-            <h2>
-              Audit-ready for <em>EU and US</em> procurement.
-            </h2>
-          </div>
-          <div className="sec-export-body">
-            <p>
-              More than 80% of the energy across Huamei&apos;s press floors is solar; the
-              shareholder portfolio also funds biomass and hydro generation, so the
-              green-energy claim sits on infrastructure, not on a certificate alone.
-              Every export run is checked against transit-grade thresholds — high
-              50 °C and low -30 °C environmental, a 24-hour vibration cycle, drop,
-              aging, and empty-box compression — so the box that leaves Henan is the
-              box a buyer in Paris or New York opens. The standards file behind that
-              work — <em>BSCI, CE, EQS, FSC, SGS</em> — is the one EU and US
-              procurement teams ask for before the first order.
-            </p>
-            <Link className="link" href="/house/standards">
-              Read the standards file →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* §VII Blogs — sage plate */}
-      <section className="sec sec-sustain">
-        <div className="sustain-inner">
-          <div
-            className="sustain-photo"
-            style={{ backgroundImage: "url('/photos/blog-showroom.jpg')" }}
+      <section id="sustainability" className="premium-home__sustainability">
+        <div className="premium-home__sustainability-media">
+          <Image
+            src="/photos/home-reference/sustainability.jpg"
+            alt="FSC-certified and recycled paper materials"
+            fill
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <div className="sustain-copy">
-            <div className="eyebrow">
-              <span className="rn">vii.</span>B L O G S
-            </div>
-            <blockquote>
-              Notes from the press floor — <em>posted</em> when there is something
-              worth saying.
-            </blockquote>
-            <p>
-              Production and process, the people we work with, the projects we
-              ship, sustainability with receipts, and news from the four floors.
-              Five sections, one floor.
+        </div>
+        <div className="premium-home__sustainability-copy">
+          <div>
+            <p className="premium-home__eyebrow premium-home__eyebrow--light">Our Commitment</p>
+            <h2>Sustainable<br />Packaging Solutions</h2>
+            <p className="premium-home__lead premium-home__lead--light">
+              Packaging designed for a more sustainable future.
             </p>
-            <div className="chips">
-              <Link href="/blogs/custom-luxury-rigid-box-manufacturing">
-                R I G I D &nbsp; B O X
-              </Link>
-              <Link href="/blogs/hot-foil-stamping-for-luxury-packaging">
-                H O T - F O I L &nbsp; &amp; &nbsp; E M B O S S
-              </Link>
-              <Link href="/blogs/sustainable-luxury-packaging-manufacturer">
-                S U S T A I N A B I L I T Y
-              </Link>
-              <Link href="/blogs/working-with-a-chinese-luxury-packaging-manufacturer">
-                S O U R C I N G &nbsp; C H I N A
-              </Link>
-              <Link href="/blogs/best-chinese-luxury-packaging-manufacturers">
-                M A N U F A C T U R E R S
-              </Link>
-            </div>
-            <Link className="link" href="/blogs" style={{ marginTop: 18, display: "inline-block" }}>
-              Read all blogs →
-            </Link>
           </div>
+          <ol className="premium-home__commitment-list">
+            {COMMITMENTS.map((item) => (
+              <li key={item.number}>
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </li>
+            ))}
+          </ol>
+          <Link className="premium-home__text-link premium-home__text-link--light" href="/house/certifications">
+            Explore Our Sustainability <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 
-      {/* §VIII Start CTA */}
-      <section className="sec sec-start">
-        <div className="start-inner">
-          <div className="eyebrow">
-            <span className="rn">viii.</span>S T A R T &nbsp; Y O U R &nbsp; D E S I G N
-          </div>
-          <h2>
-            Begin with a <em>sketch,</em> a reference, or a structure on file.
-          </h2>
-          <p>
-            Minimum order 300 pcs &nbsp;&middot;&nbsp; Fastest delivery in 2 wks
-            &nbsp;&middot;&nbsp; Corrections are free.
+      <section id="footprint" className="premium-home__section premium-home__footprint">
+        <div className="premium-home__footprint-copy">
+          <p className="premium-home__eyebrow">Our Footprint</p>
+          <h2>Trusted by<br />Brands Worldwide</h2>
+          <p className="premium-home__lead">
+            From emerging brands to global enterprises, Huamei supports customers
+            with dependable packaging solutions worldwide.
           </p>
-          <div className="start-actions">
-            <Link className="hm-plate inv" href="/begin">
-              <span className="roman">→</span>Begin a Project
-            </Link>
-            <a className="start-mail" href="mailto:info@huamei.io">
-              info@huamei.io
-            </a>
+          <ol className="premium-home__footprint-list">
+            {FOOTPRINT.map((item) => (
+              <li key={item.number}>
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <FootprintCarousel />
+        <div className="premium-home__partners">
+          <div className="premium-home__partners-head">
+            <div>
+              <p className="premium-home__eyebrow">Selected Partnerships</p>
+              <h3>Built on lasting trust.</h3>
+            </div>
+            <p>Trusted collaborations across premium spirits, beauty, retail and global materials.</p>
           </div>
+          <div className="premium-home__brand-wall" aria-label="Selected Huamei brand partners">
+            {PARTNERS.map((partner) => (
+              <figure
+                className={`premium-home__partner premium-home__partner--${partner.slug}`}
+                key={partner.number}
+              >
+                <span>{partner.number}</span>
+                <Image
+                  src={partner.image}
+                  alt={`${partner.name} logo`}
+                  width={partner.width}
+                  height={partner.height}
+                  sizes="(max-width: 620px) 42vw, (max-width: 900px) 28vw, 18vw"
+                  unoptimized
+                />
+                <figcaption>{partner.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="premium-home__partner-note">
+            A selection of brands and organizations we have collaborated with.
+          </p>
         </div>
       </section>
-    </>
+
+      <section className="premium-home__cta">
+        <p className="premium-home__eyebrow premium-home__eyebrow--light">Start a Conversation</p>
+        <h2>Let&apos;s Create Something<br /><span>Remarkable.</span></h2>
+        <p>Tell us about your packaging project.</p>
+        <Link className="premium-home__button premium-home__button--gold" href="/begin">
+          Start Your Project <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+    </main>
   );
 }
