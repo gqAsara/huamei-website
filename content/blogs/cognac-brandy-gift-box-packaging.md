@@ -1,6 +1,6 @@
 ---
 title: "Cognac and brandy gift box packaging: bottle formats, structure options, and surface treatment"
-description: "How to specify custom gift box packaging for cognac and brandy — single-bottle and multi-piece rigid formats, interior cradle design, hot-foil and registered emboss for the dark-ground palette, MOQ 200+, and 15–20 day production from a factory holding FSC and BSCI certification."
+description: "Custom gift box packaging for cognac and brandy: single-bottle and multi-piece rigid formats, hot-foil on dark grounds, MOQ 200+. FSC and BSCI certified."
 slug: "cognac-brandy-gift-box-packaging"
 section: "blogs"
 primaryKeyword: "cognac gift box packaging"
