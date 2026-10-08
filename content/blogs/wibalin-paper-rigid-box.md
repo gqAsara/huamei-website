@@ -1,6 +1,6 @@
 ---
-title: "Wibalin paper for rigid boxes: what it is, when to use it, and how to brief it"
-description: "A craft guide to Wibalin book-cloth as a wrapping material for luxury rigid boxes — surface properties, decoration limitations, comparison with coated art paper, and when the material premium is justified."
+title: "Wibalin Paper for Rigid Boxes: Spec and Briefing Guide"
+description: "Wibalin book-cloth: textile-grain wrapping for rigid boxes where offset won't adhere. Decoration constraints, foil-stamp rules, and factory briefing guide."
 slug: "wibalin-paper-rigid-box"
 section: "blogs"
 primaryKeyword: "wibalin paper rigid box"
@@ -48,7 +48,7 @@ geo:
   freshnessTarget: "annual"
 ---
 
-# Wibalin paper for rigid boxes: what it is, when to use it, and how to brief it
+# Wibalin paper for rigid boxes: spec, decoration constraints, and briefing guide
 
 By Sonia Sun, Founder, Huamei 華美 — since 1992. Published 8 June 2026. Updated 8 June 2026.
 
