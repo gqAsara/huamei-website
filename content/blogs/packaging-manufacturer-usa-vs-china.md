@@ -10,6 +10,7 @@ secondaryKeywords:
   - "sourcing packaging factory comparison"
   - "China rigid box vs domestic"
   - "packaging procurement decision"
+  - "packaging lead time china"
 intent: "investigative"
 wordCount: 1100
 author:
@@ -69,7 +70,7 @@ The 2026 tariff schedule on paper-based packaging from China (HTS Chapter 48) ad
 
 [ICC Incoterms](https://iccwbo.org/business-solutions/incoterms-rules/) govern the price basis on which Chinese packaging is quoted to US buyers. FOB Ningbo or FOB Shanghai is the standard departure point; the buyer arranges freight and insurance from that point. CIF (cost, insurance, freight) to a US port is available for buyers who prefer a delivered price. The tariff is assessed on the customs value at US port of entry regardless of Incoterms.
 
-## What are the lead time differences between US and China packaging?
+## What are typical packaging lead times from China, and how do they compare with US?
 
 US manufacturers ship domestic orders in 5–10 business days for stock structures and 15–25 business days for custom. No freight time is added for US delivery.
 
