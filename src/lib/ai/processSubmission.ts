@@ -105,7 +105,7 @@ export async function processSubmissionWithAI(args: {
     .join("\n");
 
   const result = await generateObject({
-    model: "anthropic/claude-sonnet-4-6",
+    model: "anthropic/claude-sonnet-4.6",
     schema: aiCaseStudySchema,
     system: SYSTEM_PROMPT,
     messages: [

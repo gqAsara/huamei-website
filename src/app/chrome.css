@@ -51,11 +51,11 @@
   max-width: 1320px; margin: 0 auto;
   padding: 18px 28px;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center; gap: 24px;
 }
 
-/* Hamburger button — hidden on desktop, visible <960px */
+/* Hamburger button — hidden on desktop, visible through 1080px. */
 .hm-burger {
   display: none;
   appearance: none; background: transparent; border: 0;
@@ -78,7 +78,7 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile drawer — hidden entirely on desktop (≥960px); the @media block below
+/* Mobile drawer — hidden entirely on desktop (>1080px); the @media block below
    switches it back on for small viewports. */
 .hm-drawer {
   display: none;
@@ -94,7 +94,7 @@
   opacity: 1; pointer-events: auto; transform: translateY(0);
 }
 .hm-drawer-inner {
-  position: absolute; inset: 60px 0 0 0;
+  position: absolute; inset: var(--hm-drawer-content-top, 132px) 0 0;
   overflow-y: auto;
   padding: 32px 32px 56px;
 }
@@ -125,6 +125,12 @@
   display: flex; justify-content: center;
 }
 .hm-drawer-list .hm-drawer-cta .hm-plate { width: 100%; justify-content: center; }
+.hm-nav.drawer-open { backdrop-filter: none; }
+.hm-nav.drawer-open .hm-nav-inner {
+  position: relative;
+  z-index: 36;
+  background: var(--paper);
+}
 
 .hm-wm {
   display: flex; align-items: center; gap: 14px;
@@ -187,6 +193,16 @@
   font-family: var(--font-label); font-size: 9.5px; letter-spacing: .28em;
   text-transform: uppercase; color: var(--ink-3);
 }
+.hm-begin-link {
+  color: inherit;
+  font-size: 9px;
+  letter-spacing: .16em;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding: 10px 0;
+}
+.hm-begin-link:hover { border-bottom-color: currentColor; }
 
 /* Plate button — brand signature CTA */
 .hm-plate {
@@ -498,14 +514,10 @@
 
 /* ============================================================
    R E S P O N S I V E
-   Below 960px: collapse the desktop nav into a hamburger drawer.
+   Through 1080px: collapse the desktop nav into a hamburger drawer.
    Utility bar stays visible per handoff README §6.
    ============================================================ */
-@media (max-width: 960px) {
-  .hm-utility-inner { padding: 9px 24px; flex-wrap: wrap; gap: 10px 14px; }
-  .hm-utility .left { gap: 14px; }
-  .hm-utility .right { gap: 14px; }
-
+@media (max-width: 1080px) {
   .hm-nav-inner {
     grid-template-columns: 1fr auto;
     padding: 14px 20px;
@@ -518,6 +530,12 @@
 
   .hm-wm .lat { font-size: 18px; letter-spacing: .26em; }
   .hm-wm .cn  { font-size: 16px; letter-spacing: .18em; }
+}
+
+@media (max-width: 960px) {
+  .hm-utility-inner { padding: 9px 24px; flex-wrap: wrap; gap: 10px 14px; }
+  .hm-utility .left { gap: 14px; }
+  .hm-utility .right { gap: 14px; }
 
   /* Mobile-friendly footer */
   .hm-footer-top { grid-template-columns: 1fr; gap: 40px; }

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { LiveChatButton } from "@/components/LiveChat";
+import { getLiveChatConfig } from "@/lib/live-chat";
 import { JsonLd } from "@/lib/schema/JsonLd";
 import { breadcrumbList } from "@/lib/schema/breadcrumbs";
 import "./house.css";
@@ -11,6 +13,7 @@ export const metadata = {
 };
 
 export default function HousePage() {
+  const liveChatEnabled = Boolean(getLiveChatConfig());
   return (
     <main className="hs-wrap">
       <JsonLd
@@ -96,8 +99,24 @@ export default function HousePage() {
         <h3>
           <em>Contact.</em>
         </h3>
-        <span className="stamp">24 / 7</span>
+        <span className="stamp">Let&rsquo;s talk</span>
       </div>
+      {liveChatEnabled && (
+        <section className="hs-live-chat" aria-labelledby="contact-chat-title">
+          <div>
+            <div className="k">A conversation starts here</div>
+            <h2 id="contact-chat-title">Talk through your <em>next project.</em></h2>
+            <p>
+              Ask about materials, samples or your packaging idea, right here on
+              the website. When our team is online, we can chat in real time.
+            </p>
+          </div>
+          <div className="hs-live-chat-actions">
+            <LiveChatButton />
+            <span>If we&rsquo;re away, leave a message and we&rsquo;ll follow up.</span>
+          </div>
+        </section>
+      )}
       <section className="hs-contact">
         <div className="tile">
           <div className="k">Founder &amp; projects</div>

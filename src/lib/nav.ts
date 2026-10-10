@@ -120,7 +120,6 @@ export const navCategories: NavCategory[] = [
           { label: "The factory & floor", href: "/house/factory", meta: "22,000 m²" },
           { label: "Certifications", href: "/house/certifications", meta: "FSC · ISO · CE" },
           { label: "People", href: "/house/people", meta: "3,000+" },
-          { label: "Contact", href: "/house#contact", meta: "—" },
         ],
       },
     ],

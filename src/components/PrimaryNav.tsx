@@ -11,6 +11,9 @@ export function PrimaryNav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [lastPath, setLastPath] = useState<string | null>(null);
   const navRef = useRef<HTMLUListElement>(null);
+  const shellRef = useRef<HTMLElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const burgerRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   const activeKey = activeKeyFor(pathname);
 
@@ -42,13 +45,52 @@ export function PrimaryNav() {
     };
   }, []);
 
-  // Lock body scroll when drawer is open
+  // Keep keyboard focus and scrolling inside the mobile navigation while open.
   useEffect(() => {
     if (drawerOpen) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
+      // Lock the root viewport: locking body creates a new scroll container
+      // and breaks the sticky header when the page is already scrolled.
+      const root = document.documentElement;
+      const prev = root.style.overflow;
+      root.style.overflow = "hidden";
+      const burger = burgerRef.current;
+
+      function updateDrawerPosition() {
+        if (window.matchMedia("(min-width: 1081px)").matches) {
+          setDrawerOpen(false);
+          return;
+        }
+        const shell = shellRef.current;
+        if (shell) {
+          shell.style.setProperty("--hm-drawer-content-top", `${shell.getBoundingClientRect().bottom}px`);
+        }
+      }
+
+      function keepFocusInside(event: KeyboardEvent) {
+        if (event.key !== "Tab") return;
+        const links = Array.from(
+          shellRef.current?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [],
+        ).filter((element) => element.getClientRects().length > 0);
+        const first = links[0];
+        const last = links[links.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+
+      updateDrawerPosition();
+      drawerRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+      window.addEventListener("resize", updateDrawerPosition);
+      document.addEventListener("keydown", keepFocusInside);
       return () => {
-        document.body.style.overflow = prev;
+        root.style.overflow = prev;
+        window.removeEventListener("resize", updateDrawerPosition);
+        document.removeEventListener("keydown", keepFocusInside);
+        if (burger?.getClientRects().length) burger.focus({ preventScroll: true });
       };
     }
   }, [drawerOpen]);
@@ -57,10 +99,15 @@ export function PrimaryNav() {
     setOpenKey((prev) => (prev === key ? null : key));
   }
 
+  function closeMenus() {
+    setDrawerOpen(false);
+    setOpenKey(null);
+  }
+
   return (
-    <nav className={`hm-nav${drawerOpen ? " drawer-open" : ""}`} id="nav">
+    <nav className={`hm-nav${drawerOpen ? " drawer-open" : ""}`} id="nav" ref={shellRef} aria-label="Main navigation">
       <div className="hm-nav-inner">
-        <Link className="hm-wm" href="/">
+        <Link className="hm-wm" href="/" onClick={closeMenus}>
           <span className="lat">Huamei</span>
           <span className="bar" />
           <Image
@@ -104,16 +151,22 @@ export function PrimaryNav() {
         </ul>
 
         <div className="hm-cta-cluster">
-          <Link className="hm-plate" href="/begin">
+          <Link className="hm-begin-link" href="/begin" onClick={closeMenus}>
+            Begin a project
+          </Link>
+          <Link className="hm-plate" href="/house#contact" onClick={closeMenus}>
             <span className="roman">→</span>
-            Begin
+            Contact
           </Link>
         </div>
 
         <button
           className="hm-burger"
+          ref={burgerRef}
+          type="button"
           aria-label={drawerOpen ? "Close menu" : "Open menu"}
           aria-expanded={drawerOpen}
+          aria-controls="mobile-navigation"
           onClick={() => setDrawerOpen((v) => !v)}
         >
           <span />
@@ -125,9 +178,13 @@ export function PrimaryNav() {
       {/* Mobile drawer */}
       <div
         className={`hm-drawer${drawerOpen ? " open" : ""}`}
+        id="mobile-navigation"
+        ref={drawerRef}
         role="dialog"
+        aria-label="Site navigation"
         aria-modal="true"
         aria-hidden={!drawerOpen}
+        inert={!drawerOpen}
       >
         <div className="hm-drawer-inner">
           <ul className="hm-drawer-list">
@@ -136,14 +193,20 @@ export function PrimaryNav() {
                 key={cat.key}
                 className={activeKey === cat.key ? "active" : undefined}
               >
-                <Link href={cat.href ?? `/${cat.key}`}>
+                <Link href={cat.href ?? `/${cat.key}`} onClick={closeMenus}>
                   <span className="lbl">{cat.label}</span>
                   <span className="arr">→</span>
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/house#contact" onClick={closeMenus}>
+                <span className="lbl">Contact</span>
+                <span className="arr">→</span>
+              </Link>
+            </li>
             <li className="hm-drawer-cta">
-              <Link className="hm-plate" href="/begin">
+              <Link className="hm-plate" href="/begin" onClick={closeMenus}>
                 <span className="roman">→</span> Begin a project
               </Link>
             </li>
