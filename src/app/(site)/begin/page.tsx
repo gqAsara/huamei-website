@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./begin.css";
+import { AttachmentInput, BeginForm, SubmitButton } from "./BeginForm";
 
 export const metadata = {
   title: "Begin a project",
@@ -24,13 +25,7 @@ export default function BeginPage() {
 
       <div className="bg-body">
         {/* ============ FORM ============ */}
-        <form
-          className="bg-form"
-          method="post"
-          action="/api/commission"
-          autoComplete="off"
-          encType="multipart/form-data"
-        >
+        <BeginForm>
           {/* Honeypot — invisible to humans, filled by bots scraping every
               input. /api/commission silently drops submissions where this
               field has any value. Do not rename without updating the route. */}
@@ -213,17 +208,10 @@ export default function BeginPage() {
             <div className="head">
               <div className="rn">v.</div>
               <h3>Attach <em>anything.</em></h3>
-              <p>Design files, dielines, similar boxes for reference, ideas. Five files, 50 MB total.</p>
+              <p>Design files, dielines, similar boxes for reference, ideas. Up to five files, 3 MiB total. For larger files, add a download link in the notes.</p>
             </div>
             <div>
-              <label className="bg-drop">
-                <div className="l">
-                  <div className="t">Drop files here, or browse.</div>
-                  <div className="d">PDF · AI · INDD · PNG · JPG · 50 MB total</div>
-                </div>
-                <div className="r">Browse</div>
-                <input type="file" name="attachments" multiple hidden />
-              </label>
+              <AttachmentInput />
 
               <div className="bg-field" style={{ marginTop: 22 }}>
                 <label htmlFor="f-notes">Caveats or context <span className="opt">· optional</span></label>
@@ -252,12 +240,10 @@ export default function BeginPage() {
             </label>
             <div className="actions">
               <a className="save" href="#">Save &amp; finish later</a>
-              <button className="hm-plate" type="submit">
-                <span className="roman">→</span> Send project
-              </button>
+              <SubmitButton />
             </div>
           </div>
-        </form>
+        </BeginForm>
 
         {/* ============ ASIDE ============ */}
         <aside className="bg-aside">

@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const UPDATED = "2026-05-25";
+const UPDATED = "2026-10-09";
 
 export default function PrivacyPage() {
   return (
@@ -148,10 +148,26 @@ export default function PrivacyPage() {
           privacy policy applies in addition to ours.
         </p>
 
+        <h2>Live chat</h2>
+        <p>
+          When available, our website chat is provided by tawk.to. The chat
+          service loads when you choose to open it. It processes your messages,
+          any files or contact details you share, and technical information such
+          as your IP address, browser and visited pages to connect you with our
+          team and keep the conversation available as you browse. We use these
+          conversations to answer your questions and follow up on your project.
+          See the{" "}
+          <a href="https://www.tawk.to/privacy-policy/" target="_blank" rel="noopener noreferrer">
+            tawk.to privacy policy
+          </a>{" "}
+          for details of its processing. You can also contact us using the
+          project inquiry form without opening chat.
+        </p>
+
         <h2>Cookies</h2>
         <p>
           We set cookies only for analytics (GA4) and for any third-party widgets
-          you explicitly interact with (e.g. embedded video). No advertising
+          you explicitly interact with, including live chat. No advertising
           cookies. Cookies can be cleared from your browser settings at any time.
         </p>
 

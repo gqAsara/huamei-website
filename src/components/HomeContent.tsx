@@ -3,6 +3,34 @@ import Link from "next/link";
 import { FootprintCarousel } from "@/components/FootprintCarousel";
 import "@/app/(site)/home.css";
 
+const PACKAGING = [
+  {
+    title: "Rigid gift boxes",
+    href: "/craft/rigid",
+    image: "/photos/home-packaging-v3/rigid-ginkgo.webp",
+    alt: "Packaging design illustration of a cream and deep red rectangular rigid gift box with black ginkgo leaf printing and a lift-off lid",
+  },
+  {
+    title: "Drawer boxes",
+    href: "/craft/drawer",
+    image: "/photos/home-packaging-v3/drawer-original-text.webp",
+    alt: "Text-edited reference photo of a partially shown blush drawer box with an arc pattern and a round tea tin",
+    imageClassName: "premium-home__packaging-image--drawer",
+  },
+  {
+    title: "Folding cartons",
+    href: "/craft/folding",
+    image: "/photos/home-packaging-v3/folding-grey.webp",
+    alt: "Packaging design illustration of pink iris folding cartons, one open to show its tuck flap and thin paperboard edges",
+  },
+  {
+    title: "Paper bags",
+    href: "/craft/shoppers",
+    image: "/photos/home-packaging-v3/paper-bag.webp",
+    alt: "Packaging design illustration of a charcoal paper bag with black fabric handles and terracotta printing",
+  },
+];
+
 const ADVANTAGES = [
   {
     number: "01",
@@ -140,30 +168,61 @@ export function HomeContent() {
             Premium Paper Packaging · Since 1992
           </p>
           <h1 id="home-hero-title" className="premium-home__hero-title">
-            <span>Trust.</span>
-            <span>Consistency.</span>
-            <span>Elevation.</span>
+            <span>Custom packaging.</span>
+            <span>Made for your brand.</span>
           </h1>
           <p className="premium-home__hero-copy">
-            With 30+ years of manufacturing experience, Huamei delivers custom
-            packaging solutions for international brands with reliable quality,
-            scalable production, and sustainable materials.
+            Rigid gift boxes, drawer boxes, folding cartons and paper bags —
+            customized in structure, size, inserts and finish for your brand.
           </p>
           <div className="premium-home__actions">
             <Link className="premium-home__button premium-home__button--ghost" href="/begin">
               Request a Quote
             </Link>
-            <Link className="premium-home__hero-link" href="#advantage">
+            <Link className="premium-home__hero-link" href="#packaging">
               Explore Packaging Solutions
             </Link>
           </div>
           <dl className="premium-home__facts">
             <div><dt>1992</dt><dd>Founded</dd></div>
-            <div><dt>22,000 m²</dt><dd>Production Base</dd></div>
+            <div><dt>100,000 m²</dt><dd>Production Base</dd></div>
             <div><dt>200,000+</dt><dd>Boxes Daily Capacity</dd></div>
             <div><dt>Global</dt><dd>Brand Partner</dd></div>
           </dl>
         </div>
+      </section>
+
+      <section id="packaging" className="premium-home__packaging" aria-labelledby="home-packaging-title">
+        <div className="premium-home__packaging-head">
+          <div>
+            <p className="premium-home__eyebrow">Custom Paper Packaging</p>
+            <h2 id="home-packaging-title">Packaging we make.</h2>
+          </div>
+          <Link className="premium-home__text-link" href="/craft">
+            Explore all structures <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <ul className="premium-home__packaging-grid">
+          {PACKAGING.map((item) => (
+            <li key={item.href}>
+              <Link className="premium-home__packaging-card" href={item.href}>
+                <div className="premium-home__packaging-media">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    className={item.imageClassName}
+                    fill
+                    sizes="(max-width: 620px) 44vw, (max-width: 900px) 45vw, 22vw"
+                  />
+                </div>
+                <div className="premium-home__packaging-label">
+                  <h3>{item.title}</h3>
+                  <span aria-hidden="true">↗</span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section id="advantage" className="premium-home__section premium-home__advantage">
@@ -180,8 +239,8 @@ export function HomeContent() {
         <div className="premium-home__advantage-grid">
           <div className="premium-home__portrait-media">
             <Image
-              src="/photos/home-reference/advantage-inspection.png"
-              alt="A Huamei craftsperson inspecting a premium paper box"
+              src="/photos/home-packaging-v3/collection.webp"
+              alt="Packaging design illustration of six turquoise floral rigid boxes in assorted sizes, including an open lift-off lid box"
               fill
               sizes="(max-width: 900px) 100vw, 46vw"
             />
@@ -215,6 +274,7 @@ export function HomeContent() {
                   alt={item.alt}
                   fill
                   sizes="(max-width: 620px) 78vw, (max-width: 900px) 42vw, 16vw"
+                  loading="eager"
                 />
               </div>
               <div className="premium-home__process-step-copy">
@@ -323,14 +383,15 @@ export function HomeContent() {
                 key={partner.number}
               >
                 <span>{partner.number}</span>
-                <Image
-                  src={partner.image}
-                  alt={`${partner.name} logo`}
-                  width={partner.width}
-                  height={partner.height}
-                  sizes="(max-width: 620px) 42vw, (max-width: 900px) 28vw, 18vw"
-                  unoptimized
-                />
+                <div className="premium-home__partner-logo">
+                  <Image
+                    src={partner.image}
+                    alt={`${partner.name} logo`}
+                    fill
+                    sizes="(max-width: 620px) 34vw, (max-width: 900px) 24vw, 170px"
+                    unoptimized
+                  />
+                </div>
                 <figcaption>{partner.name}</figcaption>
               </figure>
             ))}

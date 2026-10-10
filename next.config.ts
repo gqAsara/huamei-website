@@ -35,21 +35,22 @@ const nextConfig: NextConfig = {
     //  - Resend (form action posts to /api/commission, internal — not in
     //    form-action; Resend is server-to-server)
     //  - Inline scripts/styles (Next.js + Sanity Studio both need them)
+    //  - tawk.to widget, loaded only after a visitor clicks live chat
     // 'unsafe-eval' is required by Sanity Studio for its dynamic schema
     // loading. Tighten over time via a stricter CSP scoped to non-studio
     // routes if needed.
     const csp = [
       "default-src 'self' https:",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.sanity.io https://va.vercel-scripts.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.sanity.io https://va.vercel-scripts.com https://*.tawk.to https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to https://cdn.jsdelivr.net",
       "img-src 'self' data: blob: https://cdn.sanity.io https://www.googletagmanager.com https://www.google-analytics.com https:",
-      "font-src 'self' data: https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://*.sanity.io wss://*.sanity.io https://api.resend.com https://*.vercel-insights.com",
-      "frame-src 'self' https://*.sanity.io",
+      "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
+      "connect-src 'self' https://www.google-analytics.com https://*.sanity.io wss://*.sanity.io https://api.resend.com https://*.vercel-insights.com https://*.tawk.to wss://*.tawk.to",
+      "frame-src 'self' https://*.sanity.io https://*.tawk.to",
       "worker-src 'self' blob:",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://*.tawk.to",
       "frame-ancestors 'self'",
       "upgrade-insecure-requests",
     ].join("; ");
