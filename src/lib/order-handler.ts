@@ -48,14 +48,14 @@ export async function submitOrderRequest(request: Request, deliver: (request: Re
   const input = parsed.data;
   const reference = orderNumber(input.requestKey);
   const fileHashes = await Promise.all(uploads.map(async f => ({name:f.name,mime:f.type,hash:createHash("sha256").update(new Uint8Array(await f.arrayBuffer())).digest("hex")})));
-  const fingerprint = createHash("sha256").update(JSON.stringify({input, fileHashes})).digest("hex");
+  const fingerprint = createHash("sha256").update(JSON.stringify({emailTemplateVersion:2,input, fileHashes})).digest("hex");
   const forwarded = new FormData();
   forwarded.set("name", input.name);
   forwarded.set("email", input.email);
   forwarded.set("brand", input.company);
   forwarded.set("ship", input.country);
   forwarded.set("qty", String(input.quantity));
-  forwarded.set("structure", {mailer:"Mailer box / 飞机盒",book:"Book-style box / 书型盒",folding:"Folding box / 折叠盒"}[input.boxType]);
+  forwarded.set("structure", {mailer:"Mailer box",book:"Book-style box",folding:"Folding box"}[input.boxType]);
   input.finishes.forEach(f=>forwarded.append("finishing",f));
   forwarded.set("brief", `Packaging order request ${reference}\nInside dimensions: ${input.length} × ${input.width} × ${input.height} ${input.unit}\nQuantity: ${input.quantity}\nArtwork: ${uploads.length ? uploads.length+" file(s) attached" : "No design file yet; assistance may be needed"}\nStatus: Pending quotation, shipping and payment confirmation. No online payment taken.`);
   forwarded.set("notes", input.notes);
