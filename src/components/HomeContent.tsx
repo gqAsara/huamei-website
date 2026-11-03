@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FootprintCarousel } from "@/components/FootprintCarousel";
 import "@/app/(site)/home.css";
-import "@/app/(site)/order/order.css";
-import HomeOrderEntry from "./HomeOrderEntry";
 
 const PACKAGING = [
   {
@@ -184,9 +182,6 @@ export function HomeContent() {
             <Link className="premium-home__hero-link" href="#packaging">
               Explore Packaging Solutions
             </Link>
-            <Link className="premium-home__button premium-home__button--ghost" href="#order-request">
-              Order Request · 订购申请 ↗
-            </Link>
           </div>
           <dl className="premium-home__facts">
             <div><dt>1992</dt><dd>Founded</dd></div>
@@ -196,8 +191,6 @@ export function HomeContent() {
           </dl>
         </div>
       </section>
-
-      <HomeOrderEntry />
 
       <section id="packaging" className="premium-home__packaging" aria-labelledby="home-packaging-title">
         <div className="premium-home__packaging-head">

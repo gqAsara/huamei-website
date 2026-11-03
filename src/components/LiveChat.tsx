@@ -172,6 +172,14 @@ export function LiveChatProvider({ children }: { children: ReactNode }) {
   return (
     <ChatContext.Provider value={config ? { loading: loadState === "loading", open, start } : null}>
       {children}
+      {!open && !(loadState === "error" && !errorDismissed) && (
+        <Link id="order-request" href="/order" className="hm-order-launcher" data-chat={config ? "present" : "absent"}>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 7h14l1 14H4L5 7Z M8 8V6a4 4 0 0 1 8 0v2" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+          </svg>
+          <span>在线订购</span>
+        </Link>
+      )}
       {config && !open && (
         <div className="hm-chat-float">
           {loadState === "error" && !errorDismissed && (
