@@ -164,6 +164,14 @@ export default function PrivacyPage() {
           project inquiry form without opening chat.
         </p>
 
+        <h2>Packaging order requests</h2>
+        <p>When you submit a packaging order request, your specification,
+          contact details and optional design files are sent to our existing
+          inquiry mailbox through Resend. We use them to review your needs,
+          prepare a quotation and agree shipping and payment arrangements.
+          This form does not collect card or PayPal payment information.
+          Contact info@huamei.io for access, correction or deletion requests.</p>
+
         <h2>Cookies</h2>
         <p>
           We set cookies only for analytics (GA4) and for any third-party widgets

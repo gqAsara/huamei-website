@@ -106,6 +106,9 @@ export async function POST(request: Request) {
     (file) => file.name + " (" + Math.ceil(file.size / 1024) + " KB)",
   );
   const rows = Object.entries(payload).map(([key, value]) => htmlRow(key, value)).join("");
+  const orderKey = request.headers.get("x-huamei-order-key") || "";
+  const isOrderRequest = /^[0-9a-f-]{36}:[0-9a-f]{64}$/i.test(orderKey);
+  const orderReference = isOrderRequest ? brief.match(/^Packaging order request (HM-[A-F0-9]{16})\r?\n/)?.[1] : undefined;
   const html = '<div style="background:#f4efe6;padding:32px"><div style="max-width:640px;margin:0 auto;background:#fff;padding:36px 40px;border:.5px solid #c9bfb2"><div style="font:500 11px/1.2 -apple-system,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#8f6e2b;margin-bottom:6px">New project intake</div><div style="font:italic 28px/1.1 Georgia,serif;color:#1a1614;margin:0 0 24px">Huamei · /begin</div><table style="border-collapse:collapse;width:100%">'
     + rows + "</table></div></div>";
 
@@ -119,12 +122,17 @@ export async function POST(request: Request) {
       headers: {
         Authorization: "Bearer " + key,
         "Content-Type": "application/json",
+        // Order requests retry safely after a lost response. Other inquiries
+        // retain their existing behavior. Never include customer data in keys.
+        ...(isOrderRequest
+          ? { "Idempotency-Key": "packaging-order-" + orderKey }
+          : {}),
       },
       signal: AbortSignal.timeout(20_000),
       body: JSON.stringify({
         from: process.env.CONTACT_FROM_EMAIL || "Huamei <onboarding@resend.dev>",
         to: [process.env.CONTACT_TO_EMAIL || "info@huamei.io"],
-        subject: "New project intake — " + name,
+        subject: orderReference ? `Packaging order request — ${orderReference} — ${name}` : "New project intake — " + name,
         html,
         reply_to: email,
         ...(attachments.length ? { attachments } : {}),
