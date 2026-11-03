@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const BOX_TYPES = [
-  { value: "mailer", label: "Mailer box", detail: "飞机盒" },
-  { value: "book", label: "Book-style box", detail: "书型盒" },
-  { value: "folding", label: "Folding box", detail: "折叠盒" },
+  { value: "mailer", label: "Mailer box", detail: "Self-locking mailer" },
+  { value: "book", label: "Book-style box", detail: "Hinged presentation box" },
+  { value: "folding", label: "Folding box", detail: "Fold-flat carton" },
 ] as const;
 export const FINISHES = ["Printed artwork", "Hot foil", "Embossing", "Debossing", "Matte finish", "Gloss finish", "Help me choose"] as const;
 export const MAX_DESIGN_BYTES = 3 * 1024 * 1024;

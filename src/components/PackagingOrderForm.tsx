@@ -75,8 +75,10 @@ export default function PackagingOrderForm({initialBox="mailer"}:{initialBox?:st
       <legend><span>03</span> Finishing &amp; artwork</legend>
       <div className="pack-order-finishes">{FINISHES.map(f => <label key={f}><input type="checkbox" name="finishes" value={f} defaultChecked={f === "Help me choose"} />{f}</label>)}</div>
       <label className="pack-order-upload">Design files <span>Optional</span>
-        <input type="file" name="designFiles" multiple accept=".pdf,.ai,.indd,.png,.jpg,.jpeg" onChange={e => setFileNames(Array.from(e.target.files || []).map(f => f.name))} />
-        <small>{fileNames.length ? fileNames.join(" · ") : "PDF, AI, INDD, PNG or JPG · up to 2 files / 3 MiB total"}</small>
+        <input type="file" className="pack-order-file-input" aria-label="Upload design files" name="designFiles" multiple accept=".pdf,.ai,.indd,.png,.jpg,.jpeg" onChange={e => setFileNames(Array.from(e.target.files || []).map(f => f.name))} />
+        <span className="pack-order-file-control">Choose files</span>
+        <small role="status">{fileNames.length ? fileNames.join(" · ") : "No files selected"}</small>
+        <small>PDF, AI, INDD, PNG or JPG · up to 2 files / 3 MiB total</small>
       </label>
       <p className="pack-order-hint">No artwork yet? Leave this empty and tell us what you need. For larger files, request a secure transfer method in your notes.</p>
       <label>Project notes <span className="pack-order-optional">Optional</span><textarea name="notes" maxLength={2000} rows={3} placeholder="Materials, intended contents, target delivery date, or design assistance…" /></label>

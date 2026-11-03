@@ -1,6 +1,6 @@
 # Packaging order requests
 
-A small fixed button labelled 在线订购 links to `/order` from public pages. It sits above live chat and remains visible while scrolling. The homepage does not contain a separate ordering section. Visitors select a mailer, book-style or folding
+A small fixed button labelled Order Online links to `/order` from public pages. It sits above live chat and remains visible while scrolling. The homepage does not contain a separate ordering section. Visitors select a mailer, book-style or folding
 box, inside dimensions and unit, quantity, finishes, contact information and
 optional design files. This is an application for a manual quotation, not an
 instant checkout. Pricing, availability, shipping and payment are agreed later.
