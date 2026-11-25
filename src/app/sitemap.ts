@@ -3,6 +3,9 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { navCategories } from "@/lib/nav";
 import { getAllBlogPosts } from "@/lib/blogs";
+import { getNewsIssues, NEWS_URL } from "@/lib/news";
+
+export const revalidate = 60;
 
 const SITE = "https://huamei.io";
 
@@ -28,7 +31,7 @@ function publicFileExists(src: string | undefined): boolean {
   return existsSync(join(process.cwd(), "public", src.replace(/^\//, "")));
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticPaths = [
@@ -59,8 +62,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const subPathsUnique = Array.from(new Set(subPaths));
 
   const blogs = getAllBlogPosts();
+  const news = await getNewsIssues();
 
   return [
+    {
+      url: NEWS_URL,
+      ...(news.length ? { lastModified: news[0].publishedAt ?? news[0].date } : {}),
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
+    ...news.map((issue) => ({
+      url: NEWS_URL + "/" + issue.date,
+      lastModified: issue.publishedAt ?? issue.date,
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    })),
     ...staticPaths.map((path) => ({
       url: `${SITE}${path}`,
       lastModified: now,

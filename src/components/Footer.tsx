@@ -51,6 +51,7 @@ export function Footer() {
                 <li><Link href="/house/people">People</Link></li>
                 <li><Link href="/house#contact">Contact</Link></li>
                 <li><Link href="/blogs">Blogs</Link></li>
+                <li><Link href="/news">Packaging news</Link></li>
               </ul>
             </div>
             <div>

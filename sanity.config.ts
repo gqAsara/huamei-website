@@ -68,6 +68,14 @@ export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}
                     .defaultOrdering([{ field: "order", direction: "asc" }])
                 ),
               S.divider(),
+              S.listItem()
+                .title("Packaging news · 每日包装资讯")
+                .child(
+                  S.documentTypeList("packagingNewsEdition")
+                    .title("Daily editions")
+                    .initialValueTemplates([])
+                    .defaultOrdering([{ field: "date", direction: "desc" }])
+                ),
               // GEO monitoring — buyer prompts tracked across AI engines.
               S.listItem()
                 .title("🤖 GEO prompts")

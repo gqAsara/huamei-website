@@ -3,6 +3,16 @@
     {
       "path": "/api/cron/geo-probe",
       "schedule": "5 12 * * *"
+    },
+    {
+      "path": "/api/packaging-news",
+      "schedule": "17 1 * * *"
     }
-  ]
+  ],
+  "functions": {
+    "api/packaging-news.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{.*/**,.*,public/**,src/**,sanity/**,docs/**,node_modules/**,scripts/!(publish-packaging-news.py),scripts/*/**,*.md,*.json,*.ts,*.mjs,*.yaml,*.yml}"
+    }
+  }
 }

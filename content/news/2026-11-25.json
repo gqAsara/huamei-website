@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-25",
+  "publishedAt": "2026-11-25T07:26:48.206Z",
+  "title": "A yoghurt carton, a food tray and a carrier for two bottles",
+  "summary": "A shopper opens a yoghurt carton, a warehouse stacks trays of food and a customer lifts two soap bottles by one handle. We look at what each design asks a packaging buyer to test.",
+  "items": [
+    {
+      "title": "A pull ring opens the whole top of a yoghurt carton",
+      "summary": "Tetra Pak introduced Tetra Reva, a square paper-based carton for foods such as yoghurt, desserts and soft cheese. Pulling the ring opens the full top so the customer can eat from the carton with a spoon.",
+      "buyerNote": "For a gift set of chilled desserts, try the filled cartons in the proposed outer tray. Can a shopper lift one out without catching its pull ring on the tray or disturbing the next carton?",
+      "sourceName": "Tetra Pak",
+      "sourceUrl": "https://www.tetrapak.com/about-tetra-pak/news-and-events/newsarchive/tetra-pak-launches-tetra-reva-paper-based-package",
+      "sourceDate": "2026-11-24",
+      "kind": "news"
+    },
+    {
+      "title": "Mondi examines how tray design affects food damage in transit",
+      "summary": "Mondi published a white paper on preventing damage to food during transport. Its examples consider how corrugated trays carry weight in a stack, how workers handle the load and how many units fit on a pallet.",
+      "buyerNote": "When comparing two trays for confectionery, send both on the same route at the same pallet height. Record how many units fit at dispatch and how many arrive in saleable condition.",
+      "sourceName": "Mondi",
+      "sourceUrl": "https://www.mondigroup.com/news-and-insight/2026/mondi-reveals-how-purpose-built-corrugated-packaging-can-drastically-reduce-food-waste/",
+      "sourceDate": "2026-11-23",
+      "kind": "news"
+    },
+    {
+      "title": "A paperboard handle holds two soap bottles by their caps",
+      "summary": "Atlantic Packaging described the carrier it developed for pairs of Dr. Bronner’s soap bottles sold at Costco in the United States. Cut-outs in the board grip beneath the caps when a shopper lifts the handle. Atlantic says it tested the carrier at its packaging centre and in the field.",
+      "buyerNote": "For a similar twin-pack, give the supplier filled bottles fitted with the production caps. Lift the sample both straight up and from one side, and check whether each bottle stays seated.",
+      "sourceName": "Atlantic Packaging",
+      "sourceUrl": "https://www.atlanticpkg.com/packaging-europe-highlights-atlantics-fishbone-dog-bone-for-dr-bronners/",
+      "sourceDate": "2026-11-18",
+      "kind": "news"
+    }
+  ]
+}
