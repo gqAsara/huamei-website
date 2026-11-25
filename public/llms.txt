@@ -6,7 +6,7 @@
 
 ## Packaging Q&A
 
-- [Packaging Q&A](https://huamei.io/news) — illustrated answers to everyday questions about choosing, measuring, mailing and reusing paper packaging.
+- [Packaging Q&A](https://huamei.io/news) — illustrated answers to everyday questions about choosing, measuring, mailing and reusing paper packaging. Weekly studies include their method, results, limitations and downloadable data.
 - [Packaging Q&A RSS](https://huamei.io/news/feed.xml) — recent questions in publication order.
 
 ## Sustainability & international supply chain

@@ -109,6 +109,23 @@ def publish_edition(store, now, root=ROOT, editorial_generator=desk.generate, cl
     return {"status": "published" if result == "create" else "already-published", "date": str(day)}
 
 
+def notify_indexnow(result, key):
+    if result.get("status") != "published" or not re.fullmatch(r"[a-zA-Z0-9-]{8,128}", key or ""):
+        return
+    origin = "https://huamei.io"
+    listing = origin + "/news"
+    payload = {"host": "huamei.io", "key": key, "keyLocation": f"{origin}/{key}.txt",
+               "urlList": [listing, listing + "/" + result["date"]]}
+    req = urllib.request.Request("https://api.indexnow.org/indexnow", data=json.dumps(payload).encode(),
+                                 headers={"Content-Type": "application/json",
+                                          "User-Agent": "HuameiIndexNowBot/1.0 (+https://huamei.io)"})
+    try:
+        with urllib.request.build_opener(NoRedirect()).open(req, timeout=3):
+            pass
+    except Exception as error:
+        logging.warning("IndexNow notification unavailable (%s)", type(error).__name__)
+
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if not os.environ.get("CRON_SECRET"):
@@ -119,6 +136,7 @@ class handler(BaseHTTPRequestHandler):
             try:
                 clock = lambda: datetime.now(timezone.utc)
                 result = publish_edition(Store(os.environ), clock(), clock=clock)
+                notify_indexnow(result, os.environ.get("INDEXNOW_KEY"))
                 status = 200
             except Exception as error:
                 logging.error("Packaging publication failed (%s)", type(error).__name__)

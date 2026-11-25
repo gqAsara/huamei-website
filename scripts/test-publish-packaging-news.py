@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from unittest.mock import Mock, patch
+from unittest.mock import MagicMock, Mock, patch
 
 
 def load(name, path):
@@ -205,6 +205,20 @@ class QuestionsTest(unittest.TestCase):
             doc={"_id":"packagingNews-2026-11-25"}
             store.create_once(doc)
             self.assertEqual({"mutations":[{"createIfNotExists":doc}]}, request.call_args.args[1])
+
+    def test_indexnow_only_notifies_for_newly_persisted_publications(self):
+        with patch.object(cloud.urllib.request, "build_opener", return_value=MagicMock()) as op:
+            result = {"date":str(DAY), "status":"already-published"}
+            cloud.notify_indexnow(result, "examplefixture")
+            cloud.notify_indexnow({**result, "status":"scheduled"}, "examplefixture")
+            op.assert_not_called()
+            cloud.notify_indexnow({**result, "status":"published"}, "examplefixture")
+            req = op.return_value.open.call_args.args[0]
+            self.assertEqual(req.full_url, "https://api.indexnow.org/indexnow")
+            self.assertEqual(json.loads(req.data)["urlList"], ["https://huamei.io/news", "https://huamei.io/news/" + str(DAY)])
+            op.return_value.open.side_effect = TimeoutError()
+            with self.assertLogs(level="WARNING"):
+                cloud.notify_indexnow({**result, "status":"published"}, "examplefixture")
 
 
 if __name__ == "__main__":

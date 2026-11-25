@@ -28,8 +28,8 @@ export default function robots(): MetadataRoute.Robots {
       // Perplexity
       { userAgent: "PerplexityBot",   allow: "/" },
 
-      // Google AI training (separate from Googlebot — must opt in
-      // explicitly to be cited in AI Overviews / Gemini)
+      // Google-Extended controls certain Gemini uses. Googlebot controls
+      // crawling for Google Search, including its AI features.
       { userAgent: "Google-Extended", allow: "/" },
 
       // Common Crawl + Cohere training corpus
