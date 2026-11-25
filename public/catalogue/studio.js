@@ -44,7 +44,7 @@ function tile(name,copy,r,url,c=''){return '<a class="pic-card '+c+'" href="'+h(
 function grid(cards){return '<div class="picture-grid">'+cards.join('')+'</div>'}
 function frame(body){return '<div class="wrap studio">'+body+'</div>'}
 function quoteStrip(title,copy,href='#quote'){return '<section class="quote-strip section-space"><div><h2>'+h(title)+'</h2><p>'+h(copy)+'</p></div>'+link('Request a quote',href,'btn')+'</section>'}
-function hero({label,heading,copy,cta,url,image,caption,source,home=false,featureUrl=url}){const [line,em]=heading.split('|');return '<section class="hero-sheet '+(home?'hero-home':'')+'"><div class="hero-type"><span class="suptitle">'+h(label)+'</span><h1>'+h(line)+(em?'<br><em>'+h(em)+'</em>':'')+'</h1><p>'+h(copy)+'</p><div class="actions">'+link(cta,url,'btn primary')+(home?link('Request a quote','#quote','under'):'')+'</div></div><figure>'+(home?'<a href="'+h(featureUrl)+'" aria-label="View '+h(caption)+'">':'<div class="hero-art">')+img(image.photo,image.title,false)+(home?'</a>':'</div>')+'<figcaption><span>'+h(caption)+'</span><small>'+h(source)+'</small></figcaption></figure></section>'}
+function hero({label,heading,copy,cta,url,image,caption,source,home=false,featureUrl=url}){const [line,em]=heading.split('|');return '<section class="hero-sheet '+(home?'hero-home':'')+'"><div class="hero-type"><span class="suptitle">'+h(label)+'</span><h1>'+h(line)+(em?'<br><em>'+h(em)+'</em>':'')+'</h1><p>'+h(copy)+'</p><div class="actions">'+link(cta,url,'btn primary')+(home?link('Explore packaging','#packaging','under'):'')+'</div></div><figure>'+(home?'<a href="'+h(featureUrl)+'" aria-label="View '+h(caption)+'">':'<div class="hero-art">')+img(image.photo,image.title,false)+(home?'</a>':'</div>')+'<figcaption><span>'+h(caption)+'</span><small>'+h(source)+'</small></figcaption></figure></section>'}
 const photoEdit = window.PHOTO_SELECTION || {home:['un-zPYro5uenhs','px-9159719'],industry:{},features:{},formats:{}};
 const featuredPhotos = () => photoEdit.home.map(id=>byId.get(id)).filter(Boolean);
 function drawerBrief(){
@@ -79,7 +79,46 @@ function homeGallery(){
 function industryTiles(){return grid(Object.entries(industries).map(([id,s])=>tile(s.name,boxRows(findRows(id)).length+' packaging references',pick(photoEdit.industry[id],findRows(id)),encode('industry/'+id),'industry-tile')))}
 function formatCover(f){return pick(photoEdit.formats[f],boxRows(findRows('',f)))}
 function formatTiles(){return grid(Object.entries(formats).map(([id,f])=>tile(f.name,f.intro,formatCover(id),encode('packaging/'+id),'format-tile')))}
-function home(){const r=getFeatured();return frame(hero({label:'Paper packaging manufacturer · Est. 1992',heading:'Custom paper|packaging',copy:'Find a structure for your product, compare the details and send Huamei a packaging brief.',cta:'Explore packaging',url:'#packaging',featureUrl:refUrl(r),image:r,caption:r.title,source:r.author,home:true})+'<section class="section-space">'+headline('By industry','What are you packing?',link('All industries','#industries'))+industryTiles()+'</section><section class="section-space">'+headline('Product library','Choose a structure',link('All packaging','#packaging'))+formatTiles()+'</section><section class="section-space image-story">'+img(own('sample-review'),'Huamei staff reviewing a packaging sample')+'<div><span class="suptitle">Inside Huamei</span><h2>From artwork to a physical sample</h2><p>Meet the people and see the equipment involved in developing and producing your pack.</p>'+link('Visit the factory','#factory')+'</div></section>'+quoteStrip('What do you have in mind?','Start with your product, an estimated quantity and where it needs to arrive.'))}
+const homePartners = [
+ ['01-niulanshan','Niulanshan'], ['02-wuliangye','Wuliangye'], ['03-yangshao','Yangshao'],
+ ['04-red-star','Red Star'], ['05-shede','Shede'], ['06-kefumei','Kefumei'], ['07-verity','Verity'],
+ ['08-stora-enso','Stora Enso'], ['09-alibaba','Alibaba'], ['10-nacomi','Nacomi']
+];
+function homePhotoLink(id, title) {
+ const record=byId.get(id);
+ return `<a class="home-photo-link" href="${h(refUrl(record))}">
+  <figure>${img(record.photo,record.title)}<figcaption><b>${h(title)}</b><small>${h(record.author)} · ${h(record.source)}</small></figcaption></figure>
+ </a>`;
+}
+function home(){
+ const featured=getFeatured();
+ const opening=hero({label:'Paper packaging manufacturer · Est. 1992',heading:'Custom paper|packaging',
+  copy:'Custom boxes, paper bags and inserts for retail shelves, gift sets and online orders. Start with your product or a reference you like.',
+  cta:'Request a quote',url:'#quote',featureUrl:refUrl(featured),image:featured,caption:featured.title,source:featured.author,home:true});
+ const formatsNav=Object.entries(formats).map(([id,format])=>link(format.name,encode('packaging/'+id),'home-index-link')).join('');
+ const marketsNav=Object.entries(industries).map(([id,market])=>link(market.name,encode('industry/'+id),'home-index-link')).join('');
+ const partners=homePartners.map(([file,name])=>`<li><img src="${h(imageUrl('assets/partners/'+file+'.png'))}" alt="" loading="lazy" decoding="async"><span>${h(name)}</span></li>`).join('');
+ const visit=`<section class="section-space home-visit">
+   <div class="home-visit-intro"><span class="suptitle">At Huamei</span><h2>Meet the people <br>behind your pack.</h2>
+   <p>From the sample room to the press floor, see where Huamei develops and produces paper packaging.</p>
+   ${link('Visit the factory','#factory')}</div>
+   <figure class="home-visit-group">${img(own('factory-visit'),'Visitors with Huamei staff at the company reception')}<figcaption>A visit to Huamei · Company reception</figcaption></figure>
+   <div class="home-visit-scenes"><figure>${img(own('print-inspection'),'Huamei staff checking a prototype at the cutting table')}<figcaption>Structural sampling</figcaption></figure>
+   <figure>${img(own('press-room'),'Offset printing equipment on the Huamei factory floor')}<figcaption>On the press floor</figcaption></figure></div>
+  </section>`;
+ return frame(opening
+  +`<section class="section-space home-formats">${headline('Packaging formats','Choose your packaging.',link('Compare structures','#packaging'))}
+    <nav aria-label="Packaging formats" class="home-format-index">${formatsNav}</nav></section>`
+  +visit
+  +`<section class="home-partners"><div class="home-partner-heading"><h2>Selected partnerships</h2><p>A selection of brands and organizations we have collaborated with.</p></div>
+     <ul aria-label="Selected Huamei partners">${partners}</ul></section>`
+  +`<section class="section-space home-references">${headline('Packaging references','Inside the box.',link('Browse the design library','#cases'))}
+    <div class="home-detail-grid">${homePhotoLink('drawer-18693815','The sleeve and sliding tray')}${homePhotoLink('px-13278153','A divided chocolate tray')}${homePhotoLink('px-10825661','Printed skincare cartons')}</div></section>`
+  +`<section class="section-space home-markets"><div><span class="suptitle">Industries</span><h2>Start with <br>your market.</h2></div><nav aria-label="Browse by industry" class="home-market-index">${marketsNav}</nav></section>`
+  +`<section class="section-space home-field">${headline('Packaging in use','Beyond the sample room.',link('Explore field notes','#field-notes'))}
+     <div class="home-field-grid">${homePhotoLink('px-34423901','At the jewellery counter')}${homePhotoLink('px-7289727','Packing apparel for dispatch')}</div></section>`
+  +quoteStrip('What are you packing?','An approximate quantity and your product dimensions are enough to start a discussion.'));
+}
 function directory(isMarket){return frame(bread([['Home','#home'],[isMarket?'Industries':'Packaging']])+'<div class="pagelead"><span class="suptitle">'+(isMarket?'Market applications':'Product library')+'</span><h1>'+(isMarket?'Industries':'Packaging formats')+'</h1><p>'+(isMarket?'Choose your market to explore product fit, opening styles and relevant packaging references.':'Compare six paper packaging structures. Choose one to explore examples and specify your own version.')+'</p></div>'+(isMarket?industryTiles():formatTiles()+'<section class="section-space">'+headline('Packaging photographs','Explore the details')+grid(featuredPhotos().map(r=>card(r)))+'</section>')+quoteStrip('Need help choosing?','Share what you are packing and how it will reach your customer.'))}
 function feature(r,context){return '<section class="lead-feature section-space"><a href="'+h(refUrl(r,context))+'">'+img(r.photo,r.title)+'</a><div><span class="suptitle">'+h(viewName(r))+'</span><h2>'+h(r.title)+'</h2><p>'+h(r.summary||'Explore this packaging reference. Choose the details that matter for your product and include them in your inquiry.')+'</p>'+link(r.kind==='brief'?'Specify a drawer box':'Explore this reference',refUrl(r,context),'btn primary')+'</div></section>'}
 function industryPage(s){const market=industries[s],rows=findRows(s),packs=boxRows(rows);const primary=byId.get(photoEdit.features[s]);const r=primary||packs[0];const photo=pick(photoEdit.industry[s],rows);return frame(bread([['Home','#home'],['Industries','#industries'],[market.name]])+hero({label:market.name+' · Industry guide',heading:market.hero,copy:market.intro,cta:s==='jewellery'&&brief?'Specify a drawer box':'Explore the featured packaging',url:refUrl(s==='jewellery'&&brief?brief:r,{industry:s}),image:photo,caption:photo.title,source:photo.author})+feature(r,{industry:s})+'<section class="section-space">'+headline('Packaging references','Boxes for this market',link('View all '+packs.length,encode('cases',{industry:s,type:'boxes'})))+grid(packs.filter(x=>x!==r).slice(0,6).map(x=>card(x,{industry:s})))+'</section>'+((rows.some(x=>x.kind==='scene'||x.kind==='process'))?'<section class="section-space">'+headline('In use','At the counter & packing table',link('View industry photographs',encode('cases',{industry:s,type:'context'})))+grid(rows.filter(x=>['scene','process'].includes(x.kind)).slice(0,3).map(x=>card(x,{industry:s})))+'</section>':'')+quoteStrip('Start your '+market.name.toLowerCase()+' brief',market.prompt+'.',encode('quote',{industry:s})))}
