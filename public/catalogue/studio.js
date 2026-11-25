@@ -61,64 +61,68 @@ function drawerBrief(){
 }
 const brief=drawerBrief();
 if(brief)byId.set(drawerBriefId,brief);
-const getFeatured=()=>featuredPhotos()[0] || records[0];
 const legacyProducts={'huamei-rigid':'rigid','huamei-carton':'carton','huamei-bag':'bag','huamei-mailer':'mailer','huamei-food':'rigid','huamei-bottle':'carton'};
 const own=(id)=>'assets/'+id+'.webp';
 let slideIndex=0;
-function homeGallery(){
- const block=document.querySelector('.hero-home figure');if(!block)return;
- const slides=featuredPhotos();
- if(!slides.length)return;
- const r=slides[slideIndex%slides.length];
- const caption=block.querySelector('figcaption'),art=block.querySelector('a'),photo=art.querySelector('img');
- art.href=refUrl(r);art.setAttribute('aria-label','View '+r.title);
- photo.src=imageUrl(r.photo);photo.alt=r.title;
- caption.innerHTML='<div class="carousel-caption">'+link(r.title,refUrl(r),'')+'<small>'+h(r.author)+'</small></div><div class="carousel-control"><button type="button" data-slide="-1" aria-label="Previous packaging photograph">‹</button><span aria-live="polite">'+(slideIndex+1)+' / '+slides.length+'</span><button type="button" data-slide="1" aria-label="Next packaging photograph">›</button></div>';
- caption.querySelectorAll('[data-slide]').forEach(b=>b.onclick=()=>{slideIndex=(slideIndex+Number(b.dataset.slide)+slides.length)%slides.length;homeGallery();block.querySelector('[data-slide="'+b.dataset.slide+'"]').focus({preventScroll:true})});
-}
 function industryTiles(){return grid(Object.entries(industries).map(([id,s])=>tile(s.name,boxRows(findRows(id)).length+' packaging references',pick(photoEdit.industry[id],findRows(id)),encode('industry/'+id),'industry-tile')))}
 function formatCover(f){return pick(photoEdit.formats[f],boxRows(findRows('',f)))}
 function formatTiles(){return grid(Object.entries(formats).map(([id,f])=>tile(f.name,f.intro,formatCover(id),encode('packaging/'+id),'format-tile')))}
-const homePartners = [
- ['01-niulanshan','Niulanshan'], ['02-wuliangye','Wuliangye'], ['03-yangshao','Yangshao'],
- ['04-red-star','Red Star'], ['05-shede','Shede'], ['06-kefumei','Kefumei'], ['07-verity','Verity'],
- ['08-stora-enso','Stora Enso'], ['09-alibaba','Alibaba'], ['10-nacomi','Nacomi']
-];
-function homePhotoLink(id, title) {
- const record=byId.get(id);
- return `<a class="home-photo-link" href="${h(refUrl(record))}">
-  <figure>${img(record.photo,record.title)}<figcaption><b>${h(title)}</b><small>${h(record.author)} · ${h(record.source)}</small></figcaption></figure>
- </a>`;
+const archivalSlides=['un-zPYro5uenhs','f52176619571','px-5477577','burst-gift-wrapped-with-bow'];
+const ar='<span aria-hidden="true">↗</span>';
+const head=(label,heading,tail='')=>'<div class="section-head"><div><span class="kicker tint">'+label+'</span><h2>'+heading+'</h2></div>'+tail+'</div>';
+const photograph=(file,alt,extra='')=>'<img src="'+imageUrl(own(file))+'" alt="'+h(alt)+'" decoding="async" '+extra+'>';
+const invitation=(title,body)=>'<div class="invitation"><div><h2>'+title+'</h2><p>'+body+'</p></div><a class="btn primary" href="#quote">Request a quote '+ar+'</a></div>';
+function heroFigure(){
+ const r=byId.get(archivalSlides[slideIndex]), href=refUrl(r);
+ return `<div class="feature-photo"><a href="${href}" aria-label="Explore ${h(r.title)}">${img(r.photo,r.title,false)}</a></div>
+  <div class="feature-bar"><a href="${href}"><small>Design reference · ${h(r.author)}</small><strong>${h(r.title)}</strong></a><div class="arrows"><button data-step="-1" aria-label="Previous featured reference">←</button><span class="mono">${slideIndex+1} / ${archivalSlides.length}</span><button data-step="1" aria-label="Next featured reference">→</button></div></div>`;
+}
+function fitHomePhotos(container){
+ for(const photo of container.querySelectorAll('img')){
+  photo.style.objectFit='contain';
+  photo.style.transform='none';
+ }
+}
+function homeGallery(){
+ const featured=document.querySelector('#feature');if(!featured)return;
+ fitHomePhotos(main);
+ featured.onclick=e=>{const b=e.target.closest('button[data-step]');if(!b)return;slideIndex=(slideIndex+Number(b.dataset.step)+archivalSlides.length)%archivalSlides.length;featured.innerHTML=heroFigure();fitHomePhotos(featured);featured.querySelector('[data-step="'+b.dataset.step+'"]').focus({preventScroll:true})};
+}
+function formatCards(){
+ const hints=['For bottles, gift sets and keepsakes','For shelf-ready retail products','For gift collections and advent sets','For retail carryout and gifting','For courier delivery and returns','For shaped bottles and delicate items'];
+ const ids=['px-4397912','px-14977429','drawer-18693815','f52177106830','px-9594426','px-13278153'];
+ return ['rigid','carton','drawer','bag','mailer','inserts'].map((id,i)=>{const r=byId.get(ids[i]);return `<a class="pack-tile" href="#packaging/${id}"><div>${img(r.photo,r.title)}</div><h3>${formats[id].name}<span>↗</span></h3><p>${hints[i]} · ${boxRows(findRows('',id)).length} references</p></a>`}).join('');
+}
+function marketCards(){
+ const ids=['burst-packaged-soap','f23247639595','px-7318915','px-29844836','burst-gift-bag-with-bow','px-9159719'];
+ return ['beauty','drinks','fashion','jewellery','lifestyle','food'].map((id,i)=>{const r=byId.get(ids[i]);return `<a class="market-tile" href="#industry/${id}">${img(r.photo,r.title)}<span>${h(industries[id].name)}<small>${boxRows(findRows(id)).length} references</small></span><b aria-hidden="true">↗</b></a>`}).join('');
+}
+const referenceCaptions={
+ 'si-172':['Whitman chocolate box','An illustrated sleeve and sliding tray.','Cooper Hewitt, Smithsonian Design Museum'],
+ 'f52175590407':['Wine carrier','A divided carton for two bottles.'],
+ 'w3584033':['Footwear box','Embossed board and dark tissue.'],
+ 'px-10825661':['Skincare cartons','Printed cartons for dropper bottles.'],
+ 'px-11444898':['Pendant box','A pink box with a dark insert.'],
+ 'w13676860':['Chocolate assortment','A hinged lid over a divided tray.']
+};
+function archivalReference(id){
+ const [title,caption,credit]=referenceCaptions[id];
+ const r=byId.get(id), meta=industries[r.sectors[0]].name+(r.formats[0]?' · '+formats[r.formats[0]].name:'');
+ return `<a class="project-card" href="${h(refUrl(r))}"><div class="card-img">${img(r.photo,r.title)}</div><div class="card-body"><span class="card-meta">${h(meta)}</span><h3>${h(title)}<span aria-hidden="true">↗</span></h3><p>${h(caption)}</p><small>Photo · ${h(credit||r.author)}</small></div></a>`;
+}
+function useLinks(){return '<div class="use-links"><b>Shop by use</b>'+[['Retail display',{format:'carton'}],['Gifting',{q:'gift'}],['E-commerce delivery',{format:'mailer'}],['Product launches',{q:'sample'}]].map(([name,filters])=>`<a href="${h(encode('cases',{type:'boxes',...filters}))}">${name} <span>→</span></a>`).join('')+'</div>'}
+function fieldStrip(){
+ const scene=(id,title)=>{const r=byId.get(id);return `<a href="${h(refUrl(r))}"><figure>${img(r.photo,r.title)}<figcaption><b>${title}</b><span>Photography · ${h(r.author)}</span></figcaption></figure></a>`};
+ return `<section class="field-strip"><div class="wrap block">${head('Packaging in use','Beyond the sample room.','<a class="under" href="#field-notes">Read the field notes →</a>')}<div class="field-diptych">${scene('px-7233944','Packing candles by hand')}${scene('px-7289727','Ready for dispatch')}</div></div></section>`;
 }
 function home(){
- const featured=getFeatured();
- const opening=hero({label:'Paper packaging manufacturer · Est. 1992',heading:'Custom paper|packaging',
-  copy:'Custom boxes, paper bags and inserts for retail shelves, gift sets and online orders. Start with your product or a reference you like.',
-  cta:'Request a quote',url:'#quote',featureUrl:refUrl(featured),image:featured,caption:featured.title,source:featured.author,home:true});
- const formatsNav=Object.entries(formats).map(([id,format])=>link(format.name,encode('packaging/'+id),'home-index-link')).join('');
- const marketsNav=Object.entries(industries).map(([id,market])=>link(market.name,encode('industry/'+id),'home-index-link')).join('');
- const partners=homePartners.map(([file,name])=>`<li><img src="${h(imageUrl('assets/partners/'+file+'.png'))}" alt="" loading="lazy" decoding="async"><span>${h(name)}</span></li>`).join('');
- const visit=`<section class="section-space home-visit">
-   <div class="home-visit-intro"><span class="suptitle">At Huamei</span><h2>Meet the people <br>behind your pack.</h2>
-   <p>From the sample room to the press floor, see where Huamei develops and produces paper packaging.</p>
-   ${link('Visit the factory','#factory')}</div>
-   <figure class="home-visit-group">${img(own('factory-visit'),'Visitors with Huamei staff at the company reception')}<figcaption>A visit to Huamei · Company reception</figcaption></figure>
-   <div class="home-visit-scenes"><figure>${img(own('print-inspection'),'Huamei staff checking a prototype at the cutting table')}<figcaption>Structural sampling</figcaption></figure>
-   <figure>${img(own('press-room'),'Offset printing equipment on the Huamei factory floor')}<figcaption>On the press floor</figcaption></figure></div>
-  </section>`;
- return frame(opening
-  +`<section class="section-space home-formats">${headline('Packaging formats','Choose your packaging.',link('Compare structures','#packaging'))}
-    <nav aria-label="Packaging formats" class="home-format-index">${formatsNav}</nav></section>`
-  +visit
-  +`<section class="home-partners"><div class="home-partner-heading"><h2>Selected partnerships</h2><p>A selection of brands and organizations we have collaborated with.</p></div>
-     <ul aria-label="Selected Huamei partners">${partners}</ul></section>`
-  +`<section class="section-space home-references">${headline('Packaging references','Inside the box.',link('Browse the design library','#cases'))}
-    <div class="home-detail-grid">${homePhotoLink('drawer-18693815','The sleeve and sliding tray')}${homePhotoLink('px-13278153','A divided chocolate tray')}${homePhotoLink('px-10825661','Printed skincare cartons')}</div></section>`
-  +`<section class="section-space home-markets"><div><span class="suptitle">Industries</span><h2>Start with <br>your market.</h2></div><nav aria-label="Browse by industry" class="home-market-index">${marketsNav}</nav></section>`
-  +`<section class="section-space home-field">${headline('Packaging in use','Beyond the sample room.',link('Explore field notes','#field-notes'))}
-     <div class="home-field-grid">${homePhotoLink('px-34423901','At the jewellery counter')}${homePhotoLink('px-7289727','Packing apparel for dispatch')}</div></section>`
-  +quoteStrip('What are you packing?','An approximate quantity and your product dimensions are enough to start a discussion.'));
-}
+ return `<div class="wrap"><section class="hero"><div class="hero-copy"><div class="kicker"><i></i> Paper packaging manufacturer <span>/</span> Est. 1992</div><h1>Custom paper<br><em>packaging.</em></h1><p>Custom boxes, paper bags and inserts for retail shelves, gift sets and online orders. Start with your product or a reference you like.</p><div class="actions"><a class="btn primary" href="#quote">Request a quote ${ar}</a><a class="under" href="#packaging">Explore packaging →</a></div></div><figure class="hero-feature" id="feature">${heroFigure()}</figure></section></div>
+ <section class="wrap block">${head("Packaging formats","Choose your packaging.",'<a class="under" href="#packaging">Compare structures →</a>')}<div class="pack-tiles">${formatCards()}</div></section>
+ <section class="wrap block"><div class="visit-feature">${photograph("factory-visit","Visitors and Huamei staff at the company reception","loading=lazy")}<div><span class="kicker tint">At Huamei</span><h2>Meet the people behind your pack.</h2><p>From the sample room to the press floor, see where Huamei develops and produces paper packaging.</p><a class="under" href="#factory">Visit the factory →</a></div></div></section>
+ <section class="ref-section"><div class="wrap block">${head("International reference projects","Inside the box.",'<p>See how a structure opens, what holds the product in place and which details to specify for your own version.</p>')}<div class="projects">${['si-172','f52175590407','w3584033','px-10825661','px-11444898','w13676860'].map(archivalReference).join("")}</div><div class="section-end"><a class="under" href="#cases">Browse all ${boxRows(records).length} references →</a></div></div></section>
+ <section class="wrap block">${head("Industries","Start with your market.")}<div class="market-tiles">${marketCards()}</div>${useLinks()}</section>
+ ${fieldStrip()}
+ <section class="wrap final-rfq">${invitation("What are you packing?","An approximate quantity and your product dimensions are enough to start a discussion.")}</section>`;}
 function directory(isMarket){return frame(bread([['Home','#home'],[isMarket?'Industries':'Packaging']])+'<div class="pagelead"><span class="suptitle">'+(isMarket?'Market applications':'Product library')+'</span><h1>'+(isMarket?'Industries':'Packaging formats')+'</h1><p>'+(isMarket?'Choose your market to explore product fit, opening styles and relevant packaging references.':'Compare six paper packaging structures. Choose one to explore examples and specify your own version.')+'</p></div>'+(isMarket?industryTiles():formatTiles()+'<section class="section-space">'+headline('Packaging photographs','Explore the details')+grid(featuredPhotos().map(r=>card(r)))+'</section>')+quoteStrip('Need help choosing?','Share what you are packing and how it will reach your customer.'))}
 function feature(r,context){return '<section class="lead-feature section-space"><a href="'+h(refUrl(r,context))+'">'+img(r.photo,r.title)+'</a><div><span class="suptitle">'+h(viewName(r))+'</span><h2>'+h(r.title)+'</h2><p>'+h(r.summary||'Explore this packaging reference. Choose the details that matter for your product and include them in your inquiry.')+'</p>'+link(r.kind==='brief'?'Specify a drawer box':'Explore this reference',refUrl(r,context),'btn primary')+'</div></section>'}
 function industryPage(s){const market=industries[s],rows=findRows(s),packs=boxRows(rows);const primary=byId.get(photoEdit.features[s]);const r=primary||packs[0];const photo=pick(photoEdit.industry[s],rows);return frame(bread([['Home','#home'],['Industries','#industries'],[market.name]])+hero({label:market.name+' · Industry guide',heading:market.hero,copy:market.intro,cta:s==='jewellery'&&brief?'Specify a drawer box':'Explore the featured packaging',url:refUrl(s==='jewellery'&&brief?brief:r,{industry:s}),image:photo,caption:photo.title,source:photo.author})+feature(r,{industry:s})+'<section class="section-space">'+headline('Packaging references','Boxes for this market',link('View all '+packs.length,encode('cases',{industry:s,type:'boxes'})))+grid(packs.filter(x=>x!==r).slice(0,6).map(x=>card(x,{industry:s})))+'</section>'+((rows.some(x=>x.kind==='scene'||x.kind==='process'))?'<section class="section-space">'+headline('In use','At the counter & packing table',link('View industry photographs',encode('cases',{industry:s,type:'context'})))+grid(rows.filter(x=>['scene','process'].includes(x.kind)).slice(0,3).map(x=>card(x,{industry:s})))+'</section>':'')+quoteStrip('Start your '+market.name.toLowerCase()+' brief',market.prompt+'.',encode('quote',{industry:s})))}
@@ -238,6 +242,26 @@ async function saveInquiry(event,p){
   button.disabled=false;button.textContent=originalLabel;
  }
 }
+
+function homeNavigation(){
+ const group=(title,links)=>`<details class="nav-group"><summary>${title}</summary><div class="sub-links">${links.map(([l,t])=>`<a href="${l}">${t}</a>`).join("")}</div></details>`;
+ return group("Packaging",[["#packaging","All packaging"],...Object.entries(formats).map(([id,f])=>[encode('packaging/'+id),f.name]),["#finishes","Materials & finishes"]])+group("Industries",[["#industries","All industries"],...['beauty','drinks','fashion','jewellery','lifestyle','food'].map(id=>[encode('industry/'+id),industries[id].name]),["#home?view=uses","Shop by use"]])+'<a href="#cases">Case library</a>'+group("Inside Huamei",[["#factory","Our factory & team"],["#field-notes","Packaging in use"],["#contact","Contact Huamei"]])+group("How to order",[["#ordering","Sampling & production"],["#ordering?view=faq","Buyer questions"],["#quote","Start an inquiry"]]);
+}
+function homeFooter(){return `<div class="wrap footer-grid"><div><a href="#home" class="foot-logo"><img src="${h(imageUrl('assets/huamei-logo-dark.png'))}" width="1818" height="431" alt="Huamei Product Packaging"></a><p>Custom paper packaging<br>Manufacturer since 1992</p><a href="mailto:${h(inquiryEmail)}">${h(inquiryEmail)}</a></div><div><h2>Packaging</h2>${Object.entries(formats).map(([id,f])=>`<a href="#packaging/${id}">${f.name}</a>`).join("")}</div><div><h2>Explore</h2><a href="#industries">Industries</a><a href="#cases">Case library</a><a href="#finishes">Materials &amp; finishes</a><a href="#field-notes">Packaging in use</a></div><div><h2>Work with us</h2><a href="#factory">Our factory &amp; team</a><a href="#ordering">Sampling &amp; production</a><a href="#contact">Contact</a><a href="#quote" class="footer-quote">Request a quote ↗</a></div></div><div class="wrap footer-end"><span>Huamei Packaging</span><a href="#credits">Image credits</a><a href="#privacy">Inquiry privacy</a></div>`;}
+let showingArchiveHeader;
+function setCatalogueChrome(isHome){
+ if(showingArchiveHeader===isHome)return;
+ showingArchiveHeader=isHome;
+ const nav=isHome?homeNavigation():navigation();
+ $('.desktop-nav').innerHTML=nav;
+ mobile.innerHTML=nav;
+ $('footer').innerHTML=isHome?homeFooter():footer();
+ document.querySelectorAll('.sub-links a[href="#quote"]').forEach(a=>a.dataset.navRfq='');
+ $('footer a[href="#quote"]').dataset.footRfq='';
+}
+const detailStyles=document.querySelector('link[rel="stylesheet"][href$="studio.css"]')
+ ||[...document.querySelectorAll('style')].find(style=>style.textContent.trimStart().startsWith(':root{--wine:'));
+
 function render(){
  const [route,p]=getRoute();if(route==='content'){main.focus();return}closeMenu();
  const [base,id]=route.split('/');let output,rfq='#quote',r=null;
@@ -255,7 +279,10 @@ function render(){
  else if(base==='saved')output=receipt();
  else if(['privacy','factory','contact','credits','finishes','field-notes','ordering'].includes(base))output=staticPage(base,p);
  else output=home();
- main.innerHTML=output;homeGallery();document.title=(main.querySelector('h1')?.innerText||'Custom paper packaging').replace(/\s+/g,' ').trim()+' — Huamei';
+ main.innerHTML=output;
+ const isHome=Boolean(main.querySelector('#feature'));
+ if(detailStyles)detailStyles.media=isHome?'not all':'all';
+ setCatalogueChrome(isHome);homeGallery();document.title=(main.querySelector('h1')?.innerText||'Custom paper packaging').replace(/\s+/g,' ').trim()+' — Huamei';
  const config=$('#configure');if(config&&r){rfq=configureUrl(r,p,config);config.oninput=()=>setQuoteLinks(configureUrl(r,p,config));config.onsubmit=e=>{e.preventDefault();location.hash=configureUrl(r,p,config)}}
  setQuoteLinks(rfq);
  const f=$('#catalog-filter');if(f){const apply=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(f));location.hash=encode('cases',{...v,type:v.type==='all'?'':v.type})};f.onsubmit=apply;f.onchange=e=>{if(e.target.tagName==='SELECT')apply(e)}}
@@ -265,10 +292,9 @@ function render(){
  const zoom=$('#enlarge');if(zoom)zoom.onclick=()=>{const original=$('#large-image'),d=document.createElement('dialog');d.className='photo-view';d.setAttribute('aria-label',original.alt);d.innerHTML='<img src="'+h(original.src)+'" alt="'+h(original.alt)+'"><div class="viewer-bar"><p>'+h($('#view-description').textContent)+'</p><button autofocus type="button">Close</button></div>';document.body.append(d);d.showModal();d.querySelector('button').onclick=()=>d.close();d.addEventListener('close',()=>{d.remove();zoom.focus()},{once:true})};
  const download=$('#download-brief');if(download)download.onclick=()=>{const blob=new Blob([briefText(saved)],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='Huamei-packaging-inquiry.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)};
  window.scrollTo(0,0);if(lastRoute)main.focus({preventScroll:true});lastRoute=location.hash||'#home';
+ if(isHome&&p.get('view')==='uses')main.querySelector('.use-links')?.scrollIntoView();
  if(base==='ordering'&&p.get('view')==='faq')$('#faq')?.scrollIntoView();
 }
-$('.desktop-nav').innerHTML=navigation();mobile.innerHTML=navigation();$('footer').innerHTML=footer();
-document.querySelectorAll('.sub-links a[href="#quote"]').forEach(a=>a.dataset.navRfq='');$('footer a[href="#quote"]').dataset.footRfq='';
 menu.onclick=()=>{if(!mobile.hidden){closeMenu();return}mobile.hidden=false;menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close navigation')};
 document.addEventListener('click',e=>{document.querySelectorAll('.nav-group[open]').forEach(g=>{if(!g.contains(e.target)||e.target.closest('a'))g.open=false});const a=e.target.closest('a[href^="#"]');if(a?.hash===location.hash){closeMenu();window.scrollTo(0,0)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!mobile.hidden){closeMenu();menu.focus()}else{const opened=document.querySelector('.nav-group[open]');if(opened){opened.open=false;opened.querySelector('summary').focus()}}}});
