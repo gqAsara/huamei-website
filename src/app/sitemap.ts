@@ -1,10 +1,8 @@
 import type { MetadataRoute } from "next";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { VOLUMES } from "@/lib/volumes";
 import { navCategories } from "@/lib/nav";
 import { getAllBlogPosts } from "@/lib/blogs";
-import { getAllVolumes } from "@/lib/sanity/queries";
 
 const SITE = "https://huamei.io";
 
@@ -30,7 +28,7 @@ function publicFileExists(src: string | undefined): boolean {
   return existsSync(join(process.cwd(), "public", src.replace(/^\//, "")));
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticPaths = [
@@ -60,10 +58,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     );
   const subPathsUnique = Array.from(new Set(subPaths));
 
-  // Prefer Sanity (live, includes AI-generated case studies); fall back to
-  // the static volumes.ts during build environments without Sanity envs.
-  const sanityVolumes = await getAllVolumes();
-  const volumes = sanityVolumes.length > 0 ? sanityVolumes : VOLUMES;
   const blogs = getAllBlogPosts();
 
   return [
@@ -78,18 +72,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.6,
-    })),
-    ...volumes.map((v) => ({
-      url: `${SITE}/volumes/${v.slug}`,
-      lastModified: now,
-      changeFrequency: "yearly" as const,
-      priority: 0.6,
-      // Image sitemap entries — Google Images is a real top-of-funnel
-      // for packaging buyers shopping by visual reference. URLs are
-      // XML-escaped because Next 16 doesn't escape <image:loc> values.
-      images: [v.cover, ...v.photos]
-        .filter((u): u is string => typeof u === "string" && u.length > 0)
-        .map(xmlEscape),
     })),
     ...blogs.map((p) => ({
       url: `${SITE}/blogs/${p.slug}`,

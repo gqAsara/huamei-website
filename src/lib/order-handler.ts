@@ -66,10 +66,10 @@ export async function submitOrderRequest(request: Request, deliver: (request: Re
       method:"POST",headers:{accept:"application/json","x-huamei-order-key":`${input.requestKey}:${fingerprint}`},body:forwarded,
     }));
     const json = await result.json().catch(()=>null);
-    if (!result.ok || json?.ok !== true) return fail(json?.error || "We couldn't send your request. Please retry or email info@huamei.io.",result.status >= 400 ? result.status : 502);
+    if (!result.ok || json?.ok !== true) return fail(json?.error || "We couldn't send your request. Please retry or email jackychan@huamei.io.",result.status >= 400 ? result.status : 502);
     return NextResponse.json({ok:true,reference},{headers:{"Cache-Control":"no-store"}});
   } catch {
     console.error("[orders] Email request failed.");
-    return fail("We couldn't send your request. Please retry or email info@huamei.io. No payment has been taken.",502);
+    return fail("We couldn't send your request. Please retry or email jackychan@huamei.io. No payment has been taken.",502);
   }
 }

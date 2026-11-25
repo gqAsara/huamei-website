@@ -26,7 +26,6 @@ export default async function IndustryTopicPage({
           slug,
           name,
           description: topic.lede,
-          image: topic.heroImage,
         })}
       />
       <TopicTemplate topic={topic} />

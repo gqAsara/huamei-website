@@ -255,7 +255,7 @@ export default async function CasePage({
           <Link className="cta" href="/begin">
             Begin a conversation <span className="arrow">→</span>
           </Link>
-          <span className="sub">or write to info@huamei.io</span>
+          <span className="sub">or write to jackychan@huamei.io</span>
         </section>
 
         {/* Endmark */}

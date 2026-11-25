@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     return [
       // Enforce no trailing slash on every URL.
       { source: "/:path+/", destination: "/:path+", permanent: true },
+      { source: "/volumes/:slug", destination: "/volumes", permanent: true },
       // /margin → /blogs (URL renamed 2026-05-04). Permanent (301) so any
       // crawlers that picked up the original /margin URLs migrate cleanly.
       { source: "/margin", destination: "/blogs", permanent: true },
@@ -20,13 +21,24 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // studio.huamei.io → /studio rewrite is handled in src/proxy.ts (Next 16
-  // proxy file convention, formerly middleware).
-  // Doing it via next.config rewrites picks the wrong path on either side:
-  // - beforeFiles intercepts /_next/static/* and breaks asset loading
-  // - afterFiles fires too late; / has already matched the homepage route
-  // Middleware runs first per request and its matcher cleanly excludes
-  // /_next, /api, and metadata files.
+  // Only these four buyer entry points serve the approved catalogue.
+  // Studio uses its existing host-based rewrite and the remaining routes stay in Next.
+  async rewrites() {
+    const entryPoints = [
+      { source: "/", destination: "/catalogue/index.html" },
+      { source: "/industry", destination: "/catalogue/industries.html" },
+      { source: "/craft", destination: "/catalogue/packaging.html" },
+      { source: "/volumes", destination: "/catalogue/library.html" },
+    ];
+    return {
+      beforeFiles: entryPoints.map((entry) => ({
+        ...entry,
+        missing: [{ type: "host" as const, value: "studio\\.huamei\\.io" }],
+      })),
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 
   async headers() {
     // Permissive starter CSP. Allows what the site actually loads:

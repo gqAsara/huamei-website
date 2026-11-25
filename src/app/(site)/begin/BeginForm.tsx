@@ -12,7 +12,7 @@ import {
 import { ATTACHMENT_ACCEPT, validateAttachments } from "@/lib/commission";
 
 const PendingContext = createContext(false);
-const DELIVERY_ERROR = "Couldn't deliver right now. Please try again or email info@huamei.io.";
+const DELIVERY_ERROR = "Couldn't deliver right now. Please try again or email jackychan@huamei.io.";
 
 export function BeginForm({ children }: { children: ReactNode }) {
   const [pending, setPending] = useState(false);

@@ -72,7 +72,7 @@ const organizationSchema = {
     {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: "info@huamei.io",
+      email: "jackychan@huamei.io",
       availableLanguage: ["en", "zh-Hans"],
     },
   ],
@@ -279,8 +279,8 @@ export default function HouseAboutPage() {
           <p>
             For projects, samples, and trade enquiries, use the{" "}
             <Link href="/begin">project intake form</Link>. Founder-led replies
-            arrive within 48 hours. The general inbox is{" "}
-            <em>info@huamei.io</em>. For corporate, registration, and editorial
+            arrive within 48 hours. The project email is{" "}
+            <a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a>. For corporate, registration, and editorial
             correspondence, the{" "}
             <Link href="/imprint">imprint</Link> carries the registered office,
             legal representative, and editorial responsibility under §55 Abs. 2

@@ -24,10 +24,10 @@ export default function PortalPage() {
               <a href="#" style={{ fontFamily: "var(--font-cn)", letterSpacing: ".08em" }}>中文</a>
             </span>
             <a
-              href="mailto:info@huamei.io"
+              href="mailto:jackychan@huamei.io"
               style={{ color: "var(--paper-white)", opacity: 0.78 }}
             >
-              info@huamei.io
+              jackychan@huamei.io
             </a>
           </div>
         </div>

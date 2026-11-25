@@ -67,7 +67,7 @@ export function Footer() {
             <div>
               <h5><span className="roman">iv.</span>Elsewhere</h5>
               <ul>
-                <li><a href="mailto:info@huamei.io">info@huamei.io</a></li>
+                <li><a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a></li>
                 <li>
                   <a href="https://instagram.com/huamei_inc" target="_blank" rel="noreferrer">
                     Instagram <span className="tag">@huamei_inc</span>
@@ -122,8 +122,8 @@ export function Footer() {
           <div className="tile">
             <div className="k">Projects</div>
             <div className="v">
-              <a href="mailto:info@huamei.io" style={{ color: "inherit", textDecoration: "none" }}>
-                <em>info@</em>huamei.io
+              <a href="mailto:jackychan@huamei.io" style={{ color: "inherit", textDecoration: "none" }}>
+                <em>jackychan@</em>huamei.io
               </a>
             </div>
             <div className="sub">

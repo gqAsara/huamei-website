@@ -105,7 +105,7 @@ export default function NotFound() {
         <div className="nf-signoff">
           <span>Status &middot; 404 &middot; page not found</span>
           <span className="ital">&ldquo;Corrections are free.&rdquo;</span>
-          <a href="mailto:info@huamei.io">Write to the factory</a>
+          <a href="mailto:jackychan@huamei.io">Write to the factory</a>
         </div>
       </main>
       <Footer />

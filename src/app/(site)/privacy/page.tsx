@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <strong>Contact-form submissions.</strong> When you submit the form at{" "}
             <Link href="/begin">/begin</Link>, we collect your name, email, company,
             and the body of your inquiry. Submissions are routed to{" "}
-            <a href="mailto:info@huamei.io">info@huamei.io</a> through{" "}
+            <a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a> through{" "}
             <a href="https://resend.com" target="_blank" rel="noopener noreferrer">
               Resend
             </a>{" "}

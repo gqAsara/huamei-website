@@ -42,7 +42,7 @@ export default function PackagingOrderForm({initialBox="mailer"}:{initialBox?:st
     <div className="pack-order-record"><div><span>Request sent</span><strong>{reference}</strong></div><div><span>Status</span><strong>Awaiting quotation</strong></div></div>
     <h2>Thank you. Your request has been sent.</h2>
     <p>Our email service has accepted your request for delivery to the Huamei team. Keep the reference above when contacting us. Final pricing, delivery and payment arrangements will be confirmed by email. No payment has been taken.</p>
-    <p>Need to update your details? Email <a href={`mailto:info@huamei.io?subject=${encodeURIComponent(reference)}`}>info@huamei.io</a> with your reference. Please do not send the same request again.</p>
+    <p>Need to update your details? Email <a href={`mailto:jackychan@huamei.io?subject=${encodeURIComponent(reference)}`}>jackychan@huamei.io</a> with your reference. Please do not send the same request again.</p>
     <div className="pack-order-actions"><Link href="/">Return to homepage ↗</Link><Link href="/order" onClick={()=>{setReference("");setPending(false);lock.current=false;key.current=null;setFileNames([]);setBox("mailer");}}>Start another request</Link></div>
   </section>;
 

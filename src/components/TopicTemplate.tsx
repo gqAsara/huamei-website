@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Topic } from "@/lib/topics";
-import { TopicArchiveCarousel } from "./TopicArchiveCarousel";
 import "./topic.css";
 
 function renderProse(line: string) {
@@ -14,7 +12,27 @@ function renderProse(line: string) {
   });
 }
 
+const sectorFilters: Record<string, string> = {
+  cosmetic: "beauty", wellness: "beauty", spirits: "drinks", seasonal: "lifestyle",
+};
+const formatFilters: Record<string, string> = {
+  rigid: "rigid", drawer: "drawer", folding: "carton", inserts: "inserts", shoppers: "bag",
+};
+
 export function TopicTemplate({ topic }: { topic: Topic }) {
+  const sector = topic.category === "industry" ? sectorFilters[topic.slug] : undefined;
+  const format = topic.category === "craft" ? formatFilters[topic.slug] : undefined;
+  const filters = new URLSearchParams({ type: "boxes" });
+  const quote = new URLSearchParams();
+  if (sector) {
+    filters.set("industry", sector);
+    quote.set("industry", sector);
+  }
+  if (format) {
+    filters.set("format", format);
+    quote.set("format", format);
+  }
+  const quoteUrl = quote.size ? `/#quote?${quote}` : "/#quote";
   return (
     <main className="tp-wrap">
       {/* Masthead */}
@@ -62,64 +80,20 @@ export function TopicTemplate({ topic }: { topic: Topic }) {
           ))}
         </div>
         <aside className="tp-prose-aside">
-          {topic.heroImage ? (
-            <>
-              <div className="figure">
-                <Image
-                  src={topic.heroImage}
-                  alt={`${topic.title.replace(/\.$/, "")}${topic.italic?.replace(/\.$/, "") ?? ""} — basic version`}
-                  fill
-                  sizes="(max-width: 960px) 100vw, 360px"
-                  priority
-                />
-              </div>
-              <div className="figcap">
-                <span className="rn">Pl. {topic.rn}</span>
-                <em>The basic version &mdash; {topic.categoryLabel.toLowerCase()} study object.</em>
-              </div>
-            </>
-          ) : null}
           <div className="tp-prose-pull">&ldquo;{topic.pullQuote}&rdquo;</div>
         </aside>
       </section>
 
-      {/* IV. Related */}
       <div className="tp-sec-head">
-        <h2>In the <em>archive.</em></h2>
-        <Link
-          href="/volumes"
-          className="stamp"
-          style={{
-            borderBottom: ".5px solid var(--rule)",
-            paddingBottom: 2,
-            textDecoration: "none",
-            color: "var(--ink-2)",
-          }}
-        >
-          {topic.category === "industry" || topic.category === "craft"
-            ? `All ${topic.related.length} ${topic.related.length === 1 ? "volume" : "volumes"} →`
-            : "All volumes →"}
-        </Link>
+        <h2>Packaging <em>references.</em></h2>
       </div>
-      {topic.category === "industry" || topic.category === "craft" ? (
-        <TopicArchiveCarousel related={topic.related} />
-      ) : (
-        <section className="tp-related-grid">
-          {topic.related.map((r) => (
-            <Link key={r.rn} className="tp-rel" href={r.href}>
-              <div className="cover" style={{ backgroundImage: `url('${r.cover}')` }}>
-                <span className="rn">{r.rn}</span>
-              </div>
-              <div className="meta">
-                <span>{r.category}</span>
-                <span>{r.year}</span>
-              </div>
-              <h4>{r.name}</h4>
-              <div className="tag">{r.tag}</div>
-            </Link>
-          ))}
-        </section>
-      )}
+      <section className="tp-readmore">
+        <a className="tp-readmore-row" href={`/#cases?${filters}`}>
+          <span className="tp-readmore-title">Browse packaging photographs</span>
+          <span className="tp-readmore-desc">Choose a reference to include in your quotation request.</span>
+          <span className="tp-readmore-arr" aria-hidden="true">→</span>
+        </a>
+      </section>
 
       {/* V. Specs */}
       <div className="tp-sec-head">
@@ -178,20 +152,14 @@ export function TopicTemplate({ topic }: { topic: Topic }) {
 
       {/* VII. CTA */}
       <section className="tp-cta">
-        {topic.trustClients?.length ? (
-          <div className="kicker tp-cta-trust">
-            <span style={{ opacity: 0.55, marginRight: 8 }}>Made for &middot;</span>
-            {topic.trustClients.join(" · ")}
-          </div>
-        ) : null}
         <div className="kicker">{topic.ctaKicker}</div>
         <h3>{topic.ctaTitle}</h3>
         <p>{topic.ctaDesc}</p>
         <div className="actions">
-          <Link className="hm-plate" href="/begin">
-            <span className="roman">→</span> Begin a project
-          </Link>
-          <a className="alt" href="mailto:info@huamei.io">info@huamei.io</a>
+          <a className="hm-plate" href={quoteUrl}>
+            <span className="roman">→</span> Request a quote
+          </a>
+          <a className="alt" href="mailto:jackychan@huamei.io">jackychan@huamei.io</a>
         </div>
       </section>
     </main>

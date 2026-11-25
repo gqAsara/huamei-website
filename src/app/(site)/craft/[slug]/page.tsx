@@ -26,7 +26,6 @@ export default async function CraftTopicPage({
           slug,
           name,
           description: topic.lede,
-          image: topic.heroImage,
         })}
       />
       <TopicTemplate topic={topic} />

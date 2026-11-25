@@ -48,7 +48,7 @@ export const organizationGraph = {
         {
           "@type": "ContactPoint",
           contactType: "sales",
-          email: "info@huamei.io",
+          email: "jackychan@huamei.io",
           availableLanguage: ["en", "zh-Hans"],
         },
       ],

@@ -120,7 +120,7 @@ export default function HousePage() {
       <section className="hs-contact">
         <div className="tile">
           <div className="k">Founder &amp; projects</div>
-          <div className="v"><a href="mailto:info@huamei.io">info@huamei.io</a></div>
+          <div className="v"><a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a></div>
           <div className="sub">Sonia Sun &middot; reads every email</div>
         </div>
         <div className="tile">

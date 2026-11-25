@@ -39,8 +39,7 @@ export default function SentPage() {
 
         <p className="prose">
           If something urgent surfaces in the meantime, write to{" "}
-          <a href="mailto:info@huamei.io">info@huamei.io</a> directly. Sonia
-          reads that inbox first thing each morning.
+          <a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a> with your project details.
         </p>
 
         <ol className="sent-steps">

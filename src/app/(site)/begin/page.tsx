@@ -271,7 +271,7 @@ export default function BeginPage() {
           <div className="card">
             <h5>Or write <em>directly</em> <span className="rn">iii.</span></h5>
             <div className="direct">
-              <a href="mailto:info@huamei.io">info@huamei.io</a>
+              <a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a>
               <span className="sub">All projects &middot; reads every email</span>
             </div>
             <div className="direct" style={{ marginTop: 6 }}>

@@ -174,7 +174,7 @@ test("provider errors, malformed success and network timeouts never claim delive
     assert.equal(response.status, 502);
     const body = await response.json();
     assert.equal(body.ok, false);
-    assert.match(body.error, /info@huamei\.io/);
+    assert.match(body.error, /jackychan@huamei\.io/);
     assert.doesNotMatch(body.error, /provider detail/);
   }
 });

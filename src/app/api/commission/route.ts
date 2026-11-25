@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 const HONEYPOT_FIELD = "company_website";
-const DELIVERY_ERROR = "Couldn't deliver right now. Please try again or email info@huamei.io.";
+const DELIVERY_ERROR = "Couldn't deliver right now. Please try again or email jackychan@huamei.io.";
 const FIELDS = [
   "name", "role", "email", "brand", "website", "industry", "brief",
   "qty", "ship", "structure", "finishing", "notes", "agree",
@@ -131,7 +131,7 @@ export async function POST(request: Request) {
       signal: AbortSignal.timeout(20_000),
       body: JSON.stringify({
         from: process.env.CONTACT_FROM_EMAIL || "Huamei <onboarding@resend.dev>",
-        to: [process.env.CONTACT_TO_EMAIL || "info@huamei.io"],
+        to: [process.env.CONTACT_TO_EMAIL || "jackychan@huamei.io"],
         subject: orderReference ? `Packaging order request — ${orderReference} — ${name}` : "New project intake — " + name,
         html,
         reply_to: email,

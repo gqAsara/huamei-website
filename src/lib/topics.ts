@@ -1,5 +1,3 @@
-import { VOLUMES } from "./volumes";
-
 export type TopicCategory = "craft" | "industry";
 
 export type TopicItem = {
@@ -60,19 +58,16 @@ export type Topic = {
   items: TopicItem[];
   processStamp: string;
   processSteps: TopicStep[];
-  related: TopicRelated[];
   specs: TopicSpec[];
   ctaKicker: string;
   ctaTitle: string;
   ctaDesc: string;
-  heroImage?: string;
   // Commercial-intent fields (audit 2026-05-11). Optional — when set, the
   // route's generateMetadata uses commercialTitle/commercialDescription for
-  // SEO; TopicTemplate renders buyerFaq + trustClients + relatedBlogs.
+  // SEO; TopicTemplate renders buyerFaq and relatedBlogs.
   commercialTitle?: string;
   commercialDescription?: string;
   buyerFaq?: TopicFaq[];
-  trustClients?: string[]; // auto-derived in getTopic() from VOLUMES
   relatedBlogs?: TopicRelatedBlog[]; // auto-derived from TOPIC_RELATED_BLOGS map
 };
 
@@ -85,88 +80,10 @@ const SURFACE_SLUGS = new Set([
   "spot-uv", "offset", "wraps",
 ]);
 
-function heroImageFor(slug: string): string | undefined {
-  if (slug === "magnetic") return `/photos/generated/structures/magnetic-v2.jpg`;
-  if (slug === "spot-uv")  return `/photos/generated/surfaces/spot-uv-v2.jpg`;
-  if (STRUCTURE_SLUGS.has(slug)) return `/photos/generated/structures/${slug}.jpg`;
-  if (SURFACE_SLUGS.has(slug))   return `/photos/generated/surfaces/${slug}.jpg`;
-  return undefined;
-}
-
 const STRUCTURE_ORDER = ["rigid", "magnetic", "drawer", "folding", "book", "inserts", "shoppers", "bespoke"];
 const SURFACE_ORDER   = ["hot-foil", "emboss", "deboss", "soft-touch", "spot-uv", "offset", "wraps"];
 const INDUSTRY_ORDER  = ["cosmetic", "spirits", "seasonal", "wellness"];
 
-// Industry slug → archive category labels found on Volume.category.
-const INDUSTRY_CATEGORIES: Record<string, string[]> = {
-  cosmetic: ["Cosmetics", "Skincare"],
-  spirits:  ["Spirits", "Tea"],
-  seasonal: ["Gifting"],
-  wellness: ["Wellness"],
-};
-
-// Craft slug → list of volume slugs that demonstrate this technique.
-// Inferred from each volume's tag/structure; adjust as the archive grows.
-const CRAFT_VOLUMES: Record<string, string[]> = {
-  // ----- Structures -----
-  rigid: [
-    "kefumei", "collgene",
-    "hetaowang", "shede-6", "wuliangye-68", "zhonghua-dragon", "tianamen-jiu",
-    "hongxing", "yangshao",
-  ],
-  magnetic:  ["wuliangye-clamshell"],
-  drawer:    ["oriental-memoirs", "dukang", "heigouqi"],
-  folding:   [
-    "pink-food-sleeve", "glees-grove", "heart-window", "lavender-orchid",
-    "mustard-deco", "heigouqi", "t2-tea", "collgene", "kefumei",
-  ],
-  book:      ["man-made-crayon", "danquan-cave", "tianamen-jiu", "wuliangye-clamshell"],
-  inserts:   ["heigouqi", "wuliangye-clamshell", "yangshao", "cobalt-drum"],
-  shoppers:  ["red-ribbon-shopper", "black-corded"],
-  bespoke:   ["cobalt-drum", "dukang", "taozui-9"],
-
-  // ----- Surfaces -----
-  "hot-foil": [
-    "lavender-orchid", "mustard-deco", "heritage-tea", "taozui-9",
-    "wuliangye-68", "zhonghua-dragon", "hongxing", "collgene",
-  ],
-  emboss:      ["zhonghua-dragon", "collgene"],
-  deboss:      ["yangshao", "glees-grove", "man-made-crayon"],
-  "soft-touch":["kefumei"],
-  "spot-uv":   ["collgene", "kefumei"],
-  offset:      ["t2-tea", "pink-food-sleeve", "heart-window", "lavender-orchid"],
-  wraps:       ["cobalt-drum", "shede-6"],
-};
-
-function volumeToRelated(slug: string): TopicRelated | null {
-  const v = VOLUMES.find((x) => x.slug === slug);
-  if (!v) return null;
-  return {
-    rn: `${v.num}.`,
-    name: v.name,
-    category: v.category,
-    year: v.year,
-    tag: v.tag,
-    cover: v.cover,
-    href: `/volumes/${v.slug}`,
-  };
-}
-
-function relatedFromVolumes(slug: string): TopicRelated[] | undefined {
-  const cats = INDUSTRY_CATEGORIES[slug];
-  if (cats) {
-    return VOLUMES
-      .filter((v) => cats.includes(v.category))
-      .map((v) => volumeToRelated(v.slug)!);
-  }
-  const craftSlugs = CRAFT_VOLUMES[slug];
-  if (craftSlugs) {
-    return craftSlugs
-      .map((s) => volumeToRelated(s))
-      .filter((r): r is TopicRelated => r !== null);
-  }
-  return undefined;
-}
 const ROMAN = ["i.", "ii.", "iii.", "iv.", "v.", "vi.", "vii.", "viii.", "ix.", "x."];
 
 function rnForSlug(slug: string): string {
@@ -215,11 +132,6 @@ const HOT_FOIL: Topic = {
     { num: "iii.", stage: "Pull & check",  title: "Two pressmen.",                       desc: "Every fiftieth sheet is pulled. The catch-light is checked under both warm and cool lamps. Off-register sheets are scrapped on the floor.", image: "/photos/finishing-1.jpg" },
     { num: "iv.",  stage: "Hand-finish",   title: "Quiet ",      italic: "corrections.", desc: "If a sheet shows even minor blistering, we burnish by hand or scrap it. Corrections are free.",                       image: "/photos/press-die-cut-cropped.jpg" },
   ],
-  related: [
-    { rn: "I.",   name: "Dukang 杜康", category: "Spirits",  year: 2024, tag: "Octagonal · Foil · Velvet", cover: "/photos/cases/dukang/01.jpg",   href: "/volumes/dukang" },
-    { rn: "VIII.",name: "Kefumei",     category: "Skincare", year: 2025, tag: "Mass + premium · Foil",     cover: "/photos/cases/kefumei/01.jpg",  href: "/volumes/kefumei" },
-    { rn: "IX.",  name: "Collgene",    category: "Skincare", year: 2025, tag: "Tuck-end · Silver foil",    cover: "/photos/cases/collgene/01.jpg", href: "/volumes/collgene" },
-  ],
   specs: [
     { label: "Stock list",        value: "17 colours · in-house" },
     { label: "Plate material",    value: "Magnesium · 0.6 mm" },
@@ -234,7 +146,6 @@ const HOT_FOIL: Topic = {
   ctaKicker: "Foil samples · Posted free",
   ctaTitle: "Pull a foil sample, or send us a die.",
   ctaDesc: "We will press your wordmark on three stocks — coated, uncoated, and Gmund cloth — in your chosen foil and post the swatches within five working days.",
-  heroImage: "/photos/generated/surfaces/hot-foil.jpg",
   commercialTitle: "Hot-foil stamping suppliers for luxury packaging — 17 foils in-house",
   commercialDescription: "17 foil colours in-house. ±0.1 mm foil-to-emboss registration — three times tighter than industry standard. MOQ 200+, samples in 7–10 days for rigid boxes and cartons.",
   buyerFaq: [
@@ -265,7 +176,6 @@ type TopicCopy = {
   italic?: string;
   cn?: string;
   lede?: string;
-  related?: TopicRelated[];
   // Commercial-intent fields. See Topic type.
   commercialTitle?: string;
   commercialDescription?: string;
@@ -282,7 +192,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     pullQuote: "Two pieces, lifted straight up — the simplest gesture a luxury box can make.",
     meta: ["1.5–2.5 mm core", "Paper or cloth wrap", "Min 300 pcs"],
     commercialTitle: "Custom luxury rigid box manufacturer — since 1992",
-    commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production. Built for Wuliangye, Yangshao and a small bench of skincare houses.",
+    commercialDescription: "Paper-wrapped rigid boxes for cosmetic, spirits, and gifting brands. 1.5–3.0 mm greyboard core, MOQ 200+ pieces, 20–28 day production.",
     buyerFaq: [
       { q: "What's the minimum order for a custom rigid box?", a: "200+ pieces public floor. Some structures run lower on a per-project quote. Below 200 the per-piece cost rises because press setup and hand-assembly time stop amortizing." },
       { q: "How long does a custom rigid box take?", a: "Samples 7–10 days; production 20–28 days from approved sample. Foil, emboss, and registered emboss-and-foil are included in the production schedule — no extra time." },
@@ -509,12 +419,12 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "Cosmetic and skincare outers are where the Huamei floor spends most of its press time. The brief is rarely loud: a soft-touch laminate, a foil wordmark, a spot-UV catch-light. The work is in the fit.",
       "Folding cartons for serum tubes and lipsticks; rigid two-piece for fragrance and palette sets; magnetic flaps where the unboxing is the moment. We register foil to emboss at ±0.1 mm, and the Pantone tolerance on press is {em}ΔE ≤ 2{/em}.",
-      "Houses on file include Collgene, Kefumei, and a small bench of indie skincare projects. Minimum 1,000 for folding, 300 for rigid. Lead time 14–18 days for cartons, 22–32 days for rigid.",
+      "Minimum 1,000 for folding, 300 for rigid. Lead time 14–18 days for cartons, 22–32 days for rigid.",
     ],
     pullQuote: "The compact, the tube, the jar — and everything that sits around them.",
-    meta: ["4 in archive", "ΔE ≤ 2", "Soft-touch standard"],
+    meta: ["ΔE ≤ 2", "Soft-touch standard"],
     commercialTitle: "Luxury cosmetic & skincare packaging manufacturer",
-    commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration. Built for Collgene, Kefumei and a small bench of skincare brands.",
+    commercialDescription: "Folding cartons, rigid boxes, and magnetic flaps for cosmetic and skincare brands. ΔE ≤ 2 colour, ±0.1 mm foil-to-emboss registration.",
     buyerFaq: [
       { q: "What's the MOQ for cosmetic packaging?", a: "1,000+ for folding cartons; 300+ for rigid; 200+ for magnetic-flap rigid. Below the floors a rigid box is usually cheaper per unit than a folding carton." },
       { q: "What lead time should I plan for?", a: "14–18 days for folding cartons; 20–32 days for rigid. Surface decoration — hot-foil, emboss, soft-touch, spot-UV — runs inside the production schedule. Sample turnaround 7–10 days." },
@@ -530,12 +440,12 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
     prose: [
       "Spirits are the longest-running register on the Huamei floor. Baijiu houses, grand-cru wine, and archival tea share a structural vocabulary — book-style boxes, slipcase-and-drawer, ceramic cradles, magnetic clamshells — and a tolerance for {em}weight{/em} that few other categories share.",
       "We engineer inserts to ±1 mm of the bottle profile and pulp the cradle where moisture stability matters. Foil-on-cloth is the catalogue rule for premium SKUs; ceramic-and-foil for the highest tier.",
-      "Houses on file include Wuliangye, Yangshao, Dukang, Hongxing Erguotou, Shede, Taozui, and a tea bench that runs from T2 to DEEPURE Heritage. Lead time 22–35 days. Minimum 300 — 1,000 for the printed cartons that sit beside.",
+      "Lead time 22–35 days. Minimum 300 — 1,000 for the printed cartons that sit beside.",
     ],
     pullQuote: "The reveal is half the bottle.",
-    meta: ["14 in archive", "Book · drawer · ceramic", "±1 mm cradles"],
+    meta: ["Book · drawer · ceramic", "±1 mm cradles"],
     commercialTitle: "Luxury spirits, wine & tea packaging manufacturer",
-    commercialDescription: "Book-style, drawer, and ceramic cradle gift packs for spirits, wine, and archival tea. ±1 mm bottle-profile tolerance. Built for Wuliangye, Yangshao, Dukang, Hongxing Erguotou.",
+    commercialDescription: "Book-style, drawer, and ceramic cradle gift packs for spirits, wine, and archival tea. ±1 mm bottle-profile tolerance.",
     buyerFaq: [
       { q: "What's the MOQ for a spirits gift box?", a: "300+ for rigid construction; 1,000+ for the printed folding cartons that sit beside the bottle in retail. Some heritage launches run lower on per-project quote." },
       { q: "How long does a spirits launch take?", a: "22–35 days production. Ceramic cradles add a week; cloth-wrapped book-style adds another. Plan 8–10 weeks from brief to a warehouse pallet in the US." },
@@ -554,7 +464,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
       "Minimum 500 for shoppers, 1,000 for printed cartons. Lead time runs 18–28 days outside the seasonal lock-in; inside it, we reserve press capacity in February for the autumn moon.",
     ],
     pullQuote: "Booked a year ahead — colour and symbol are the brief.",
-    meta: ["6 in archive", "CNY · Mid-Autumn", "Booked a year ahead"],
+    meta: ["CNY · Mid-Autumn", "Booked a year ahead"],
     commercialTitle: "CNY & Mid-Autumn gift box manufacturer — luxury seasonal packaging",
     commercialDescription: "Chinese New Year, Mid-Autumn, and lunar limited-edition gift packs. Sleeves, drawers, ribbon shoppers, laser-cut overlays. CNY ships October; Mid-Autumn ships June. Book press capacity a year ahead.",
     buyerFaq: [
@@ -574,7 +484,7 @@ const TOPIC_COPY: Record<string, TopicCopy> = {
       "Minimum 500 for folding cartons, 1,000 for runs above the prestige threshold. Lead time 16–22 days. Pulp is the sustainable default; soy ink is house standard.",
     ],
     pullQuote: "Type that whispers — paper that composts.",
-    meta: ["2 in archive", "Pulp + folding", "Soy ink standard"],
+    meta: ["Pulp + folding", "Soy ink standard"],
     commercialTitle: "Luxury wellness & botanical packaging manufacturer",
     commercialDescription: "Restrained, considered packaging for botanicals, soaps, and supplements. Uncoated stocks, soy ink, pulp inserts that compost. FSC/PEFC default. MOQ 500+, 16–22 day lead time.",
     buyerFaq: [
@@ -663,51 +573,15 @@ function relatedBlogsForTopic(slug: string): TopicRelatedBlog[] {
     .slice(0, 3);
 }
 
-// Auto-derive named clients (max 5) from the volumes that demonstrate this
-// topic. Used to render the trust line on /craft/* and /industry/* pages.
-function clientsForTopic(category: TopicCategory, slug: string): string[] {
-  let volumeSlugs: string[] = [];
-  if (category === "craft") {
-    volumeSlugs = CRAFT_VOLUMES[slug] ?? [];
-  } else {
-    const cats = INDUSTRY_CATEGORIES[slug];
-    if (cats) {
-      volumeSlugs = VOLUMES.filter((v) => cats.includes(v.category)).map((v) => v.slug);
-    }
-  }
-  const seen = new Set<string>();
-  const clients: string[] = [];
-  for (const vs of volumeSlugs) {
-    const v = VOLUMES.find((x) => x.slug === vs);
-    if (!v) continue;
-    const c = v.client.trim();
-    if (!c || /house design|studio client|dtc client/i.test(c)) continue;
-    if (seen.has(c)) continue;
-    seen.add(c);
-    clients.push(c);
-    if (clients.length >= 5) break;
-  }
-  return clients;
-}
-
 export function getTopic(category: TopicCategory, slug: string): Topic {
   const explicit = TOPICS[slug];
   if (explicit && explicit.category === category) {
-    const dynamic = relatedFromVolumes(slug);
-    const base = dynamic ? { ...explicit, related: dynamic } : explicit;
-    const trustClients = clientsForTopic(category, slug);
-    const relatedBlogs = relatedBlogsForTopic(slug);
-    return {
-      ...base,
-      ...(trustClients.length ? { trustClients } : {}),
-      ...(relatedBlogs.length ? { relatedBlogs } : {}),
-    };
+    return { ...explicit, relatedBlogs: relatedBlogsForTopic(slug) };
   }
 
   const meta = CATEGORY_META[category];
   const name = titleize(slug);
   const copy = TOPIC_COPY[slug];
-  const trustClients = clientsForTopic(category, slug);
   const relatedBlogs = relatedBlogsForTopic(slug);
 
   return {
@@ -724,7 +598,6 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     title: copy?.title ?? name,
     italic: copy?.italic,
     cn: copy?.cn ?? meta.cn,
-    heroImage: heroImageFor(slug),
     lede: copy?.lede ?? (copy
       ? `${name} on the Huamei floor — the materials, the use cases, the operational details.`
       : "A topic from the Huamei archive — content for this page is being prepared. The structure below is the shape every topic takes."),
@@ -746,7 +619,6 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     })),
     processStamp: "Process · iv steps",
     processSteps: HOT_FOIL.processSteps,
-    related: relatedFromVolumes(slug) ?? copy?.related ?? HOT_FOIL.related,
     specs: [
       { label: "Min run",        value: "300 pcs" },
       { label: "Lead time",      value: "20 – 28 days" },
@@ -761,7 +633,6 @@ export function getTopic(category: TopicCategory, slug: string): Topic {
     commercialTitle: copy?.commercialTitle,
     commercialDescription: copy?.commercialDescription,
     buyerFaq: copy?.buyerFaq,
-    ...(trustClients.length ? { trustClients } : {}),
     ...(relatedBlogs.length ? { relatedBlogs } : {}),
   };
 }
