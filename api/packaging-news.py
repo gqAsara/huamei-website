@@ -108,6 +108,7 @@ def publish_edition(store, now, root=ROOT, editorial_generator=desk.generate, cl
     if clock and clock().astimezone(desk.SHANGHAI).date() != day:
         raise PublicationDeadline("Local publication date changed")
     for item in issue["items"]:
+        item["_type"] = "packagingNewsStory"
         item["_key"] = hashlib.sha256(item["sourceUrl"].encode()).hexdigest()[:20]
     doc = {"_type": DOCUMENT_TYPE, "_id": doc_id, **issue}
     result = store.create_once(doc)

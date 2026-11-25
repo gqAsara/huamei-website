@@ -16,6 +16,7 @@ export const packagingNewsEdition = defineType({
       validation: (rule) => rule.required().min(1).max(3),
       of: [
         defineArrayMember({
+          name: "packagingNewsStory",
           type: "object",
           fields: [
             defineField({ name: "title", type: "string", validation: (rule) => rule.required() }),

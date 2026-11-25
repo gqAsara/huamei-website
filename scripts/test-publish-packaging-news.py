@@ -148,6 +148,7 @@ class CloudPublisherTest(unittest.TestCase):
         doc = self.store.create_once.call_args.args[0]
         self.assertEqual("packagingNews-2026-11-25", doc.pop("_id"))
         self.assertEqual("packagingNewsEdition", doc.pop("_type"))
+        self.assertEqual("packagingNewsStory", doc["items"][0].pop("_type"))
         self.assertEqual(20, len(doc["items"][0].pop("_key")))
         self.assertEqual(seed, doc)
 
