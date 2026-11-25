@@ -97,3 +97,4 @@
 2026-10-09T07:05:08Z	seo-ops	daily-audit	Oct-08 ops: 3 commits pushed, 3 URLs improved — wibalin-paper title 78->54 + meta 206->155 (98 imp, pos 5.9, 1 click); cognac-brandy meta 271->153 (11 imp, pos 6.6, 0 clicks); usa-vs-china lead-time H2 + secondaryKeywords writeback (packaging lead time china, pos 18.6); links + schema clean; publish routine silent since ~Aug-11 (no new blogs ~8 weeks) — escalated; IndexNow 403 ongoing
 2026-11-25T07:26:32.349Z	editor	draft	content/news/2026-11-25.json
 2026-11-25T07:32:41Z	site-engineer	commit	seo/p3-daily-packaging-news	/news
+2026-11-25T08:10:55Z	site-engineer	commit	seo/p3-daily-packaging-news	/news daily illustrated questions and weekly reproducible studies

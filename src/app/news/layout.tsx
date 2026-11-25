@@ -31,7 +31,7 @@ export default function NewsLayout({ children }: { children: ReactNode }) {
       {children}
       <footer className="news-footer">
         <a href="/">Huamei 華美 Packaging</a>
-        <nav aria-label="Footer navigation"><a href="/news">Packaging news</a><a href="/volumes">Case library</a><a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a></nav>
+        <nav aria-label="Footer navigation"><a href="/news">Packaging Q&amp;A</a><a href="/volumes">Case library</a><a href="mailto:jackychan@huamei.io">jackychan@huamei.io</a></nav>
       </footer>
     </div>
   );

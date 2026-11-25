@@ -6,13 +6,13 @@
     },
     {
       "path": "/api/packaging-news",
-      "schedule": "17 1 * * *"
+      "schedule": "0 3 * * *"
     }
   ],
   "functions": {
     "api/packaging-news.py": {
       "maxDuration": 60,
-      "excludeFiles": "{.*/**,.*,public/**,src/**,sanity/**,docs/**,node_modules/**,scripts/!(publish-packaging-news.py),scripts/*/**,*.md,*.json,*.ts,*.mjs,*.yaml,*.yml}"
+      "excludeFiles": "{.*/**,.*,public/**,src/**,sanity/**,docs/**,node_modules/**,scripts/!(publish-packaging-news.py|packaging_research.py),scripts/*/**,*.md,*.json,*.ts,*.mjs,*.yaml,*.yml}"
     }
   }
 }

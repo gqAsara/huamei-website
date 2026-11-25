@@ -1,4 +1,4 @@
-"""Authenticated Vercel Cron endpoint for the public packaging desk."""
+"""Authenticated Vercel Cron endpoint for the daily packaging question."""
 import hashlib
 import hmac
 import importlib.util
@@ -6,7 +6,6 @@ import json
 import logging
 import os
 import re
-import time
 import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone
@@ -50,7 +49,7 @@ class Store:
         return bool(self.query("defined(*[_id == $id][0]._id)", id=document_id))
 
     def history(self, day):
-        rows = self.query('*[_type == "packagingNewsEdition" && date < $day && !(_id in path("drafts.**"))]{date,items[]{title,kind,sourceName,sourceUrl}}', day=str(day))
+        rows = self.query('*[_type == "packagingNewsEdition" && date < $day && _id == "packagingNews-" + date]{date,items[]{title,kind,sourceName,sourceUrl,image{url}}}', day=str(day))
         return [(date.fromisoformat(row["date"]), item) for row in rows for item in row["items"]]
 
     def create_once(self, doc):
@@ -65,51 +64,46 @@ def authorized(header, secret):
 
 def reviewed_seed(path, day, now):
     seed = json.loads(path.read_text(encoding="utf-8"))
-    if seed.get("date") != str(day) or not all(isinstance(seed.get(k), str) and desk.clean(seed[k]) and not desk.PII.search(seed[k]) for k in ("title", "summary")):
-        raise ValueError("Invalid checked-in issue")
-    if not isinstance(seed.get("items"), list) or not 1 <= len(seed["items"]) <= 3:
-        raise ValueError("Invalid checked-in items")
-    items = []
-    for item in seed["items"]:
-        items.append(desk.check_candidate(item, items, day, lambda url, _: url))
+    issue = desk.reviewed_edition(seed, path.parents[2], day, [])
     stamp = seed.get("publishedAt", now.isoformat(timespec="seconds"))
     published = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
     if published.tzinfo is None or published > now or published.astimezone(desk.SHANGHAI).date() != day:
         raise ValueError("Invalid checked-in publication time")
-    return {k: seed[k] for k in ("date", "title", "summary")} | {"publishedAt": stamp, "items": items}
-
-
-class PublicationDeadline(RuntimeError):
-    pass
+    issue["publishedAt"] = stamp
+    return issue
 
 
 def publish_edition(store, now, root=ROOT, editorial_generator=desk.generate, clock=None):
-    day = now.astimezone(desk.SHANGHAI).date()
+    local_time = now.astimezone(desk.SHANGHAI)
+    day = local_time.date()
     doc_id = "packagingNews-" + str(day)
     if store.exists(doc_id):
         return {"status": "already-published", "date": str(day)}
+    if local_time.hour < 11:
+        return {"status": "scheduled", "date": str(day)}
 
     seed = root / "content/news" / f"{day}.json"
+    issue = None
     if seed.is_file():
-        # These sources were reviewed before the corresponding immutable Git issue was published.
-        issue = reviewed_seed(seed, day, now)
-    else:
-        history = store.history(day)
-        # Keep time for the final atomic mutation. An overdue run is never backdated.
-        cutoff = time.monotonic() + 31
-        def verify(url, source_date):
-            remaining = cutoff - time.monotonic()
-            if remaining < 1:
-                raise PublicationDeadline("Source checking exceeded its time budget")
-            return desk.article_url(url, source_date, timeout=min(6, remaining))
-        issue = editorial_generator(root, now, verify=verify, remote_history=history)
-        issue["publishedAt"] = now.astimezone(desk.SHANGHAI).isoformat(timespec="seconds")
-
+        try:
+            issue = reviewed_seed(seed, day, now)
+        except (KeyError, TypeError, ValueError):
+            logging.warning("Checked-in item is not a publishable daily question")
+    if issue is None:
+        issue = editorial_generator(root, now, remote_history=store.history(day))
+        issue["publishedAt"] = local_time.isoformat(timespec="seconds")
     if clock and clock().astimezone(desk.SHANGHAI).date() != day:
-        raise PublicationDeadline("Local publication date changed")
+        raise ValueError("Local publication date changed")
     for item in issue["items"]:
         item["_type"] = "packagingNewsStory"
         item["_key"] = hashlib.sha256(item["sourceUrl"].encode()).hexdigest()[:20]
+        if item.get("image"):
+            item["image"]["_type"] = "object"
+    if issue.get("study"):
+        issue["study"]["_type"] = "object"
+        for index, row in enumerate(issue["study"]["rows"]):
+            row["_type"] = "packagingResearchRow"
+            row["_key"] = "row-" + str(index + 1)
     doc = {"_type": DOCUMENT_TYPE, "_id": doc_id, **issue}
     result = store.create_once(doc)
     return {"status": "published" if result == "create" else "already-published", "date": str(day)}

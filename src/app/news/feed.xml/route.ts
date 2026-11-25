@@ -1,4 +1,4 @@
-import { getNewsIssues, NEWS_URL } from "@/lib/news";
+import { displayablePhoto, getNewsIssues, NEWS_URL } from "@/lib/news";
 
 export const dynamic = "force-static";
 export const revalidate = 60;
@@ -13,14 +13,20 @@ export async function GET() {
   const items = issues.map((issue) => {
     const url = NEWS_URL + "/" + issue.date;
     const date = issue.publishedAt ? "<pubDate>" + new Date(issue.publishedAt).toUTCString() + "</pubDate>" : "";
+    const cover = displayablePhoto(issue.cover);
+    const media = cover
+      ? '<media:content medium="image" url="' + escapeXml(new URL(cover.url, NEWS_URL).href) + '">' +
+        '<media:description type="plain">' + escapeXml(cover.alt) + '</media:description></media:content>'
+      : "";
     return "<item><title>" + escapeXml(issue.title) + "</title><link>" + url + "</link>" +
       "<guid isPermaLink=\"true\">" + url + "</guid>" + date +
-      "<description>" + escapeXml(issue.summary) + "</description></item>";
+      (issue.hasStudy ? "<category>Packaging study</category>" : "") +
+      "<description>" + escapeXml(issue.summary) + "</description>" + media + "</item>";
   });
   const rss = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>' +
-    '<title>Huamei Packaging News</title><link>' + NEWS_URL + '</link>' +
-    '<description>Daily news and source notes for paper packaging buyers.</description><language>en</language>' +
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><channel>' +
+    '<title>Huamei Packaging Q&amp;A</title><link>' + NEWS_URL + '</link>' +
+    '<description>Practical answers to everyday paper packaging questions.</description><language>en</language>' +
     '<atom:link href="' + NEWS_URL + '/feed.xml" rel="self" type="application/rss+xml"/>' +
     items.join("\n") + '</channel></rss>';
   return new Response(rss, { headers: { "Content-Type": "application/rss+xml; charset=utf-8" } });

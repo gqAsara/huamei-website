@@ -69,10 +69,10 @@ export function buildConfig({ basePath = "/studio" }: { basePath?: string } = {}
                 ),
               S.divider(),
               S.listItem()
-                .title("Packaging news · 每日包装资讯")
+                .title("Packaging Q&A · 每日包装问答")
                 .child(
                   S.documentTypeList("packagingNewsEdition")
-                    .title("Daily editions")
+                    .title("Daily questions")
                     .initialValueTemplates([])
                     .defaultOrdering([{ field: "date", direction: "desc" }])
                 ),

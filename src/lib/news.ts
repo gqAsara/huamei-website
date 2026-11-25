@@ -5,7 +5,34 @@ export const NEWS_URL = "https://huamei.io/news";
 const directory = join(process.cwd(), "content", "news");
 const isoDay = /^\d{4}-\d{2}-\d{2}$/;
 const summaryFields = "date, publishedAt, title, summary";
-const issueFields = summaryFields + ", items[]{title, summary, buyerNote, sourceName, sourceUrl, sourceDate, kind}";
+const imageFields = "url, alt, credit, sourceUrl, license, licenseUrl";
+const issueFields = summaryFields + ", study{title,method,columns,rows[]{cells},findings,limitations}, items[]{title, summary, buyerNote, sourceName, sourceUrl, sourceDate, kind, image{" + imageFields + "}}";
+const archiveFields = summaryFields + ', "hasStudy": defined(study.method), "cover": items[defined(image.url)][0].image{' + imageFields + "}";
+
+export type NewsImage = {
+  url: string;
+  alt: string;
+  credit: string;
+  sourceUrl: string;
+  license: string;
+  licenseUrl?: string;
+};
+
+// These photo licences permit editorial display without a public credit.
+const uncreditedLicenses = new Set([
+  "cc0", "cc0 1.0", "public domain", "unsplash license", "pexels license",
+  "burst license", "shopify burst license", "pixabay content license",
+]);
+
+export function displayablePhoto(image?: NewsImage | null): Pick<NewsImage, "url" | "alt"> | undefined {
+  if (!image || typeof image.url !== "string" ||
+      !/^\/news-media\/[a-z0-9_-]+(?:\.[a-z0-9_-]+)*\.(?:jpe?g|webp|png)$/i.test(image.url) ||
+      typeof image.alt !== "string" || !image.alt.trim() ||
+      typeof image.credit !== "string" || !image.credit.trim() ||
+      typeof image.license !== "string" || !uncreditedLicenses.has(image.license.trim().toLowerCase()) ||
+      !URL.canParse(image.sourceUrl) || new URL(image.sourceUrl).protocol !== "https:") return undefined;
+  return { url: image.url, alt: image.alt };
+}
 
 export type NewsItem = {
   title: string;
@@ -14,7 +41,8 @@ export type NewsItem = {
   sourceName: string;
   sourceUrl: string;
   sourceDate: string;
-  kind?: "news" | "reference";
+  kind?: "question" | "news" | "reference";
+  image?: NewsImage | null;
 };
 
 export type NewsSummary = {
@@ -22,9 +50,29 @@ export type NewsSummary = {
   publishedAt?: string | null;
   title: string;
   summary: string;
+  cover?: NewsImage | null;
+  hasStudy?: boolean;
 };
 
-export type NewsIssue = NewsSummary & { items: NewsItem[] };
+export type PackagingStudy = {
+  title: string;
+  method: string;
+  columns: string[];
+  rows: { cells: string[] }[];
+  findings: string[];
+  limitations: string;
+};
+
+export type NewsIssue = NewsSummary & { items: NewsItem[]; study?: PackagingStudy | null };
+
+function validStudy(study: PackagingStudy): boolean {
+  const text = (value: unknown) => typeof value === "string" && value.trim().length > 0;
+  return !!study && [study.title, study.method, study.limitations].every(text) &&
+    Array.isArray(study.findings) && study.findings.length > 0 && study.findings.every(text) &&
+    Array.isArray(study.columns) && study.columns.length >= 2 && study.columns.every(text) &&
+    Array.isArray(study.rows) && study.rows.length > 0 && study.rows.every((row) =>
+      row && Array.isArray(row.cells) && row.cells.length === study.columns.length && row.cells.every(text));
+}
 
 const shanghaiDate = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
@@ -58,12 +106,13 @@ function validItem(item: NewsItem, date: string): boolean {
     (text) => typeof text === "string" && text.trim().length > 0,
   ) && validDay(item.sourceDate) && item.sourceDate <= date &&
     URL.canParse(item.sourceUrl) && new URL(item.sourceUrl).protocol === "https:" &&
-    (!item.kind || item.kind === "news" || item.kind === "reference");
+    (!item.kind || item.kind === "question" || item.kind === "news" || item.kind === "reference");
 }
 
 function validIssue(issue: NewsIssue, date: string, now: Date): boolean {
   return isPublic(issue, now) && issue.date === date && Array.isArray(issue.items) &&
-    issue.items.length > 0 && issue.items.every((item) => validItem(item, date));
+    issue.items.length > 0 && issue.items.every((item) => validItem(item, date)) &&
+    (!issue.study || validStudy(issue.study));
 }
 
 function localIssue(date: string, now: Date): NewsIssue | null {
@@ -117,7 +166,7 @@ export async function getNewsIssues(limit = Infinity, now = new Date()): Promise
   const entries = new Map<string, NewsSummary>();
   for (const date of localNewsDates()) {
     const issue = localIssue(date, now);
-    if (issue) entries.set(date, issue);
+    if (issue) entries.set(date, { ...issue, hasStudy: !!issue.study, cover: issue.items.find((item) => displayablePhoto(item.image))?.image });
   }
   const size = Math.min(100, limit);
   // Public document IDs have no dots. Each day has one stable ID; drafts and
@@ -126,7 +175,7 @@ export async function getNewsIssues(limit = Infinity, now = new Date()): Promise
   let publicRows = 0;
   for (let offset = 0; size > 0; offset += size) {
     const rows = await querySanity<NewsSummary[]>(
-      `*[${filter}] | order(date desc)[${offset}...${offset + size}]{${summaryFields}}`,
+      `*[${filter}] | order(date desc)[${offset}...${offset + size}]{${archiveFields}}`,
       { through: shanghaiDate.format(now) },
     );
     if (!Array.isArray(rows)) break;

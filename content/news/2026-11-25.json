@@ -1,35 +1,152 @@
 {
   "date": "2026-11-25",
   "publishedAt": "2026-11-25T07:26:48.206Z",
-  "title": "A yoghurt carton, a food tray and a carrier for two bottles",
-  "summary": "A shopper opens a yoghurt carton, a warehouse stacks trays of food and a customer lifts two soap bottles by one handle. We look at what each design asks a packaging buyer to test.",
+  "title": "How do I measure a box to fit my product?",
+  "summary": "Measure the space inside the assembled box, then compare it with the product in its insert or wrapping. Record both sets of measurements as length × width × depth, using the same units.",
   "items": [
     {
-      "title": "A pull ring opens the whole top of a yoghurt carton",
-      "summary": "Tetra Pak introduced Tetra Reva, a square paper-based carton for foods such as yoghurt, desserts and soft cheese. Pulling the ring opens the full top so the customer can eat from the carton with a spoon.",
-      "buyerNote": "For a gift set of chilled desserts, try the filled cartons in the proposed outer tray. Can a shopper lift one out without catching its pull ring on the tray or disturbing the next carton?",
-      "sourceName": "Tetra Pak",
-      "sourceUrl": "https://www.tetrapak.com/about-tetra-pak/news-and-events/newsarchive/tetra-pak-launches-tetra-reva-paper-based-package",
-      "sourceDate": "2026-11-24",
-      "kind": "news"
-    },
-    {
-      "title": "Mondi examines how tray design affects food damage in transit",
-      "summary": "Mondi published a white paper on preventing damage to food during transport. Its examples consider how corrugated trays carry weight in a stack, how workers handle the load and how many units fit on a pallet.",
-      "buyerNote": "When comparing two trays for confectionery, send both on the same route at the same pallet height. Record how many units fit at dispatch and how many arrive in saleable condition.",
-      "sourceName": "Mondi",
-      "sourceUrl": "https://www.mondigroup.com/news-and-insight/2026/mondi-reveals-how-purpose-built-corrugated-packaging-can-drastically-reduce-food-waste/",
-      "sourceDate": "2026-11-23",
-      "kind": "news"
-    },
-    {
-      "title": "A paperboard handle holds two soap bottles by their caps",
-      "summary": "Atlantic Packaging described the carrier it developed for pairs of Dr. Bronner’s soap bottles sold at Costco in the United States. Cut-outs in the board grip beneath the caps when a shopper lifts the handle. Atlantic says it tested the carrier at its packaging centre and in the field.",
-      "buyerNote": "For a similar twin-pack, give the supplier filled bottles fitted with the production caps. Lift the sample both straight up and from one side, and check whether each bottle stays seated.",
-      "sourceName": "Atlantic Packaging",
-      "sourceUrl": "https://www.atlanticpkg.com/packaging-europe-highlights-atlantics-fishbone-dog-bone-for-dr-bronners/",
-      "sourceDate": "2026-11-18",
-      "kind": "news"
+      "title": "How do I measure a box to fit my product?",
+      "summary": "Close the product as you would pack it and measure its widest points, including any handles or caps. Add the insert or wrapping and measure again. For example, a 100 × 60 × 30 mm item might occupy 115 × 75 × 40 mm in its insert. In a box measuring 120 × 80 × 45 mm inside, that leaves 5 mm total along each axis, or 2.5 mm on either side of the centred insert.",
+      "buyerNote": "Check the assembled sample with a ruler. Measure between the inside walls, first along the longer side of the opening and then the shorter side. Measure depth from the inside base to where the underside of the closed lid sits. Pack the item, close the lid and lift the item out again. The lid should clear the product and your fingers should have room to grip it. For shipping, test the cushioning with the actual product.",
+      "sourceName": "Huamei buyer guides",
+      "sourceUrl": "https://huamei.io/blogs/rigid-box-lid-fit-tolerance",
+      "sourceDate": "2026-08-11",
+      "kind": "question",
+      "image": {
+        "url": "/news-media/inside-an-open-box.jpg",
+        "alt": "An open cardboard box with its four flaps folded back to reveal the inside walls and base.",
+        "credit": "Shopify Partners",
+        "sourceUrl": "https://www.shopify.com/stock-photos/photos/shipping-box",
+        "license": "Burst License",
+        "licenseUrl": "https://www.shopify.com/stock-photos/licenses/shopify-some-rights-reserved"
+      }
     }
-  ]
+  ],
+  "study": {
+    "title": "How much volume does clearance add?",
+    "method": "Model three rectangular packed items at four clearances. Add the stated gap to each of the six faces. Multiply the resulting inside length, width and height in millimetres, then divide by 1,000 to get cubic centimetres. Each percentage uses that item's zero-clearance volume as its baseline.",
+    "columns": [
+      "Packed item L × W × H (mm)",
+      "Gap per face (mm)",
+      "Box inside L × W × H (mm)",
+      "Inside volume (cm³)",
+      "Increase (%)"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "120 × 80 × 45",
+          "0",
+          "120 × 80 × 45",
+          "432.0",
+          "0.0"
+        ]
+      },
+      {
+        "cells": [
+          "120 × 80 × 45",
+          "2.5",
+          "125 × 85 × 50",
+          "531.2",
+          "23.0"
+        ]
+      },
+      {
+        "cells": [
+          "120 × 80 × 45",
+          "5",
+          "130 × 90 × 55",
+          "643.5",
+          "49.0"
+        ]
+      },
+      {
+        "cells": [
+          "120 × 80 × 45",
+          "10",
+          "140 × 100 × 65",
+          "910.0",
+          "110.6"
+        ]
+      },
+      {
+        "cells": [
+          "200 × 150 × 80",
+          "0",
+          "200 × 150 × 80",
+          "2,400.0",
+          "0.0"
+        ]
+      },
+      {
+        "cells": [
+          "200 × 150 × 80",
+          "2.5",
+          "205 × 155 × 85",
+          "2,700.9",
+          "12.5"
+        ]
+      },
+      {
+        "cells": [
+          "200 × 150 × 80",
+          "5",
+          "210 × 160 × 90",
+          "3,024.0",
+          "26.0"
+        ]
+      },
+      {
+        "cells": [
+          "200 × 150 × 80",
+          "10",
+          "220 × 170 × 100",
+          "3,740.0",
+          "55.8"
+        ]
+      },
+      {
+        "cells": [
+          "300 × 220 × 120",
+          "0",
+          "300 × 220 × 120",
+          "7,920.0",
+          "0.0"
+        ]
+      },
+      {
+        "cells": [
+          "300 × 220 × 120",
+          "2.5",
+          "305 × 225 × 125",
+          "8,578.1",
+          "8.3"
+        ]
+      },
+      {
+        "cells": [
+          "300 × 220 × 120",
+          "5",
+          "310 × 230 × 130",
+          "9,269.0",
+          "17.0"
+        ]
+      },
+      {
+        "cells": [
+          "300 × 220 × 120",
+          "10",
+          "320 × 240 × 140",
+          "10,752.0",
+          "35.8"
+        ]
+      }
+    ],
+    "findings": [
+      "120 × 80 × 45 mm: 432.0 to 643.5 cm³ (49.0% more).",
+      "200 × 150 × 80 mm: 2,400.0 to 3,024.0 cm³ (26.0% more).",
+      "300 × 220 × 120 mm: 7,920.0 to 9,269.0 cm³ (17.0% more)."
+    ],
+    "limitations": "These are calculated dimensions. A product resting on the base has a different distribution of space. The table does not establish how much cushioning a particular product needs in transit."
+  }
 }
