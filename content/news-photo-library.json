@@ -173,5 +173,24 @@
       "license": "Pexels License",
       "licenseUrl": "https://www.pexels.com/license/"
     }
+  },
+  {
+    "topics": [
+      "wrapping paper",
+      "gift wrap",
+      "scissors",
+      "wrapping a present",
+      "wrapping a gift",
+      "wrapping a box",
+      "end flaps"
+    ],
+    "image": {
+      "url": "/news-media/cutting-wrapping-paper.jpg",
+      "alt": "One person holds a roll of silver wrapping paper over a white gift box while another cuts the sheet with scissors.",
+      "credit": "Any Lane",
+      "sourceUrl": "https://www.pexels.com/photo/photo-of-a-person-s-hands-cutting-wrapping-paper-5727927/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/"
+    }
   }
 ]
