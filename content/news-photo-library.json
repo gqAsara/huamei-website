@@ -192,5 +192,23 @@
       "license": "Pexels License",
       "licenseUrl": "https://www.pexels.com/license/"
     }
+  },
+  {
+    "topics": [
+      "shopping bag",
+      "gift bag",
+      "paper bag",
+      "paper handles",
+      "twisted handles",
+      "paper bag recycling"
+    ],
+    "image": {
+      "url": "/news-media/kraft-bag-twisted-handles.jpg",
+      "alt": "A plain brown paper shopping bag with two twisted handles stands on a wooden surface.",
+      "credit": "Picas Joe",
+      "sourceUrl": "https://www.pexels.com/photo/a-brown-paper-bag-over-wood-11348561/",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/"
+    }
   }
 ]
